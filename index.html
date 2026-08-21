@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="北京优先的考公、选调优培、事业单位与央国企求职信息雷达。" />
+    <title>北京求职雷达｜考公与央国企机会看板</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="回到首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>Opportunity intelligence</small></span></a>
+        <nav aria-label="主导航"><a href="#opportunities">机会</a><a href="#timeline">节奏</a><a href="#sources">来源</a></nav>
+        <span class="sync-status"><i></i>最近核验：2026.08.21</span>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">2027 届求职季 · 北京优先</p>
+            <h1>两条路一起走，<br /><em>每个机会都有依据。</em></h1>
+            <p class="hero-intro">把散落的招录公告变成一张清晰的行动地图：北京机会优先、只看可追溯来源、先核验再发布，每次打开都知道下一步做什么。</p>
+            <div class="hero-actions"><a class="primary-button" href="#opportunities">查看今日机会 <span>↘</span></a><a class="text-button" href="#timeline">看求职节奏 →</a></div>
+          </div>
+          <div class="hero-panel" aria-label="当前求职阶段">
+            <div class="panel-topline"><span>当前阶段</span><strong>蓄水期</strong></div>
+            <div class="phase-visual"><div class="phase-number">08</div><div><p>八月下旬</p><strong>材料准备 · 信息源建档</strong></div></div>
+            <div class="phase-progress"><span></span></div>
+            <div class="panel-stats"><div><strong>10</strong><span>已核验入口</span></div><div><strong>8</strong><span>北京优先</span></div><div><strong>2</strong><span>并行赛道</span></div></div>
+            <p class="next-window"><span>下一个关键窗口</span><strong>北京选调 / 优培公告</strong></p>
+          </div>
+        </section>
+
+        <section class="dashboard">
+          <div class="main-column" id="opportunities">
+            <div class="section-heading"><div><p class="eyebrow">VERIFIED OPPORTUNITIES</p><h2>值得持续关注的机会</h2></div><span class="result-count" id="result-count">10 条结果</span></div>
+            <div class="toolbar">
+              <div class="filter-tabs" id="filter-tabs" role="group" aria-label="按赛道筛选"><button class="active" data-filter="全部" type="button">全部</button><button data-filter="考公" type="button">考公</button><button data-filter="选调优培" type="button">选调优培</button><button data-filter="央国企" type="button">央国企</button><button data-filter="事业单位" type="button">事业单位</button></div>
+              <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索单位、地区或关键词" placeholder="单位 / 地区 / 关键词" /></label>
+            </div>
+            <div class="opportunity-list" id="opportunity-list"></div>
+          </div>
+
+          <aside class="side-column">
+            <section class="today-card"><div class="side-heading"><div><p class="eyebrow">TODAY</p><h2>今天先做这 3 件</h2></div><span id="task-count">0/3</span></div><div class="task-list" id="task-list"></div><p class="saved-note">已收藏 <strong id="saved-count">0</strong> 个机会，进度会保存在当前设备。</p></section>
+            <section class="profile-card">
+              <div class="profile-header"><span class="profile-monogram">筛</span><div><p>当前筛选偏好</p><strong>匿名 · 不保存个人身份信息</strong></div></div>
+              <div class="profile-grid"><div><span>主线</span><strong>考公 / 选调优培</strong></div><div><span>并行</span><strong>央国企 / 事业单位</strong></div><div><span>地区</span><strong>北京优先 · 全国补充</strong></div></div>
+              <div class="skill-stack"><span>官方来源</span><span>条件可判断</span><span>入口可执行</span><span>核验后发布</span></div>
+            </section>
+            <section class="source-card" id="sources"><p class="eyebrow">SOURCE STANDARD</p><h2>什么才算“有效信息”</h2><ul><li><span>01</span><p><strong>线索广泛发现</strong>官网、学校、平台、公众号和社群都可进入待核验池。</p></li><li><span>02</span><p><strong>回溯原始公告</strong>找不到政府、学校或企业原文的线索不上架。</p></li><li><span>03</span><p><strong>关键字段复核</strong>逐项确认届别、专业、地点、截止时间和有效入口。</p></li></ul></section>
+          </aside>
+        </section>
+
+        <section class="intelligence-section">
+          <div class="intelligence-copy"><p class="eyebrow">INTELLIGENCE PIPELINE</p><h2>发现渠道不设限，<br />发布标准不降低。</h2><p>第三方内容只负责提示“可能有机会”，原始公告才决定它能不能出现在网站上。</p><div class="channel-cloud"><span>政府官网</span><span>企业招聘站</span><span>高校就业网</span><span>官方公众号</span><span>招聘平台</span><span>搜索索引</span><span>社群转发</span><span>社交媒体</span></div></div>
+          <div class="pipeline" aria-label="信息核验流程"><article><span>01</span><div><strong>广域发现</strong><p>先收线索，不急着发布</p></div></article><i>→</i><article><span>02</span><div><strong>追溯原文</strong><p>定位官方公告与附件</p></div></article><i>→</i><article><span>03</span><div><strong>资格核验</strong><p>核对五项关键字段</p></div></article><i>→</i><article class="publish-step"><span>04</span><div><strong>审核发布</strong><p>记录核验时间再上架</p></div></article></div>
+        </section>
+
+        <section class="timeline-section" id="timeline">
+          <div class="section-heading timeline-heading"><div><p class="eyebrow">THE ROAD AHEAD</p><h2>从现在到上岸，节奏不要乱</h2></div><p>具体日期以当年官方公告为准</p></div>
+          <div class="timeline-grid"><article class="current"><span>NOW · 8月</span><h3>材料蓄水</h3><p>确认报考条件、准备证明材料、完成多版本简历。</p></article><article><span>9—10月</span><h3>选调优培 + 秋招</h3><p>盯紧北京选调优培公告，同时关注在京央国企。</p></article><article><span>10—11月</span><h3>国考窗口</h3><p>公告后按专业代码筛岗，集中完成报名与笔试冲刺。</p></article><article><span>11—次年3月</span><h3>省考与春招</h3><p>京考、事业单位、央国企补录与其他地区机会滚动跟进。</p></article></div>
+        </section>
+      </main>
+      <footer><p><strong>北京求职雷达</strong> · 只收集值得行动的信息</p><p>每条机会都应回到官方页面复核后再投递。</p></footer>
+    </div>
+  </body>
+</html>
