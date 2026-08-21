@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "sources": [
+    {"id": "picc-campus", "organization": "中国人民保险集团", "type": "企业官方招聘系统", "domains": ["picc.zhiye.com"], "entryUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true", "officialSiteConfirmed": true},
+    {"id": "national-civil", "organization": "国家公务员局", "type": "政府官网", "domains": ["scs.gov.cn"], "entryUrl": "https://www.scs.gov.cn/", "officialSiteConfirmed": true},
+    {"id": "beijing-civil", "organization": "北京市公务员招考与人事考试主管部门", "type": "政府官网", "domains": ["beijing.gov.cn", "rsj.beijing.gov.cn"], "entryUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "officialSiteConfirmed": true}
+  ]
+}
