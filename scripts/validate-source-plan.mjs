@@ -7,7 +7,7 @@ const errors = [];
 const sourceIds = new Set();
 
 if (registry.version !== 2) errors.push("source-registry.version 必须为 2");
-if (plan.version !== 1) errors.push("source-plan.version 必须为 1");
+if (plan.version !== 2) errors.push("source-plan.version 必须为 2");
 if (plan.timezone !== "Asia/Shanghai") errors.push("source-plan.timezone 必须为 Asia/Shanghai");
 
 for (const [index, source] of (registry.sources || []).entries()) {
@@ -42,6 +42,7 @@ if (!plan.announcementLifecycle?.beforeApplicationOpens?.includes("不得")) err
 if (!plan.announcementLifecycle?.withPositionTable?.includes("具体岗位")) errors.push("预公告附职位表时必须拆到具体岗位");
 if (plan.qualityFilter?.unknownIsNotNegative !== true) errors.push("薪资或强度未知不得作为负面事实");
 if (plan.qualityFilter?.lowRankNeverMeansExclude !== true) errors.push("低排名不得自动排除岗位");
+if (!plan.positionScan?.largeDatasetStrategy?.includes("screening-policy.json")) errors.push("大规模职位入口必须引用 screening-policy.json");
 
 if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));

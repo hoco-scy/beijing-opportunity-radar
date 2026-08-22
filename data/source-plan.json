@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "timezone": "Asia/Shanghai",
   "retryPolicy": {"criticalMaxAttempts":3,"activeMaxAttempts":3,"priorityMaxAttempts":2,"backoffSeconds":[0,90,300],"alternateOfficialEndpointBeforeFailure":true,"failureOutcome":"completed-partial"},
   "coverage": {
@@ -16,6 +16,7 @@
   "positionScan": {
     "publicExam": "下载并遍历官方完整职位表，禁止先用关键词缩小范围；逐岗执行硬资格门禁",
     "enterprise": "遍历官方列表全部分页、职位板块和动态加载结果，并用广义关键词补漏",
+    "largeDatasetStrategy": "超过 200 个岗位时必须按 screening-policy.json 使用代码全量初筛、模型批量复核和候选子集官方核验；禁止让高推理模型逐岗阅读整表",
     "majorInclusion": ["生物医学工程","0831","083100","082601","工学可报","理工类可报","不限专业"],
     "uncertainRelatedMajor": "央国企可标记为需人工确认；公考不得因此标记为确认可报"
   },

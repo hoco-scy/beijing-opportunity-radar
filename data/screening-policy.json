@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "mode": "structured-batch-first",
+  "largeDatasetThreshold": 200,
+  "principles": {
+    "scanEveryOfficialRow": true,
+    "neverUseOneModelCallPerRow": true,
+    "neverPasteWholeTableIntoModelContext": true,
+    "lowRankNeverMeansExclude": true,
+    "unknownMeansDeferNotReject": true
+  },
+  "datasetReuse": {
+    "fingerprintAlgorithm": "sha256",
+    "reuseWhenOfficialAttachmentUnchanged": true,
+    "stillRecheckPublishedJobsAndDeadlines": true
+  },
+  "stages": [
+    {
+      "id": "normalize",
+      "executor": "code",
+      "input": "官方完整职位表、官方导出或官方招聘接口的全部分页结果",
+      "output": "仅保存在任务临时空间的规范化逐岗记录",
+      "requirements": ["保留原始行号与职位代码", "合并所有工作表、分页和职位板块", "不把整表复制进模型上下文"]
+    },
+    {
+      "id": "deterministic-gates",
+      "executor": "code",
+      "input": "全部规范化岗位",
+      "output": "明确通过、明确不通过、需要语义复核三组",
+      "requirements": ["逐行读取全部字段和备注", "仅凭明确条件作硬排除", "专业代码、专业名称、工学、理工类和不限专业均参与匹配", "未知或解析失败进入需要语义复核"]
+    },
+    {
+      "id": "semantic-batch-review",
+      "executor": "routine-model",
+      "input": "机器初筛通过项与需要语义复核项",
+      "output": "结构化批量结论",
+      "requirements": ["每批 20 至 60 个岗位", "输出固定 JSON 字段", "不得为每个岗位单独发起模型调用", "结论必须保留职位代码或原始行号"]
+    },
+    {
+      "id": "official-verification",
+      "executor": "browser-and-official-source",
+      "input": "拟发布岗位、疑难岗位、已发布且仍在截止前的岗位",
+      "output": "官方逐岗证据和最终结论",
+      "requirements": ["优先使用职位表原始字段和官方详情页", "只对候选子集逐岗打开网页", "公考全部资格项通过后才能发布"]
+    }
+  ],
+  "modelPolicy": {
+    "routineModel": "GPT-5.6 Terra",
+    "routineReasoning": "medium",
+    "batchSizeTarget": 40,
+    "highReasoning": {
+      "defaultEnabled": false,
+      "separateCadence": "weekly-or-manual",
+      "maxItemsPerRun": 20,
+      "allowedReasons": ["专业目录层级冲突", "职位备注与主字段冲突", "多份官方文件口径冲突", "官方附件解析异常"],
+      "overflowOutcome": "deferred"
+    }
+  },
+  "qualityAssurance": {
+    "sampleMachineRejections": true,
+    "sampleRate": 0.03,
+    "minimumPerReasonCode": 3,
+    "falseNegativeAction": "修正规则并重跑完整数据集"
+  },
+  "requiredRunMetrics": [
+    "datasetsDownloaded",
+    "datasetsReused",
+    "positionsDiscovered",
+    "positionsMachineScreened",
+    "positionsMachineRejected",
+    "positionsBatchReviewed",
+    "positionsOfficiallyVerified",
+    "positionsEscalated",
+    "positionsDeferredByBudget"
+  ],
+  "publicReporting": {
+    "recordBatchCountsByReason": true,
+    "recordReviewedCandidatesIndividually": true,
+    "includeOfficialTableFallback": true,
+    "neverPublishPrivateProfileValues": true
+  }
+}

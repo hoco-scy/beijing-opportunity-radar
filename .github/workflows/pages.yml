@@ -28,6 +28,8 @@ jobs:
         run: node scripts/validate-review-log.mjs
       - name: Validate source coverage and retry policy
         run: node scripts/validate-source-plan.mjs
+      - name: Validate layered large-dataset screening policy
+        run: node scripts/validate-screening-policy.mjs
       - name: Check anonymous public content
         run: node scripts/check-privacy.mjs
 

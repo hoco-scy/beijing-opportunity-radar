@@ -46,6 +46,22 @@ function renderReview(review) {
   </article>`;
 }
 
+function renderScreeningMetrics(run) {
+  const metrics = run.screeningMetrics;
+  if (!metrics) return "";
+  const rows = [
+    ["官方岗位总量", metrics.positionsDiscovered],
+    ["代码全量扫描", metrics.positionsMachineScreened],
+    ["明确条件排除", metrics.positionsMachineRejected],
+    ["模型批量复核", metrics.positionsBatchReviewed],
+    ["官方逐岗核验", metrics.positionsOfficiallyVerified],
+    ["高推理疑难项", metrics.positionsEscalated],
+    ["后续轮次继续", metrics.positionsDeferredByBudget],
+    ["数据集下载 / 复用", `${metrics.datasetsDownloaded} / ${metrics.datasetsReused}`],
+  ].map(([label, value]) => `<li><strong>${escapeHTML(label)}</strong><span>${escapeHTML(value)}</span></li>`).join("");
+  return `<details class="source-checks"><summary>查看大表筛选漏斗 <span>＋</span></summary><ul>${rows}</ul></details>`;
+}
+
 function renderRun(run) {
   const reviews = filteredReviews(run);
   const metrics = run.metrics;
@@ -69,6 +85,7 @@ function renderRun(run) {
       <div><strong>${metrics.rejected}</strong><span>未通过</span></div>
       <div><strong>${metrics.deferred}</strong><span>继续核验</span></div>
     </div>
+    ${renderScreeningMetrics(run)}
     <details class="source-checks"><summary>查看来源系统状态 <span>＋</span></summary><ul>${sourceChecks}</ul></details>
     <div class="review-grid">${reviewContent}</div>
   </article>`;

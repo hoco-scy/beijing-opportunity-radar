@@ -9,6 +9,11 @@ const errors = [];
 const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 const decisions = new Set(["accepted", "rejected", "deferred"]);
 const runStatuses = new Set(["completed", "completed-partial", "failed"]);
+const screeningMetricKeys = [
+  "datasetsDownloaded", "datasetsReused", "positionsDiscovered", "positionsMachineScreened",
+  "positionsMachineRejected", "positionsBatchReviewed", "positionsOfficiallyVerified",
+  "positionsEscalated", "positionsDeferredByBudget"
+];
 
 function officialDomain(urlValue, source) {
   try {
@@ -45,6 +50,7 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
   if ((run.reviews || []).length !== metrics.reviewedItems) errors.push(`${label}.reviews 数量与 reviewedItems 不一致`);
 
   const strictCoverage = Number(run.policyVersion || 0) >= 2;
+  const batchScreening = Number(run.policyVersion || 0) >= 3;
   if (!strictCoverage && run.coverageStatus !== "legacy-incomplete") errors.push(`${label} 旧版不完整运行必须显式标记 legacy-incomplete`);
   if (strictCoverage && (run.sourceChecks || []).length !== metrics.officialSystemsChecked) errors.push(`${label}.sourceChecks 必须逐一记录全部检查来源`);
   const checkedSourceIds = new Set();
@@ -63,6 +69,14 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
     }
   }
   if (strictCoverage && metrics.officialSystemsFailed > 0 && run.status !== "completed-partial") errors.push(`${label} 有来源失败时必须标记 completed-partial`);
+  if (batchScreening) {
+    for (const key of screeningMetricKeys) {
+      if (!Number.isInteger(run.screeningMetrics?.[key]) || run.screeningMetrics[key] < 0) errors.push(`${label}.screeningMetrics.${key} 必须是非负整数`);
+    }
+    if ((run.screeningMetrics?.positionsMachineScreened || 0) > (run.screeningMetrics?.positionsDiscovered || 0)) errors.push(`${label} 机器扫描数不能大于发现总数`);
+    if ((run.screeningMetrics?.positionsMachineRejected || 0) > (run.screeningMetrics?.positionsMachineScreened || 0)) errors.push(`${label} 机器排除数不能大于机器扫描数`);
+    if ((run.screeningMetrics?.positionsEscalated || 0) > 20) errors.push(`${label} 高推理升级数超过每轮 20 项上限`);
+  }
   if (run.status === "completed-partial" && opportunities.meta?.lastRunStatus !== "completed-partial" && runIndex === 0) errors.push("最新运行部分完成时，正文 meta.lastRunStatus 必须同步");
 
   for (const [reviewIndex, review] of (run.reviews || []).entries()) {
