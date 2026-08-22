@@ -1,11 +1,355 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastRunAt": "2026-08-22T12:30:00+08:00",
+    "lastRunAt": "2026-08-22T17:07:00+08:00",
     "timezone": "Asia/Shanghai",
     "privacyRule": "只记录公开招聘事实、匿名审核结论和公开安全原因；不记录或反推任何私人资格字段"
   },
   "runs": [
+    {
+      "id": "run-20260822-1707",
+      "checkedAt": "2026-08-22T17:07:00+08:00",
+      "trigger": "manual-immediate-test-full-sync",
+      "policyVersion": 5,
+      "screeningStrategyVersion": 2,
+      "coverageStatus": "all-planned-official-and-discovery-sources-attempted-with-recorded-gaps",
+      "status": "completed-partial",
+      "outcome": "published-and-deferred",
+      "summary": "已尝试全部 24 个官方来源和 2 个发现来源；新增 1 条官方逐岗核验记录。16 个来源因入口、筛选、分页或附件未完成而保留为部分完成，未将任何缺口解释为无岗位。",
+      "metrics": {
+        "officialSystemsChecked": 24,
+        "officialSystemsSucceeded": 8,
+        "officialSystemsFailed": 16,
+        "newLeads": 1,
+        "reviewedItems": 8,
+        "accepted": 1,
+        "rejected": 4,
+        "deferred": 3,
+        "published": 1,
+        "updated": 0,
+        "closed": 0
+      },
+      "screeningMetrics": {
+        "portalResultsReported": 2173,
+        "nativeFilterQueries": 3,
+        "nativeFilteredResults": 0,
+        "deduplicatedCandidates": 0,
+        "positionsBatchReviewed": 0,
+        "positionsOfficiallyVerified": 1,
+        "positionsEscalated": 0,
+        "positionsDeferredByBudget": 1935,
+        "discoverySourcesChecked": 2,
+        "discoveryOfficialCandidates": 0
+      },
+      "sourceChecks": [
+        {
+          "sourceId": "national-civil",
+          "status": "temporarily-unavailable",
+          "attempts": 3,
+          "note": "国家公务员局主入口与登记备用入口累计 3 次均返回网关错误；未据此判断没有 2027 公告。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "beijing-civil",
+          "status": "checked-no-new-position-table",
+          "attempts": 1,
+          "note": "官方公务员招考列表当前仍为 2026 年度信息，未见 2027 年度公告或职位表。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "beijing-personnel-exam",
+          "status": "checked-no-new-position-table",
+          "attempts": 1,
+          "note": "官方重要通知当前条目未见 2027 京考、定向选调或优培公告及职位表。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "beijing-institutions",
+          "status": "checked-no-publishable-change",
+          "attempts": 1,
+          "note": "复核官方招聘列表的当前公告；仍在有效期内的公告均已保留匿名审核结论，未形成新增正文岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "central-institutions",
+          "status": "accessible-incomplete",
+          "attempts": 3,
+          "note": "官方平台可恢复读取当前公告并核验其中一项详情，但其余仍在有效期内的公告和附件未完成逐项处理。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "china-public-recruitment",
+          "status": "temporarily-unavailable",
+          "attempts": 3,
+          "note": "主入口、HTTP 兼容入口与浏览器复试累计 3 次未能建立可用职位列表；未把访问失败写成无公告。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "central-sasac-recruitment",
+          "status": "temporarily-unavailable",
+          "attempts": 3,
+          "note": "桌面、移动与浏览器备用入口累计 3 次均无法完整访问；继续保留上轮仍在期限内公告的匿名审核上下文。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "central-enterprise-roster",
+          "status": "temporarily-unavailable",
+          "attempts": 3,
+          "note": "名录入口、上级栏目与浏览器复试累计 3 次均未建立有效页面，后续运行继续重试。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "beijing-state-assets",
+          "status": "checked-no-publishable-change",
+          "attempts": 1,
+          "note": "官方国企招聘栏目当前条目未发现字段完整的新增具体岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "picc-campus",
+          "status": "accessible-incomplete",
+          "attempts": 3,
+          "note": "官方入口和两类岗位页均已重试；未取得可复现的完整结构化结果，既有批量复核待办继续保留。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "boe-campus",
+          "status": "accessible-incomplete",
+          "attempts": 2,
+          "note": "官方校园招聘职位页可建立连接但未返回可稳定读取的职位列表，未据此生成具体岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "sinopharm-careers",
+          "status": "checked-no-publishable-change",
+          "attempts": 1,
+          "note": "官方招聘栏目可访问，当前未发现可新增的字段完整具体岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "genertec-official",
+          "status": "accessible-incomplete",
+          "attempts": 2,
+          "note": "集团官网已定位官方招聘入口，但跳转后的招聘门户未返回可稳定处理的岗位列表。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "crc-careers",
+          "status": "temporarily-unavailable",
+          "attempts": 2,
+          "note": "官方招聘入口与浏览器复试均返回网关错误，未将失败解释为没有岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "cec-campus",
+          "status": "accessible-incomplete",
+          "attempts": 2,
+          "note": "官方校园招聘首页可访问，但本轮未能取得职位列表与筛选结果。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "cetc-recruitment",
+          "status": "checked-no-publishable-change",
+          "attempts": 1,
+          "note": "官方招聘栏目可访问，当前未发现可新增的字段完整具体岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "sgcc-careers",
+          "status": "checked-no-active-campaign",
+          "attempts": 2,
+          "note": "官方招聘首页恢复读取后仅见已过期的 2026 批次信息，本轮未见当前活动招聘。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "cnpc-careers",
+          "status": "temporarily-unavailable",
+          "attempts": 2,
+          "note": "官方入口与浏览器复试均未建立可用职位页面，未将失败解释为没有岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "sinopec-careers",
+          "status": "temporarily-unavailable",
+          "attempts": 2,
+          "note": "官方入口与校园招聘兼容路径累计 2 次未能读取可核验职位列表。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "cmcc-careers",
+          "status": "accessible-incomplete",
+          "attempts": 2,
+          "note": "官方站内校园招聘筛选可触发，但地点选项与结果列表未稳定返回，未遍历未筛选岗位全集。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "chinatelecom-careers",
+          "status": "accessible-incomplete",
+          "attempts": 3,
+          "note": "官方职位详情可核验并新增 1 条具体岗位，但地点和单位筛选未稳定返回完整结果，未遍历未筛选岗位全集。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "casic-careers",
+          "status": "semantic-404",
+          "attempts": 2,
+          "note": "登记入口最终落到官方招聘门户的 404 错误页；备用访问亦未恢复有效职位页。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "spacechina-careers",
+          "status": "accessible-incomplete",
+          "attempts": 2,
+          "note": "集团官网已定位人才招聘入口，但人才站本轮未返回可稳定读取的岗位列表。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        },
+        {
+          "sourceId": "chinapost-recruitment",
+          "status": "checked-no-publishable-change",
+          "attempts": 2,
+          "note": "集团官网与官方站内检索均未发现可公开核验的新增具体招聘岗位。",
+          "checkedAt": "2026-08-22T17:07:00+08:00"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "review-20260822-1707-chinatelecom-32ae9cb8fa33c130",
+          "scope": "position",
+          "track": "央国企",
+          "organization": "中国电信集团数据发展中心（支付公司）",
+          "title": "人工智能工程师（安全方向）",
+          "officialPublishedAt": "2026-08-22",
+          "headcount": "若干",
+          "deadline": "官方未注明统一截止时间；以系统实时状态为准",
+          "decision": "accepted",
+          "reasonCode": "enterprise-position-verified",
+          "reason": "官方招聘系统可定位到具体岗位；公开硬门槛已完成匿名资格核验，非硬性偏好保留投递前确认提示。",
+          "verificationNote": "官方职位详情已核对单位、北京地点、学历、职责、发布时间和投递入口。",
+          "fallback": "进入中国电信官方校园招聘职位详情页查看实时岗位状态。",
+          "sourceId": "chinatelecom-careers",
+          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=32ae9cb8fa33c130&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0"
+        },
+        {
+          "id": "review-20260822-1707-yanqing-edu",
+          "scope": "announcement",
+          "track": "事业单位",
+          "organization": "北京市延庆区教育委员会",
+          "title": "2026 年第五批公开招聘教师公告复查",
+          "officialPublishedAt": "2026-08-21",
+          "headcount": "公告总计 12 人",
+          "deadline": "2026-09-01 17:30",
+          "decision": "rejected",
+          "reasonCode": "candidate-category-mismatch",
+          "reason": "公告级公开招录对象条件经匿名资格核验未通过。",
+          "verificationNote": "官方公告仍在公开截止时间前，公告级条件已足以作出结论。",
+          "fallback": "可进入官方公告查看职位表和后续补充口径。",
+          "sourceId": "beijing-institutions",
+          "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260821_4831284.html"
+        },
+        {
+          "id": "review-20260822-1707-miyun-health",
+          "scope": "announcement",
+          "track": "事业单位",
+          "organization": "北京市密云区卫生健康委员会",
+          "title": "2026 年第二次公开招聘事业单位工作人员公告复查",
+          "officialPublishedAt": "2026-08-21",
+          "headcount": "6 个岗位，共 20 人",
+          "deadline": "2026-09-01 15:00",
+          "decision": "rejected",
+          "reasonCode": "candidate-category-mismatch",
+          "reason": "公告级公开招录对象条件经匿名资格核验未通过。",
+          "verificationNote": "官方公告仍在公开截止时间前，公告级条件已足以作出结论。",
+          "fallback": "可进入官方公告查看职位计划表和后续补充口径。",
+          "sourceId": "beijing-institutions",
+          "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260821_4831251.html"
+        },
+        {
+          "id": "review-20260822-1707-chinanews",
+          "scope": "announcement",
+          "track": "事业单位",
+          "organization": "中国新闻社",
+          "title": "2026 年面向社会公开招聘工作人员公告",
+          "officialPublishedAt": "2026-08-18",
+          "headcount": "4 个岗位，共 10 人",
+          "deadline": "2026-09-01 17:00",
+          "decision": "rejected",
+          "reasonCode": "experience-or-professional-credential-mismatch",
+          "reason": "公告级公开硬条件经匿名资格核验未通过。",
+          "verificationNote": "官方公告已核对岗位数量、报名期限和公告级资格要求。",
+          "fallback": "可进入人社部官方公告下载岗位信息表复核。",
+          "sourceId": "central-institutions",
+          "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260818_582358.html"
+        },
+        {
+          "id": "review-20260822-1707-sasac-social",
+          "scope": "announcement",
+          "track": "事业单位",
+          "organization": "国务院国资委委属单位",
+          "title": "2026 年面向社会公开招聘公告复查",
+          "officialPublishedAt": "2026-07-31",
+          "headcount": "职位附件本轮未能完整取得",
+          "deadline": "2026-08-24 17:00",
+          "decision": "rejected",
+          "reasonCode": "candidate-category-mismatch",
+          "reason": "已从当前默认分支的官方公告记录恢复并复用公告级匿名资格结论；本轮官网入口失败未被误写为无公告。",
+          "verificationNote": "本轮按登记入口完成重试但未能重新打开公告页，保留仍在期限内的公开公告上下文。",
+          "fallback": "官网入口恢复后可进入国务院国资委官方公告下载职位需求表复核。",
+          "sourceId": "central-sasac-recruitment",
+          "officialUrl": "https://wap.sasac.gov.cn/n2588035/n2588325/n2588350/c35714069/content.html"
+        },
+        {
+          "id": "review-20260822-1707-boe",
+          "scope": "official-system",
+          "track": "央国企",
+          "organization": "京东方科技集团",
+          "title": "2027 届校园招聘系统本轮跟踪",
+          "officialPublishedAt": "官方未注明",
+          "headcount": "官方入口未提供可稳定核验的逐岗人数",
+          "deadline": "官方入口未提供统一截止时间",
+          "decision": "deferred",
+          "reasonCode": "position-fields-incomplete",
+          "reason": "官方职位页未返回可稳定读取的岗位名称或代码、地点、人数和截止口径，暂不生成正文岗位。",
+          "verificationNote": "本轮已重试官方入口；字段完整前不使用第三方汇总替代。",
+          "fallback": "进入京东方官方校园招聘职位页查看实时状态。",
+          "sourceId": "boe-campus",
+          "officialUrl": "https://campus.boe.com/custom/xzzw?hideMenu=1"
+        },
+        {
+          "id": "review-20260822-1707-chinatelecom-coverage",
+          "scope": "official-system",
+          "track": "央国企",
+          "organization": "中国电信集团有限公司",
+          "title": "校园招聘全单位筛选覆盖待补",
+          "officialPublishedAt": "官方未注明",
+          "headcount": "官方入口报告总量 2173 条；本轮未形成可复现的站内筛选结果",
+          "deadline": "官方入口未提供统一截止时间",
+          "decision": "deferred",
+          "reasonCode": "native-filter-combination-incomplete",
+          "reason": "官网地点和招聘单位筛选未稳定返回完整结果；未遍历未筛选的大型岗位全集。",
+          "verificationNote": "已单独核验可定位的具体岗位；其余覆盖范围继续保留为后续筛选任务。",
+          "fallback": "进入中国电信官方校园招聘系统按地点、单位和职位类别筛选。",
+          "sourceId": "chinatelecom-careers",
+          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/campus"
+        },
+        {
+          "id": "review-20260822-1707-picc-batch-backlog",
+          "scope": "official-system",
+          "track": "央国企",
+          "organization": "中国人民保险集团",
+          "title": "2027 届校招结构化批量复核待办",
+          "officialPublishedAt": "2026-07-31 起持续更新",
+          "headcount": "1935 条待批量复核",
+          "deadline": "各单位截止口径不同；岗位招满即停",
+          "decision": "deferred",
+          "reasonCode": "structured-batch-review-pending",
+          "reason": "尚未取得可复现的完整结构化筛选结果；未处理项保留为待复核，不冒充已审核或已排除。",
+          "verificationNote": "本轮重试官方入口后仍未完成结果读取，保留上轮已记录的批量待办数量。",
+          "fallback": "进入中国人保官方校招系统查看实时职位列表。",
+          "sourceId": "picc-campus",
+          "officialUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true"
+        }
+      ]
+    },
     {
       "id": "run-20260822-1230",
       "checkedAt": "2026-08-22T12:30:00+08:00",

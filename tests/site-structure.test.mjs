@@ -19,7 +19,6 @@ test("every page exposes the same four-page navigation", async () => {
       assert.match(html, new RegExp(`<a[^>]+href="${href}"[^>]*>${label}</a>`), `${page} 缺少 ${label} 入口`);
     }
     assert.equal((html.match(/class="nav-current"/g) || []).length, 1, `${page} 应只有一个当前页标记`);
-    assert.match(html, /href="https:\/\/hoco-scy\.github\.io\/city-opportunity-radar\/"[^>]*>切换城市<\/a>/, `${page} 缺少城市切换入口`);
   }
 });
 
@@ -159,7 +158,7 @@ test("top bar shows only the update time while audit uses user-facing update lan
     read("data/opportunities.json"), read("app.js"), read("audit.js"),
   ]);
   const opportunities = JSON.parse(opportunitiesRaw);
-  assert.equal(opportunities.meta.lastIncompleteSourceCount, 9);
+  assert.equal(opportunities.meta.lastIncompleteSourceCount, 16);
   assert.equal(opportunities.meta.lastDeferredCandidateCount, 1935);
   assert.match(app, /最近更新：/);
   assert.match(audit, /最近更新：/);

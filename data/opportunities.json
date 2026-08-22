@@ -1,14 +1,89 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastVerifiedAt": "2026-08-22T12:30:00+08:00",
+    "lastVerifiedAt": "2026-08-22T17:07:00+08:00",
     "lastRunStatus": "completed-partial",
-    "lastIncompleteSourceCount": 9,
+    "lastIncompleteSourceCount": 16,
     "lastDeferredCandidateCount": 1935,
     "timezone": "Asia/Shanghai",
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件"
   },
   "jobs": [
+    {
+      "id": "chinatelecom-32ae9cb8fa33c130",
+      "track": "央国企",
+      "subtrack": "通信央企",
+      "organization": "中国电信集团数据发展中心（支付公司）",
+      "department": "官方未注明",
+      "title": "人工智能工程师（安全方向）",
+      "exactTitle": "数据发展中心（支付公司）-人工智能工程师（安全方向）",
+      "jobCode": "32ae9cb8fa33c130",
+      "location": "北京市",
+      "cohort": "校园招聘（届别官方未注明）",
+      "recruitmentType": "校园招聘",
+      "headcount": "若干",
+      "education": "硕士研究生及以上",
+      "degree": "官方未单列",
+      "majors": "人工智能、网络空间安全、信息安全、计算机科学与技术等相关专业背景优先",
+      "politicalStatus": "官方未注明",
+      "experience": "官方未注明",
+      "responsibilities": [
+        "推进人工智能与大语言模型技术在安全领域的研究和演进。",
+        "与安全、产品和工程团队协作，推动研究成果在业务场景落地迭代。",
+        "跟踪 AI 与安全交叉领域前沿技术并形成技术成果。"
+      ],
+      "requirements": [
+        "硕士研究生及以上学历。",
+        "相关专业背景优先。",
+        "具备机器学习、深度学习、大语言模型与 AI 智能体相关基础。",
+        "具备良好编程能力，熟练掌握至少一门主流编程语言。"
+      ],
+      "publishedAt": "2026-08-22",
+      "deadline": "官方未注明统一截止时间；以系统实时状态为准",
+      "deadlineType": "官方未注明",
+      "status": "招聘中",
+      "priority": 94,
+      "matchLevel": "重点关注",
+      "matchReason": "北京的人工智能与网络安全研发岗位，公开学历门槛和职责清晰；专业及能力偏好以投递系统实时要求为准。",
+      "riskNotes": [
+        "官方未公开统一截止时间，以系统实时状态为准。",
+        "公开要求含专业与能力偏好，投递前应结合岗位页再次确认。"
+      ],
+      "tags": [
+        "北京",
+        "人工智能",
+        "网络安全",
+        "大语言模型",
+        "校园招聘"
+      ],
+      "sourceId": "chinatelecom-careers",
+      "officialAnnouncementUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=32ae9cb8fa33c130&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0",
+      "officialApplyUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=32ae9cb8fa33c130&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0",
+      "applyInstruction": "打开中国电信官方校园招聘职位详情页，确认信息后使用“立即申请”入口投递。",
+      "verifiedAt": "2026-08-22",
+      "lastSeenAt": "2026-08-22T17:07:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "本轮打开官方职位详情，页面显示“立即申请”，并标注发布时间为 2026-08-22。",
+      "verifiedFields": [
+        "职位名称与编码",
+        "单位",
+        "地点",
+        "学历",
+        "职责",
+        "任职要求",
+        "发布时间",
+        "投递路径",
+        "截止口径"
+      ],
+      "verification": {
+        "officialSource": true,
+        "specificPosition": true,
+        "location": true,
+        "eligibility": true,
+        "applicationPath": true,
+        "deadlineChecked": true
+      }
+    },
     {
       "id": "picc-j78589",
       "track": "央国企",
@@ -1846,11 +1921,11 @@
       "track": "考公",
       "title": "中央机关及其直属机构 2027 年度考试录用公务员",
       "status": "等待公告",
-      "note": "2027 年度国考公告和职位表暂未发布。相关招录信息请以国家公务员局官网公布内容为准。",
+      "note": "官方公告及职位表正在持续核验，正式发布后将在此更新。",
       "officialUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
       "alternateOfficialUrl": "http://subb.scs.gov.cn/pp/gkweb/core/web/ui/business/home/lxhome.html",
       "alternateOfficialLabel": "补充录用信息",
-      "checkedAt": "2026-08-22T14:56:00+08:00"
+      "checkedAt": "2026-08-22T17:07:00+08:00"
     },
     {
       "id": "beijing-civil-2027",
@@ -1859,7 +1934,7 @@
       "status": "职位表未发布",
       "note": "2027 年度公告和职位表暂未发布。公布后会在这里提示报名时间和具体岗位。",
       "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
-      "checkedAt": "2026-08-22T12:30:00+08:00"
+      "checkedAt": "2026-08-22T17:07:00+08:00"
     },
     {
       "id": "beijing-selection-2027",
@@ -1868,7 +1943,7 @@
       "status": "职位表未发布",
       "note": "2027 年度定向选调公告和职位表暂未发布。公布后会按当年条件更新具体岗位。",
       "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
-      "checkedAt": "2026-08-22T12:30:00+08:00"
+      "checkedAt": "2026-08-22T17:07:00+08:00"
     },
     {
       "id": "beijing-youpei-2027",
@@ -1877,16 +1952,16 @@
       "status": "岗位表未发布",
       "note": "2027 年度优培计划公告和岗位表暂未发布。公布后会按当年条件更新具体岗位。",
       "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/",
-      "checkedAt": "2026-08-22T12:30:00+08:00"
+      "checkedAt": "2026-08-22T17:07:00+08:00"
     },
     {
       "id": "beijing-institutions",
       "track": "事业单位",
       "title": "北京市事业单位公开招聘",
       "status": "全年分批发布",
-      "note": "事业单位招聘全年分批发布。目前没有新增的具体岗位进入岗位列表。",
+      "note": "事业单位招聘全年分批发布。本轮复核现行公告后未形成新增具体岗位；已保留公告级审核记录。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/",
-      "checkedAt": "2026-08-22T12:30:00+08:00"
+      "checkedAt": "2026-08-22T17:07:00+08:00"
     }
   ]
 }
