@@ -78,6 +78,11 @@ function publicField(value = "") {
 function publicReviewReason(review) {
   const reasons = {
     "enterprise-position-verified": "已在招聘单位官网找到具体岗位，可打开官网查看完整要求和投递方式。",
+    "enterprise-position-needs-confirmation": "官网没有限定为不相关专业，岗位信息完整；专业边界仍建议投递前向单位确认。",
+    "role-domain-not-aligned": "结合岗位职责、专业条件和服务业务复核后，未发现与生物医学工程背景相符的明确交叉，因此没有加入岗位页。",
+    "broad-engineering-eligibility-needs-confirmation": "官网专业范围覆盖理工科硕士，岗位可作为交叉工科机会保留；生物医学工程是否被具体认定，建议投递前确认。",
+    "health-digital-cross-domain-needs-confirmation": "单位业务与医疗健康数字化有关，岗位也存在交叉场景；专业认定仍建议在投递前向单位确认。",
+    "objective-role-risk": "官网岗位说明出现高风险或高强度工作要求，因此没有加入岗位页。",
     "core-profession-mismatch": "岗位的核心专业或能力要求与当前关注方向没有明确交集，因此没有加入岗位页。",
     "explicit-profession-mismatch": "岗位的专业要求指向其他方向，因此没有加入岗位页。",
     "sales-or-field-risk": "岗位以客户拓展、业绩推动或高频现场工作为核心，因此没有加入岗位页。",

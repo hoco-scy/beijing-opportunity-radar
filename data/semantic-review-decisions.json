@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "city": "北京",
+  "sourceId": "chinatelecom-careers",
+  "candidateSetHash": "b6e36ba42e76568ebb5b5cca386500746e561280119b6045f23f998863736301",
+  "reviewMethod": "本轮按官网详情分为两个语义批次，由任务代理阅读职责、专业条件与单位业务后形成；不是关键词分类结果。",
+  "batchDecisions": [
+    {
+      "batch": 1,
+      "candidateCount": 37,
+      "decision": "rejected",
+      "reasonCode": "role-domain-not-aligned",
+      "reason": "岗位核心工作集中在云网、软件、算法、安全、通信或工程交付，未形成与当前关注方向相符的医疗健康或生物医学交叉职责，因此不放入岗位页。",
+      "semanticBasis": "逐项阅读本批官网职责与任职条件后作出结论：判断依据是实际工作对象、必备技术栈和明确专业条件的组合，而非职位名称中是否出现 AI、数据或工程等单一词。"
+    },
+    {
+      "batch": 2,
+      "candidateCount": 36,
+      "decision": "rejected",
+      "reasonCode": "role-domain-not-aligned",
+      "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
+      "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。"
+    }
+  ],
+  "overrides": [
+    {
+      "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=fa21e8df40c7e17f&recruitType=1&positionType=0%2F1227%2F132803&columnId=1&brandCode=1&importPost=0",
+      "decision": "accepted",
+      "reasonCode": "broad-engineering-eligibility-needs-confirmation",
+      "reason": "官网将学历和专业范围写为理工科硕士及以上，职责是信息化咨询、调研和技术架构规划；可作为交叉工科背景的具体岗位保留，但投递前仍需向单位确认专业认定。",
+      "semanticBasis": "判断来自官网列出的“理工科类相关专业、硕士研究生及以上”以及以咨询、需求调研和技术规划为主的职责；没有把它表述为已确认符合。",
+      "matchLevel": "需要确认",
+      "priority": 70,
+      "matchReason": "官方专业口径覆盖理工科硕士，岗位工作以信息化咨询和技术规划为主；生物医学工程是否被单位具体认定需确认。",
+      "tags": ["理工科硕士", "信息化咨询", "专业待确认"]
+    },
+    {
+      "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=e316d7964c952a01&recruitType=1&positionType=0%2F1227%2F109100%2F109203%2F109207&columnId=1&brandCode=1&importPost=",
+      "decision": "accepted",
+      "reasonCode": "health-digital-cross-domain-needs-confirmation",
+      "reason": "岗位来自中电信翼康科技，官方集团资料确认该单位服务医疗卫生健康数字化平台；该岗位开展垂直领域大模型研发。职位专业要求偏人工智能和计算机，故保留为需要确认而非确认符合。",
+      "semanticBasis": "综合岗位官网详情中的垂直领域模型研发职责与中国电信集团官网对中电信翼康医疗卫生健康数字化业务的说明判断；没有因“AI算法”标题本身直接收录。",
+      "matchLevel": "需要确认",
+      "priority": 78,
+      "matchReason": "单位业务明确面向医疗卫生健康数字化，岗位负责垂直领域大模型研发；官方专业要求未直接列出生物医学工程，投递前需确认。",
+      "tags": ["医疗健康数字化", "人工智能", "专业待确认"]
+    }
+  ]
+}

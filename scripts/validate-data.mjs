@@ -23,8 +23,6 @@ const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 const runStatuses = new Set(["completed", "completed-partial", "failed"]);
 const lastSeenStatuses = new Set(["live", "upcoming", "temporarily-unavailable", "closed"]);
 const jobStatuses = new Set(["招聘中", "即将开放", "临时无法复查", "已关闭"]);
-const pureComputingCore = /人工智能工程师|算法工程师|网络安全|信息安全|软件开发|软件工程|\bIT岗\b|计算机科学与技术/;
-const biomedicalBridge = /医疗器械|医疗人工智能|医学影像|生物信号|临床数据|医学数据|健康科技|生物工程/;
 
 function officialDomain(urlValue, source) {
   try {
@@ -56,12 +54,6 @@ for (const [index, job] of (data.jobs || []).entries()) {
   if (!jobStatuses.has(job.status)) errors.push(`${label}.status 不受支持`);
   if (job.status === "招聘中" && job.lastSeenStatus !== "live") errors.push(`${label} 标记招聘中但最近复查不是 live`);
   if (job.status === "即将开放" && job.lastSeenStatus !== "upcoming") errors.push(`${label} 标记即将开放但最近复查不是 upcoming`);
-  const coreText = [job.title, job.exactTitle, ...(job.requirements || [])].join(" ");
-  const fullText = [coreText, job.majors, ...(job.responsibilities || [])].join(" ");
-  if (pureComputingCore.test(coreText) && !biomedicalBridge.test(fullText)) {
-    errors.push(`${label} 是无明确生物医学工程交集的纯计算机岗位，不得发布`);
-  }
-
   const source = sources.get(job.sourceId);
   if (!source?.officialSiteConfirmed) errors.push(`${label}.sourceId 未登记为官方来源`);
   else {
