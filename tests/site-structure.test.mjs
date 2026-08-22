@@ -80,16 +80,17 @@ test("failed sources have explicit recovery routes and processing recipes", asyn
   assert.equal(plan.sourceOutcomeDefinitions["accessible-incomplete"].includes("入口可用"), true);
 });
 
-test("partial-run banner explains what remains", async () => {
+test("top bar shows only the update time while audit retains run details", async () => {
   const [opportunitiesRaw, app, audit] = await Promise.all([
     read("data/opportunities.json"), read("app.js"), read("audit.js"),
   ]);
   const opportunities = JSON.parse(opportunitiesRaw);
   assert.equal(opportunities.meta.lastIncompleteSourceCount, 9);
   assert.equal(opportunities.meta.lastDeferredCandidateCount, 1935);
-  assert.match(app, /上次未查完/);
+  assert.match(app, /最近更新：/);
+  assert.match(audit, /最近更新：/);
   assert.match(audit, /个来源未完成/);
-  assert.doesNotMatch(`${app}\n${audit}`, /部分网站未完成|部分网站没查完/);
+  assert.doesNotMatch(`${app}\n${audit}`, /上次未查完|候选待处理|部分网站未完成|部分网站没查完/);
 });
 
 test("removed template-like slogans do not return", async () => {

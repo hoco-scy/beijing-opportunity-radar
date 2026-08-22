@@ -181,12 +181,7 @@ function updateSummary() {
   const jobs = state.data.jobs;
   const meta = state.data.meta;
   const syncDate = get("#sync-date");
-  if (syncDate) {
-    const status = meta.lastRunStatus === "completed-partial"
-      ? `上次未查完：${meta.lastIncompleteSourceCount} 个来源 · ${meta.lastDeferredCandidateCount} 个候选待处理`
-      : "最近更新";
-    syncDate.innerHTML = `<i></i>${status} · ${formatDateTime(meta.lastVerifiedAt)}`;
-  }
+  if (syncDate) syncDate.innerHTML = `<i></i>最近更新：${formatDateTime(meta.lastVerifiedAt)}`;
   if (get("#stat-jobs")) get("#stat-jobs").textContent = jobs.length;
   if (get("#stat-beijing")) get("#stat-beijing").textContent = jobs.filter((job) => job.location.includes("北京")).length;
   if (get("#stat-tracks")) get("#stat-tracks").textContent = new Set(jobs.map((job) => job.track)).size;

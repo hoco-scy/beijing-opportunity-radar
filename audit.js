@@ -135,11 +135,7 @@ function renderRun(run) {
 
 function render() {
   const latest = auditState.data.runs[0];
-  const deferred = latest.screeningMetrics?.positionsDeferredByBudget || 0;
-  const status = latest.status === "completed-partial"
-    ? `上次未查完：${latest.metrics.officialSystemsFailed} 个来源 · ${deferred} 个候选待处理`
-    : "最近更新";
-  document.querySelector("#sync-date").innerHTML = `<i></i>${status} · ${formatDateTime(auditState.data.meta.lastRunAt)}`;
+  document.querySelector("#sync-date").innerHTML = `<i></i>最近更新：${formatDateTime(auditState.data.meta.lastRunAt)}`;
   document.querySelector("#latest-run").textContent = formatDateTime(latest.checkedAt);
   document.querySelector("#latest-reviewed").textContent = `${latest.metrics.reviewedItems} 项`;
   document.querySelector("#latest-published").textContent = `${latest.metrics.published} 项`;
