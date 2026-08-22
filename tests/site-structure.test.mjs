@@ -59,6 +59,20 @@ test("source cards expose overlapping coverage instead of claiming orthogonal ca
   assert.deepEqual(shared.coverage, ["公务员招录", "选调优培", "事业单位", "国有企业"]);
 });
 
+test("public pages do not render internal processing notes", async () => {
+  const [app, audit, sources, opportunitiesRaw] = await Promise.all([
+    read("app.js"), read("audit.js"), read("sources.js"), read("data/opportunities.json"),
+  ]);
+  const opportunities = JSON.parse(opportunitiesRaw);
+  const nationalMonitor = opportunities.monitors.find((monitor) => monitor.id === "national-civil-2027");
+  assert.equal(nationalMonitor.status, "等待公告");
+  assert.doesNotMatch(nationalMonitor.note, /报名系统|主入口|补充录用入口|下一轮/);
+  assert.match(app, /查看官网/);
+  assert.doesNotMatch(app, /statusEvidence/);
+  assert.doesNotMatch(audit, /source\.note|source\.attempts|review\.verificationNote|review\.fallback|renderScreeningMetrics/);
+  assert.doesNotMatch(sources, /source\.note|source\.attempts/);
+});
+
 test("national civil service monitor uses the two current official entries", async () => {
   const [registryRaw, opportunitiesRaw] = await Promise.all([
     read("data/source-registry.json"),
@@ -109,7 +123,7 @@ test("failed sources have explicit recovery routes and processing recipes", asyn
   assert.equal(plan.sourceOutcomeDefinitions["accessible-incomplete"].includes("入口可用"), true);
 });
 
-test("top bar shows only the update time while audit retains run details", async () => {
+test("top bar shows only the update time while audit uses user-facing update language", async () => {
   const [opportunitiesRaw, app, audit] = await Promise.all([
     read("data/opportunities.json"), read("app.js"), read("audit.js"),
   ]);
@@ -118,8 +132,8 @@ test("top bar shows only the update time while audit retains run details", async
   assert.equal(opportunities.meta.lastDeferredCandidateCount, 1935);
   assert.match(app, /最近更新：/);
   assert.match(audit, /最近更新：/);
-  assert.match(audit, /个来源未完成/);
-  assert.doesNotMatch(`${app}\n${audit}`, /上次未查完|候选待处理|部分网站未完成|部分网站没查完/);
+  assert.match(audit, /部分信息仍待确认/);
+  assert.doesNotMatch(`${app}\n${audit}`, /上次未查完|候选待处理|部分网站未完成|部分网站没查完|个来源未完成/);
 });
 
 test("removed template-like slogans do not return", async () => {

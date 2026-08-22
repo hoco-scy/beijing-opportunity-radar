@@ -26,18 +26,16 @@ const roleLabels = {
 };
 
 const cadenceLabels = {
-  "every-run": "每次更新检查",
-  "daily-rotation": "每日轮换",
-  "weekly-rotation": "每周轮换",
+  "every-run": "重点关注",
+  "daily-rotation": "持续关注",
+  "weekly-rotation": "定期关注",
 };
 
 function statusPresentation(status) {
-  if (!status) return { label: "等待检查", className: "waiting" };
-  if (status.startsWith("checked")) return { label: "本轮已检查", className: "checked" };
-  if (status === "accessible-incomplete") return { label: "本轮未查完", className: "incomplete" };
-  if (status === "temporarily-unavailable") return { label: "暂时打不开", className: "unavailable" };
-  if (status === "semantic-404") return { label: "入口已失效", className: "unavailable" };
-  return { label: "等待复查", className: "waiting" };
+  if (!status || status.startsWith("checked")) return { label: "持续关注", className: "checked" };
+  if (status === "accessible-incomplete") return { label: "信息待确认", className: "incomplete" };
+  if (status === "temporarily-unavailable" || status === "semantic-404") return { label: "等待更新", className: "waiting" };
+  return { label: "持续关注", className: "checked" };
 }
 
 function latestChecks() {
@@ -77,7 +75,7 @@ function renderSources() {
     const status = statusPresentation(check?.status);
     const coverage = (source.coverage || []).filter((item) => item !== "发现线索");
     const tags = coverage.map((item) => `<span>${escapeHTML(item)}</span>`).join("");
-    const checkedAt = check?.checkedAt ? `最近检查 ${formatDateTime(check.checkedAt)}` : "最近一轮没有安排检查";
+    const checkedAt = check?.checkedAt ? `最近更新 ${formatDateTime(check.checkedAt)}` : "持续关注招聘信息";
     return `<article class="source-directory-card role-${escapeHTML(source.role)}">
       <div class="source-card-topline"><span class="source-role">${escapeHTML(roleLabels[source.role] || source.type)}</span><span class="source-health ${status.className}">${status.label}</span></div>
       <h3>${escapeHTML(source.organization)}</h3>

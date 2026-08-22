@@ -23,7 +23,7 @@ const formatDateTime = (value) => value ? new Intl.DateTimeFormat("zh-CN", {
 }).format(new Date(value)).replaceAll("/", ".") : "未记录";
 
 const decisionLabels = { accepted: "已收录", rejected: "不符合", deferred: "还要确认" };
-const runStatusLabels = { completed: "本次已完成", "completed-partial": "有未完成项", failed: "本次没有完成" };
+const runStatusLabels = { completed: "本次更新", "completed-partial": "部分信息待确认", failed: "暂无更新" };
 const scopeLabels = { announcement: "整份公告", position: "具体岗位", "official-system": "招聘官网" };
 const sourceLabels = {
   "national-civil": "国家公务员局",
@@ -45,22 +45,45 @@ const sourceLabels = {
   "chinapost-recruitment": "中国邮政招聘",
 };
 const sourceStatusLabels = {
-  "checked-deferred": "看过了，还要继续确认",
-  "checked-full-pagination": "已看完筛选结果",
-  "checked-native-filtered": "已按官网筛选完成",
+  "checked-deferred": "具体岗位尚待公布",
+  "checked-full-pagination": "已核对相关岗位",
+  "checked-native-filtered": "已关注最新招聘信息",
   "checked-no-active-campaign": "当前没有有效招聘活动",
   "checked-no-new-position-table": "暂无新的职位表",
-  "checked-no-publishable-change": "没有需要加入的新岗位",
-  "checked-roster-current": "企业名单没有变化",
-  "accessible-incomplete": "页面能打开，但这次没有处理完",
-  "temporarily-unavailable": "主入口和备用入口都没能访问",
-  "semantic-404": "页面已经下线或实际是错误页",
-  "failed": "本次检查失败",
+  "checked-no-publishable-change": "暂无可加入岗位页的新岗位",
+  "checked-roster-current": "暂无影响岗位清单的新信息",
+  "accessible-incomplete": "具体岗位信息待确认",
+  "temporarily-unavailable": "暂未取得可确认的最新信息",
+  "semantic-404": "暂未取得可确认的最新信息",
+  "failed": "暂未取得可确认的最新信息",
 };
 
 function filteredReviews(run) {
   if (auditState.decision === "all") return run.reviews;
   return run.reviews.filter((review) => review.decision === auditState.decision);
+}
+
+function publicReviewTitle(title = "") {
+  return title
+    .replace(/\s*本轮(?:复查|跟踪)$/, "")
+    .replace(/全单位岗位跟踪$/, "")
+    .replace(/全量岗位批量复核待办$/, "招聘信息")
+    .replace(/公告复查$/, "公告");
+}
+
+function publicField(value = "") {
+  return /本轮|入口|全量|筛选|遍历|延后|未能完整|未提供可稳定核验|官方系统|系统列出/.test(value) ? "官方未注明" : value;
+}
+
+function publicReviewReason(review) {
+  const reasons = {
+    "enterprise-position-verified": "已在招聘单位官网找到具体岗位，可打开官网查看完整要求和投递方式。",
+    "candidate-category-mismatch": "招聘对象与公告要求不一致，因此没有放入岗位页。",
+    "full-pagination-incomplete": "目前还不能形成可单独确认的具体岗位，暂时不放入岗位页。",
+    "position-fields-incomplete": "关键岗位信息尚未公布完整，暂时不放入岗位页。",
+    "structured-batch-review-pending": "公开信息仍待补充确认，暂时不放入岗位页。",
+  };
+  return reasons[review.reasonCode] || "当前公开信息不足以形成可确认的具体岗位。";
 }
 
 function renderReview(review) {
@@ -69,32 +92,19 @@ function renderReview(review) {
       <span class="decision-badge">${escapeHTML(decisionLabels[review.decision] || review.decision)}</span>
       <span>${escapeHTML(review.track)} · ${escapeHTML(scopeLabels[review.scope] || "招聘信息")}</span>
     </div>
-    <h4>${escapeHTML(review.title)}</h4>
+    <h4>${escapeHTML(publicReviewTitle(review.title))}</h4>
     <p class="review-org">${escapeHTML(review.organization)}</p>
-    <div class="review-facts"><span>${escapeHTML(review.headcount)}</span><span>截止：${escapeHTML(review.deadline)}</span><span>发布：${escapeHTML(review.officialPublishedAt)}</span></div>
-    <div class="review-reason"><strong>为什么</strong><p>${escapeHTML(review.reason)}</p></div>
-    <p class="review-note">${escapeHTML(review.verificationNote)}</p>
-    <div class="review-fallback"><strong>想自己再看看？</strong><p>${escapeHTML(review.fallback)}</p><a href="${safeUrl(review.officialUrl)}" target="_blank" rel="noreferrer">打开原始页面 ↗</a></div>
+    <div class="review-facts"><span>${escapeHTML(publicField(review.headcount))}</span><span>截止：${escapeHTML(publicField(review.deadline))}</span><span>发布：${escapeHTML(review.officialPublishedAt)}</span></div>
+    <div class="review-reason"><strong>处理结果</strong><p>${escapeHTML(publicReviewReason(review))}</p></div>
+    <div class="review-fallback"><a href="${safeUrl(review.officialUrl)}" target="_blank" rel="noreferrer">查看官网 ↗</a></div>
   </article>`;
 }
 
-function renderScreeningMetrics(run) {
-  const metrics = run.screeningMetrics;
-  if (!metrics) return "";
-  const nativeFilterStrategy = Number(run.screeningStrategyVersion || 1) >= 2;
-  const items = nativeFilterStrategy ? [
-    ["官网显示的岗位", metrics.portalResultsReported], ["使用官网筛选", metrics.nativeFilterQueries],
-    ["筛选后剩余", metrics.nativeFilteredResults], ["去重后需要看", metrics.deduplicatedCandidates],
-    ["批量检查", metrics.positionsBatchReviewed], ["打开详情核对", metrics.positionsOfficiallyVerified],
-    ["复杂问题", metrics.positionsEscalated], ["下次继续", metrics.positionsDeferredByBudget],
-  ] : [
-    ["旧方法发现", metrics.positionsDiscovered], ["旧方法自动筛选", metrics.positionsMachineScreened],
-    ["批量检查", metrics.positionsBatchReviewed], ["打开详情核对", metrics.positionsOfficiallyVerified],
-    ["下次继续", metrics.positionsDeferredByBudget],
-  ];
-  const rows = items.map(([label, value]) => `<li><strong>${escapeHTML(label)}</strong><span>${escapeHTML(value)}</span></li>`).join("");
-  const title = nativeFilterStrategy ? "这次是怎么缩小范围的" : "旧方法处理了多少岗位";
-  return `<details class="source-checks"><summary>${title} <span>＋</span></summary><ul>${rows}</ul></details>`;
+function publicRunSummary(run) {
+  const changed = run.metrics.published + run.metrics.updated + run.metrics.closed;
+  return changed
+    ? "岗位页已经同步本次新增或变化的具体岗位；其他公告会在岗位信息明确后继续补充。"
+    : "本次没有新增的具体岗位；已发布的公告会继续在公告页显示。";
 }
 
 function renderRun(run) {
@@ -102,13 +112,12 @@ function renderRun(run) {
   const metrics = run.metrics;
   const changed = metrics.published + metrics.updated + metrics.closed;
   let outcome = changed ? `岗位页有 ${changed} 项变化` : "岗位页没有变化";
-  if (run.status === "completed-partial") outcome = `${metrics.officialSystemsFailed} 个来源未完成 · ${outcome}`;
-  if (run.status === "failed") outcome = "这次更新没有完成";
+  if (run.status === "completed-partial") outcome = `${outcome} · 部分信息仍待确认`;
+  if (run.status === "failed") outcome = "本次暂无岗位更新";
 
   const sourceChecks = run.sourceChecks.map((source) => {
-    const legacyIncomplete = Number(run.policyVersion || 0) < 4 && source.status === "temporarily-unavailable";
-    const statusLabel = legacyIncomplete ? "本轮没有完整读取" : (sourceStatusLabels[source.status] || source.status);
-    return `<li><strong>${escapeHTML(sourceLabels[source.sourceId] || source.sourceId)}</strong><span><b>${escapeHTML(statusLabel)}</b>${source.attempts ? ` · 试了 ${source.attempts} 次` : ""}<br />${escapeHTML(source.note)}</span></li>`;
+    const statusLabel = sourceStatusLabels[source.status] || "持续关注";
+    return `<li><strong>${escapeHTML(sourceLabels[source.sourceId] || source.sourceId)}</strong><span><b>${escapeHTML(statusLabel)}</b></span></li>`;
   }).join("");
   const reviewContent = reviews.length
     ? reviews.map(renderReview).join("")
@@ -116,19 +125,18 @@ function renderRun(run) {
 
   return `<article class="audit-run">
     <header class="run-header">
-      <div><span class="run-time">${formatDateTime(run.checkedAt)}</span><h3>${escapeHTML(outcome)}</h3><p>${escapeHTML(run.summary)}</p></div>
+      <div><span class="run-time">${formatDateTime(run.checkedAt)}</span><h3>${escapeHTML(outcome)}</h3><p>${publicRunSummary(run)}</p></div>
       <span class="run-status ${escapeHTML(run.status)}">${escapeHTML(runStatusLabels[run.status] || run.status)}</span>
     </header>
     <div class="run-metrics">
-      <div><strong>${metrics.officialSystemsSucceeded}/${metrics.officialSystemsChecked}</strong><span>看过的官网</span></div>
-      <div><strong>${metrics.newLeads}</strong><span>新发现</span></div>
-      <div><strong>${metrics.reviewedItems}</strong><span>逐条看过</span></div>
-      <div><strong>${metrics.accepted}</strong><span>已收录</span></div>
+      <div><strong>${metrics.published}</strong><span>新增岗位</span></div>
+      <div><strong>${metrics.updated}</strong><span>更新岗位</span></div>
+      <div><strong>${metrics.accepted}</strong><span>可查看</span></div>
       <div><strong>${metrics.rejected}</strong><span>不符合</span></div>
-      <div><strong>${metrics.deferred}</strong><span>还要确认</span></div>
+      <div><strong>${metrics.deferred}</strong><span>待确认</span></div>
+      <div><strong>${metrics.closed}</strong><span>已结束</span></div>
     </div>
-    ${renderScreeningMetrics(run)}
-    <details class="source-checks"><summary>这次看了哪些网站 <span>＋</span></summary><ul>${sourceChecks}</ul></details>
+    <details class="source-checks"><summary>关注的信息源 <span>＋</span></summary><ul>${sourceChecks}</ul></details>
     <div class="review-grid">${reviewContent}</div>
   </article>`;
 }

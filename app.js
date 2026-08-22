@@ -125,7 +125,7 @@ function renderCards() {
           <div class="deadline-block"><span>报名截止</span><strong>${escapeHTML(job.deadline)}</strong></div>
           <div class="source-actions"><a href="${safeUrl(job.officialAnnouncementUrl)}" target="_blank" rel="noreferrer">查看招聘说明 ↗</a><a class="apply-link" href="${safeUrl(job.officialApplyUrl)}" target="_blank" rel="noreferrer">去官网找 ${escapeHTML(job.jobCode)} ↗</a></div>
         </div>
-        <p class="source-note">${escapeHTML(job.applyInstruction)}<br />最近确认：${formatDateTime(job.lastSeenAt)}。${escapeHTML(job.statusEvidence)}</p>
+        <p class="source-note">${escapeHTML(job.applyInstruction)}<br />信息更新于 ${formatDateTime(job.lastSeenAt)}，报名和投递前请以官网为准。</p>
       </div>
     </article>`;
   }).join("");
@@ -144,12 +144,12 @@ function renderMonitors() {
   if (!grid) return;
   grid.innerHTML = state.data.monitors.map((monitor) => {
     const alternate = monitor.alternateOfficialUrl
-      ? `<a href="${safeUrl(monitor.alternateOfficialUrl)}" target="_blank" rel="noreferrer">${escapeHTML(monitor.alternateOfficialLabel || "备用入口")} ↗</a>`
+      ? `<a href="${safeUrl(monitor.alternateOfficialUrl)}" target="_blank" rel="noreferrer">${escapeHTML(monitor.alternateOfficialLabel || "相关信息")} ↗</a>`
       : "";
     return `<article class="monitor-card">
       <div><span class="monitor-track">${escapeHTML(monitor.track)}</span><span class="monitor-status">${escapeHTML(monitor.status)}</span></div>
       <h3>${escapeHTML(monitor.title)}</h3><p>${escapeHTML(monitor.note)}</p>
-      <footer><span>最近查看 ${formatDateTime(monitor.checkedAt)}</span><span class="monitor-actions"><a href="${safeUrl(monitor.officialUrl)}" target="_blank" rel="noreferrer">主入口 ↗</a>${alternate}</span></footer>
+      <footer><span>最近更新 ${formatDateTime(monitor.checkedAt)}</span><span class="monitor-actions"><a href="${safeUrl(monitor.officialUrl)}" target="_blank" rel="noreferrer">查看官网 ↗</a>${alternate}</span></footer>
     </article>`;
   }).join("");
 }

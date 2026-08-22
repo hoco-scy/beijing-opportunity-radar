@@ -1845,11 +1845,11 @@
       "id": "national-civil-2027",
       "track": "考公",
       "title": "中央机关及其直属机构 2027 年度考试录用公务员",
-      "status": "报名入口已更新",
-      "note": "国家公务员局已改用新的报名系统，主入口和补充录用入口均已确认可以访问。下一轮将从新地址继续检查 2027 年度公告和职位表。",
+      "status": "等待公告",
+      "note": "2027 年度国考公告和职位表暂未发布。相关招录信息请以国家公务员局官网公布内容为准。",
       "officialUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
       "alternateOfficialUrl": "http://subb.scs.gov.cn/pp/gkweb/core/web/ui/business/home/lxhome.html",
-      "alternateOfficialLabel": "补充录用入口",
+      "alternateOfficialLabel": "补充录用信息",
       "checkedAt": "2026-08-22T14:56:00+08:00"
     },
     {
@@ -1857,7 +1857,7 @@
       "track": "考公",
       "title": "北京市各级机关 2027 年度考试录用公务员",
       "status": "职位表未发布",
-      "note": "官方公务员招考栏目最新仍为 2026 年度补充录用信息，未见 2027 年度公告或完整职位表。",
+      "note": "2027 年度公告和职位表暂未发布。公布后会在这里提示报名时间和具体岗位。",
       "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
       "checkedAt": "2026-08-22T12:30:00+08:00"
     },
@@ -1866,7 +1866,7 @@
       "track": "选调优培",
       "title": "北京市 2027 年度定向选调",
       "status": "职位表未发布",
-      "note": "官方公务员招考栏目未见 2027 年度定向选调公告或职位表，未沿用往年资格口径。",
+      "note": "2027 年度定向选调公告和职位表暂未发布。公布后会按当年条件更新具体岗位。",
       "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
       "checkedAt": "2026-08-22T12:30:00+08:00"
     },
@@ -1875,7 +1875,7 @@
       "track": "选调优培",
       "title": "北京市 2027 年度“优培计划”",
       "status": "岗位表未发布",
-      "note": "北京市人事考试重要通知未见 2027 年度优培公告或岗位表，未沿用往年资格口径。",
+      "note": "2027 年度优培计划公告和岗位表暂未发布。公布后会按当年条件更新具体岗位。",
       "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/",
       "checkedAt": "2026-08-22T12:30:00+08:00"
     },
@@ -1884,7 +1884,7 @@
       "track": "事业单位",
       "title": "北京市事业单位公开招聘",
       "status": "全年分批发布",
-      "note": "官方列表最新仍为 8 月 21 日两条公告；本轮复查未发现较上一轮新增公告，两条公告均维持公告级不通过。",
+      "note": "事业单位招聘全年分批发布。目前没有新增的具体岗位进入岗位列表。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/",
       "checkedAt": "2026-08-22T12:30:00+08:00"
     }
