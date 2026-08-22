@@ -24,7 +24,7 @@
   },
   "geographyCadence": {
     "beijing": "every-run",
-    "otherRegions": "weekly-rotation",
+    "otherRegions": "every-run",
     "otherRegionsNeverImplicitlyRejected": true
   },
   "stages": [

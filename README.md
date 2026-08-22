@@ -28,3 +28,7 @@ node --test tests/site-structure.test.mjs
 ```
 
 GitHub Pages 只有在全部门禁通过后才会部署。
+
+## 云端同步文档
+
+[`AUTOMATION.md`](AUTOMATION.md) 是每次同步都要重新读取的运行手册，定义来源检查、核验、写入和发布的完成条件。运行时间、通知和云端任务提示词与它分离，统一维护在 [`automation/task-prompts.md`](automation/task-prompts.md)；其中不保存任何私有档案字段。

@@ -4,7 +4,9 @@ const root = new URL("../", import.meta.url);
 const opportunities = JSON.parse(await readFile(new URL("data/opportunities.json", root), "utf8"));
 const log = JSON.parse(await readFile(new URL("data/review-log.json", root), "utf8"));
 const registry = JSON.parse(await readFile(new URL("data/source-registry.json", root), "utf8"));
+const sourcePlan = JSON.parse(await readFile(new URL("data/source-plan.json", root), "utf8"));
 const sources = new Map(registry.sources.map((source) => [source.id, source]));
+const everyRunOfficial = new Set(sourcePlan.coverage?.everyRunOfficial || []);
 const errors = [];
 const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 const decisions = new Set(["accepted", "rejected", "deferred"]);
@@ -81,6 +83,12 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
       const failed = ["failed", "temporarily-unavailable", "semantic-404"].includes(check.status);
       if (failed && ["critical", "active"].includes(source?.tier) && check.attempts < 3) errors.push(`${checkLabel} 关键来源失败前必须至少尝试 3 次`);
     }
+  }
+  if (Number(run.policyVersion || 0) >= 5) {
+    for (const sourceId of everyRunOfficial) {
+      if (!checkedSourceIds.has(sourceId)) errors.push(`${label}.sourceChecks 缺少每轮全量官方来源：${sourceId}`);
+    }
+    if (checkedSourceIds.size !== everyRunOfficial.size) errors.push(`${label}.sourceChecks 必须恰好覆盖 everyRunOfficial`);
   }
   if (Number(run.policyVersion || 0) >= 4) {
     const incompleteSources = (run.sourceChecks || []).filter((check) => incompleteSourceStatuses.has(check.status)).length;

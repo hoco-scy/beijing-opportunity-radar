@@ -15,8 +15,8 @@ function validSourceUrl(value, source) {
   } catch { return false; }
 }
 
-if (registry.version !== 3) errors.push("source-registry.version 必须为 3");
-if (plan.version !== 3) errors.push("source-plan.version 必须为 3");
+if (registry.version !== 4) errors.push("source-registry.version 必须为 4");
+if (plan.version !== 4) errors.push("source-plan.version 必须为 4");
 if (plan.timezone !== "Asia/Shanghai") errors.push("source-plan.timezone 必须为 Asia/Shanghai");
 
 for (const [index, source] of (registry.sources || []).entries()) {
@@ -47,14 +47,25 @@ if (!Array.isArray(plan.fallbackOrder) || plan.fallbackOrder.length < 4) errors.
 
 const listed = [
   ...(plan.coverage?.criticalEveryRun || []),
-  ...(plan.coverage?.morningRotation || []),
-  ...(plan.coverage?.noonRotation || []),
+  ...(plan.coverage?.everyRunOfficial || []),
+  ...(plan.coverage?.everyRunDiscovery || []),
 ];
 for (const id of listed) if (!sourceIds.has(id)) errors.push(`source-plan 引用了未登记来源：${id}`);
 for (const id of (plan.coverage?.criticalEveryRun || [])) {
   const source = registry.sources.find((item) => item.id === id);
   if (source?.tier !== "critical" || source?.cadence !== "every-run") errors.push(`关键来源分级或频次错误：${id}`);
 }
+const everyRunOfficial = new Set(plan.coverage?.everyRunOfficial || []);
+const everyRunDiscovery = new Set(plan.coverage?.everyRunDiscovery || []);
+for (const source of registry.sources || []) {
+  if (source.officialSiteConfirmed) {
+    if (!everyRunOfficial.has(source.id)) errors.push(`每轮全量官方来源缺失：${source.id}`);
+    if (source.cadence !== "every-run") errors.push(`全量官方来源频次必须为 every-run：${source.id}`);
+  }
+  if (source.role === "discovery" && !everyRunDiscovery.has(source.id)) errors.push(`每轮全量发现来源缺失：${source.id}`);
+}
+if (everyRunOfficial.size !== (registry.sources || []).filter((source) => source.officialSiteConfirmed).length) errors.push("everyRunOfficial 必须恰好覆盖全部已确认官方来源");
+if (everyRunDiscovery.size !== (registry.sources || []).filter((source) => source.role === "discovery").length) errors.push("everyRunDiscovery 必须恰好覆盖全部发现来源");
 
 if (!plan.announcementLifecycle?.beforeApplicationOpens?.includes("不得")) errors.push("必须明确预公告不得因尚未开放报名而排除");
 if (!plan.announcementLifecycle?.withPositionTable?.includes("具体岗位")) errors.push("预公告附职位表时必须拆到具体岗位");
@@ -66,4 +77,4 @@ if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));
   process.exit(1);
 }
-console.log(`来源计划门禁通过：${registry.sources.length} 个来源，${plan.coverage.criticalEveryRun.length} 个每轮必查官方入口。`);
+console.log(`来源计划门禁通过：${registry.sources.length} 个来源，每轮全量检查 ${plan.coverage.everyRunOfficial.length} 个官方来源和 ${plan.coverage.everyRunDiscovery.length} 个发现来源。`);

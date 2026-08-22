@@ -59,6 +59,24 @@ test("source cards expose overlapping coverage instead of claiming orthogonal ca
   assert.deepEqual(shared.coverage, ["公务员招录", "选调优培", "事业单位", "国有企业"]);
 });
 
+test("each scheduled run covers every registered source instead of rotating source batches", async () => {
+  const [registryRaw, planRaw] = await Promise.all([
+    read("data/source-registry.json"),
+    read("data/source-plan.json"),
+  ]);
+  const registry = JSON.parse(registryRaw);
+  const plan = JSON.parse(planRaw);
+  const officialIds = registry.sources.filter((source) => source.officialSiteConfirmed).map((source) => source.id).sort();
+  const discoveryIds = registry.sources.filter((source) => source.role === "discovery").map((source) => source.id).sort();
+
+  assert.equal(plan.version, 4);
+  assert.deepEqual([...plan.coverage.everyRunOfficial].sort(), officialIds);
+  assert.deepEqual([...plan.coverage.everyRunDiscovery].sort(), discoveryIds);
+  assert.ok(registry.sources.every((source) => source.cadence === "every-run"));
+  assert.equal(plan.coverage.morningRotation, undefined);
+  assert.equal(plan.coverage.noonRotation, undefined);
+});
+
 test("public pages do not render internal processing notes", async () => {
   const [app, audit, sources, opportunitiesRaw] = await Promise.all([
     read("app.js"), read("audit.js"), read("sources.js"), read("data/opportunities.json"),
@@ -109,7 +127,7 @@ test("failed sources have explicit recovery routes and processing recipes", asyn
     "spacechina-careers", "chinapost-recruitment",
   ];
 
-  assert.equal(registry.version, 3);
+  assert.equal(registry.version, 4);
   assert.equal(recipes.version, 2);
   for (const id of repaired) {
     assert.ok(source(id)?.accessMode, `${id} 缺少访问方式`);

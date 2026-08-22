@@ -27,8 +27,6 @@ const roleLabels = {
 
 const cadenceLabels = {
   "every-run": "重点关注",
-  "daily-rotation": "持续关注",
-  "weekly-rotation": "定期关注",
 };
 
 function statusPresentation(status) {
