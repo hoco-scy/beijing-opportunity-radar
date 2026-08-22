@@ -19,6 +19,7 @@ test("every page exposes the same four-page navigation", async () => {
       assert.match(html, new RegExp(`<a[^>]+href="${href}"[^>]*>${label}</a>`), `${page} 缺少 ${label} 入口`);
     }
     assert.equal((html.match(/class="nav-current"/g) || []).length, 1, `${page} 应只有一个当前页标记`);
+    assert.match(html, /href="https:\/\/hoco-scy\.github\.io\/city-opportunity-radar\/"[^>]*>切换城市<\/a>/, `${page} 缺少城市切换入口`);
   }
 });
 
