@@ -22,6 +22,20 @@ test("every page exposes the same four-page navigation", async () => {
   }
 });
 
+test("pages version static assets so a refresh cannot reuse the previous layout", async () => {
+  const scripts = {
+    "index.html": "app.js",
+    "monitors.html": "app.js",
+    "sources.html": "sources.js",
+    "audit.html": "audit.js",
+  };
+  for (const [page, script] of Object.entries(scripts)) {
+    const html = await read(page);
+    assert.match(html, /href="styles\.css\?v=\d{8}-\d{4}"/, `${page} 缺少样式版本号`);
+    assert.match(html, new RegExp(`src="${script.replace(".", "\\.")}\\?v=\\d{8}-\\d{4}"`), `${page} 缺少脚本版本号`);
+  }
+});
+
 test("favorites stay in the job list and the former page redirects", async () => {
   const [index, favorites, app] = await Promise.all([read("index.html"), read("favorites.html"), read("app.js")]);
   assert.match(index, /data-saved-filter/);
