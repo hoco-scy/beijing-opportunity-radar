@@ -201,12 +201,13 @@ test("BUAA job board is a high-priority discovery source, not public publication
 });
 
 test("top bar shows only the update time while audit uses user-facing update language", async () => {
-  const [opportunitiesRaw, app, audit] = await Promise.all([
-    read("data/opportunities.json"), read("app.js"), read("audit.js"),
+  const [opportunitiesRaw, reviewLogRaw, app, audit] = await Promise.all([
+    read("data/opportunities.json"), read("data/review-log.json"), read("app.js"), read("audit.js"),
   ]);
   const opportunities = JSON.parse(opportunitiesRaw);
-  assert.equal(opportunities.meta.lastIncompleteSourceCount, 16);
-  assert.equal(opportunities.meta.lastDeferredCandidateCount, 1935);
+  const latestRun = JSON.parse(reviewLogRaw).runs[0];
+  assert.equal(opportunities.meta.lastIncompleteSourceCount, latestRun.metrics.officialSystemsFailed);
+  assert.equal(opportunities.meta.lastDeferredCandidateCount, latestRun.screeningMetrics.positionsDeferredByBudget);
   assert.match(app, /最近更新：/);
   assert.match(audit, /最近更新：/);
   assert.match(audit, /部分信息仍待确认/);

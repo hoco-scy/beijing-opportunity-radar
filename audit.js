@@ -78,6 +78,11 @@ function publicField(value = "") {
 function publicReviewReason(review) {
   const reasons = {
     "enterprise-position-verified": "已在招聘单位官网找到具体岗位，可打开官网查看完整要求和投递方式。",
+    "core-profession-mismatch": "岗位的核心专业或能力要求与当前关注方向没有明确交集，因此没有加入岗位页。",
+    "explicit-profession-mismatch": "岗位的专业要求指向其他方向，因此没有加入岗位页。",
+    "sales-or-field-risk": "岗位以客户拓展、业绩推动或高频现场工作为核心，因此没有加入岗位页。",
+    "political-status-requirement": "岗位有明确的政治面貌要求或优先要求，且专业方向不匹配，因此没有加入岗位页。",
+    "major-boundary-unconfirmed": "岗位涉及交叉方向，但官网没有写清专业边界，暂时不作为可直接投递岗位收录。",
     "candidate-category-mismatch": "招聘对象与公告要求不一致，因此没有放入岗位页。",
     "full-pagination-incomplete": "目前还不能形成可单独确认的具体岗位，暂时不放入岗位页。",
     "position-fields-incomplete": "关键岗位信息尚未公布完整，暂时不放入岗位页。",

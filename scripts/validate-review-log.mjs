@@ -110,7 +110,8 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
       }
     }
   }
-  if (Number(run.policyVersion || 0) >= 5) {
+  const isTargetedRemediation = run.scope === "targeted-remediation";
+  if (Number(run.policyVersion || 0) >= 5 && !isTargetedRemediation) {
     for (const sourceId of everyRunOfficial) {
       if (!checkedSourceIds.has(sourceId)) errors.push(`${label}.sourceChecks 缺少每轮全量官方来源：${sourceId}`);
     }

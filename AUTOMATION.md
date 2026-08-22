@@ -116,6 +116,8 @@
 
 1. 更新 `data/opportunities.json`、`data/review-log.json`，必要时更新来源登记、来源计划或筛选配方。全量规则下的新运行使用 `policyVersion: 6` 与 `screeningStrategyVersion: 2`；数据必须使用带 `+08:00` 的分钟级时间。
 2. 无论是否出现新岗位，都追加本轮匿名审核记录，并更新 `meta.lastVerifiedAt`、`meta.lastRunAt` 和公告监测项 `checkedAt`。
+
+手动清理单个官方来源的存量待办时，可另建 `scope: "targeted-remediation"` 的定向补录记录：仍用 `policyVersion: 6` 和完整官方访问证据，但只记录实际处理的来源，不能冒充一次全量扫描。
 3. 运行以下全部门禁：
 
    ```bash

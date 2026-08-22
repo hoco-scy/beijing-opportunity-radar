@@ -7,9 +7,18 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
       "accessMode": "browser-spa",
-      "nativeFilters": ["当年考试项目", "公告", "职位表", "报考指南"],
+      "nativeFilters": [
+        "当年考试项目",
+        "公告",
+        "职位表",
+        "报考指南"
+      ],
       "queryPlan": {
-        "everyRun": ["先打开国考主入口，再打开补充录用入口", "等待当前项目或空状态加载", "公告或职位表发布后下载官方附件并按公考硬条件组合筛选"],
+        "everyRun": [
+          "先打开国考主入口，再打开补充录用入口",
+          "等待当前项目或空状态加载",
+          "公告或职位表发布后下载官方附件并按公考硬条件组合筛选"
+        ],
         "completionRule": "两个登记入口中任一页面能正常呈现而职位表尚未发布时，记录 checked-no-new-position-table；不得因另一入口网关波动写 temporarily-unavailable"
       },
       "availabilityRule": "主入口或补充录用入口任一返回非错误官方页面，即证明入口可用；未完成动态内容只可记 accessible-incomplete。",
@@ -22,9 +31,17 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoList.html?type=1",
       "accessMode": "public-filterable-list",
-      "nativeFilters": ["地区", "职位或公司关键词", "招聘信息类别"],
+      "nativeFilters": [
+        "地区",
+        "职位或公司关键词",
+        "招聘信息类别"
+      ],
       "queryPlan": {
-        "everyRun": ["优先查看北京地区，再覆盖全国的当期公告", "用 2027 校招、选调、优培、事业单位、央企国企、生物医学工程、医疗器械等查询词取并集", "打开每条线索的原始发布页并记录其指向的单位或政府官方入口"],
+        "everyRun": [
+          "优先查看北京地区，再覆盖全国的当期公告",
+          "用 2027 校招、选调、优培、事业单位、央企国企、生物医学工程、医疗器械等查询词取并集",
+          "打开每条线索的原始发布页并记录其指向的单位或政府官方入口"
+        ],
         "completionRule": "仅将可回溯到政府或单位官方页面的线索计为可核验候选；北航就业信息网自身不作为正文岗位或公告的发布证据"
       },
       "availabilityRule": "公开列表或任一结构化筛选结果可加载时，记录本轮已检查；页面不可用仅影响发现覆盖，不能替代官方来源状态。",
@@ -39,7 +56,11 @@
       "accessMode": "desktop-with-mobile-fallback",
       "nativeFilters": [],
       "queryPlan": {
-        "everyRun": ["读取央企名录并与来源登记的中央企业基线比较", "桌面页无法建立连接时改用登记的 WAP 同文路径", "仅在发现可核验官方招聘入口时扩充来源登记"],
+        "everyRun": [
+          "读取央企名录并与来源登记的中央企业基线比较",
+          "桌面页无法建立连接时改用登记的 WAP 同文路径",
+          "仅在发现可核验官方招聘入口时扩充来源登记"
+        ],
         "completionRule": "WAP 页面能读取名录时即完成名录检查；不得因桌面 HTTPS 超时把整个名录来源记为 temporarily-unavailable"
       },
       "availabilityRule": "登记的 WAP 同文路径返回非错误官方页面时，来源状态必须是 checked-roster-current 或 accessible-incomplete。",
@@ -52,18 +73,43 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true",
       "accessMode": "browser-spa",
-      "nativeFilters": ["招聘项目：科技类/综合类", "集团下属单位", "工作地点：省/市/区县", "发布时间", "职位关键词"],
+      "nativeFilters": [
+        "招聘项目：科技类/综合类",
+        "集团下属单位",
+        "工作地点：省/市/区县",
+        "发布时间",
+        "职位关键词"
+      ],
       "queryPlan": {
-        "everyRun": ["科技类岗位 + 北京市", "综合类岗位 + 北京市"],
+        "everyRun": [
+          "科技类岗位 + 北京市",
+          "综合类岗位 + 北京市"
+        ],
         "keywordRule": "北京安全筛选后的并集不超过 100 时直接复核全部结果，不再使用关键词缩小；超过 150 时才运行广义关键词族并取并集",
         "otherRegions": "按周轮换地区并使用广义关键词族，仅作为低优先级补充"
       },
       "availabilityRule": "校园招聘首页或任一已登记项目页能返回非错误官方页面时，列表未复现只能记 accessible-incomplete。",
       "observations": [
-        {"segment":"综合类岗位","unfilteredCount":1888,"beijingCount":57},
-        {"segment":"科技类岗位","unfilteredCount":73,"beijingCount":12}
+        {
+          "segment": "综合类岗位",
+          "unfilteredCount": 1888,
+          "beijingCount": 57,
+          "pageCount": 6
+        },
+        {
+          "segment": "科技类岗位",
+          "unfilteredCount": 73,
+          "beijingCount": 12,
+          "pageCount": 2
+        },
+        {
+          "segment": "北京市两类岗位去重后",
+          "nativeFilteredCount": 69,
+          "reviewedCount": 69,
+          "reviewedAt": "2026-08-22T17:55:00+08:00"
+        }
       ],
-      "notes": "职位关键词已验证可命中岗位详情中的专业或背景词，不仅匹配职位标题。数量是观察时快照，不作为未来运行的固定预期。"
+      "notes": "官网北京筛选结果低于 100 条时直接逐岗展开详情；2026-08-22 已完成综合类 57 条、科技类 12 条的全量详情复核。"
     },
     {
       "sourceId": "boe-campus",
@@ -84,7 +130,10 @@
       "accessMode": "server-rendered-list",
       "nativeFilters": [],
       "queryPlan": {
-        "everyRun": ["按发布时间检查事业单位公开招聘公告列表的全部当前分页", "优先处理截止未过且面向应届毕业生的公告"],
+        "everyRun": [
+          "按发布时间检查事业单位公开招聘公告列表的全部当前分页",
+          "优先处理截止未过且面向应届毕业生的公告"
+        ],
         "fallback": "HTTPS 无法连接时切换到登记的同路径 HTTP 官方入口，不得据此判断没有公告",
         "positionHandling": "进入公告和官方附件后再按地点、届别、学历与专业字段筛选具体岗位"
       },
@@ -100,7 +149,10 @@
       "accessMode": "desktop-with-mobile-fallback",
       "nativeFilters": [],
       "queryPlan": {
-        "everyRun": ["检查央企招聘栏目最新公告", "打开截止未过公告的职位附件或官方招聘专题"],
+        "everyRun": [
+          "检查央企招聘栏目最新公告",
+          "打开截止未过公告的职位附件或官方招聘专题"
+        ],
         "fallback": "桌面站超时或证书链异常时切换到登记的官方 WAP HTTP 页面",
         "positionHandling": "公告没有岗位附件时记为 deferred；有附件时拆到具体岗位"
       },
@@ -114,9 +166,18 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://job.sinopec.com/#/school/index",
       "accessMode": "browser-spa",
-      "nativeFilters": ["校园招聘/社会招聘路由", "集团公告", "企业公告", "招聘岗位模块"],
+      "nativeFilters": [
+        "校园招聘/社会招聘路由",
+        "集团公告",
+        "企业公告",
+        "招聘岗位模块"
+      ],
       "queryPlan": {
-        "everyRun": ["进入校园招聘路由", "打开招聘岗位模块并识别当期招聘活动", "先使用届别、企业、地点和岗位类别等页面现有控件"],
+        "everyRun": [
+          "进入校园招聘路由",
+          "打开招聘岗位模块并识别当期招聘活动",
+          "先使用届别、企业、地点和岗位类别等页面现有控件"
+        ],
         "completionRule": "记录筛选前后数量并处理筛选结果全部分页；只加载首页壳不算完成",
         "fallback": "页面路由加载失败时从集团公告或企业公告重新进入当期招聘专题"
       },
@@ -130,9 +191,21 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://job.10086.cn/personal/job/",
       "accessMode": "filterable-dynamic-list",
-      "nativeFilters": ["招聘类型", "招聘单位", "职位类别", "学历要求", "工作地点省/市", "发布日期", "职位关键词"],
+      "nativeFilters": [
+        "招聘类型",
+        "招聘单位",
+        "职位类别",
+        "学历要求",
+        "工作地点省/市",
+        "发布日期",
+        "职位关键词"
+      ],
       "queryPlan": {
-        "everyRun": ["招聘类型：校园招聘 + 工作地点：北京", "人工智能专区：北京", "当期公司校园招聘页：北京"],
+        "everyRun": [
+          "招聘类型：校园招聘 + 工作地点：北京",
+          "人工智能专区：北京",
+          "当期公司校园招聘页：北京"
+        ],
         "keywordRule": "结构化筛选并集超过 150 时才运行工学、理工、技术、数据、生物医学工程和不限专业等广义关键词族",
         "completionRule": "动态加载结果必须滚动或翻页至末项，并按职位代码或详情地址去重"
       },
@@ -145,14 +218,28 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/campus",
       "accessMode": "filterable-paginated-list",
-      "nativeFilters": ["职位关键词或专业", "工作地点", "职位类别", "招聘单位", "发布时间"],
+      "nativeFilters": [
+        "职位关键词或专业",
+        "工作地点",
+        "职位类别",
+        "招聘单位",
+        "发布时间"
+      ],
       "queryPlan": {
-        "everyRun": ["校园招聘 + 工作地点：北京", "人工智能公司/研究院 + 北京", "北京公司 + 全部职位类别"],
+        "everyRun": [
+          "校园招聘 + 工作地点：北京",
+          "人工智能公司/研究院 + 北京",
+          "北京公司 + 全部职位类别"
+        ],
         "keywordRule": "北京结构化结果超过 150 时再运行广义关键词族并取并集",
         "completionRule": "以筛选后的页数为准翻到末页，不得用未筛选的 61 页总量作为待处理量"
       },
       "observations": [
-        {"segment":"校园招聘未筛选快照","unfilteredCount":607,"unfilteredPages":61}
+        {
+          "segment": "校园招聘未筛选快照",
+          "unfilteredCount": 607,
+          "unfilteredPages": 61
+        }
       ],
       "notes": "官网可正常列出具体岗位；上一轮只检查部分单位，应标记 accessible-incomplete 而不是 temporarily-unavailable。"
     },
@@ -164,7 +251,10 @@
       "accessMode": "semantic-health-check-required",
       "nativeFilters": [],
       "queryPlan": null,
-      "failureSignals": ["最终地址包含 /404?errorpath=", "页面标题或正文出现 Not Found"],
+      "failureSignals": [
+        "最终地址包含 /404?errorpath=",
+        "页面标题或正文出现 Not Found"
+      ],
       "observations": [],
       "notes": "根入口、列表页和已收录的详情链接当前均落到站内 404 页面。HTTP 200 不能视为成功；新入口只能从集团官方公告重新发现后登记。"
     },
@@ -176,7 +266,11 @@
       "accessMode": "browser-antibot",
       "nativeFilters": [],
       "queryPlan": {
-        "everyRun": ["先从航天科技集团官网确认人才招聘链接", "使用真实浏览器低频打开中国航天人才网", "优先筛选北京和校园招聘"],
+        "everyRun": [
+          "先从航天科技集团官网确认人才招聘链接",
+          "使用真实浏览器低频打开中国航天人才网",
+          "优先筛选北京和校园招聘"
+        ],
         "fallback": "人才网触发频率或指纹拦截时，转查集团官网和所属院所官方招聘公告；未完成时记为 accessible-incomplete",
         "completionRule": "通过反自动化校验不等于完成，仍须记录筛选范围和职位结果数量"
       },
@@ -189,9 +283,17 @@
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://www.chinapost.com.cn/",
       "accessMode": "official-announcement-discovery",
-      "nativeFilters": ["集团首页站内检索", "集团公告", "各省分公司和直属单位招聘公告"],
+      "nativeFilters": [
+        "集团首页站内检索",
+        "集团公告",
+        "各省分公司和直属单位招聘公告"
+      ],
       "queryPlan": {
-        "everyRun": ["在集团官网检索校园招聘、社会招聘、2027 和北京", "打开当期官方公告", "只跟随公告明确给出的临时招聘专题或投递链接"],
+        "everyRun": [
+          "在集团官网检索校园招聘、社会招聘、2027 和北京",
+          "打开当期官方公告",
+          "只跟随公告明确给出的临时招聘专题或投递链接"
+        ],
         "fallback": "年度专题不存在或 DNS 失效时回到集团公告，不复用往年招聘专题",
         "completionRule": "没有固定职位门户时按公告生命周期跟踪；当期公告未发布可记 checked-no-active-campaign"
       },
