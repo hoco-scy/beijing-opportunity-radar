@@ -49,17 +49,20 @@ function renderReview(review) {
 function renderScreeningMetrics(run) {
   const metrics = run.screeningMetrics;
   if (!metrics) return "";
-  const rows = [
-    ["官方岗位总量", metrics.positionsDiscovered],
-    ["代码全量扫描", metrics.positionsMachineScreened],
-    ["明确条件排除", metrics.positionsMachineRejected],
-    ["模型批量复核", metrics.positionsBatchReviewed],
-    ["官方逐岗核验", metrics.positionsOfficiallyVerified],
-    ["高推理疑难项", metrics.positionsEscalated],
+  const nativeFilterStrategy = Number(run.screeningStrategyVersion || 1) >= 2;
+  const items = nativeFilterStrategy ? [
+    ["入口报告总量", metrics.portalResultsReported], ["官网筛选查询", metrics.nativeFilterQueries],
+    ["站内筛选结果", metrics.nativeFilteredResults], ["去重候选", metrics.deduplicatedCandidates],
+    ["模型批量复核", metrics.positionsBatchReviewed], ["官方逐岗核验", metrics.positionsOfficiallyVerified],
+    ["高推理疑难项", metrics.positionsEscalated], ["后续轮次继续", metrics.positionsDeferredByBudget],
+  ] : [
+    ["旧版入口发现", metrics.positionsDiscovered], ["旧版机器扫描", metrics.positionsMachineScreened],
+    ["旧版模型复核", metrics.positionsBatchReviewed], ["官方逐岗核验", metrics.positionsOfficiallyVerified],
     ["后续轮次继续", metrics.positionsDeferredByBudget],
-    ["数据集下载 / 复用", `${metrics.datasetsDownloaded} / ${metrics.datasetsReused}`],
-  ].map(([label, value]) => `<li><strong>${escapeHTML(label)}</strong><span>${escapeHTML(value)}</span></li>`).join("");
-  return `<details class="source-checks"><summary>查看大表筛选漏斗 <span>＋</span></summary><ul>${rows}</ul></details>`;
+  ];
+  const rows = items.map(([label, value]) => `<li><strong>${escapeHTML(label)}</strong><span>${escapeHTML(value)}</span></li>`).join("");
+  const title = nativeFilterStrategy ? "查看官网筛选漏斗" : "查看旧版全入口漏斗";
+  return `<details class="source-checks"><summary>${title} <span>＋</span></summary><ul>${rows}</ul></details>`;
 }
 
 function renderRun(run) {

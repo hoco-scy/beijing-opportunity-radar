@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "sourceId": "picc-campus",
+      "status": "verified",
+      "observedAt": "2026-08-22",
+      "officialEntryUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true",
+      "nativeFilters": ["招聘项目：科技类/综合类", "集团下属单位", "工作地点：省/市/区县", "发布时间", "职位关键词"],
+      "queryPlan": {
+        "everyRun": ["科技类岗位 + 北京市", "综合类岗位 + 北京市"],
+        "keywordRule": "北京安全筛选后的并集不超过 100 时直接复核全部结果，不再使用关键词缩小；超过 150 时才运行广义关键词族并取并集",
+        "otherRegions": "按周轮换地区并使用广义关键词族，仅作为低优先级补充"
+      },
+      "observations": [
+        {"segment":"综合类岗位","unfilteredCount":1888,"beijingCount":57},
+        {"segment":"科技类岗位","unfilteredCount":73,"beijingCount":12}
+      ],
+      "notes": "职位关键词已验证可命中岗位详情中的专业或背景词，不仅匹配职位标题。数量是观察时快照，不作为未来运行的固定预期。"
+    },
+    {
+      "sourceId": "boe-campus",
+      "status": "pending-observation",
+      "observedAt": null,
+      "officialEntryUrl": "https://campus.boe.com/custom/xzzw?hideMenu=1",
+      "nativeFilters": [],
+      "queryPlan": null,
+      "observations": [],
+      "notes": "下次轮到该来源时先识别并保存官方站内筛选能力。"
+    }
+  ]
+}

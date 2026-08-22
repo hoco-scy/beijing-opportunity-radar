@@ -9,7 +9,12 @@ const errors = [];
 const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 const decisions = new Set(["accepted", "rejected", "deferred"]);
 const runStatuses = new Set(["completed", "completed-partial", "failed"]);
-const screeningMetricKeys = [
+const nativeFilterMetricKeys = [
+  "portalResultsReported", "nativeFilterQueries", "nativeFilteredResults", "deduplicatedCandidates",
+  "positionsBatchReviewed", "positionsOfficiallyVerified",
+  "positionsEscalated", "positionsDeferredByBudget"
+];
+const legacyScreeningMetricKeys = [
   "datasetsDownloaded", "datasetsReused", "positionsDiscovered", "positionsMachineScreened",
   "positionsMachineRejected", "positionsBatchReviewed", "positionsOfficiallyVerified",
   "positionsEscalated", "positionsDeferredByBudget"
@@ -70,11 +75,13 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
   }
   if (strictCoverage && metrics.officialSystemsFailed > 0 && run.status !== "completed-partial") errors.push(`${label} 有来源失败时必须标记 completed-partial`);
   if (batchScreening) {
+    const nativeFilterStrategy = Number(run.screeningStrategyVersion || 1) >= 2;
+    const screeningMetricKeys = nativeFilterStrategy ? nativeFilterMetricKeys : legacyScreeningMetricKeys;
     for (const key of screeningMetricKeys) {
       if (!Number.isInteger(run.screeningMetrics?.[key]) || run.screeningMetrics[key] < 0) errors.push(`${label}.screeningMetrics.${key} 必须是非负整数`);
     }
-    if ((run.screeningMetrics?.positionsMachineScreened || 0) > (run.screeningMetrics?.positionsDiscovered || 0)) errors.push(`${label} 机器扫描数不能大于发现总数`);
-    if ((run.screeningMetrics?.positionsMachineRejected || 0) > (run.screeningMetrics?.positionsMachineScreened || 0)) errors.push(`${label} 机器排除数不能大于机器扫描数`);
+    if (nativeFilterStrategy && (run.screeningMetrics?.nativeFilteredResults || 0) > (run.screeningMetrics?.portalResultsReported || 0)) errors.push(`${label} 站内筛选结果不能大于入口报告总量`);
+    if (nativeFilterStrategy && (run.screeningMetrics?.deduplicatedCandidates || 0) > (run.screeningMetrics?.nativeFilteredResults || 0)) errors.push(`${label} 去重候选不能大于站内筛选结果`);
     if ((run.screeningMetrics?.positionsEscalated || 0) > 20) errors.push(`${label} 高推理升级数超过每轮 20 项上限`);
   }
   if (run.status === "completed-partial" && opportunities.meta?.lastRunStatus !== "completed-partial" && runIndex === 0) errors.push("最新运行部分完成时，正文 meta.lastRunStatus 必须同步");
