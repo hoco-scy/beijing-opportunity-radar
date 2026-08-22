@@ -526,6 +526,23 @@ footer strong { color: var(--ink); }
 .how-it-works li strong { display: block; margin-top: 30px; font-size: 12px; }
 .how-it-works li p { margin: 8px 0 0; color: #687a7f; font-size: 9px; line-height: 1.65; }
 
+.selection-logic {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 64px;
+  align-items: center;
+  padding: 12px 0 54px;
+  border-top: 1px solid var(--line);
+}
+.selection-copy { padding: 34px 0; }
+.selection-copy h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 32px; line-height: 1.35; font-weight: 600; }
+.selection-copy > p:last-child { margin: 17px 0 0; color: var(--ink-soft); font-size: 11px; line-height: 1.85; }
+.selection-rules { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; padding: 1px; background: var(--line); }
+.selection-rules article { min-height: 210px; padding: 22px; background: var(--white); }
+.selection-rules span { color: var(--orange); font-family: Georgia, serif; font-size: 17px; }
+.selection-rules h3 { margin: 31px 0 0; font-size: 13px; }
+.selection-rules p { margin: 9px 0 0; color: #687a7f; font-size: 10px; line-height: 1.72; }
+
 .audit-hero.page-intro { min-height: 470px; border-bottom: 0; }
 .audit-page .audit-feed { padding-top: 74px; }
 
@@ -592,6 +609,7 @@ footer strong { color: var(--ink); }
   .page-intro { grid-template-columns: 1fr; gap: 38px; padding-left: 0; padding-right: 0; }
   .page-intro-stat, .page-intro-note { max-width: 620px; }
   .how-it-works { grid-template-columns: 1fr; gap: 28px; }
+  .selection-logic { grid-template-columns: 1fr; gap: 0; }
   .taxonomy-card { max-width: 620px; }
   .source-toolbar { align-items: stretch; flex-direction: column; }
   .source-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -618,6 +636,12 @@ footer strong { color: var(--ink); }
   .how-it-works ol { grid-template-columns: 1fr; }
   .how-it-works li { min-height: 0; }
   .how-it-works li strong { margin-top: 18px; }
+  .selection-logic { padding: 0 0 52px; }
+  .selection-copy { padding: 33px 0 25px; }
+  .selection-copy h2 { font-size: 27px; }
+  .selection-rules { grid-template-columns: 1fr; }
+  .selection-rules article { min-height: 0; }
+  .selection-rules h3 { margin-top: 17px; }
   .audit-hero.page-intro { min-height: 0; padding: 50px 0; }
   .sources-hero { min-height: 0; }
   .taxonomy-card { padding: 25px; }

@@ -142,3 +142,12 @@ test("removed template-like slogans do not return", async () => {
     assert.doesNotMatch(content, new RegExp(phrase));
   }
 });
+
+test("homepage makes the biomedical-master selection scope explicit without exposing personal details", async () => {
+  const index = await read("index.html");
+  assert.match(index, /主要面向生物医学相关背景的硕士/);
+  assert.match(index, /生物医学工程及相近工科背景的硕士/);
+  assert.match(index, /公考逐项确认条件/);
+  assert.match(index, /北京优先，官网为准/);
+  assert.match(index, /页面不保存姓名、学校或联系方式/);
+});
