@@ -77,6 +77,18 @@ test("each scheduled run covers every registered source instead of rotating sour
   assert.equal(plan.coverage.noonRotation, undefined);
 });
 
+test("automation treats validation failures as a repair loop instead of a stopping point", async () => {
+  const [agents, automation, prompts] = await Promise.all([
+    read("AGENTS.md"),
+    read("AUTOMATION.md"),
+    read("automation/task-prompts.md"),
+  ]);
+  assert.match(agents, /一次失败不是结束任务的理由/);
+  assert.match(automation, /步骤 H：门禁修复循环/);
+  assert.match(automation, /不得在首次失败后停止、暂停任务或等待下一次定时触发/);
+  assert.match(prompts, /不得在第一次失败后暂停或把失败当作最终回执/);
+});
+
 test("public pages do not render internal processing notes", async () => {
   const [app, audit, sources, opportunitiesRaw] = await Promise.all([
     read("app.js"), read("audit.js"), read("sources.js"), read("data/opportunities.json"),
