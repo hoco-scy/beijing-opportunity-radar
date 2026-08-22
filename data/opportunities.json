@@ -2,6 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "lastVerifiedAt": "2026-08-22T08:03:00+08:00",
+    "lastRunStatus": "completed-partial",
     "timezone": "Asia/Shanghai",
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件"
   },
@@ -44,6 +45,9 @@
       "officialApplyUrl": "https://picc.zhiye.com/custom/campus?c1=8&hideAll=true",
       "applyInstruction": "进入中国人保官方校招的综合类岗位，选择北京市并搜索职位代码 J78589",
       "verifiedAt": "2026-08-21",
+      "lastSeenAt": "2026-08-22T11:20:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "官方招聘系统按职位代码返回 1 个在招岗位",
       "verifiedFields": ["职位代码", "单位", "地点", "学历", "专业", "职责", "投递路径", "截止口径"],
       "verification": {"officialSource": true, "specificPosition": true, "location": true, "eligibility": true, "applicationPath": true, "deadlineChecked": true}
     },
@@ -81,6 +85,9 @@
       "officialApplyUrl": "https://picc.zhiye.com/custom/campus?c1=8&hideAll=true",
       "applyInstruction": "进入中国人保官方校招的综合类岗位，选择北京市并搜索职位代码 J79361",
       "verifiedAt": "2026-08-21",
+      "lastSeenAt": "2026-08-22T11:20:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "官方招聘系统按职位代码返回 1 个在招岗位",
       "verifiedFields": ["职位代码", "单位", "地点", "专业", "职责", "投递路径", "截止口径"],
       "verification": {"officialSource": true, "specificPosition": true, "location": true, "eligibility": true, "applicationPath": true, "deadlineChecked": true}
     },
@@ -118,6 +125,9 @@
       "officialApplyUrl": "https://picc.zhiye.com/custom/campus?c1=8&hideAll=true",
       "applyInstruction": "进入中国人保官方校招的综合类岗位，选择北京市并搜索职位代码 J80468",
       "verifiedAt": "2026-08-21",
+      "lastSeenAt": "2026-08-22T11:20:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "官方招聘系统按职位代码返回 1 个在招岗位",
       "verifiedFields": ["职位代码", "单位", "地点", "专业", "职责", "投递路径", "截止口径"],
       "verification": {"officialSource": true, "specificPosition": true, "location": true, "eligibility": true, "applicationPath": true, "deadlineChecked": true}
     },
@@ -155,6 +165,9 @@
       "officialApplyUrl": "https://picc.zhiye.com/custom/campus?c1=8&hideAll=true",
       "applyInstruction": "进入中国人保官方校招的综合类岗位，选择北京市并搜索职位代码 J80470",
       "verifiedAt": "2026-08-21",
+      "lastSeenAt": "2026-08-22T11:20:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "官方招聘系统按职位代码返回 1 个在招岗位",
       "verifiedFields": ["职位代码", "单位", "地点", "专业", "经历偏好", "职责", "投递路径", "截止口径"],
       "verification": {"officialSource": true, "specificPosition": true, "location": true, "eligibility": true, "applicationPath": true, "deadlineChecked": true}
     },
@@ -192,12 +205,15 @@
       "officialApplyUrl": "https://picc.zhiye.com/custom/campus?c1=8&hideAll=true",
       "applyInstruction": "进入中国人保官方校招的综合类岗位，选择北京市并搜索职位代码 J80472",
       "verifiedAt": "2026-08-21",
+      "lastSeenAt": "2026-08-22T11:20:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "官方招聘系统按职位代码返回 1 个在招岗位",
       "verifiedFields": ["职位代码", "单位", "地点", "专业", "职责", "投递路径", "截止口径"],
       "verification": {"officialSource": true, "specificPosition": true, "location": true, "eligibility": true, "applicationPath": true, "deadlineChecked": true}
     }
   ],
   "monitors": [
-    {"id": "national-civil-2027", "track": "考公", "title": "中央机关及其直属机构 2027 年度考试录用公务员", "status": "职位表未发布", "note": "截至本次检查，国家公务员局尚未发布 2027 年度招考公告和职位表；本轮主站访问超时，将在下次运行重试。", "officialUrl": "https://www.scs.gov.cn/", "checkedAt": "2026-08-22T08:03:00+08:00"},
+    {"id": "national-civil-2027", "track": "考公", "title": "中央机关及其直属机构 2027 年度考试录用公务员", "status": "本轮未完成复查", "note": "国家公务员局主站本轮访问超时，无法据此判断是否已有新公告或职位表；新版流程会在同轮最多重试三次，仍失败则保留为部分完成。", "officialUrl": "https://www.scs.gov.cn/", "checkedAt": "2026-08-22T08:03:00+08:00"},
     {"id": "beijing-civil-2027", "track": "考公", "title": "北京市各级机关 2027 年度考试录用公务员", "status": "职位表未发布", "note": "北京市公务员招考栏目当前最新完整年度职位表仍为 2026 年度；2027 年职位表发布后再逐行筛选。", "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "checkedAt": "2026-08-22T08:03:00+08:00"},
     {"id": "beijing-selection-2027", "track": "选调优培", "title": "北京市 2027 年度定向选调", "status": "职位表未发布", "note": "尚未发现 2027 年度官方招录公告或职位表。院校范围、政治面貌、荣誉和专业要求均不得沿用往年口径。", "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "checkedAt": "2026-08-22T08:03:00+08:00"},
     {"id": "beijing-youpei-2027", "track": "选调优培", "title": "北京市 2027 年度“优培计划”", "status": "岗位表未发布", "note": "尚未发现 2027 年度官方招聘公告或岗位表。具体单位、岗位类别和资格条件以当年原始附件为准。", "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/", "checkedAt": "2026-08-22T08:03:00+08:00"},

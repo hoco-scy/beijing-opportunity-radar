@@ -38,7 +38,7 @@ function filteredJobs() {
     (state.activeTrack === "全部" || job.track === state.activeTrack) &&
     (state.activeMatch === "全部" || job.matchLevel === state.activeMatch) &&
     (!keyword || searchText(job).includes(keyword))
-  );
+  ).sort((a, b) => (b.priority || 0) - (a.priority || 0) || a.title.localeCompare(b.title, "zh-CN"));
 }
 
 function renderCards() {
@@ -99,7 +99,7 @@ function renderCards() {
           <div class="deadline-block"><span>截止口径</span><strong>${escapeHTML(job.deadline)}</strong></div>
           <div class="source-actions"><a href="${safeUrl(job.officialAnnouncementUrl)}" target="_blank" rel="noreferrer">招聘说明 ↗</a><a class="apply-link" href="${safeUrl(job.officialApplyUrl)}" target="_blank" rel="noreferrer">官网搜索 ${escapeHTML(job.jobCode)} ↗</a></div>
         </div>
-        <p class="source-note">${escapeHTML(job.applyInstruction)} · 核验于 ${formatDate(job.verifiedAt)}</p>
+        <p class="source-note">${escapeHTML(job.applyInstruction)} · 状态复查于 ${formatDateTime(job.lastSeenAt)} · ${escapeHTML(job.statusEvidence)}</p>
       </div>
     </article>`;
   }).join("");
@@ -137,7 +137,8 @@ function updateCounts() {
 
 function updateSummary() {
   const jobs = state.data.jobs;
-  document.querySelector("#sync-date").textContent = `最近核验：${formatDateTime(state.data.meta.lastVerifiedAt)}`;
+  const partial = state.data.meta.lastRunStatus === "completed-partial" ? "（部分）" : "";
+  document.querySelector("#sync-date").textContent = `最近核验${partial}：${formatDateTime(state.data.meta.lastVerifiedAt)}`;
   document.querySelector("#stat-jobs").textContent = jobs.length;
   document.querySelector("#stat-beijing").textContent = jobs.filter((job) => job.location.includes("北京")).length;
   document.querySelector("#stat-tracks").textContent = new Set(jobs.map((job) => job.track)).size;

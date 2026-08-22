@@ -347,6 +347,13 @@ footer strong { color: var(--ink); }
 .audit-policy h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 23px; font-weight: 600; }
 .audit-policy > p { margin: 0; color: #cae0d8; font-size: 11px; line-height: 1.8; }
 .audit-policy .eyebrow { color: #b9e0d2; }
+.audit-method { display: grid; grid-template-columns: .7fr 1.3fr; gap: 60px; padding: 42px 0 0; }
+.audit-method h2 { max-width: 360px; margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 25px; line-height: 1.35; }
+.method-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.method-grid p { margin: 0; padding: 17px; background: #f3f0e9; }
+.method-grid strong, .method-grid span { display: block; }
+.method-grid strong { margin-bottom: 7px; color: var(--green); font-size: 10px; }
+.method-grid span { color: #617379; font-size: 9px; line-height: 1.7; }
 
 .audit-feed { padding-top: 74px; }
 .audit-heading { align-items: center; }
@@ -360,6 +367,8 @@ footer strong { color: var(--ink); }
 .run-header h3 { margin: 9px 0 8px; font-family: Georgia, "Songti SC", serif; font-size: 25px; font-weight: 600; }
 .run-header p { max-width: 830px; margin: 0; color: #617379; font-size: 11px; line-height: 1.75; }
 .run-status { height: max-content; padding: 7px 10px; color: #376f57; background: #e1f0e7; border-radius: 99px; font-size: 9px; font-weight: 800; white-space: nowrap; }
+.run-status.completed-partial { color: #80631e; background: #f2e9cf; }
+.run-status.failed { color: #a74d33; background: var(--orange-light); }
 .run-metrics { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; margin-top: 26px; border: 1px solid #e7e3da; background: #e7e3da; }
 .run-metrics div { min-height: 82px; padding: 16px; background: #faf8f3; }
 .run-metrics strong { display: block; font-family: Georgia, serif; font-size: 22px; }
@@ -421,6 +430,8 @@ footer strong { color: var(--ink); }
   .audit-summary div { min-height: 105px; padding: 19px; }
   .audit-summary strong { font-size: 17px; }
   .audit-policy { grid-template-columns: 1fr; gap: 14px; padding: 24px; }
+  .audit-method { grid-template-columns: 1fr; gap: 18px; padding-top: 32px; }
+  .method-grid { grid-template-columns: 1fr; }
   .audit-heading { align-items: flex-start; flex-direction: column; }
   .audit-filters { width: 100%; overflow-x: auto; }
   .audit-filters button { flex: 0 0 auto; }

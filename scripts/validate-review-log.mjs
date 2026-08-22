@@ -8,6 +8,7 @@ const sources = new Map(registry.sources.map((source) => [source.id, source]));
 const errors = [];
 const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 const decisions = new Set(["accepted", "rejected", "deferred"]);
+const runStatuses = new Set(["completed", "completed-partial", "failed"]);
 
 function officialDomain(urlValue, source) {
   try {
@@ -33,6 +34,7 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
   if (runIds.has(run.id)) errors.push(`${label}.id 重复`);
   runIds.add(run.id);
   if (!minuteTimestamp.test(run.checkedAt || "")) errors.push(`${label}.checkedAt 必须精确到北京时间分钟`);
+  if (!runStatuses.has(run.status)) errors.push(`${label}.status 不受支持`);
 
   const metrics = run.metrics || {};
   for (const key of ["officialSystemsChecked", "officialSystemsSucceeded", "officialSystemsFailed", "newLeads", "reviewedItems", "accepted", "rejected", "deferred", "published", "updated", "closed"]) {
@@ -42,10 +44,26 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
   if (metrics.accepted + metrics.rejected + metrics.deferred !== metrics.reviewedItems) errors.push(`${label} 审核结论数量与 reviewedItems 不闭合`);
   if ((run.reviews || []).length !== metrics.reviewedItems) errors.push(`${label}.reviews 数量与 reviewedItems 不一致`);
 
+  const strictCoverage = Number(run.policyVersion || 0) >= 2;
+  if (!strictCoverage && run.coverageStatus !== "legacy-incomplete") errors.push(`${label} 旧版不完整运行必须显式标记 legacy-incomplete`);
+  if (strictCoverage && (run.sourceChecks || []).length !== metrics.officialSystemsChecked) errors.push(`${label}.sourceChecks 必须逐一记录全部检查来源`);
+  const checkedSourceIds = new Set();
   for (const [sourceIndex, check] of (run.sourceChecks || []).entries()) {
-    if (!sources.get(check.sourceId)?.officialSiteConfirmed) errors.push(`${label}.sourceChecks[${sourceIndex}] 未引用已登记官方来源`);
-    if (!check.status || !check.note) errors.push(`${label}.sourceChecks[${sourceIndex}] 状态或说明缺失`);
+    const checkLabel = `${label}.sourceChecks[${sourceIndex}]`;
+    const source = sources.get(check.sourceId);
+    if (!source?.officialSiteConfirmed) errors.push(`${checkLabel} 未引用已登记官方来源`);
+    if (!check.status || !check.note) errors.push(`${checkLabel} 状态或说明缺失`);
+    if (checkedSourceIds.has(check.sourceId)) errors.push(`${checkLabel}.sourceId 重复`);
+    checkedSourceIds.add(check.sourceId);
+    if (strictCoverage) {
+      if (!Number.isInteger(check.attempts) || check.attempts < 1) errors.push(`${checkLabel}.attempts 必须是正整数`);
+      if (!minuteTimestamp.test(check.checkedAt || "")) errors.push(`${checkLabel}.checkedAt 必须精确到北京时间分钟`);
+      const failed = ["failed", "temporarily-unavailable"].includes(check.status);
+      if (failed && ["critical", "active"].includes(source?.tier) && check.attempts < 3) errors.push(`${checkLabel} 关键来源失败前必须至少尝试 3 次`);
+    }
   }
+  if (strictCoverage && metrics.officialSystemsFailed > 0 && run.status !== "completed-partial") errors.push(`${label} 有来源失败时必须标记 completed-partial`);
+  if (run.status === "completed-partial" && opportunities.meta?.lastRunStatus !== "completed-partial" && runIndex === 0) errors.push("最新运行部分完成时，正文 meta.lastRunStatus 必须同步");
 
   for (const [reviewIndex, review] of (run.reviews || []).entries()) {
     const reviewLabel = `${label}.reviews[${reviewIndex}]`;

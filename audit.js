@@ -20,6 +20,12 @@ const labels = {
   deferred: "继续核验",
 };
 
+const runStatusLabels = {
+  completed: "运行完成",
+  "completed-partial": "部分完成",
+  failed: "运行失败",
+};
+
 function filteredReviews(run) {
   if (auditState.decision === "all") return run.reviews;
   return run.reviews.filter((review) => review.decision === auditState.decision);
@@ -43,8 +49,9 @@ function renderReview(review) {
 function renderRun(run) {
   const reviews = filteredReviews(run);
   const metrics = run.metrics;
-  const outcome = run.outcome === "no-publishable-change" ? "完成核验 · 正文无变化" : "完成核验 · 正文有更新";
-  const sourceChecks = run.sourceChecks.map((source) => `<li><strong>${escapeHTML(source.status)}</strong><span>${escapeHTML(source.note)}</span></li>`).join("");
+  const outcomeText = run.outcome === "no-publishable-change" ? "正文无变化" : "正文有更新";
+  const outcome = `${run.status === "completed-partial" ? "部分完成" : "完成核验"} · ${outcomeText}`;
+  const sourceChecks = run.sourceChecks.map((source) => `<li><strong>${escapeHTML(source.status)}${source.attempts ? ` · 尝试 ${source.attempts} 次` : ""}</strong><span>${escapeHTML(source.note)}</span></li>`).join("");
   const reviewContent = reviews.length
     ? reviews.map(renderReview).join("")
     : `<div class="empty-state compact"><strong>本轮没有这一结论的记录</strong><p>切换筛选查看其他审核结果。</p></div>`;
@@ -52,7 +59,7 @@ function renderRun(run) {
   return `<article class="audit-run">
     <header class="run-header">
       <div><span class="run-time">${formatDateTime(run.checkedAt)}</span><h3>${escapeHTML(outcome)}</h3><p>${escapeHTML(run.summary)}</p></div>
-      <span class="run-status">${escapeHTML(run.status === "completed" ? "运行完成" : run.status)}</span>
+      <span class="run-status ${escapeHTML(run.status)}">${escapeHTML(runStatusLabels[run.status] || run.status)}</span>
     </header>
     <div class="run-metrics">
       <div><strong>${metrics.officialSystemsSucceeded}/${metrics.officialSystemsChecked}</strong><span>官方系统成功</span></div>
@@ -69,7 +76,8 @@ function renderRun(run) {
 
 function render() {
   const latest = auditState.data.runs[0];
-  document.querySelector("#sync-date").textContent = `最近核验：${formatDateTime(auditState.data.meta.lastRunAt)}`;
+  const partial = latest.status === "completed-partial" ? "（部分）" : "";
+  document.querySelector("#sync-date").textContent = `最近核验${partial}：${formatDateTime(auditState.data.meta.lastRunAt)}`;
   document.querySelector("#latest-run").textContent = formatDateTime(latest.checkedAt);
   document.querySelector("#latest-reviewed").textContent = `${latest.metrics.reviewedItems} 项`;
   document.querySelector("#latest-published").textContent = `${latest.metrics.published} 项`;

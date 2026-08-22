@@ -9,7 +9,8 @@ const required = [
   "id", "track", "organization", "department", "title", "exactTitle", "jobCode",
   "location", "cohort", "education", "majors", "responsibilities", "requirements",
   "publishedAt", "deadline", "status", "matchLevel", "matchReason", "sourceId",
-  "officialAnnouncementUrl", "officialApplyUrl", "verifiedAt", "verifiedFields", "verification"
+  "officialAnnouncementUrl", "officialApplyUrl", "verifiedAt", "lastSeenAt",
+  "lastSeenStatus", "statusEvidence", "verifiedFields", "verification"
 ];
 const publicExamTracks = new Set(["考公", "选调优培"]);
 const publicExamChecks = [
@@ -19,6 +20,9 @@ const publicExamChecks = [
   "avoidanceRules", "positionNotes"
 ];
 const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
+const runStatuses = new Set(["completed", "completed-partial", "failed"]);
+const lastSeenStatuses = new Set(["live", "upcoming", "temporarily-unavailable", "closed"]);
+const jobStatuses = new Set(["招聘中", "即将开放", "临时无法复查", "已关闭"]);
 
 function officialDomain(urlValue, source) {
   try {
@@ -30,6 +34,7 @@ function officialDomain(urlValue, source) {
 
 if (data.meta?.schemaVersion !== 1) errors.push("meta.schemaVersion 必须为 1");
 if (!minuteTimestamp.test(data.meta?.lastVerifiedAt || "")) errors.push("meta.lastVerifiedAt 必须是精确到分钟的北京时间，例如 2026-08-22T08:03:00+08:00");
+if (!runStatuses.has(data.meta?.lastRunStatus)) errors.push("meta.lastRunStatus 必须是 completed、completed-partial 或 failed");
 if (!Array.isArray(data.jobs) || !Array.isArray(data.monitors)) errors.push("jobs 和 monitors 必须是数组");
 
 const ids = new Set();
@@ -41,6 +46,11 @@ for (const [index, job] of (data.jobs || []).entries()) {
   }
   if (ids.has(job.id)) errors.push(`${label}.id 重复: ${job.id}`);
   ids.add(job.id);
+  if (!minuteTimestamp.test(job.lastSeenAt || "")) errors.push(`${label}.lastSeenAt 必须精确到北京时间分钟`);
+  if (!lastSeenStatuses.has(job.lastSeenStatus)) errors.push(`${label}.lastSeenStatus 不受支持`);
+  if (!jobStatuses.has(job.status)) errors.push(`${label}.status 不受支持`);
+  if (job.status === "招聘中" && job.lastSeenStatus !== "live") errors.push(`${label} 标记招聘中但最近复查不是 live`);
+  if (job.status === "即将开放" && job.lastSeenStatus !== "upcoming") errors.push(`${label} 标记即将开放但最近复查不是 upcoming`);
 
   const source = sources.get(job.sourceId);
   if (!source?.officialSiteConfirmed) errors.push(`${label}.sourceId 未登记为官方来源`);
