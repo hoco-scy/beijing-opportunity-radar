@@ -21,6 +21,10 @@ const safeUrl = (value = "") => {
   catch { return "#"; }
 };
 const formatDate = (value) => value ? value.replaceAll("-", ".") : "未注明";
+const formatDateTime = (value) => value ? new Intl.DateTimeFormat("zh-CN", {
+  timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit",
+  hour: "2-digit", minute: "2-digit", hour12: false,
+}).format(new Date(value)).replaceAll("/", ".") : "未记录";
 
 function searchText(job) {
   return [job.title, job.exactTitle, job.organization, job.department, job.location,
@@ -112,7 +116,7 @@ function renderMonitors() {
   document.querySelector("#monitor-grid").innerHTML = state.data.monitors.map((monitor) => `<article class="monitor-card">
     <div><span class="monitor-track">${escapeHTML(monitor.track)}</span><span class="monitor-status">${escapeHTML(monitor.status)}</span></div>
     <h3>${escapeHTML(monitor.title)}</h3><p>${escapeHTML(monitor.note)}</p>
-    <footer><span>最近检查 ${formatDate(monitor.checkedAt)}</span><a href="${safeUrl(monitor.officialUrl)}" target="_blank" rel="noreferrer">官方入口 ↗</a></footer>
+    <footer><span>最近检查 ${formatDateTime(monitor.checkedAt)}</span><a href="${safeUrl(monitor.officialUrl)}" target="_blank" rel="noreferrer">官方入口 ↗</a></footer>
   </article>`).join("");
 }
 
@@ -133,7 +137,7 @@ function updateCounts() {
 
 function updateSummary() {
   const jobs = state.data.jobs;
-  document.querySelector("#sync-date").textContent = `最近核验：${formatDate(state.data.meta.lastVerifiedAt)}`;
+  document.querySelector("#sync-date").textContent = `最近核验：${formatDateTime(state.data.meta.lastVerifiedAt)}`;
   document.querySelector("#stat-jobs").textContent = jobs.length;
   document.querySelector("#stat-beijing").textContent = jobs.filter((job) => job.location.includes("北京")).length;
   document.querySelector("#stat-tracks").textContent = new Set(jobs.map((job) => job.track)).size;

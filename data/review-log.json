@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "lastRunAt": "2026-08-22T08:03:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "privacyRule": "只记录公开招聘事实、匿名审核结论和公开安全原因；不记录或反推任何私人资格字段"
+  },
+  "runs": [
+    {
+      "id": "run-20260822-0803",
+      "checkedAt": "2026-08-22T08:03:00+08:00",
+      "trigger": "scheduled",
+      "status": "completed",
+      "outcome": "no-publishable-change",
+      "summary": "本轮发现 2 条新的官方招聘公告，并继续核验京东方校招入口；没有候选通过正文发布门禁，因此岗位列表未变，但全部审核行为已记录。",
+      "metrics": {
+        "officialSystemsChecked": 7,
+        "officialSystemsSucceeded": 6,
+        "officialSystemsFailed": 1,
+        "newLeads": 2,
+        "reviewedItems": 3,
+        "accepted": 0,
+        "rejected": 2,
+        "deferred": 1,
+        "published": 0,
+        "updated": 0,
+        "closed": 0
+      },
+      "sourceChecks": [
+        {
+          "sourceId": "national-civil",
+          "status": "temporarily-unavailable",
+          "note": "国家公务员局主站本轮访问超时；未使用非官方材料替代，将在后续运行重试。"
+        },
+        {
+          "sourceId": "beijing-civil",
+          "status": "checked-no-new-position-table",
+          "note": "未发现 2027 京考、定向选调或优培职位表。"
+        },
+        {
+          "sourceId": "beijing-state-assets",
+          "status": "checked-no-publishable-change",
+          "note": "北京国企招聘栏目未发现字段完整的新增 2027 届北京岗位。"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "review-yanqing-edu-2026-fifth",
+          "scope": "announcement",
+          "track": "事业单位",
+          "organization": "北京市延庆区教育委员会",
+          "title": "2026 年第五批公开招聘教师公告",
+          "officialPublishedAt": "2026-08-21",
+          "headcount": "公告总计 12 人",
+          "deadline": "2026-09-01 17:30",
+          "decision": "rejected",
+          "reasonCode": "candidate-category-mismatch",
+          "reason": "招聘对象限定为 2024—2026 届范围，未通过当前求职届别硬门禁。",
+          "verificationNote": "官方公告已核验；公告级条件已足以作出结论，因此未把附件拆成正式岗位。",
+          "fallback": "仍可打开官方公告和岗位表，自行查看是否有后续补充或特殊口径。",
+          "sourceId": "beijing-institutions",
+          "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260821_4831284.html"
+        },
+        {
+          "id": "review-miyun-health-2026-second",
+          "scope": "announcement",
+          "track": "事业单位",
+          "organization": "北京市密云区卫生健康委员会",
+          "title": "2026 年第二次公开招聘事业单位工作人员公告",
+          "officialPublishedAt": "2026-08-21",
+          "headcount": "6 个岗位，共 20 人",
+          "deadline": "2026-09-01 15:00",
+          "decision": "rejected",
+          "reasonCode": "candidate-category-mismatch",
+          "reason": "招聘对象限定为 2024—2026 届范围，未通过当前求职届别硬门禁。",
+          "verificationNote": "官方公告已核验；公告级条件已足以作出结论，因此未把 6 个岗位写入正式列表。",
+          "fallback": "仍可打开官方公告和职位计划表，自行复核岗位专业与特殊条件。",
+          "sourceId": "beijing-institutions",
+          "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260821_4831251.html"
+        },
+        {
+          "id": "review-boe-campus-2027",
+          "scope": "official-system",
+          "track": "央国企",
+          "organization": "京东方科技集团",
+          "title": "2027 届校园招聘系统",
+          "officialPublishedAt": "2026-07-03",
+          "headcount": "官方入口未提供可稳定核验的逐岗人数",
+          "deadline": "官方入口未提供统一截止时间",
+          "decision": "deferred",
+          "reasonCode": "position-fields-incomplete",
+          "reason": "已确认官方校招入口，但本轮未能完整取得岗位名称或代码、地点、人数和截止口径等逐岗字段。",
+          "verificationNote": "保留为继续核验项；字段完整前不依据高校转载或第三方汇总生成正式岗位。",
+          "fallback": "可进入官方校招系统自行搜索北京、智慧医工等关键词，发现具体岗位后再回到官方页复核。",
+          "sourceId": "boe-campus",
+          "officialUrl": "https://www.boe.com/join/index"
+        }
+      ]
+    }
+  ]
+}

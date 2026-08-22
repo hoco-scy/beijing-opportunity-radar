@@ -12,7 +12,7 @@
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="#top" aria-label="回到首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>Position intelligence</small></span></a>
-        <nav aria-label="主导航"><a href="#opportunities">具体岗位</a><a href="#monitors">公告监测</a><a href="#standard">核验标准</a></nav>
+        <nav aria-label="主导航"><a href="#opportunities">具体岗位</a><a href="#monitors">公告监测</a><a href="audit.html">审核日志</a><a href="#standard">核验标准</a></nav>
         <span class="sync-status" id="sync-date"><i></i>正在读取核验时间</span>
       </header>
 
@@ -22,7 +22,7 @@
             <p class="eyebrow">2027 届求职季 · 北京优先 · 岗位级追踪</p>
             <h1>不是“某单位在招”，<br /><em>而是具体哪个岗位。</em></h1>
             <p class="hero-intro">一条记录对应一个真实岗位：职位代码、地点、学历、专业、职责、截止口径和官方入口都能核对。没有发布职位表的考试，只进入监测区，不进入岗位列表。</p>
-            <div class="hero-actions"><a class="primary-button" href="#opportunities">查看 <strong id="hero-job-count">—</strong> 个具体岗位 <span>↘</span></a><a class="text-button" href="#monitors">查看考公发布状态 →</a></div>
+            <div class="hero-actions"><a class="primary-button" href="#opportunities">查看 <strong id="hero-job-count">—</strong> 个具体岗位 <span>↘</span></a><a class="text-button" href="audit.html">查看发现与审核日志 →</a></div>
           </div>
           <div class="hero-panel" aria-label="岗位情报质量标准">
             <div class="panel-topline"><span>当前数据层级</span><strong>逐岗核验</strong></div>
@@ -61,9 +61,15 @@
           <div class="monitor-grid" id="monitor-grid"></div>
         </section>
 
+        <a class="audit-teaser" href="audit.html">
+          <div><p class="eyebrow">REVIEW TRAIL</p><h2>没有进入正文，<br />也不等于没有发生。</h2></div>
+          <p>每轮发现、官方核验、未通过原因和待继续核验项都会留下匿名记录。正式岗位为零时，也能看见系统做过什么。</p>
+          <span>打开审核日志 ↗</span>
+        </a>
+
         <section class="intelligence-section">
           <div class="intelligence-copy"><p class="eyebrow">DAILY CLOUD PIPELINE</p><h2>线索可以很杂，<br />公开数据必须很干净。</h2><p>云端任务每天发现和复查。聚合站、公众号和社群只能触发调查，不能直接生成公开岗位。</p><div class="channel-cloud"><span>政府官网</span><span>企业招聘站</span><span>职位表附件</span><span>高校就业网</span><span>官方公众号</span><span>招聘平台</span><span>搜索索引</span><span>社群线索</span></div></div>
-          <div class="pipeline" aria-label="岗位核验流程"><article><span>01</span><div><strong>发现岗位线索</strong><p>不限渠道建立候选</p></div></article><i>→</i><article><span>02</span><div><strong>追溯官方记录</strong><p>公告、职位表或招聘系统</p></div></article><i>→</i><article><span>03</span><div><strong>逐字段核验</strong><p>公考再核对全部资格条件</p></div></article><i>→</i><article class="publish-step"><span>04</span><div><strong>通过门禁发布</strong><p>失败则不写入公开仓库</p></div></article></div>
+          <div class="pipeline" aria-label="岗位核验流程"><article><span>01</span><div><strong>发现岗位线索</strong><p>不限渠道建立候选</p></div></article><i>→</i><article><span>02</span><div><strong>追溯官方记录</strong><p>公告、职位表或招聘系统</p></div></article><i>→</i><article><span>03</span><div><strong>逐字段核验</strong><p>公考再核对全部资格条件</p></div></article><i>→</i><article class="publish-step"><span>04</span><div><strong>记录结论并发布</strong><p>通过进正文，其余进审核日志</p></div></article></div>
         </section>
       </main>
       <footer><p><strong>北京求职雷达</strong> · 具体到岗，核验后再行动</p><p>岗位状态可能随时变化，投递前请在官方系统做最后确认。</p></footer>

@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastVerifiedAt": "2026-08-21",
+    "lastVerifiedAt": "2026-08-22T08:03:00+08:00",
     "timezone": "Asia/Shanghai",
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件"
   },
@@ -197,10 +197,10 @@
     }
   ],
   "monitors": [
-    {"id": "national-civil-2027", "track": "考公", "title": "中央机关及其直属机构 2027 年度考试录用公务员", "status": "职位表未发布", "note": "截至本次检查，国家公务员局尚未发布 2027 年度招考公告和职位表；发布前不生成任何“预计岗位”。", "officialUrl": "https://www.scs.gov.cn/", "checkedAt": "2026-08-21"},
-    {"id": "beijing-civil-2027", "track": "考公", "title": "北京市各级机关 2027 年度考试录用公务员", "status": "职位表未发布", "note": "北京市公务员招考栏目当前最新完整年度职位表仍为 2026 年度；2027 年职位表发布后再逐行筛选。", "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "checkedAt": "2026-08-21"},
-    {"id": "beijing-selection-2027", "track": "选调优培", "title": "北京市 2027 年度定向选调", "status": "职位表未发布", "note": "尚未发现 2027 年度官方招录公告或职位表。院校范围、政治面貌、荣誉和专业要求均不得沿用往年口径。", "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "checkedAt": "2026-08-21"},
-    {"id": "beijing-youpei-2027", "track": "选调优培", "title": "北京市 2027 年度“优培计划”", "status": "岗位表未发布", "note": "尚未发现 2027 年度官方招聘公告或岗位表。具体单位、岗位类别和资格条件以当年原始附件为准。", "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/", "checkedAt": "2026-08-21"},
-    {"id": "beijing-institutions", "track": "事业单位", "title": "北京市事业单位公开招聘", "status": "全年分批发布", "note": "该栏目按单位分批更新。只有公告附件中能定位到具体岗位名称、人数、学历和专业要求的记录才会上架。", "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/", "checkedAt": "2026-08-21"}
+    {"id": "national-civil-2027", "track": "考公", "title": "中央机关及其直属机构 2027 年度考试录用公务员", "status": "职位表未发布", "note": "截至本次检查，国家公务员局尚未发布 2027 年度招考公告和职位表；本轮主站访问超时，将在下次运行重试。", "officialUrl": "https://www.scs.gov.cn/", "checkedAt": "2026-08-22T08:03:00+08:00"},
+    {"id": "beijing-civil-2027", "track": "考公", "title": "北京市各级机关 2027 年度考试录用公务员", "status": "职位表未发布", "note": "北京市公务员招考栏目当前最新完整年度职位表仍为 2026 年度；2027 年职位表发布后再逐行筛选。", "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "checkedAt": "2026-08-22T08:03:00+08:00"},
+    {"id": "beijing-selection-2027", "track": "选调优培", "title": "北京市 2027 年度定向选调", "status": "职位表未发布", "note": "尚未发现 2027 年度官方招录公告或职位表。院校范围、政治面貌、荣誉和专业要求均不得沿用往年口径。", "officialUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "checkedAt": "2026-08-22T08:03:00+08:00"},
+    {"id": "beijing-youpei-2027", "track": "选调优培", "title": "北京市 2027 年度“优培计划”", "status": "岗位表未发布", "note": "尚未发现 2027 年度官方招聘公告或岗位表。具体单位、岗位类别和资格条件以当年原始附件为准。", "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/", "checkedAt": "2026-08-22T08:03:00+08:00"},
+    {"id": "beijing-institutions", "track": "事业单位", "title": "北京市事业单位公开招聘", "status": "全年分批发布", "note": "本轮发现 2 条新公告，均在公告级因招聘对象范围不匹配而未进入正式岗位；详情见审核日志。", "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/", "checkedAt": "2026-08-22T08:03:00+08:00"}
   ]
 }

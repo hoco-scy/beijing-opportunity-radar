@@ -9,11 +9,14 @@
 - 公考和选调岗位必须结合私有资格档案完成全部硬条件校验，只有确认可报才发布。
 - 央国企岗位准确区分“符合”“需要确认”和“谨慎尝试”，不把优先条件当成符合条件。
 - 公开仓库不保存姓名、学校、联系方式、照片、出生信息、籍贯或详细荣誉等个人资料。
+- 正文只展示通过门禁的岗位；`audit.html` 展示匿名审核日志，包括未通过与继续核验的官方候选及公开安全原因。
+- 右上角“最近核验”和审核日志均精确到北京时间分钟；即使没有岗位进入正文，每轮任务也必须更新并留下记录。
 
-岗位数据位于 `data/opportunities.json`。提交前运行：
+岗位数据位于 `data/opportunities.json`，审核记录位于 `data/review-log.json`。提交前运行：
 
 ```bash
 node scripts/validate-data.mjs
+node scripts/validate-review-log.mjs
 node scripts/check-privacy.mjs
 ```
 

@@ -24,6 +24,8 @@ jobs:
           node-version: 22
       - name: Validate verified position data
         run: node scripts/validate-data.mjs
+      - name: Validate anonymous review log and minute-level freshness
+        run: node scripts/validate-review-log.mjs
       - name: Check anonymous public content
         run: node scripts/check-privacy.mjs
 

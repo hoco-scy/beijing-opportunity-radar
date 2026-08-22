@@ -3,6 +3,9 @@
   "sources": [
     {"id": "picc-campus", "organization": "中国人民保险集团", "type": "企业官方招聘系统", "domains": ["picc.zhiye.com"], "entryUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true", "officialSiteConfirmed": true},
     {"id": "national-civil", "organization": "国家公务员局", "type": "政府官网", "domains": ["scs.gov.cn"], "entryUrl": "https://www.scs.gov.cn/", "officialSiteConfirmed": true},
-    {"id": "beijing-civil", "organization": "北京市公务员招考与人事考试主管部门", "type": "政府官网", "domains": ["beijing.gov.cn", "rsj.beijing.gov.cn"], "entryUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "officialSiteConfirmed": true}
+    {"id": "beijing-civil", "organization": "北京市公务员招考与人事考试主管部门", "type": "政府官网", "domains": ["beijing.gov.cn", "rsj.beijing.gov.cn"], "entryUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/", "officialSiteConfirmed": true},
+    {"id": "beijing-institutions", "organization": "北京市人力资源和社会保障局", "type": "政府官网", "domains": ["rsj.beijing.gov.cn", "beijing.gov.cn"], "entryUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/", "officialSiteConfirmed": true},
+    {"id": "beijing-state-assets", "organization": "北京市人民政府国有资产监督管理委员会", "type": "政府官网", "domains": ["gzw.beijing.gov.cn"], "entryUrl": "https://gzw.beijing.gov.cn/yggq/gqzp/index.html", "officialSiteConfirmed": true},
+    {"id": "boe-campus", "organization": "京东方科技集团", "type": "企业官方招聘系统", "domains": ["boe.com", "campus.boe.com"], "entryUrl": "https://www.boe.com/join/index", "officialSiteConfirmed": true}
   ]
 }

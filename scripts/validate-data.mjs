@@ -18,6 +18,7 @@ const publicExamChecks = [
   "grassrootsExperience", "honorsAndRecommendation", "certificatesAndOtherLimits",
   "avoidanceRules", "positionNotes"
 ];
+const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 
 function officialDomain(urlValue, source) {
   try {
@@ -28,7 +29,7 @@ function officialDomain(urlValue, source) {
 }
 
 if (data.meta?.schemaVersion !== 1) errors.push("meta.schemaVersion 必须为 1");
-if (!/^\d{4}-\d{2}-\d{2}$/.test(data.meta?.lastVerifiedAt || "")) errors.push("meta.lastVerifiedAt 格式错误");
+if (!minuteTimestamp.test(data.meta?.lastVerifiedAt || "")) errors.push("meta.lastVerifiedAt 必须是精确到分钟的北京时间，例如 2026-08-22T08:03:00+08:00");
 if (!Array.isArray(data.jobs) || !Array.isArray(data.monitors)) errors.push("jobs 和 monitors 必须是数组");
 
 const ids = new Set();
@@ -66,6 +67,7 @@ for (const [index, monitor] of (data.monitors || []).entries()) {
   for (const key of ["id", "track", "title", "status", "note", "officialUrl", "checkedAt"]) {
     if (!monitor[key]) errors.push(`monitors[${index}].${key} 缺失`);
   }
+  if (!minuteTimestamp.test(monitor.checkedAt || "")) errors.push(`monitors[${index}].checkedAt 必须精确到北京时间分钟`);
 }
 
 if (errors.length) {
