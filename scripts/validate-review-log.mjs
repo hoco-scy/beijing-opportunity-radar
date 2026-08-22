@@ -9,6 +9,13 @@ const errors = [];
 const minuteTimestamp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\+08:00$/;
 const decisions = new Set(["accepted", "rejected", "deferred"]);
 const runStatuses = new Set(["completed", "completed-partial", "failed"]);
+const sourceCheckStatuses = new Set([
+  "checked-deferred", "checked-full-pagination", "checked-native-filtered",
+  "checked-no-active-campaign", "checked-no-new-position-table",
+  "checked-no-publishable-change", "checked-roster-current",
+  "accessible-incomplete", "temporarily-unavailable", "semantic-404", "failed"
+]);
+const incompleteSourceStatuses = new Set(["accessible-incomplete", "temporarily-unavailable", "semantic-404", "failed"]);
 const nativeFilterMetricKeys = [
   "portalResultsReported", "nativeFilterQueries", "nativeFilteredResults", "deduplicatedCandidates",
   "positionsBatchReviewed", "positionsOfficiallyVerified",
@@ -23,7 +30,7 @@ const legacyScreeningMetricKeys = [
 function officialDomain(urlValue, source) {
   try {
     const url = new URL(urlValue);
-    const permittedProtocol = url.protocol === "https:" || (source.transportSecurity === "official-http-only" && url.protocol === "http:");
+    const permittedProtocol = url.protocol === "https:" || (["official-http-only", "official-http-fallback"].includes(source.transportSecurity) && url.protocol === "http:");
     return permittedProtocol && source.domains.some((domain) =>
       url.hostname === domain || url.hostname.endsWith(`.${domain}`));
   } catch { return false; }
@@ -65,14 +72,19 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
     const source = sources.get(check.sourceId);
     if (!source?.officialSiteConfirmed) errors.push(`${checkLabel} 未引用已登记官方来源`);
     if (!check.status || !check.note) errors.push(`${checkLabel} 状态或说明缺失`);
+    if (!sourceCheckStatuses.has(check.status)) errors.push(`${checkLabel}.status 不受支持`);
     if (checkedSourceIds.has(check.sourceId)) errors.push(`${checkLabel}.sourceId 重复`);
     checkedSourceIds.add(check.sourceId);
     if (strictCoverage) {
       if (!Number.isInteger(check.attempts) || check.attempts < 1) errors.push(`${checkLabel}.attempts 必须是正整数`);
       if (!minuteTimestamp.test(check.checkedAt || "")) errors.push(`${checkLabel}.checkedAt 必须精确到北京时间分钟`);
-      const failed = ["failed", "temporarily-unavailable"].includes(check.status);
+      const failed = ["failed", "temporarily-unavailable", "semantic-404"].includes(check.status);
       if (failed && ["critical", "active"].includes(source?.tier) && check.attempts < 3) errors.push(`${checkLabel} 关键来源失败前必须至少尝试 3 次`);
     }
+  }
+  if (Number(run.policyVersion || 0) >= 4) {
+    const incompleteSources = (run.sourceChecks || []).filter((check) => incompleteSourceStatuses.has(check.status)).length;
+    if (metrics.officialSystemsFailed !== incompleteSources) errors.push(`${label} 未完成来源数量必须与 sourceChecks 状态闭合`);
   }
   if (strictCoverage && metrics.officialSystemsFailed > 0 && run.status !== "completed-partial") errors.push(`${label} 有来源失败时必须标记 completed-partial`);
   if (batchScreening) {
@@ -86,6 +98,10 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
     if ((run.screeningMetrics?.positionsEscalated || 0) > 20) errors.push(`${label} 高推理升级数超过每轮 20 项上限`);
   }
   if (run.status === "completed-partial" && opportunities.meta?.lastRunStatus !== "completed-partial" && runIndex === 0) errors.push("最新运行部分完成时，正文 meta.lastRunStatus 必须同步");
+  if (runIndex === 0) {
+    if (opportunities.meta?.lastIncompleteSourceCount !== metrics.officialSystemsFailed) errors.push("正文 meta.lastIncompleteSourceCount 必须与最新运行一致");
+    if (opportunities.meta?.lastDeferredCandidateCount !== (run.screeningMetrics?.positionsDeferredByBudget || 0)) errors.push("正文 meta.lastDeferredCandidateCount 必须与最新运行一致");
+  }
 
   for (const [reviewIndex, review] of (run.reviews || []).entries()) {
     const reviewLabel = `${label}.reviews[${reviewIndex}]`;

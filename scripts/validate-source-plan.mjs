@@ -10,13 +10,13 @@ function validSourceUrl(value, source) {
   try {
     const url = new URL(value);
     const officialHost = source.domains.some((domain) => url.hostname === domain || url.hostname.endsWith(`.${domain}`));
-    const permittedHttp = source.transportSecurity === "official-http-only" && url.protocol === "http:";
+    const permittedHttp = ["official-http-only", "official-http-fallback"].includes(source.transportSecurity) && url.protocol === "http:";
     return officialHost && (url.protocol === "https:" || permittedHttp);
   } catch { return false; }
 }
 
-if (registry.version !== 2) errors.push("source-registry.version 必须为 2");
-if (plan.version !== 2) errors.push("source-plan.version 必须为 2");
+if (registry.version !== 3) errors.push("source-registry.version 必须为 3");
+if (plan.version !== 3) errors.push("source-plan.version 必须为 3");
 if (plan.timezone !== "Asia/Shanghai") errors.push("source-plan.timezone 必须为 Asia/Shanghai");
 
 for (const [index, source] of (registry.sources || []).entries()) {
@@ -29,7 +29,9 @@ for (const [index, source] of (registry.sources || []).entries()) {
   for (const alternate of (source.alternateEntryUrls || [])) {
     if (!validSourceUrl(alternate, source)) errors.push(`备用来源 URL 无效、域名不匹配或未获 HTTP 例外：${source.id}`);
   }
-  if (source.transportSecurity === "official-http-only" && !/^\d{4}-\d{2}-\d{2}$/.test(source.httpOnlyVerifiedAt || "")) errors.push(`仅 HTTP 官方来源缺少核验日期：${source.id}`);
+  if (source.transportSecurity?.startsWith("official-http-") && !/^\d{4}-\d{2}-\d{2}$/.test(source.httpOnlyVerifiedAt || "")) errors.push(`允许 HTTP 的官方来源缺少核验日期：${source.id}`);
+  if (source.recipeRequired && (!source.accessMode || !/^\d{4}-\d{2}-\d{2}$/.test(source.lastAccessAuditAt || ""))) errors.push(`需要筛选配方的来源缺少访问方式或核验日期：${source.id}`);
+  if (source.accessMode === "semantic-health-check-required" && !source.semanticFailureSignals?.length) errors.push(`语义健康检查来源缺少失败信号：${source.id}`);
   if (source.role === "authoritative" && source.officialSiteConfirmed !== true) errors.push(`权威来源未确认官方属性：${source.id}`);
   if (source.role === "discovery" && source.officialSiteConfirmed !== false) errors.push(`发现来源不得标记为官方证据：${source.id}`);
 }
@@ -37,6 +39,11 @@ for (const [index, source] of (registry.sources || []).entries()) {
 const retry = plan.retryPolicy || {};
 if (retry.criticalMaxAttempts < 3 || retry.activeMaxAttempts < 3) errors.push("critical 与 active 来源必须至少尝试 3 次");
 if (retry.failureOutcome !== "completed-partial") errors.push("来源失败的运行结果必须是 completed-partial");
+if (retry.semanticHealthCheckRequired !== true) errors.push("来源访问必须检查最终地址和页面语义，不能只看 HTTP 状态码");
+for (const status of ["checked-native-filtered", "checked-no-active-campaign", "accessible-incomplete", "temporarily-unavailable", "semantic-404"]) {
+  if (!plan.sourceOutcomeDefinitions?.[status]) errors.push(`缺少来源结果定义：${status}`);
+}
+if (!Array.isArray(plan.fallbackOrder) || plan.fallbackOrder.length < 4) errors.push("官方入口 fallback 顺序不完整");
 
 const listed = [
   ...(plan.coverage?.criticalEveryRun || []),

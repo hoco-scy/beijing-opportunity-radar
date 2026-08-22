@@ -27,7 +27,7 @@ const jobStatuses = new Set(["招聘中", "即将开放", "临时无法复查", 
 function officialDomain(urlValue, source) {
   try {
     const url = new URL(urlValue);
-    const permittedProtocol = url.protocol === "https:" || (source.transportSecurity === "official-http-only" && url.protocol === "http:");
+    const permittedProtocol = url.protocol === "https:" || (["official-http-only", "official-http-fallback"].includes(source.transportSecurity) && url.protocol === "http:");
     return permittedProtocol && source.domains.some((domain) =>
       url.hostname === domain || url.hostname.endsWith(`.${domain}`));
   } catch { return false; }
@@ -36,6 +36,8 @@ function officialDomain(urlValue, source) {
 if (data.meta?.schemaVersion !== 1) errors.push("meta.schemaVersion 必须为 1");
 if (!minuteTimestamp.test(data.meta?.lastVerifiedAt || "")) errors.push("meta.lastVerifiedAt 必须是精确到分钟的北京时间，例如 2026-08-22T08:03:00+08:00");
 if (!runStatuses.has(data.meta?.lastRunStatus)) errors.push("meta.lastRunStatus 必须是 completed、completed-partial 或 failed");
+if (!Number.isInteger(data.meta?.lastIncompleteSourceCount) || data.meta.lastIncompleteSourceCount < 0) errors.push("meta.lastIncompleteSourceCount 必须是非负整数");
+if (!Number.isInteger(data.meta?.lastDeferredCandidateCount) || data.meta.lastDeferredCandidateCount < 0) errors.push("meta.lastDeferredCandidateCount 必须是非负整数");
 if (!Array.isArray(data.jobs) || !Array.isArray(data.monitors)) errors.push("jobs 和 monitors 必须是数组");
 
 const ids = new Set();

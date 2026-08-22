@@ -4,7 +4,10 @@ const escapeHTML = (value = "") => String(value)
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
-const httpOnlyOfficialHosts = new Set(["bm.scs.gov.cn", "subb.scs.gov.cn"]);
+const httpOnlyOfficialHosts = new Set([
+  "bm.scs.gov.cn", "subb.scs.gov.cn", "job.mohrss.gov.cn",
+  "wap.sasac.gov.cn", "www.spacetalent.com.cn"
+]);
 const safeUrl = (value = "") => {
   try {
     const url = new URL(value);
@@ -20,7 +23,7 @@ const formatDateTime = (value) => value ? new Intl.DateTimeFormat("zh-CN", {
 }).format(new Date(value)).replaceAll("/", ".") : "未记录";
 
 const decisionLabels = { accepted: "已收录", rejected: "不符合", deferred: "还要确认" };
-const runStatusLabels = { completed: "本次已完成", "completed-partial": "部分网站没查完", failed: "本次没有完成" };
+const runStatusLabels = { completed: "本次已完成", "completed-partial": "有未完成项", failed: "本次没有完成" };
 const scopeLabels = { announcement: "整份公告", position: "具体岗位", "official-system": "招聘官网" };
 const sourceLabels = {
   "national-civil": "国家公务员局",
@@ -44,10 +47,15 @@ const sourceLabels = {
 const sourceStatusLabels = {
   "checked-deferred": "看过了，还要继续确认",
   "checked-full-pagination": "已看完筛选结果",
+  "checked-native-filtered": "已按官网筛选完成",
+  "checked-no-active-campaign": "当前没有有效招聘活动",
   "checked-no-new-position-table": "暂无新的职位表",
   "checked-no-publishable-change": "没有需要加入的新岗位",
   "checked-roster-current": "企业名单没有变化",
-  "temporarily-unavailable": "这次没能打开",
+  "accessible-incomplete": "页面能打开，但这次没有处理完",
+  "temporarily-unavailable": "主入口和备用入口都没能访问",
+  "semantic-404": "页面已经下线或实际是错误页",
+  "failed": "本次检查失败",
 };
 
 function filteredReviews(run) {
@@ -94,10 +102,14 @@ function renderRun(run) {
   const metrics = run.metrics;
   const changed = metrics.published + metrics.updated + metrics.closed;
   let outcome = changed ? `岗位页有 ${changed} 项变化` : "岗位页没有变化";
-  if (run.status === "completed-partial") outcome = `部分网站没查完 · ${outcome}`;
+  if (run.status === "completed-partial") outcome = `${metrics.officialSystemsFailed} 个来源未完成 · ${outcome}`;
   if (run.status === "failed") outcome = "这次更新没有完成";
 
-  const sourceChecks = run.sourceChecks.map((source) => `<li><strong>${escapeHTML(sourceLabels[source.sourceId] || source.sourceId)}</strong><span><b>${escapeHTML(sourceStatusLabels[source.status] || source.status)}</b>${source.attempts ? ` · 试了 ${source.attempts} 次` : ""}<br />${escapeHTML(source.note)}</span></li>`).join("");
+  const sourceChecks = run.sourceChecks.map((source) => {
+    const legacyIncomplete = Number(run.policyVersion || 0) < 4 && source.status === "temporarily-unavailable";
+    const statusLabel = legacyIncomplete ? "本轮没有完整读取" : (sourceStatusLabels[source.status] || source.status);
+    return `<li><strong>${escapeHTML(sourceLabels[source.sourceId] || source.sourceId)}</strong><span><b>${escapeHTML(statusLabel)}</b>${source.attempts ? ` · 试了 ${source.attempts} 次` : ""}<br />${escapeHTML(source.note)}</span></li>`;
+  }).join("");
   const reviewContent = reviews.length
     ? reviews.map(renderReview).join("")
     : `<div class="empty-state compact"><strong>这次没有这一类记录</strong><p>可以切换上面的筛选查看其他结果。</p></div>`;
@@ -123,8 +135,11 @@ function renderRun(run) {
 
 function render() {
   const latest = auditState.data.runs[0];
-  const partial = latest.status === "completed-partial" ? "（部分网站未完成）" : "";
-  document.querySelector("#sync-date").innerHTML = `<i></i>最近更新${partial}：${formatDateTime(auditState.data.meta.lastRunAt)}`;
+  const deferred = latest.screeningMetrics?.positionsDeferredByBudget || 0;
+  const status = latest.status === "completed-partial"
+    ? `上次未查完：${latest.metrics.officialSystemsFailed} 个来源 · ${deferred} 个候选待处理`
+    : "最近更新";
+  document.querySelector("#sync-date").innerHTML = `<i></i>${status} · ${formatDateTime(auditState.data.meta.lastRunAt)}`;
   document.querySelector("#latest-run").textContent = formatDateTime(latest.checkedAt);
   document.querySelector("#latest-reviewed").textContent = `${latest.metrics.reviewedItems} 项`;
   document.querySelector("#latest-published").textContent = `${latest.metrics.published} 项`;

@@ -26,7 +26,10 @@ const escapeHTML = (value = "") => String(value)
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
-const httpOnlyOfficialHosts = new Set(["bm.scs.gov.cn", "subb.scs.gov.cn"]);
+const httpOnlyOfficialHosts = new Set([
+  "bm.scs.gov.cn", "subb.scs.gov.cn", "job.mohrss.gov.cn",
+  "wap.sasac.gov.cn", "www.spacetalent.com.cn"
+]);
 const safeUrl = (value = "") => {
   try {
     const url = new URL(value);
@@ -176,9 +179,14 @@ function updateCounts() {
 
 function updateSummary() {
   const jobs = state.data.jobs;
-  const partial = state.data.meta.lastRunStatus === "completed-partial" ? "（部分网站未完成）" : "";
+  const meta = state.data.meta;
   const syncDate = get("#sync-date");
-  if (syncDate) syncDate.innerHTML = `<i></i>最近更新${partial}：${formatDateTime(state.data.meta.lastVerifiedAt)}`;
+  if (syncDate) {
+    const status = meta.lastRunStatus === "completed-partial"
+      ? `上次未查完：${meta.lastIncompleteSourceCount} 个来源 · ${meta.lastDeferredCandidateCount} 个候选待处理`
+      : "最近更新";
+    syncDate.innerHTML = `<i></i>${status} · ${formatDateTime(meta.lastVerifiedAt)}`;
+  }
   if (get("#stat-jobs")) get("#stat-jobs").textContent = jobs.length;
   if (get("#stat-beijing")) get("#stat-beijing").textContent = jobs.filter((job) => job.location.includes("北京")).length;
   if (get("#stat-tracks")) get("#stat-tracks").textContent = new Set(jobs.map((job) => job.track)).size;

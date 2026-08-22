@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "mode": "official-native-filter-first",
   "principles": {
     "preferOfficialNativeFilters": true,
@@ -7,7 +7,9 @@
     "combineQueriesByUnion": true,
     "deduplicateBeforeModelReview": true,
     "lowRankNeverMeansExclude": true,
-    "unknownMeansDeferNotReject": true
+    "unknownMeansDeferNotReject": true,
+    "httpStatusAloneNeverMeansSuccess": true,
+    "accessibleIncompleteIsNotUnavailable": true
   },
   "sourceCapabilityPolicy": {
     "registry": "data/filter-recipes.json",
@@ -16,7 +18,9 @@
     "safeFiltersFirst": ["招聘类型或届别", "工作地点", "学历", "岗位大类", "发布时间"],
     "keywordFiltersOnlyWhenSafeFiltersStillExceed": 150,
     "stopNarrowingWhenAtOrBelow": 100,
-    "fallbackWhenNoReliableNativeFilter": "下载官方表格、调用官方公开接口或用代码处理官方分页结果"
+    "fallbackWhenNoReliableNativeFilter": "下载官方表格、调用官方公开接口或用代码处理官方分页结果",
+    "semanticHealthChecks": ["最终地址没有落到 404 或 error 路由", "页面标题和正文不是不存在、下线或错误页", "动态列表已加载出可计数的结果或明确的空状态"],
+    "accessibleButIncompleteOutcome": "accessible-incomplete"
   },
   "geographyCadence": {
     "beijing": "every-run",

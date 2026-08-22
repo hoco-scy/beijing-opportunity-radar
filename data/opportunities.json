@@ -3,6 +3,8 @@
     "schemaVersion": 1,
     "lastVerifiedAt": "2026-08-22T12:30:00+08:00",
     "lastRunStatus": "completed-partial",
+    "lastIncompleteSourceCount": 9,
+    "lastDeferredCandidateCount": 1935,
     "timezone": "Asia/Shanghai",
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件"
   },

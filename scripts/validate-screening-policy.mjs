@@ -3,12 +3,17 @@ import { readFile } from "node:fs/promises";
 const root = new URL("../", import.meta.url);
 const policy = JSON.parse(await readFile(new URL("data/screening-policy.json", root), "utf8"));
 const recipes = JSON.parse(await readFile(new URL("data/filter-recipes.json", root), "utf8"));
+const registry = JSON.parse(await readFile(new URL("data/source-registry.json", root), "utf8"));
 const errors = [];
+const sources = new Map(registry.sources.map((source) => [source.id, source]));
 
-if (policy.version !== 2) errors.push("screening-policy.version 必须为 2");
+if (policy.version !== 3) errors.push("screening-policy.version 必须为 3");
 if (policy.mode !== "official-native-filter-first") errors.push("筛选模式必须是 official-native-filter-first");
 
 for (const key of ["preferOfficialNativeFilters", "neverTraverseUnfilteredPortalWhenReliableFiltersExist", "combineQueriesByUnion", "deduplicateBeforeModelReview", "lowRankNeverMeansExclude", "unknownMeansDeferNotReject"]) {
+  if (policy.principles?.[key] !== true) errors.push(`principles.${key} 必须为 true`);
+}
+for (const key of ["httpStatusAloneNeverMeansSuccess", "accessibleIncompleteIsNotUnavailable"]) {
   if (policy.principles?.[key] !== true) errors.push(`principles.${key} 必须为 true`);
 }
 
@@ -20,6 +25,8 @@ for (const id of ["discover-native-capabilities", "native-filter-union", "normal
 if (policy.sourceCapabilityPolicy?.registry !== "data/filter-recipes.json") errors.push("必须使用 filter-recipes.json 保存站点筛选能力");
 if (policy.sourceCapabilityPolicy?.stopNarrowingWhenAtOrBelow > 100) errors.push("安全筛选后不超过 100 个岗位时必须停止继续缩小");
 if (policy.sourceCapabilityPolicy?.keywordFiltersOnlyWhenSafeFiltersStillExceed < 150) errors.push("结果不超过 150 个岗位时不得为节省成本强制使用关键词缩小");
+if (!policy.sourceCapabilityPolicy?.semanticHealthChecks?.length) errors.push("必须登记页面语义健康检查");
+if (policy.sourceCapabilityPolicy?.accessibleButIncompleteOutcome !== "accessible-incomplete") errors.push("能打开但未处理完必须记为 accessible-incomplete");
 
 const model = policy.modelPolicy || {};
 if (model.routineModel !== "GPT-5.6 Terra") errors.push("常规任务模型必须是 GPT-5.6 Terra");
@@ -33,13 +40,25 @@ for (const key of ["portalResultsReported", "nativeFilterQueries", "nativeFilter
   if (!requiredMetrics.has(key)) errors.push(`缺少运行指标：${key}`);
 }
 
-if (recipes.version !== 1 || !Array.isArray(recipes.recipes)) errors.push("filter-recipes.json 格式无效");
+if (recipes.version !== 2 || !Array.isArray(recipes.recipes)) errors.push("filter-recipes.json 格式无效");
 const recipeIds = new Set();
+const recipeStatuses = new Set([
+  "verified", "verified-no-native-filter", "route-verified", "browser-required",
+  "announcement-discovery", "temporarily-unavailable", "pending-observation"
+]);
 for (const recipe of (recipes.recipes || [])) {
   if (!recipe.sourceId || recipeIds.has(recipe.sourceId)) errors.push(`筛选配方 sourceId 缺失或重复：${recipe.sourceId || "unknown"}`);
   recipeIds.add(recipe.sourceId);
-  if (!["verified", "pending-observation"].includes(recipe.status)) errors.push(`筛选配方状态无效：${recipe.sourceId}`);
+  if (!sources.has(recipe.sourceId)) errors.push(`筛选配方引用未登记来源：${recipe.sourceId}`);
+  if (!recipeStatuses.has(recipe.status)) errors.push(`筛选配方状态无效：${recipe.sourceId}`);
   if (recipe.status === "verified" && (!recipe.nativeFilters?.length || !recipe.queryPlan)) errors.push(`已验证筛选配方缺少控件或查询计划：${recipe.sourceId}`);
+  if (["verified-no-native-filter", "route-verified", "browser-required", "announcement-discovery"].includes(recipe.status) && !recipe.queryPlan) errors.push(`来源处理配方缺少查询计划：${recipe.sourceId}`);
+  if (recipe.status === "temporarily-unavailable" && !recipe.failureSignals?.length) errors.push(`暂不可用来源缺少语义失败信号：${recipe.sourceId}`);
+  if (recipe.status !== "pending-observation" && !/^\d{4}-\d{2}-\d{2}$/.test(recipe.observedAt || "")) errors.push(`筛选配方缺少核验日期：${recipe.sourceId}`);
+  if (!recipe.accessMode) errors.push(`筛选配方缺少访问方式：${recipe.sourceId}`);
+}
+for (const source of registry.sources.filter((item) => item.recipeRequired)) {
+  if (!recipeIds.has(source.id)) errors.push(`需要筛选配方但尚未登记：${source.id}`);
 }
 
 if (errors.length) {

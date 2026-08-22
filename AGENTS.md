@@ -34,6 +34,8 @@
 - 每轮检查 `source-plan.json` 的 `criticalEveryRun` 全部来源、所有仍在截止前的 active 来源及当次早/午轮换来源；所有检查都必须逐条写入 `sourceChecks`。
 - critical 与 active 来源首次失败后最多共尝试 3 次，间隔按计划退避；失败前还要尝试同一机构的官方备用入口、公告栏目或可下载附件。
 - 重试后仍失败时，不得把“未能访问”写成“没有公告”。该轮标记 `completed-partial`，记录尝试次数、最后检查时间和失败说明；其他可完成来源继续处理。
+- 不能只根据 HTTP 状态码判断入口成功。最终地址落到 `/404`、`error`，或页面标题/正文明确显示不存在、下线、错误页时，记录 `semantic-404`。入口能打开但筛选结果、分页、附件或职位详情没有处理完时，记录 `accessible-incomplete`，不得写成 `temporarily-unavailable`。
+- 必须按 `source-registry.json` 登记顺序尝试官方备用入口；仅 HTTP 入口只能用于已明确登记并标注核验日期的官方域名。动态招聘站必须执行 `filter-recipes.json` 中的访问方式、筛选组合和完成条件。
 - `officialSystemsChecked` 必须等于 `sourceChecks` 数量，成功与失败统计必须闭合；不得只记录部分来源却声称全面运行。
 - 现有正文岗位每 24 小时内至少复查一次，写入逐岗 `lastSeenAt`、`lastSeenStatus` 与 `statusEvidence`。全轮时间更新不等于逐岗复查。
 
@@ -80,7 +82,7 @@
 1. 复查现有岗位；再发现、去重、核验新岗位；处理预公告和上轮 deferred 项。
 2. 更新 `data/opportunities.json`、`data/review-log.json`，必要时更新来源登记与计划。
 3. 无论正文是否变化，都追加运行日志并更新 `meta.lastVerifiedAt`、`meta.lastRunAt` 与监测项 `checkedAt`；统一使用带 `+08:00` 的分钟级时间戳。
-4. 新版运行使用 `policyVersion: 3` 与 `screeningStrategyVersion: 2`。每个 `sourceChecks` 项必须有 `sourceId`、`status`、`note`、`attempts` 和分钟级 `checkedAt`；每轮都必须写入 `screeningMetrics`，说明入口报告总量、站内查询次数、站内筛选结果、去重候选、批量复核、官方逐岗核验和高推理升级数量，没有相应数据时填 0。
+4. 新版运行使用 `policyVersion: 4` 与 `screeningStrategyVersion: 2`。每个 `sourceChecks` 项必须有 `sourceId`、`status`、`note`、`attempts` 和分钟级 `checkedAt`；每轮都必须写入 `screeningMetrics`，说明入口报告总量、站内查询次数、站内筛选结果、去重候选、批量复核、官方逐岗核验和高推理升级数量，没有相应数据时填 0。`officialSystemsFailed` 必须等于 `accessible-incomplete`、`temporarily-unavailable`、`semantic-404` 与 `failed` 的合计数量。
 5. 日志记录所有已回溯官方来源的通过、未通过与继续核验对象；原因只使用公开安全分类。若公告级条件已足以排除，可不拆全表，但须明确公告级结论。
 6. 运行：
    - `node scripts/validate-source-plan.mjs`
