@@ -2,35 +2,10 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="在北京求职雷达中收藏的岗位。" />
-    <title>我的收藏｜北京求职雷达</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="0; url=index.html?saved=1#opportunities" />
+    <title>正在打开收藏｜北京求职雷达</title>
+    <script>location.replace("index.html?saved=1#opportunities");</script>
   </head>
-  <body data-view="favorites">
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="返回岗位首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>北京岗位更新</small></span></a>
-        <nav aria-label="主导航"><a href="index.html">岗位</a><a class="nav-current" href="favorites.html">我的收藏</a><a href="monitors.html">考试公告</a><a href="audit.html">更新记录</a></nav>
-        <span class="sync-status" id="sync-date"><i></i>正在读取更新时间</span>
-      </header>
-      <main class="subpage">
-        <section class="page-intro">
-          <div><p class="eyebrow">我的收藏</p><h1>想回头再看的岗位</h1><p>在岗位卡片右上角点一下心形，就会出现在这里。收藏只保存在当前浏览器，不会上传个人信息。</p></div>
-          <div class="page-intro-stat"><strong id="saved-count">0</strong><span>个收藏岗位</span><a href="index.html">继续找岗位 →</a></div>
-        </section>
-        <section class="listing-page-section">
-          <div class="section-heading"><div><p class="eyebrow">已收藏</p><h2>我的岗位清单</h2></div><span class="result-count" id="result-count">正在载入</span></div>
-          <div class="toolbar">
-            <div class="filter-tabs" role="group" aria-label="按招聘方向筛选"><button class="active" data-filter="全部" type="button">全部</button><button data-filter="考公" type="button">考公</button><button data-filter="选调优培" type="button">选调优培</button><button data-filter="央国企" type="button">央国企</button><button data-filter="事业单位" type="button">事业单位</button></div>
-            <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索收藏的岗位" placeholder="搜索收藏的岗位" /></label>
-          </div>
-          <div class="match-toolbar" role="group" aria-label="按推荐程度筛选"><span>推荐程度</span><button class="active" data-match="全部" type="button">全部</button><button data-match="重点关注" type="button">重点关注</button><button data-match="需要确认" type="button">需要确认</button><button data-match="谨慎尝试" type="button">谨慎尝试</button></div>
-          <div class="opportunity-list" id="opportunity-list"><div class="empty-state"><strong>正在读取收藏</strong><p>稍等一下。</p></div></div>
-        </section>
-      </main>
-      <footer><p><strong>北京求职雷达</strong> · 我的收藏</p><p>收藏只保存在当前浏览器，清理浏览器数据后会消失。</p></footer>
-    </div>
-  </body>
+  <body><p><a href="index.html?saved=1#opportunities">前往岗位页查看收藏</a></p></body>
 </html>

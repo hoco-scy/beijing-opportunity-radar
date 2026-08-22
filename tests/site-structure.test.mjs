@@ -2,11 +2,11 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-const pages = ["index.html", "favorites.html", "monitors.html", "audit.html"];
+const pages = ["index.html", "monitors.html", "sources.html", "audit.html"];
 const expectedNavigation = [
   ["index.html", "岗位"],
-  ["favorites.html", "我的收藏"],
   ["monitors.html", "考试公告"],
+  ["sources.html", "信息源"],
   ["audit.html", "更新记录"],
 ];
 
@@ -22,12 +22,27 @@ test("every page exposes the same four-page navigation", async () => {
   }
 });
 
-test("favorites are available as a filter and a standalone page", async () => {
+test("favorites stay in the job list and the former page redirects", async () => {
   const [index, favorites, app] = await Promise.all([read("index.html"), read("favorites.html"), read("app.js")]);
   assert.match(index, /data-saved-filter/);
-  assert.match(favorites, /data-view="favorites"/);
+  assert.match(favorites, /index\.html\?saved=1#opportunities/);
   assert.match(app, /radar-saved-opportunities/);
-  assert.match(app, /pageView === "favorites"/);
+  assert.match(app, /URLSearchParams\(location\.search\)/);
+  for (const page of pages) assert.doesNotMatch(await read(page), /href="favorites\.html"/);
+});
+
+test("source cards expose overlapping coverage instead of claiming orthogonal categories", async () => {
+  const [sourcesPage, sourcesScript, registryRaw] = await Promise.all([
+    read("sources.html"), read("sources.js"), read("data/source-registry.json"),
+  ]);
+  const registry = JSON.parse(registryRaw);
+  assert.match(sourcesPage, /不是四只互不相干的抽屉/);
+  assert.match(sourcesPage, /招录方式/);
+  assert.match(sourcesPage, /单位性质/);
+  assert.match(sourcesScript, /source\.coverage/);
+  assert.ok(registry.sources.every((source) => Array.isArray(source.coverage) && source.coverage.length > 0));
+  const shared = registry.sources.find((source) => source.id === "beijing-personnel-exam");
+  assert.deepEqual(shared.coverage, ["公务员招录", "选调优培", "事业单位", "国有企业"]);
 });
 
 test("national civil service monitor uses the two current official entries", async () => {

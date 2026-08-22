@@ -12,7 +12,7 @@
 - 客观质量筛选：只有官方可核验的明显低待遇、高强度、高危、有害暴露、长期夜班倒班或重体力等事实才会硬排除；未知信息保留待确认，不使用性别刻板印象。
 - 匿名门禁：公考使用私有资格档案逐项判断，但公开仓库不保存或显示任何私人值。
 
-网站分成四个独立页面：`index.html` 查看具体岗位，`favorites.html` 查看当前浏览器收藏，`monitors.html` 跟踪考试公告，`audit.html` 查看每轮匿名发现、核验、通过、未通过和继续跟踪记录。
+网站分成四个独立页面：`index.html` 查看具体岗位并筛选当前浏览器收藏，`monitors.html` 跟踪考试公告，`sources.html` 查看正在检查的信息源及其覆盖范围，`audit.html` 查看每轮匿名发现、核验、通过、未通过和继续跟踪记录。旧的 `favorites.html` 仅保留为兼容跳转。
 
 岗位数据位于 `data/opportunities.json`，审核记录位于 `data/review-log.json`，来源池和运行策略位于 `data/source-registry.json`、`data/source-plan.json`、`data/screening-policy.json` 与 `data/filter-recipes.json`。正文只展示通过门禁的具体岗位。
 

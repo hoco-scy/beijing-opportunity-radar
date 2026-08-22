@@ -176,6 +176,7 @@ main { width: min(1400px, calc(100% - 48px)); margin: 0 auto; }
 .source-card li > span { color: var(--orange); font-family: Georgia, serif; font-size: 13px; }
 .source-card li p { margin: 0; color: #586b71; font-size: 10px; line-height: 1.55; }
 .source-card li strong { display: block; margin-bottom: 2px; color: var(--ink); font-size: 11px; }
+.source-card-link { display: inline-flex; margin-top: 16px; color: var(--green); font-size: 10px; font-weight: 800; }
 
 .intelligence-section { display: grid; grid-template-columns: .72fr 1.28fr; gap: 70px; align-items: center; padding: 26px 0 90px; }
 .intelligence-copy h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 36px; line-height: 1.25; font-weight: 600; }
@@ -269,6 +270,7 @@ footer strong { color: var(--ink); }
 .match-toolbar > span { margin-right: 4px; color: #7b888c; font-size: 10px; }
 .match-toolbar button { padding: 6px 10px; border: 0; border-radius: 3px; color: #69797e; background: #e7e3da; cursor: pointer; font-size: 10px; }
 .match-toolbar button.active { color: white; background: var(--green); }
+.filter-note { margin: -5px 0 16px; color: #7b898d; font-size: 9px; line-height: 1.65; }
 
 .job-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin: 17px 0 14px; border: 1px solid #e6e2d9; background: #e6e2d9; }
 .job-facts div { min-height: 66px; padding: 11px 12px; background: #faf8f3; }
@@ -527,6 +529,48 @@ footer strong { color: var(--ink); }
 .audit-hero.page-intro { min-height: 470px; border-bottom: 0; }
 .audit-page .audit-feed { padding-top: 74px; }
 
+/* Source directory */
+.sources-hero { min-height: 470px; }
+.taxonomy-card { padding: 30px; color: white; background: var(--ink); border-radius: 6px; box-shadow: 0 24px 55px rgba(16,45,59,.18); }
+.taxonomy-card .eyebrow { color: #f0aa8f; }
+.taxonomy-card > strong { display: block; margin-bottom: 22px; font-family: Georgia, "Songti SC", serif; font-size: 22px; line-height: 1.45; }
+.taxonomy-card > div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.14); }
+.taxonomy-card > div span { color: #91a8ad; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.taxonomy-card > div p { margin: 0; color: #e4ece9; font-size: 10px; line-height: 1.65; }
+.taxonomy-card small { display: block; margin-top: 17px; color: #adc0c5; font-size: 9px; line-height: 1.75; }
+
+.source-directory { padding: 70px 0 82px; }
+.source-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.source-filters { flex-wrap: wrap; }
+.source-filter-note { margin: 14px 0 22px; color: #718187; font-size: 9px; line-height: 1.7; }
+.source-directory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.source-directory-grid > .empty-state { grid-column: 1 / -1; }
+.source-directory-card { display: flex; flex-direction: column; min-height: 242px; padding: 21px; border: 1px solid rgba(16,45,59,.1); border-top: 4px solid var(--green); background: var(--white); box-shadow: 0 7px 22px rgba(16,45,59,.035); }
+.source-directory-card.role-roster { border-top-color: var(--blue); }
+.source-directory-card.role-discovery { border-top-color: #b58a36; }
+.source-card-topline { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.source-role { color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.role-roster .source-role { color: var(--blue); }
+.role-discovery .source-role { color: #80631e; }
+.source-health { padding: 5px 7px; border-radius: 99px; font-size: 8px; font-weight: 800; }
+.source-health.checked { color: #376f57; background: #e1f0e7; }
+.source-health.incomplete { color: #80631e; background: #f2e9cf; }
+.source-health.unavailable { color: #a74d33; background: var(--orange-light); }
+.source-health.waiting { color: #68797e; background: #e8e4db; }
+.source-directory-card h3 { margin: 21px 0 7px; font-family: Georgia, "Songti SC", serif; font-size: 18px; line-height: 1.4; }
+.source-type { margin: 0; color: #7a898e; font-size: 9px; line-height: 1.55; }
+.source-coverage { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 19px; }
+.source-coverage strong { margin-right: 2px; color: #839094; font-size: 8px; }
+.source-coverage span { padding: 5px 7px; color: #506a70; background: #efede6; border-radius: 2px; font-size: 8px; }
+.source-card-footer { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-top: auto; padding-top: 19px; border-top: 1px solid #ece8df; }
+.source-card-footer span { color: #8a979a; font-size: 8px; line-height: 1.5; }
+.source-card-footer a { flex: 0 0 auto; color: var(--green); font-size: 9px; font-weight: 800; }
+.source-legend { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-bottom: 5px; border: 1px solid var(--line); background: var(--line); }
+.source-legend article { min-height: 180px; padding: 25px; background: #ebe7de; }
+.source-legend span { color: var(--orange); font-family: Georgia, serif; font-size: 15px; }
+.source-legend strong { display: block; margin-top: 26px; font-size: 12px; }
+.source-legend p { margin: 9px 0 0; color: #5f7177; font-size: 9px; line-height: 1.75; }
+
 @media (max-width: 1050px) {
   .topbar {
     height: auto;
@@ -548,6 +592,9 @@ footer strong { color: var(--ink); }
   .page-intro { grid-template-columns: 1fr; gap: 38px; padding-left: 0; padding-right: 0; }
   .page-intro-stat, .page-intro-note { max-width: 620px; }
   .how-it-works { grid-template-columns: 1fr; gap: 28px; }
+  .taxonomy-card { max-width: 620px; }
+  .source-toolbar { align-items: stretch; flex-direction: column; }
+  .source-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -572,4 +619,11 @@ footer strong { color: var(--ink); }
   .how-it-works li { min-height: 0; }
   .how-it-works li strong { margin-top: 18px; }
   .audit-hero.page-intro { min-height: 0; padding: 50px 0; }
+  .sources-hero { min-height: 0; }
+  .taxonomy-card { padding: 25px; }
+  .source-directory { padding-top: 52px; }
+  .source-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 3px; }
+  .source-directory-grid, .source-legend { grid-template-columns: 1fr; }
+  .source-directory-card { min-height: 220px; }
+  .source-legend article { min-height: 0; }
 }

@@ -1,9 +1,8 @@
-const pageView = document.body.dataset.view || "jobs";
 const state = {
   activeTrack: "全部",
   activeMatch: "全部",
   query: "",
-  savedOnly: pageView === "favorites",
+  savedOnly: new URLSearchParams(location.search).get("saved") === "1",
   data: null,
 };
 
@@ -202,13 +201,18 @@ function bindFilters() {
   const search = get("#search");
   if (search) search.addEventListener("input", (event) => { state.query = event.target.value; renderCards(); });
   const savedFilter = get("[data-saved-filter]");
-  if (savedFilter) savedFilter.addEventListener("click", () => {
-    state.savedOnly = !state.savedOnly;
+  if (savedFilter) {
     savedFilter.classList.toggle("active", state.savedOnly);
     savedFilter.setAttribute("aria-pressed", String(state.savedOnly));
     savedFilter.firstChild.textContent = state.savedOnly ? "♥ 我的收藏 " : "♡ 我的收藏 ";
-    renderCards();
-  });
+    savedFilter.addEventListener("click", () => {
+      state.savedOnly = !state.savedOnly;
+      savedFilter.classList.toggle("active", state.savedOnly);
+      savedFilter.setAttribute("aria-pressed", String(state.savedOnly));
+      savedFilter.firstChild.textContent = state.savedOnly ? "♥ 我的收藏 " : "♡ 我的收藏 ";
+      renderCards();
+    });
+  }
 }
 
 async function init() {

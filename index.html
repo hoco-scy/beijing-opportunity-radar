@@ -12,7 +12,7 @@
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="index.html" aria-label="返回岗位首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>北京岗位更新</small></span></a>
-        <nav aria-label="主导航"><a class="nav-current" href="index.html">岗位</a><a href="favorites.html">我的收藏</a><a href="monitors.html">考试公告</a><a href="audit.html">更新记录</a></nav>
+        <nav aria-label="主导航"><a class="nav-current" href="index.html">岗位</a><a href="monitors.html">考试公告</a><a href="sources.html">信息源</a><a href="audit.html">更新记录</a></nav>
         <span class="sync-status" id="sync-date"><i></i>正在读取更新时间</span>
       </header>
 
@@ -22,7 +22,7 @@
             <p class="eyebrow">2027 届 · 北京优先</p>
             <h1>北京优先的<br /><em>岗位清单</em></h1>
             <p class="hero-intro">考公、选调、事业单位和央国企放在一起看。每条信息都对应一个具体岗位，并附上职位代码、专业要求和官网入口。</p>
-            <div class="hero-actions"><a class="primary-button" href="#opportunities">浏览 <strong id="hero-job-count">—</strong> 个岗位 <span>↓</span></a><a class="text-button" href="favorites.html">打开我的收藏 →</a></div>
+            <div class="hero-actions"><a class="primary-button" href="#opportunities">浏览 <strong id="hero-job-count">—</strong> 个岗位 <span>↓</span></a><a class="text-button" href="sources.html">查看信息源 →</a></div>
           </div>
           <div class="hero-panel" aria-label="当前岗位概况">
             <div class="panel-topline"><span>目前收录</span><strong>已核对岗位信息</strong></div>
@@ -37,9 +37,10 @@
           <div class="main-column">
             <div class="section-heading"><div><p class="eyebrow">岗位列表</p><h2>现在可以看的岗位</h2></div><span class="result-count" id="result-count">正在载入</span></div>
             <div class="toolbar">
-              <div class="filter-tabs" role="group" aria-label="按招聘方向筛选"><button class="active" data-filter="全部" type="button">全部</button><button data-filter="考公" type="button">考公</button><button data-filter="选调优培" type="button">选调优培</button><button data-filter="央国企" type="button">央国企</button><button data-filter="事业单位" type="button">事业单位</button></div>
+              <div class="filter-tabs" role="group" aria-label="按招聘方向筛选"><button class="active" data-filter="全部" type="button">全部</button><button data-filter="考公" type="button">国考 / 京考</button><button data-filter="选调优培" type="button">选调 / 优培</button><button data-filter="央国企" type="button">国有企业</button><button data-filter="事业单位" type="button">事业单位</button></div>
               <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索岗位、代码、单位或专业" placeholder="搜岗位、单位、代码或专业" /></label>
             </div>
+            <p class="filter-note">这里按常用报名入口归类，不是互不重叠的单位类别；岗位最终属于机关、事业单位还是国有企业，以当年公告为准。</p>
             <div class="match-toolbar" role="group" aria-label="按推荐程度筛选"><span>推荐程度</span><button class="active" data-match="全部" type="button">全部</button><button data-match="重点关注" type="button">重点关注</button><button data-match="需要确认" type="button">需要确认</button><button data-match="谨慎尝试" type="button">谨慎尝试</button><button class="saved-filter-button" data-saved-filter type="button" aria-pressed="false">♡ 我的收藏 <strong id="saved-filter-count">0</strong></button></div>
             <div class="opportunity-list" id="opportunity-list"><div class="empty-state"><strong>正在读取岗位</strong><p>稍等一下，岗位列表马上出现。</p></div></div>
           </div>
@@ -48,10 +49,10 @@
             <section class="today-card"><div class="side-heading"><div><p class="eyebrow">今天可以先做</p><h2>三件小事</h2></div><span id="task-count">0/3</span></div><div class="task-list" id="task-list"></div><p class="saved-note">已经收藏 <strong id="saved-count">0</strong> 个岗位。收藏只保存在当前浏览器。</p></section>
             <section class="profile-card">
               <div class="profile-header"><span class="profile-monogram">岗</span><div><p>目前主要在找</p><strong>页面不保存姓名、学校或联系方式</strong></div></div>
-              <div class="profile-grid"><div><span>考试</span><strong>京考 / 国考 / 选调优培</strong></div><div><span>就业</span><strong>央国企 / 事业单位</strong></div><div><span>地点</span><strong>北京优先 · 全国补充</strong></div></div>
+              <div class="profile-grid"><div><span>方式</span><strong>国考 / 京考 / 选调 / 优培</strong></div><div><span>单位</span><strong>机关 / 事业单位 / 国有企业</strong></div><div><span>地点</span><strong>北京优先 · 全国补充</strong></div></div>
               <div class="skill-stack"><span>生物医学工程</span><span>工学</span><span>数据与技术</span><span>产品与项目</span><span>综合管理</span></div>
             </section>
-            <section class="source-card"><p class="eyebrow">收录原则</p><h2>为什么会出现在这里</h2><ul><li><span>01</span><p><strong>能找到具体岗位</strong>至少有岗位名称或职位代码，不拿整场招聘代替岗位。</p></li><li><span>02</span><p><strong>能回到官网查看</strong>职位信息来自政府或招聘单位官网，第三方内容只用来找方向。</p></li><li><span>03</span><p><strong>公考岗位确认可报</strong>报考条件有一项说不清，就先放到更新记录里继续查。</p></li></ul></section>
+            <section class="source-card"><p class="eyebrow">收录原则</p><h2>为什么会出现在这里</h2><ul><li><span>01</span><p><strong>能找到具体岗位</strong>至少有岗位名称或职位代码，不拿整场招聘代替岗位。</p></li><li><span>02</span><p><strong>能回到官网查看</strong>职位信息来自政府或招聘单位官网，第三方内容只用来找方向。</p></li><li><span>03</span><p><strong>公考岗位确认可报</strong>报考条件有一项说不清，就先放到更新记录里继续查。</p></li></ul><a class="source-card-link" href="sources.html">查看正在检查的信息源 →</a></section>
           </aside>
         </section>
 
