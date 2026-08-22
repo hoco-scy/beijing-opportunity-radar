@@ -6,6 +6,15 @@ const plan = JSON.parse(await readFile(new URL("data/source-plan.json", root), "
 const errors = [];
 const sourceIds = new Set();
 
+function validSourceUrl(value, source) {
+  try {
+    const url = new URL(value);
+    const officialHost = source.domains.some((domain) => url.hostname === domain || url.hostname.endsWith(`.${domain}`));
+    const permittedHttp = source.transportSecurity === "official-http-only" && url.protocol === "http:";
+    return officialHost && (url.protocol === "https:" || permittedHttp);
+  } catch { return false; }
+}
+
 if (registry.version !== 2) errors.push("source-registry.version 必须为 2");
 if (plan.version !== 2) errors.push("source-plan.version 必须为 2");
 if (plan.timezone !== "Asia/Shanghai") errors.push("source-plan.timezone 必须为 Asia/Shanghai");
@@ -16,9 +25,11 @@ for (const [index, source] of (registry.sources || []).entries()) {
   }
   if (sourceIds.has(source.id)) errors.push(`来源 id 重复：${source.id}`);
   sourceIds.add(source.id);
-  try {
-    if (new URL(source.entryUrl).protocol !== "https:") errors.push(`来源不是 HTTPS：${source.id}`);
-  } catch { errors.push(`来源 URL 无效：${source.id}`); }
+  if (!validSourceUrl(source.entryUrl, source)) errors.push(`来源 URL 无效、域名不匹配或未获 HTTP 例外：${source.id}`);
+  for (const alternate of (source.alternateEntryUrls || [])) {
+    if (!validSourceUrl(alternate, source)) errors.push(`备用来源 URL 无效、域名不匹配或未获 HTTP 例外：${source.id}`);
+  }
+  if (source.transportSecurity === "official-http-only" && !/^\d{4}-\d{2}-\d{2}$/.test(source.httpOnlyVerifiedAt || "")) errors.push(`仅 HTTP 官方来源缺少核验日期：${source.id}`);
   if (source.role === "authoritative" && source.officialSiteConfirmed !== true) errors.push(`权威来源未确认官方属性：${source.id}`);
   if (source.role === "discovery" && source.officialSiteConfirmed !== false) errors.push(`发现来源不得标记为官方证据：${source.id}`);
 }

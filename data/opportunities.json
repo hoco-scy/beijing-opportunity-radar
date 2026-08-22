@@ -1843,10 +1843,12 @@
       "id": "national-civil-2027",
       "track": "考公",
       "title": "中央机关及其直属机构 2027 年度考试录用公务员",
-      "status": "本轮未完成复查",
-      "note": "国家公务员局主站与备用入口累计尝试 3 次仍无法完整访问；不得据此判断为没有 2027 公告。",
-      "officialUrl": "https://www.scs.gov.cn/",
-      "checkedAt": "2026-08-22T12:30:00+08:00"
+      "status": "报名入口已更新",
+      "note": "国家公务员局已改用新的报名系统，主入口和补充录用入口均已确认可以访问。下一轮将从新地址继续检查 2027 年度公告和职位表。",
+      "officialUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+      "alternateOfficialUrl": "http://subb.scs.gov.cn/pp/gkweb/core/web/ui/business/home/lxhome.html",
+      "alternateOfficialLabel": "补充录用入口",
+      "checkedAt": "2026-08-22T14:56:00+08:00"
     },
     {
       "id": "beijing-civil-2027",

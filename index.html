@@ -3,76 +3,64 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="北京优先的考公、选调优培与央国企具体岗位核验看板。" />
-    <title>北京求职雷达｜具体岗位核验看板</title>
+    <meta name="description" content="北京优先的考公、选调、事业单位和央国企岗位清单。" />
+    <title>岗位｜北京求职雷达</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
-  <body>
+  <body data-view="jobs">
     <div class="site-shell">
       <header class="topbar">
-        <a class="brand" href="#top" aria-label="回到首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>Position intelligence</small></span></a>
-        <nav aria-label="主导航"><a href="#opportunities">具体岗位</a><a href="#monitors">公告监测</a><a href="audit.html">审核日志</a><a href="#standard">核验标准</a></nav>
-        <span class="sync-status" id="sync-date"><i></i>正在读取核验时间</span>
+        <a class="brand" href="index.html" aria-label="返回岗位首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>北京岗位更新</small></span></a>
+        <nav aria-label="主导航"><a class="nav-current" href="index.html">岗位</a><a href="favorites.html">我的收藏</a><a href="monitors.html">考试公告</a><a href="audit.html">更新记录</a></nav>
+        <span class="sync-status" id="sync-date"><i></i>正在读取更新时间</span>
       </header>
 
-      <main id="top">
+      <main>
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">2027 届求职季 · 北京优先 · 岗位级追踪</p>
-            <h1>不是“某单位在招”，<br /><em>而是具体哪个岗位。</em></h1>
-            <p class="hero-intro">一条记录对应一个真实岗位：职位代码、地点、学历、专业、职责、截止口径和官方入口都能核对。没有发布职位表的考试，只进入监测区，不进入岗位列表。</p>
-            <div class="hero-actions"><a class="primary-button" href="#opportunities">查看 <strong id="hero-job-count">—</strong> 个具体岗位 <span>↘</span></a><a class="text-button" href="audit.html">查看发现与审核日志 →</a></div>
+            <p class="eyebrow">2027 届 · 北京优先</p>
+            <h1>北京优先的<br /><em>岗位清单</em></h1>
+            <p class="hero-intro">考公、选调、事业单位和央国企放在一起看。每条信息都对应一个具体岗位，并附上职位代码、专业要求和官网入口。</p>
+            <div class="hero-actions"><a class="primary-button" href="#opportunities">浏览 <strong id="hero-job-count">—</strong> 个岗位 <span>↓</span></a><a class="text-button" href="favorites.html">打开我的收藏 →</a></div>
           </div>
-          <div class="hero-panel" aria-label="岗位情报质量标准">
-            <div class="panel-topline"><span>当前数据层级</span><strong>逐岗核验</strong></div>
-            <div class="phase-visual"><div class="phase-number">01</div><div><p>一条记录</p><strong>一个岗位 / 一行职位表</strong></div></div>
+          <div class="hero-panel" aria-label="当前岗位概况">
+            <div class="panel-topline"><span>目前收录</span><strong>已核对岗位信息</strong></div>
+            <div class="phase-visual"><div class="phase-number">BJ</div><div><p>查看范围</p><strong>北京每次更新，全国定期补充</strong></div></div>
             <div class="phase-progress"><span></span></div>
-            <div class="panel-stats"><div><strong id="stat-jobs">—</strong><span>具体岗位</span></div><div><strong id="stat-beijing">—</strong><span>北京岗位</span></div><div><strong id="stat-tracks">—</strong><span>已开放赛道</span></div></div>
-            <p class="next-window"><span>当前提醒</span><strong>招满即停的岗位优先处理</strong></p>
+            <div class="panel-stats"><div><strong id="stat-jobs">—</strong><span>全部岗位</span></div><div><strong id="stat-beijing">—</strong><span>北京岗位</span></div><div><strong id="stat-tracks">—</strong><span>招聘方向</span></div></div>
+            <p class="next-window"><span>先看什么</span><strong>快截止和招满即止的岗位</strong></p>
           </div>
         </section>
 
-        <section class="dashboard">
-          <div class="main-column" id="opportunities">
-            <div class="section-heading"><div><p class="eyebrow">VERIFIED POSITIONS</p><h2>完成逐岗核验的机会</h2></div><span class="result-count" id="result-count">正在载入</span></div>
+        <section class="dashboard" id="opportunities">
+          <div class="main-column">
+            <div class="section-heading"><div><p class="eyebrow">岗位列表</p><h2>现在可以看的岗位</h2></div><span class="result-count" id="result-count">正在载入</span></div>
             <div class="toolbar">
-              <div class="filter-tabs" role="group" aria-label="按赛道筛选"><button class="active" data-filter="全部" type="button">全部</button><button data-filter="考公" type="button">考公</button><button data-filter="选调优培" type="button">选调优培</button><button data-filter="央国企" type="button">央国企</button><button data-filter="事业单位" type="button">事业单位</button></div>
-              <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索岗位、代码、单位、专业或关键词" placeholder="岗位 / 代码 / 单位 / 专业" /></label>
+              <div class="filter-tabs" role="group" aria-label="按招聘方向筛选"><button class="active" data-filter="全部" type="button">全部</button><button data-filter="考公" type="button">考公</button><button data-filter="选调优培" type="button">选调优培</button><button data-filter="央国企" type="button">央国企</button><button data-filter="事业单位" type="button">事业单位</button></div>
+              <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索岗位、代码、单位或专业" placeholder="搜岗位、单位、代码或专业" /></label>
             </div>
-            <div class="match-toolbar" role="group" aria-label="按判断结果筛选"><span>岗位判断</span><button class="active" data-match="全部" type="button">全部</button><button data-match="重点关注" type="button">重点关注</button><button data-match="需要确认" type="button">需要确认</button><button data-match="谨慎尝试" type="button">谨慎尝试</button></div>
-            <div class="opportunity-list" id="opportunity-list"><div class="empty-state"><strong>正在读取岗位数据</strong><p>只加载已经通过核验门禁的公开记录。</p></div></div>
+            <div class="match-toolbar" role="group" aria-label="按推荐程度筛选"><span>推荐程度</span><button class="active" data-match="全部" type="button">全部</button><button data-match="重点关注" type="button">重点关注</button><button data-match="需要确认" type="button">需要确认</button><button data-match="谨慎尝试" type="button">谨慎尝试</button><button class="saved-filter-button" data-saved-filter type="button" aria-pressed="false">♡ 我的收藏 <strong id="saved-filter-count">0</strong></button></div>
+            <div class="opportunity-list" id="opportunity-list"><div class="empty-state"><strong>正在读取岗位</strong><p>稍等一下，岗位列表马上出现。</p></div></div>
           </div>
 
           <aside class="side-column">
-            <section class="today-card"><div class="side-heading"><div><p class="eyebrow">NEXT ACTIONS</p><h2>今天先做这 3 件</h2></div><span id="task-count">0/3</span></div><div class="task-list" id="task-list"></div><p class="saved-note">已收藏 <strong id="saved-count">0</strong> 个岗位，进度仅保存在当前设备。</p></section>
+            <section class="today-card"><div class="side-heading"><div><p class="eyebrow">今天可以先做</p><h2>三件小事</h2></div><span id="task-count">0/3</span></div><div class="task-list" id="task-list"></div><p class="saved-note">已经收藏 <strong id="saved-count">0</strong> 个岗位。收藏只保存在当前浏览器。</p></section>
             <section class="profile-card">
-              <div class="profile-header"><span class="profile-monogram">岗</span><div><p>公开筛选方向</p><strong>匿名 · 不保存个人身份信息</strong></div></div>
-              <div class="profile-grid"><div><span>主线</span><strong>京考 / 国考 / 选调优培</strong></div><div><span>并行</span><strong>央国企 / 事业单位</strong></div><div><span>地区</span><strong>北京优先 · 全国补充</strong></div></div>
-              <div class="skill-stack"><span>医药健康</span><span>检验检测</span><span>科研技术</span><span>产品项目</span><span>综合管理</span></div>
+              <div class="profile-header"><span class="profile-monogram">岗</span><div><p>目前主要在找</p><strong>页面不保存姓名、学校或联系方式</strong></div></div>
+              <div class="profile-grid"><div><span>考试</span><strong>京考 / 国考 / 选调优培</strong></div><div><span>就业</span><strong>央国企 / 事业单位</strong></div><div><span>地点</span><strong>北京优先 · 全国补充</strong></div></div>
+              <div class="skill-stack"><span>生物医学工程</span><span>工学</span><span>数据与技术</span><span>产品与项目</span><span>综合管理</span></div>
             </section>
-            <section class="source-card" id="standard"><p class="eyebrow">PUBLICATION GATE</p><h2>岗位入库的硬门槛</h2><ul><li><span>01</span><p><strong>必须具体到岗</strong>有职位名称或职位代码，招聘专题不能代替岗位。</p></li><li><span>02</span><p><strong>必须回到官方</strong>第三方只提供线索，岗位字段以官方原文或职位表为准。</p></li><li><span>03</span><p><strong>公考必须确认可报</strong>硬条件全部通过才发布；任一项未知或不符都不上架。</p></li></ul></section>
+            <section class="source-card"><p class="eyebrow">收录原则</p><h2>为什么会出现在这里</h2><ul><li><span>01</span><p><strong>能找到具体岗位</strong>至少有岗位名称或职位代码，不拿整场招聘代替岗位。</p></li><li><span>02</span><p><strong>能回到官网查看</strong>职位信息来自政府或招聘单位官网，第三方内容只用来找方向。</p></li><li><span>03</span><p><strong>公考岗位确认可报</strong>报考条件有一项说不清，就先放到更新记录里继续查。</p></li></ul></section>
           </aside>
         </section>
 
-        <section class="monitor-section" id="monitors">
-          <div class="section-heading"><div><p class="eyebrow">ANNOUNCEMENT WATCH</p><h2>考公与选调公告监测</h2></div><p>未发布职位表 ≠ 已有岗位</p></div>
-          <div class="monitor-intro"><strong>这里追踪的是“何时可以开始逐岗筛选”</strong><p>公告发布后会解析职位表，并用私有资料逐项校验。只有毕业年份、专业代码、学历学位、应届身份、院校/生源或户籍、政治面貌、基层经历、荣誉条件及备注限制全部确认通过的职位，才会进入上方列表。</p></div>
-          <div class="monitor-grid" id="monitor-grid"></div>
-        </section>
-
-        <a class="audit-teaser" href="audit.html">
-          <div><p class="eyebrow">REVIEW TRAIL</p><h2>没有进入正文，<br />也不等于没有发生。</h2></div>
-          <p>每轮发现、官方核验、未通过原因和待继续核验项都会留下匿名记录。正式岗位为零时，也能看见系统做过什么。</p>
-          <span>打开审核日志 ↗</span>
-        </a>
-
-        <section class="intelligence-section">
-          <div class="intelligence-copy"><p class="eyebrow">DAILY CLOUD PIPELINE</p><h2>线索可以很杂，<br />公开数据必须很干净。</h2><p>云端任务每天发现和复查。聚合站、公众号和社群只能触发调查，不能直接生成公开岗位。</p><div class="channel-cloud"><span>政府官网</span><span>企业招聘站</span><span>职位表附件</span><span>高校就业网</span><span>官方公众号</span><span>招聘平台</span><span>搜索索引</span><span>社群线索</span></div></div>
-          <div class="pipeline" aria-label="岗位核验流程"><article><span>01</span><div><strong>发现岗位线索</strong><p>不限渠道建立候选</p></div></article><i>→</i><article><span>02</span><div><strong>追溯官方记录</strong><p>公告、职位表或招聘系统</p></div></article><i>→</i><article><span>03</span><div><strong>逐字段核验</strong><p>公考再核对全部资格条件</p></div></article><i>→</i><article class="publish-step"><span>04</span><div><strong>记录结论并发布</strong><p>通过进正文，其余进审核日志</p></div></article></div>
+        <section class="how-it-works">
+          <div><p class="eyebrow">网站怎么更新</p><h2>先在官网缩小范围，再认真看岗位详情</h2><p>招聘网站能按届别、地点、学历和岗位类别筛选时，会先用这些条件。最后只打开可能合适的岗位详情，不再从几千条结果里一页页翻。</p></div>
+          <ol><li><span>1</span><strong>官网筛选</strong><p>先选 2027 届、北京和合适的岗位类别。</p></li><li><span>2</span><strong>核对详情</strong><p>看专业、学历、职责、地点和截止时间。</p></li><li><span>3</span><strong>留下结果</strong><p>适合的进岗位列表，其余原因写进更新记录。</p></li></ol>
         </section>
       </main>
-      <footer><p><strong>北京求职雷达</strong> · 具体到岗，核验后再行动</p><p>岗位状态可能随时变化，投递前请在官方系统做最后确认。</p></footer>
+      <footer><p><strong>北京求职雷达</strong> · 给自己用的岗位清单</p><p>报名前请再打开招聘单位官网确认一次。</p></footer>
     </div>
   </body>
 </html>

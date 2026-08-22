@@ -1,25 +1,41 @@
-const state = { activeTrack: "全部", activeMatch: "全部", query: "", data: null };
+const pageView = document.body.dataset.view || "jobs";
+const state = {
+  activeTrack: "全部",
+  activeMatch: "全部",
+  query: "",
+  savedOnly: pageView === "favorites",
+  data: null,
+};
+
 const tasks = [
-  "优先核对并投递招满即停的北京岗位",
-  "对央国企“相关专业”口径向招聘单位确认",
-  "准备公考职位表的专业代码与硬条件核验表",
+  "先看快截止和招满即止的北京岗位",
+  "把“相关专业”说不清的岗位单独列出来确认",
+  "公考职位表发布后，再按专业代码完整筛一遍",
 ];
 
 const readList = (key) => {
   try { return JSON.parse(localStorage.getItem(key) || "[]"); }
   catch { return []; }
 };
+
 let saved = readList("radar-saved-opportunities");
 let doneTasks = readList("radar-done-tasks");
 
+const get = (selector) => document.querySelector(selector);
 const escapeHTML = (value = "") => String(value)
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
+const httpOnlyOfficialHosts = new Set(["bm.scs.gov.cn", "subb.scs.gov.cn"]);
 const safeUrl = (value = "") => {
-  try { const url = new URL(value); return url.protocol === "https:" ? url.href : "#"; }
-  catch { return "#"; }
+  try {
+    const url = new URL(value);
+    if (url.protocol === "https:") return url.href;
+    if (url.protocol === "http:" && httpOnlyOfficialHosts.has(url.hostname)) return url.href;
+    return "#";
+  } catch { return "#"; }
 };
+
 const formatDate = (value) => value ? value.replaceAll("-", ".") : "未注明";
 const formatDateTime = (value) => value ? new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit",
@@ -35,6 +51,7 @@ function searchText(job) {
 function filteredJobs() {
   const keyword = state.query.trim().toLowerCase();
   return state.data.jobs.filter((job) =>
+    (!state.savedOnly || saved.includes(job.id)) &&
     (state.activeTrack === "全部" || job.track === state.activeTrack) &&
     (state.activeMatch === "全部" || job.matchLevel === state.activeMatch) &&
     (!keyword || searchText(job).includes(keyword))
@@ -42,15 +59,22 @@ function filteredJobs() {
 }
 
 function renderCards() {
+  const list = get("#opportunity-list");
+  if (!list) return;
   const jobs = filteredJobs();
-  const list = document.querySelector("#opportunity-list");
-  document.querySelector("#result-count").textContent = `${jobs.length} 个具体岗位`;
+  const resultCount = get("#result-count");
+  if (resultCount) resultCount.textContent = state.savedOnly ? `${jobs.length} 个收藏` : `${jobs.length} 个岗位`;
 
   if (!jobs.length) {
-    const message = state.activeTrack === "考公"
-      ? "公考只展示已经逐项确认可报的职位；尚未发布职位表或存在未确认条件时，这里会保持为空。"
-      : "没有职位名称或职位代码的信息不会进入具体岗位列表。";
-    list.innerHTML = `<div class="empty-state"><strong>暂时没有符合当前筛选的具体岗位</strong><p>${message}</p></div>`;
+    let title = "没有符合当前筛选的岗位";
+    let message = "换一个方向或关键词试试。";
+    if (state.savedOnly) {
+      title = "还没有收藏岗位";
+      message = "回到岗位页，点击岗位右上角的心形即可收藏。";
+    } else if (state.activeTrack === "考公") {
+      message = "公考岗位只有在所有报考条件都确认后才会显示。";
+    }
+    list.innerHTML = `<div class="empty-state"><strong>${title}</strong><p>${message}</p></div>`;
     return;
   }
 
@@ -58,18 +82,18 @@ function renderCards() {
     const isSaved = saved.includes(job.id);
     const verified = job.verifiedFields.map((field) => `<span>✓ ${escapeHTML(field)}</span>`).join("");
     const risks = job.riskNotes.length
-      ? `<div class="risk-note"><strong>投递前确认</strong><ul>${job.riskNotes.map((note) => `<li>${escapeHTML(note)}</li>`).join("")}</ul></div>`
+      ? `<div class="risk-note"><strong>投递前再确认</strong><ul>${job.riskNotes.map((note) => `<li>${escapeHTML(note)}</li>`).join("")}</ul></div>`
       : "";
-    const gate = job.track === "考公" ? "资格硬条件已确认" : "官方逐岗核验";
+    const sourceLabel = job.track === "考公" ? "报考条件已核对" : "信息来自招聘官网";
 
     return `<article class="opportunity-card">
       <div class="card-accent" data-track="${escapeHTML(job.track)}"></div>
       <div class="card-content">
         <div class="card-topline">
           <span class="track-tag track-${escapeHTML(job.track)}">${escapeHTML(job.track)}</span>
-          <span class="official-tag">● ${gate}</span>
+          <span class="official-tag">● ${sourceLabel}</span>
           <span class="freshness-tag">${escapeHTML(job.status)}</span>
-          <button class="save-button ${isSaved ? "saved" : ""}" data-save="${escapeHTML(job.id)}" type="button" aria-label="收藏 ${escapeHTML(job.title)}">${isSaved ? "♥" : "♡"}</button>
+          <button class="save-button ${isSaved ? "saved" : ""}" data-save="${escapeHTML(job.id)}" type="button" aria-pressed="${isSaved}" aria-label="${isSaved ? "取消收藏" : "收藏"} ${escapeHTML(job.title)}">${isSaved ? "♥" : "♡"}</button>
         </div>
         <div class="card-title-row">
           <div><h3>${escapeHTML(job.title)}</h3><p>${escapeHTML(job.organization)} · ${escapeHTML(job.department)}</p></div>
@@ -83,23 +107,23 @@ function renderCards() {
           <div><span>招聘人数</span><strong>${escapeHTML(job.headcount)}</strong></div>
           <div><span>发布时间</span><strong>${formatDate(job.publishedAt)}</strong></div>
         </div>
-        <p class="match-reason"><strong>岗位判断</strong>${escapeHTML(job.matchReason)}</p>
+        <p class="match-reason"><strong>为什么值得看</strong>${escapeHTML(job.matchReason)}</p>
         <div class="requirement-strip"><span>专业要求</span><p>${escapeHTML(job.majors)}</p></div>
         <div class="tag-row">${job.tags.map((tag) => `<span>${escapeHTML(tag)}</span>`).join("")}</div>
         <details class="job-details">
-          <summary>查看岗位职责与完整资格条件 <span>＋</span></summary>
+          <summary>岗位职责和完整要求 <span>＋</span></summary>
           <div class="details-grid">
-            <section><h4>岗位职责</h4><ul>${job.responsibilities.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul></section>
-            <section><h4>资格条件</h4><ul>${job.requirements.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul></section>
+            <section><h4>主要工作</h4><ul>${job.responsibilities.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul></section>
+            <section><h4>招聘要求</h4><ul>${job.requirements.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul></section>
           </div>
           ${risks}
-          <div class="verification-row"><strong>已核字段</strong>${verified}</div>
+          <div class="verification-row"><strong>已经核对</strong>${verified}</div>
         </details>
         <div class="card-footer">
-          <div class="deadline-block"><span>截止口径</span><strong>${escapeHTML(job.deadline)}</strong></div>
-          <div class="source-actions"><a href="${safeUrl(job.officialAnnouncementUrl)}" target="_blank" rel="noreferrer">招聘说明 ↗</a><a class="apply-link" href="${safeUrl(job.officialApplyUrl)}" target="_blank" rel="noreferrer">官网搜索 ${escapeHTML(job.jobCode)} ↗</a></div>
+          <div class="deadline-block"><span>报名截止</span><strong>${escapeHTML(job.deadline)}</strong></div>
+          <div class="source-actions"><a href="${safeUrl(job.officialAnnouncementUrl)}" target="_blank" rel="noreferrer">查看招聘说明 ↗</a><a class="apply-link" href="${safeUrl(job.officialApplyUrl)}" target="_blank" rel="noreferrer">去官网找 ${escapeHTML(job.jobCode)} ↗</a></div>
         </div>
-        <p class="source-note">${escapeHTML(job.applyInstruction)} · 状态复查于 ${formatDateTime(job.lastSeenAt)} · ${escapeHTML(job.statusEvidence)}</p>
+        <p class="source-note">${escapeHTML(job.applyInstruction)}<br />最近确认：${formatDateTime(job.lastSeenAt)}。${escapeHTML(job.statusEvidence)}</p>
       </div>
     </article>`;
   }).join("");
@@ -108,41 +132,57 @@ function renderCards() {
     const id = button.dataset.save;
     saved = saved.includes(id) ? saved.filter((item) => item !== id) : [...saved, id];
     localStorage.setItem("radar-saved-opportunities", JSON.stringify(saved));
-    updateCounts(); renderCards();
+    updateCounts();
+    renderCards();
   }));
 }
 
 function renderMonitors() {
-  document.querySelector("#monitor-grid").innerHTML = state.data.monitors.map((monitor) => `<article class="monitor-card">
-    <div><span class="monitor-track">${escapeHTML(monitor.track)}</span><span class="monitor-status">${escapeHTML(monitor.status)}</span></div>
-    <h3>${escapeHTML(monitor.title)}</h3><p>${escapeHTML(monitor.note)}</p>
-    <footer><span>最近检查 ${formatDateTime(monitor.checkedAt)}</span><a href="${safeUrl(monitor.officialUrl)}" target="_blank" rel="noreferrer">官方入口 ↗</a></footer>
-  </article>`).join("");
+  const grid = get("#monitor-grid");
+  if (!grid) return;
+  grid.innerHTML = state.data.monitors.map((monitor) => {
+    const alternate = monitor.alternateOfficialUrl
+      ? `<a href="${safeUrl(monitor.alternateOfficialUrl)}" target="_blank" rel="noreferrer">${escapeHTML(monitor.alternateOfficialLabel || "备用入口")} ↗</a>`
+      : "";
+    return `<article class="monitor-card">
+      <div><span class="monitor-track">${escapeHTML(monitor.track)}</span><span class="monitor-status">${escapeHTML(monitor.status)}</span></div>
+      <h3>${escapeHTML(monitor.title)}</h3><p>${escapeHTML(monitor.note)}</p>
+      <footer><span>最近查看 ${formatDateTime(monitor.checkedAt)}</span><span class="monitor-actions"><a href="${safeUrl(monitor.officialUrl)}" target="_blank" rel="noreferrer">主入口 ↗</a>${alternate}</span></footer>
+    </article>`;
+  }).join("");
 }
 
 function renderTasks() {
-  document.querySelector("#task-list").innerHTML = tasks.map((task, index) => `<label class="task ${doneTasks.includes(index) ? "done" : ""}"><input type="checkbox" data-task="${index}" ${doneTasks.includes(index) ? "checked" : ""}/><span class="fake-check">✓</span><span>${escapeHTML(task)}</span></label>`).join("");
+  const list = get("#task-list");
+  if (!list) return;
+  list.innerHTML = tasks.map((task, index) => `<label class="task ${doneTasks.includes(index) ? "done" : ""}"><input type="checkbox" data-task="${index}" ${doneTasks.includes(index) ? "checked" : ""}/><span class="fake-check">✓</span><span>${escapeHTML(task)}</span></label>`).join("");
   document.querySelectorAll("[data-task]").forEach((box) => box.addEventListener("change", () => {
     const index = Number(box.dataset.task);
     doneTasks = doneTasks.includes(index) ? doneTasks.filter((item) => item !== index) : [...doneTasks, index];
     localStorage.setItem("radar-done-tasks", JSON.stringify(doneTasks));
-    renderTasks(); updateCounts();
+    renderTasks();
+    updateCounts();
   }));
 }
 
 function updateCounts() {
-  document.querySelector("#saved-count").textContent = saved.length;
-  document.querySelector("#task-count").textContent = `${doneTasks.length}/${tasks.length}`;
+  const savedCount = get("#saved-count");
+  const filterCount = get("#saved-filter-count");
+  const taskCount = get("#task-count");
+  if (savedCount) savedCount.textContent = saved.length;
+  if (filterCount) filterCount.textContent = saved.length;
+  if (taskCount) taskCount.textContent = `${doneTasks.length}/${tasks.length}`;
 }
 
 function updateSummary() {
   const jobs = state.data.jobs;
-  const partial = state.data.meta.lastRunStatus === "completed-partial" ? "（部分）" : "";
-  document.querySelector("#sync-date").textContent = `最近核验${partial}：${formatDateTime(state.data.meta.lastVerifiedAt)}`;
-  document.querySelector("#stat-jobs").textContent = jobs.length;
-  document.querySelector("#stat-beijing").textContent = jobs.filter((job) => job.location.includes("北京")).length;
-  document.querySelector("#stat-tracks").textContent = new Set(jobs.map((job) => job.track)).size;
-  document.querySelector("#hero-job-count").textContent = jobs.length;
+  const partial = state.data.meta.lastRunStatus === "completed-partial" ? "（部分网站未完成）" : "";
+  const syncDate = get("#sync-date");
+  if (syncDate) syncDate.innerHTML = `<i></i>最近更新${partial}：${formatDateTime(state.data.meta.lastVerifiedAt)}`;
+  if (get("#stat-jobs")) get("#stat-jobs").textContent = jobs.length;
+  if (get("#stat-beijing")) get("#stat-beijing").textContent = jobs.filter((job) => job.location.includes("北京")).length;
+  if (get("#stat-tracks")) get("#stat-tracks").textContent = new Set(jobs.map((job) => job.track)).size;
+  if (get("#hero-job-count")) get("#hero-job-count").textContent = jobs.length;
 }
 
 function bindFilters() {
@@ -156,7 +196,16 @@ function bindFilters() {
     document.querySelectorAll("[data-match]").forEach((item) => item.classList.toggle("active", item === button));
     renderCards();
   }));
-  document.querySelector("#search").addEventListener("input", (event) => { state.query = event.target.value; renderCards(); });
+  const search = get("#search");
+  if (search) search.addEventListener("input", (event) => { state.query = event.target.value; renderCards(); });
+  const savedFilter = get("[data-saved-filter]");
+  if (savedFilter) savedFilter.addEventListener("click", () => {
+    state.savedOnly = !state.savedOnly;
+    savedFilter.classList.toggle("active", state.savedOnly);
+    savedFilter.setAttribute("aria-pressed", String(state.savedOnly));
+    savedFilter.firstChild.textContent = state.savedOnly ? "♥ 我的收藏 " : "♡ 我的收藏 ";
+    renderCards();
+  });
 }
 
 async function init() {
@@ -164,10 +213,19 @@ async function init() {
     const response = await fetch("data/opportunities.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
-    updateSummary(); bindFilters(); renderCards(); renderMonitors(); renderTasks(); updateCounts();
+    updateSummary();
+    updateCounts();
+    bindFilters();
+    renderCards();
+    renderMonitors();
+    renderTasks();
   } catch (error) {
-    document.querySelector("#opportunity-list").innerHTML = `<div class="empty-state"><strong>岗位数据暂时没有加载成功</strong><p>数据恢复前不会展示未经核验的替代内容。</p></div>`;
-    console.error("Failed to load verified opportunities", error);
+    const jobs = get("#opportunity-list");
+    const monitors = get("#monitor-grid");
+    if (jobs) jobs.innerHTML = `<div class="empty-state"><strong>岗位暂时没有加载出来</strong><p>请稍后刷新页面。</p></div>`;
+    if (monitors) monitors.innerHTML = `<div class="empty-state"><strong>公告暂时没有加载出来</strong><p>请稍后刷新页面。</p></div>`;
+    console.error("Failed to load opportunities", error);
   }
 }
+
 init();

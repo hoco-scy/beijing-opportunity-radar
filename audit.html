@@ -3,63 +3,63 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="北京求职雷达每轮发现、核验、通过、未通过与待继续核验记录。" />
-    <title>审核日志｜北京求职雷达</title>
+    <meta name="description" content="每次岗位更新查看了哪些官网、收录了什么，以及没有收录的原因。" />
+    <title>更新记录｜北京求职雷达</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="audit.js" defer></script>
   </head>
   <body>
     <div class="site-shell">
       <header class="topbar">
-        <a class="brand" href="index.html" aria-label="返回岗位首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>Position intelligence</small></span></a>
-        <nav aria-label="主导航"><a href="index.html#opportunities">具体岗位</a><a href="index.html#monitors">公告监测</a><a class="nav-current" href="audit.html">审核日志</a></nav>
-        <span class="sync-status" id="sync-date"><i></i>正在读取运行时间</span>
+        <a class="brand" href="index.html" aria-label="返回岗位首页"><span class="brand-mark">BJ</span><span><strong>北京求职雷达</strong><small>北京岗位更新</small></span></a>
+        <nav aria-label="主导航"><a href="index.html">岗位</a><a href="favorites.html">我的收藏</a><a href="monitors.html">考试公告</a><a class="nav-current" href="audit.html">更新记录</a></nav>
+        <span class="sync-status" id="sync-date"><i></i>正在读取更新时间</span>
       </header>
 
-      <main class="audit-page">
-        <section class="audit-hero">
+      <main class="audit-page subpage">
+        <section class="audit-hero page-intro">
           <div>
-            <p class="eyebrow">PUBLIC REVIEW TRAIL</p>
-            <h1>每次搜索，<br /><em>都有迹可循。</em></h1>
-            <p>正文只放通过门禁的岗位；这里记录每轮发现了什么、核验了什么、为什么通过、未通过或需要继续核验。即使正式岗位为零，检查行为也不会消失。</p>
+            <p class="eyebrow">更新记录</p>
+            <h1>这次查了什么，<br /><em>为什么这样处理</em></h1>
+            <p>每次更新都会记下看过哪些官网、逐条核对了哪些岗位，以及没有收录的原因。想自己再看一遍，也能从这里回到原始页面。</p>
           </div>
-          <div class="audit-summary" aria-label="最近一次审核摘要">
-            <div><span>最近运行</span><strong id="latest-run">—</strong></div>
-            <div><span>本轮审核</span><strong id="latest-reviewed">—</strong></div>
-            <div><span>进入正文</span><strong id="latest-published">—</strong></div>
+          <div class="audit-summary" aria-label="最近一次更新摘要">
+            <div><span>最近更新</span><strong id="latest-run">—</strong></div>
+            <div><span>逐条看过</span><strong id="latest-reviewed">—</strong></div>
+            <div><span>加入岗位页</span><strong id="latest-published">—</strong></div>
           </div>
         </section>
 
         <section class="audit-policy">
-          <div><p class="eyebrow">ANONYMOUS BY DESIGN</p><h2>公开结论，不公开私人条件</h2></div>
-          <p>日志只记录官方招聘事实、审核层级和公开安全的原因分类。私人资格只参与门禁判断，不会出现在岗位标题、原因、提交记录或网页源码中。</p>
+          <div><p class="eyebrow">隐私说明</p><h2>只写处理结果，不写个人条件</h2></div>
+          <p>公开页面不会出现姓名、学校、联系方式、户籍或政治面貌等私人信息。记录里只保留岗位本身的要求，以及“符合、不符合、还要确认”这类结论。</p>
         </section>
 
         <section class="audit-method" aria-labelledby="method-title">
-          <div><p class="eyebrow">HIGH-RECALL REVIEW</p><h2 id="method-title">先充分发现，再用客观证据筛选</h2></div>
+          <div><p class="eyebrow">检查方法</p><h2 id="method-title">先用官网缩小范围，再看具体岗位</h2></div>
           <div class="method-grid">
-            <p><strong>官网先筛</strong><span>优先使用官网自己的届别、地点、学历、类别和关键词控件，多组结果取并集；模型只复核去重后的候选。</span></p>
-            <p><strong>预公告在内</strong><span>官方已发布且截止未过就持续跟踪。附职位表时拆为“即将开放”的具体岗位；未附表时保留公告级审核记录。</span></p>
-            <p><strong>失败会重试</strong><span>关键官网最多尝试三次并寻找官方备用入口；仍失败则公开标记“部分完成”，不会假装没有新公告。</span></p>
-            <p><strong>只按事实排除</strong><span>仅凭官方可核验的低待遇、高强度、高危、夜班倒班或有害暴露等条件排除，不使用行业或性别刻板印象。</span></p>
+            <p><strong>先用官网筛选</strong><span>优先选择届别、地点、学历和岗位类别，不从几千条结果里硬翻。</span></p>
+            <p><strong>预告也会记下</strong><span>已经发布但还没开始报名的公告，会一直跟到职位表出来。</span></p>
+            <p><strong>打不开会说明</strong><span>重要网站会再试几次；还是打不开，就如实写成“本次没查完”。</span></p>
+            <p><strong>没有证据不下结论</strong><span>工资、强度或风险没有写明时，不会凭印象替岗位做判断。</span></p>
           </div>
         </section>
 
         <section class="audit-feed">
           <div class="section-heading audit-heading">
-            <div><p class="eyebrow">RUN HISTORY</p><h2>云端核验记录</h2></div>
-            <div class="audit-filters" role="group" aria-label="按审核结论筛选">
+            <div><p class="eyebrow">按时间查看</p><h2>每次更新</h2></div>
+            <div class="audit-filters" role="group" aria-label="按处理结果筛选">
               <button class="active" type="button" data-decision="all">全部</button>
-              <button type="button" data-decision="accepted">通过</button>
-              <button type="button" data-decision="rejected">未通过</button>
-              <button type="button" data-decision="deferred">继续核验</button>
+              <button type="button" data-decision="accepted">已收录</button>
+              <button type="button" data-decision="rejected">不符合</button>
+              <button type="button" data-decision="deferred">还要确认</button>
             </div>
           </div>
-          <div id="audit-run-list" class="audit-run-list"><div class="empty-state"><strong>正在读取审核日志</strong><p>每轮任务都会在这里留下匿名记录。</p></div></div>
+          <div id="audit-run-list" class="audit-run-list"><div class="empty-state"><strong>正在读取更新记录</strong><p>稍等一下。</p></div></div>
         </section>
       </main>
 
-      <footer><p><strong>北京求职雷达</strong> · 正文看结果，日志看过程</p><p>未通过不代表永远不可报；请以最新官方公告和个人资格复核为准。</p></footer>
+      <footer><p><strong>北京求职雷达</strong> · 更新记录</p><p>岗位条件会变化，最终以报名时的官方页面为准。</p></footer>
     </div>
   </body>
 </html>

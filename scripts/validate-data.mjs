@@ -27,7 +27,8 @@ const jobStatuses = new Set(["招聘中", "即将开放", "临时无法复查", 
 function officialDomain(urlValue, source) {
   try {
     const url = new URL(urlValue);
-    return url.protocol === "https:" && source.domains.some((domain) =>
+    const permittedProtocol = url.protocol === "https:" || (source.transportSecurity === "official-http-only" && url.protocol === "http:");
+    return permittedProtocol && source.domains.some((domain) =>
       url.hostname === domain || url.hostname.endsWith(`.${domain}`));
   } catch { return false; }
 }

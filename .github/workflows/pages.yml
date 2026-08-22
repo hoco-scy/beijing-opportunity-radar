@@ -32,6 +32,8 @@ jobs:
         run: node scripts/validate-screening-policy.mjs
       - name: Check anonymous public content
         run: node scripts/check-privacy.mjs
+      - name: Check page navigation, favorites, sources, and copy
+        run: node --test tests/site-structure.test.mjs
 
   deploy:
     needs: validate

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sources": [
-    {"id":"national-civil","organization":"国家公务员局","type":"政府官网","role":"authoritative","tier":"critical","cadence":"every-run","domains":["scs.gov.cn"],"entryUrl":"https://www.scs.gov.cn/","officialSiteConfirmed":true},
+    {"id":"national-civil","organization":"国家公务员局","type":"政府官网","role":"authoritative","tier":"critical","cadence":"every-run","domains":["scs.gov.cn"],"entryUrl":"http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html","alternateEntryUrls":["http://subb.scs.gov.cn/pp/gkweb/core/web/ui/business/home/lxhome.html"],"transportSecurity":"official-http-only","httpOnlyVerifiedAt":"2026-08-22","officialSiteConfirmed":true},
     {"id":"beijing-civil","organization":"北京市公务员招考主管部门","type":"政府官网","role":"authoritative","tier":"critical","cadence":"every-run","domains":["beijing.gov.cn"],"entryUrl":"https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/","officialSiteConfirmed":true},
     {"id":"beijing-personnel-exam","organization":"北京市人事考试通用平台","type":"政府官网","role":"authoritative","tier":"critical","cadence":"every-run","domains":["rsj.beijing.gov.cn"],"entryUrl":"https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/","officialSiteConfirmed":true},
     {"id":"beijing-institutions","organization":"北京市人力资源和社会保障局事业单位公开招聘","type":"政府官网","role":"authoritative","tier":"critical","cadence":"every-run","domains":["rsj.beijing.gov.cn","beijing.gov.cn"],"entryUrl":"https://rsj.beijing.gov.cn/xxgk/gkzp/","officialSiteConfirmed":true},
