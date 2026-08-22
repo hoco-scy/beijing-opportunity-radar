@@ -408,7 +408,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "招聘类型：校园招聘/应届生",
         "工作地点：北京",
@@ -446,13 +446,13 @@
       ],
       "notes": "官网北京筛选结果低于 100 条时直接逐岗展开详情；2026-08-22 已完成综合类 57 条、科技类 12 条的全量详情复核。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "招聘类型：校园招聘/应届生",
@@ -467,8 +467,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -489,7 +489,7 @@
       "status": "verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://campus.boe.com/custom/xzzw?hideMenu=1",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "招聘类型：应届生",
         "工作城市：北京",
@@ -510,13 +510,13 @@
       "notes": "下次轮到该来源时先识别并保存官方站内筛选能力。",
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "招聘类型：应届生",
@@ -532,8 +532,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -640,7 +640,7 @@
       "status": "verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://careers.crc.com.cn/index.html",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "招聘类型：校园招聘优先",
         "地点：北京",
@@ -658,13 +658,13 @@
       },
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "招聘类型：校园招聘优先",
@@ -679,8 +679,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -701,7 +701,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://campus.cec.com.cn/",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "招聘类型：校园招聘/应届生",
         "工作地点：北京",
@@ -719,13 +719,13 @@
       },
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "招聘类型：校园招聘/应届生",
@@ -740,8 +740,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -895,7 +895,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://job.sinopec.com/",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "招聘项目：校园招聘",
         "工作地点/单位所在地：北京",
@@ -915,13 +915,13 @@
       "observations": [],
       "notes": "首页和校园招聘路由可用；该站是 JavaScript 应用，必须在浏览器中等待职位模块加载。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "招聘项目：校园招聘",
@@ -936,8 +936,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -958,7 +958,7 @@
       "status": "verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://job.10086.cn/personal/job/",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "招聘类型：校园招聘",
         "工作地点：北京",
@@ -978,13 +978,13 @@
       "notes": "首页与全部职位列表均可访问；上一轮未完成是动态结果未读完，不是入口失效。",
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "招聘类型：校园招聘",
@@ -999,8 +999,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -1241,7 +1241,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoList.html?type=1",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "地区：北京",
         "类型：招聘信息/校招/选调/优培",
@@ -1260,13 +1260,13 @@
       "observations": [],
       "notes": "无需登录即可访问招聘信息列表，覆盖校招、选调等多类线索；作为每轮高优先级发现渠道。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "地区：北京",
@@ -1281,8 +1281,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -1303,7 +1303,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://www.ncss.cn/",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "地点：北京",
         "学历：硕士",
@@ -1321,13 +1321,13 @@
       },
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "地点：北京",
@@ -1342,8 +1342,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
@@ -1364,7 +1364,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://www.iguopin.com/",
-      "accessMode": "browser-seeded-public-script",
+      "accessMode": "browser-official-page",
       "nativeFilters": [
         "地点：北京",
         "学历：硕士",
@@ -1383,13 +1383,13 @@
       },
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "script",
-        "mode": "official-public-structured-list-script",
+        "primary": "browser",
+        "mode": "official-browser-native-filter",
         "steps": [
-          "首次接入或站点改版时，仅用浏览器确认公开筛选控件、公开列表请求和分页语义；不逐岗阅读。",
-          "脚本只请求该官方站点公开暴露的列表/详情页面或公开 JSON 请求，先应用原生筛选，再按服务端总页数批量获取。",
-          "以职位代码优先、详情链接其次去重；只把已去重且未过期的候选送入批量复核和官方详情核验。",
-          "遇到登录、验证码、WAF 或未找到稳定公开请求时立即停止脚本抓取，改用浏览器官方公告路径并记录 accessible-incomplete；不绕过访问控制。"
+          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
+          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
+          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
+          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
         ],
         "nativeFilters": [
           "地点：北京",
@@ -1405,8 +1405,8 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已保存原生筛选组合、筛选后总量、分页范围和去重数量；每条拟发布岗位仍需回到官方详情核验。",
-        "fallback": "公开筛选或分页请求不稳定时，改用浏览器查看官方公告/详情；不得退回到未筛选岗位全集。"
+        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
+        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
       },
       "availability": {
         "state": "available",
