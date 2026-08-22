@@ -140,7 +140,7 @@ test("failed sources have explicit recovery routes and processing recipes", asyn
   ];
 
   assert.equal(registry.version, 4);
-  assert.equal(recipes.version, 2);
+  assert.equal(recipes.version, 3);
   for (const id of repaired) {
     assert.ok(source(id)?.accessMode, `${id} 缺少访问方式`);
     assert.ok(recipeIds.has(id), `${id} 缺少处理配方`);
