@@ -2,6 +2,51 @@
   "version": 2,
   "recipes": [
     {
+      "sourceId": "national-civil",
+      "status": "route-verified",
+      "observedAt": "2026-08-22",
+      "officialEntryUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+      "accessMode": "browser-spa",
+      "nativeFilters": ["当年考试项目", "公告", "职位表", "报考指南"],
+      "queryPlan": {
+        "everyRun": ["先打开国考主入口，再打开补充录用入口", "等待当前项目或空状态加载", "公告或职位表发布后下载官方附件并按公考硬条件组合筛选"],
+        "completionRule": "两个登记入口中任一页面能正常呈现而职位表尚未发布时，记录 checked-no-new-position-table；不得因另一入口网关波动写 temporarily-unavailable"
+      },
+      "availabilityRule": "主入口或补充录用入口任一返回非错误官方页面，即证明入口可用；未完成动态内容只可记 accessible-incomplete。",
+      "observations": [],
+      "notes": "两条入口均为国家公务员局登记的 HTTP 官方路径；必须记录每条路径的最终页面或错误证据。"
+    },
+    {
+      "sourceId": "buaa-career-discovery",
+      "status": "verified",
+      "observedAt": "2026-08-22",
+      "officialEntryUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoList.html?type=1",
+      "accessMode": "public-filterable-list",
+      "nativeFilters": ["地区", "职位或公司关键词", "招聘信息类别"],
+      "queryPlan": {
+        "everyRun": ["优先查看北京地区，再覆盖全国的当期公告", "用 2027 校招、选调、优培、事业单位、央企国企、生物医学工程、医疗器械等查询词取并集", "打开每条线索的原始发布页并记录其指向的单位或政府官方入口"],
+        "completionRule": "仅将可回溯到政府或单位官方页面的线索计为可核验候选；北航就业信息网自身不作为正文岗位或公告的发布证据"
+      },
+      "availabilityRule": "公开列表或任一结构化筛选结果可加载时，记录本轮已检查；页面不可用仅影响发现覆盖，不能替代官方来源状态。",
+      "observations": [],
+      "notes": "无需登录即可访问招聘信息列表，覆盖校招、选调等多类线索；作为每轮高优先级发现渠道。"
+    },
+    {
+      "sourceId": "central-enterprise-roster",
+      "status": "verified-no-native-filter",
+      "observedAt": "2026-08-22",
+      "officialEntryUrl": "https://www.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
+      "accessMode": "desktop-with-mobile-fallback",
+      "nativeFilters": [],
+      "queryPlan": {
+        "everyRun": ["读取央企名录并与来源登记的中央企业基线比较", "桌面页无法建立连接时改用登记的 WAP 同文路径", "仅在发现可核验官方招聘入口时扩充来源登记"],
+        "completionRule": "WAP 页面能读取名录时即完成名录检查；不得因桌面 HTTPS 超时把整个名录来源记为 temporarily-unavailable"
+      },
+      "availabilityRule": "登记的 WAP 同文路径返回非错误官方页面时，来源状态必须是 checked-roster-current 或 accessible-incomplete。",
+      "observations": [],
+      "notes": "桌面 HTTPS 可能超时；官方 WAP 同文路径已核验可用。"
+    },
+    {
       "sourceId": "picc-campus",
       "status": "verified",
       "observedAt": "2026-08-22",
@@ -13,6 +58,7 @@
         "keywordRule": "北京安全筛选后的并集不超过 100 时直接复核全部结果，不再使用关键词缩小；超过 150 时才运行广义关键词族并取并集",
         "otherRegions": "按周轮换地区并使用广义关键词族，仅作为低优先级补充"
       },
+      "availabilityRule": "校园招聘首页或任一已登记项目页能返回非错误官方页面时，列表未复现只能记 accessible-incomplete。",
       "observations": [
         {"segment":"综合类岗位","unfilteredCount":1888,"beijingCount":57},
         {"segment":"科技类岗位","unfilteredCount":73,"beijingCount":12}
@@ -42,6 +88,7 @@
         "fallback": "HTTPS 无法连接时切换到登记的同路径 HTTP 官方入口，不得据此判断没有公告",
         "positionHandling": "进入公告和官方附件后再按地点、届别、学历与专业字段筛选具体岗位"
       },
+      "availabilityRule": "HTTPS 无法连接但登记的 HTTP 同路径返回非错误官方页面时，来源不是 temporarily-unavailable；附件或分页未完成时记 accessible-incomplete。",
       "observations": [],
       "notes": "该入口以公告列表为主，没有可靠的逐岗资格筛选器；2026-08-22 实测 HTTP 入口可完整返回。"
     },
@@ -57,6 +104,7 @@
         "fallback": "桌面站超时或证书链异常时切换到登记的官方 WAP HTTP 页面",
         "positionHandling": "公告没有岗位附件时记为 deferred；有附件时拆到具体岗位"
       },
+      "availabilityRule": "桌面页异常但登记的 WAP 页面返回非错误官方栏目时，来源不是 temporarily-unavailable；附件未处理完时记 accessible-incomplete。",
       "observations": [],
       "notes": "2026-08-22 实测桌面入口超时，官方 WAP HTTP 页面可返回完整栏目。"
     },
@@ -72,6 +120,7 @@
         "completionRule": "记录筛选前后数量并处理筛选结果全部分页；只加载首页壳不算完成",
         "fallback": "页面路由加载失败时从集团公告或企业公告重新进入当期招聘专题"
       },
+      "availabilityRule": "首页或校园招聘路由任一返回非错误官方页面时，路由内容未加载只能记 accessible-incomplete。",
       "observations": [],
       "notes": "首页和校园招聘路由可用；该站是 JavaScript 应用，必须在浏览器中等待职位模块加载。"
     },

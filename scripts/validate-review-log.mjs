@@ -83,6 +83,32 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
       const failed = ["failed", "temporarily-unavailable", "semantic-404"].includes(check.status);
       if (failed && ["critical", "active"].includes(source?.tier) && check.attempts < 3) errors.push(`${checkLabel} 关键来源失败前必须至少尝试 3 次`);
     }
+    if (Number(run.policyVersion || 0) >= 6) {
+      const evidence = check.accessEvidence;
+      const entries = [source?.entryUrl, ...(source?.alternateEntryUrls || [])].filter(Boolean);
+      if (!Array.isArray(evidence) || !evidence.length) errors.push(`${checkLabel}.accessEvidence 必须记录入口访问证据`);
+      else {
+        const attempted = new Set();
+        let hasOfficialPage = false;
+        let hasSemantic404 = false;
+        for (const [evidenceIndex, item] of evidence.entries()) {
+          const evidenceLabel = `${checkLabel}.accessEvidence[${evidenceIndex}]`;
+          if (!item.requestedUrl || !item.outcome) errors.push(`${evidenceLabel} 必须包含 requestedUrl 和 outcome`);
+          attempted.add(item.requestedUrl);
+          if (["official-page", "page-incomplete"].includes(item.outcome)) {
+            hasOfficialPage = true;
+            if (!item.finalUrl || !officialDomain(item.finalUrl, source)) errors.push(`${evidenceLabel}.finalUrl 必须是同一官方来源域名`);
+          }
+          if (item.outcome === "semantic-404") hasSemantic404 = true;
+        }
+        if (check.status === "temporarily-unavailable") {
+          for (const url of entries) if (!attempted.has(url)) errors.push(`${checkLabel} 写 temporarily-unavailable 前必须尝试登记入口：${url}`);
+          if (hasOfficialPage) errors.push(`${checkLabel} 已有可用官方页面，不能写 temporarily-unavailable`);
+        }
+        if (check.status === "accessible-incomplete" && !hasOfficialPage) errors.push(`${checkLabel} 写 accessible-incomplete 必须有可用官方页面证据`);
+        if (check.status === "semantic-404" && !hasSemantic404) errors.push(`${checkLabel} 写 semantic-404 必须有语义 404 证据`);
+      }
+    }
   }
   if (Number(run.policyVersion || 0) >= 5) {
     for (const sourceId of everyRunOfficial) {

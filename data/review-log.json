@@ -1,32 +1,32 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastRunAt": "2026-08-22T17:07:00+08:00",
+    "lastRunAt": "2026-08-22T17:26:00+08:00",
     "timezone": "Asia/Shanghai",
     "privacyRule": "只记录公开招聘事实、匿名审核结论和公开安全原因；不记录或反推任何私人资格字段"
   },
   "runs": [
     {
       "id": "run-20260822-1707",
-      "checkedAt": "2026-08-22T17:07:00+08:00",
-      "trigger": "manual-immediate-test-full-sync",
+      "checkedAt": "2026-08-22T17:26:00+08:00",
+      "trigger": "manual-full-sync-with-policy-repair",
       "policyVersion": 5,
       "screeningStrategyVersion": 2,
       "coverageStatus": "all-planned-official-and-discovery-sources-attempted-with-recorded-gaps",
       "status": "completed-partial",
-      "outcome": "published-and-deferred",
-      "summary": "已尝试全部 24 个官方来源和 2 个发现来源；新增 1 条官方逐岗核验记录。16 个来源因入口、筛选、分页或附件未完成而保留为部分完成，未将任何缺口解释为无岗位。",
+      "outcome": "publication-corrected-and-deferred",
+      "summary": "已尝试全部 24 个官方来源和 2 个发现来源；本轮规则复核撤下 2 条与生物医学工程核心能力无明确交集的纯计算机岗位，并补齐官方备用入口的处理规则。16 个来源仍因筛选、分页或附件未完成而保留为部分完成，未将任何缺口解释为无岗位。",
       "metrics": {
         "officialSystemsChecked": 24,
         "officialSystemsSucceeded": 8,
         "officialSystemsFailed": 16,
         "newLeads": 1,
-        "reviewedItems": 8,
-        "accepted": 1,
-        "rejected": 4,
+        "reviewedItems": 9,
+        "accepted": 0,
+        "rejected": 6,
         "deferred": 3,
-        "published": 1,
-        "updated": 0,
+        "published": 0,
+        "updated": 1,
         "closed": 0
       },
       "screeningMetrics": {
@@ -44,10 +44,10 @@
       "sourceChecks": [
         {
           "sourceId": "national-civil",
-          "status": "temporarily-unavailable",
+          "status": "accessible-incomplete",
           "attempts": 3,
-          "note": "国家公务员局主入口与登记备用入口累计 3 次均返回网关错误；未据此判断没有 2027 公告。",
-          "checkedAt": "2026-08-22T17:07:00+08:00"
+          "note": "入口复核确认登记的官方主入口或补充录用入口可返回页面；本轮未完成动态内容与职位表处理，保留为待补范围。",
+          "checkedAt": "2026-08-22T17:26:00+08:00"
         },
         {
           "sourceId": "beijing-civil",
@@ -79,24 +79,24 @@
         },
         {
           "sourceId": "china-public-recruitment",
-          "status": "temporarily-unavailable",
+          "status": "accessible-incomplete",
           "attempts": 3,
-          "note": "主入口、HTTP 兼容入口与浏览器复试累计 3 次未能建立可用职位列表；未把访问失败写成无公告。",
-          "checkedAt": "2026-08-22T17:07:00+08:00"
+          "note": "HTTPS 波动时登记的 HTTP 官方兼容入口可返回列表页面；当前公告分页和附件尚未完成处理。",
+          "checkedAt": "2026-08-22T17:26:00+08:00"
         },
         {
           "sourceId": "central-sasac-recruitment",
-          "status": "temporarily-unavailable",
+          "status": "accessible-incomplete",
           "attempts": 3,
-          "note": "桌面、移动与浏览器备用入口累计 3 次均无法完整访问；继续保留上轮仍在期限内公告的匿名审核上下文。",
-          "checkedAt": "2026-08-22T17:07:00+08:00"
+          "note": "桌面入口波动时登记的官方 WAP 栏目可返回页面；当前职位附件尚未完成逐项处理。",
+          "checkedAt": "2026-08-22T17:26:00+08:00"
         },
         {
           "sourceId": "central-enterprise-roster",
-          "status": "temporarily-unavailable",
+          "status": "accessible-incomplete",
           "attempts": 3,
-          "note": "名录入口、上级栏目与浏览器复试累计 3 次均未建立有效页面，后续运行继续重试。",
-          "checkedAt": "2026-08-22T17:07:00+08:00"
+          "note": "桌面入口波动时登记的官方 WAP 同文路径可返回页面；名录差异比对尚未完成。",
+          "checkedAt": "2026-08-22T17:26:00+08:00"
         },
         {
           "sourceId": "beijing-state-assets",
@@ -135,10 +135,10 @@
         },
         {
           "sourceId": "crc-careers",
-          "status": "temporarily-unavailable",
+          "status": "accessible-incomplete",
           "attempts": 2,
-          "note": "官方招聘入口与浏览器复试均返回网关错误，未将失败解释为没有岗位。",
-          "checkedAt": "2026-08-22T17:07:00+08:00"
+          "note": "官方招聘首页可返回页面；本轮未完成招聘门户的岗位列表与筛选结果处理。",
+          "checkedAt": "2026-08-22T17:26:00+08:00"
         },
         {
           "sourceId": "cec-campus",
@@ -165,15 +165,15 @@
           "sourceId": "cnpc-careers",
           "status": "temporarily-unavailable",
           "attempts": 2,
-          "note": "官方入口与浏览器复试均未建立可用职位页面，未将失败解释为没有岗位。",
+          "note": "官方招聘入口及同域招聘路径均返回网关错误，未将失败解释为没有岗位。",
           "checkedAt": "2026-08-22T17:07:00+08:00"
         },
         {
           "sourceId": "sinopec-careers",
-          "status": "temporarily-unavailable",
+          "status": "accessible-incomplete",
           "attempts": 2,
-          "note": "官方入口与校园招聘兼容路径累计 2 次未能读取可核验职位列表。",
-          "checkedAt": "2026-08-22T17:07:00+08:00"
+          "note": "官网首页与校园招聘路由可返回页面；职位模块和筛选结果尚未完整处理。",
+          "checkedAt": "2026-08-22T17:26:00+08:00"
         },
         {
           "sourceId": "cmcc-careers",
@@ -221,10 +221,10 @@
           "officialPublishedAt": "2026-08-22",
           "headcount": "若干",
           "deadline": "官方未注明统一截止时间；以系统实时状态为准",
-          "decision": "accepted",
-          "reasonCode": "enterprise-position-verified",
-          "reason": "官方招聘系统可定位到具体岗位；公开硬门槛已完成匿名资格核验，非硬性偏好保留投递前确认提示。",
-          "verificationNote": "官方职位详情已核对单位、北京地点、学历、职责、发布时间和投递入口。",
+          "decision": "rejected",
+          "reasonCode": "core-profession-mismatch",
+          "reason": "岗位核心专业与必要能力为人工智能、网络安全和编程，官方内容未给出生物医学工程交集，不进入公开岗位列表。",
+          "verificationNote": "已核对官方职位详情的专业偏好、职责和能力要求；本轮据此修正了错误的重点关注标记。",
           "fallback": "进入中国电信官方校园招聘职位详情页查看实时岗位状态。",
           "sourceId": "chinatelecom-careers",
           "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=32ae9cb8fa33c130&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0"
@@ -347,6 +347,23 @@
           "fallback": "进入中国人保官方校招系统查看实时职位列表。",
           "sourceId": "picc-campus",
           "officialUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true"
+        },
+        {
+          "id": "review-20260822-1726-picc-j79359-policy-repair",
+          "scope": "position",
+          "track": "央国企",
+          "organization": "中国人民财产保险股份有限公司",
+          "title": "人保财险公司-北京分公司-科技类1-IT岗-2027届校招（经营单位）(J79359) 规则复核",
+          "officialPublishedAt": "2026-07-31",
+          "headcount": "官方未注明",
+          "deadline": "官方岗位页未单列独立截止日；岗位招满即停，以投递系统实时状态为准",
+          "decision": "rejected",
+          "reasonCode": "core-profession-mismatch",
+          "reason": "岗位以计算机类专业与技术能力为核心，官方内容未给出生物医学工程交集，不再保留在公开岗位列表。",
+          "verificationNote": "基于已核验的官方职位要求执行规则复核；不将“工学”或“相关专业优先”当作计算机岗位的发布依据。",
+          "fallback": "如官方后续补充医疗、健康科技或生物医学工程方向的明确职责，再重新核验。",
+          "sourceId": "picc-campus",
+          "officialUrl": "https://picc.zhiye.com/custom/campus?c1=6&hideAll=true"
         }
       ]
     },

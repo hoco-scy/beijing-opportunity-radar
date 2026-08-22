@@ -28,6 +28,12 @@ if (policy.sourceCapabilityPolicy?.keywordFiltersOnlyWhenSafeFiltersStillExceed 
 if (!policy.sourceCapabilityPolicy?.semanticHealthChecks?.length) errors.push("必须登记页面语义健康检查");
 if (policy.sourceCapabilityPolicy?.accessibleButIncompleteOutcome !== "accessible-incomplete") errors.push("能打开但未处理完必须记为 accessible-incomplete");
 
+const relevanceGate = policy.profileRelevanceGate || {};
+if (relevanceGate.discoveryTermsAreNotPublicationEvidence !== true) errors.push("发现词不得直接作为发布匹配依据");
+if (relevanceGate.candidateFocus !== "biomedical-engineering-and-adjacent-engineering") errors.push("岗位匹配必须面向生物医学工程及交叉工程背景");
+if (relevanceGate.pureComputingOutcome !== "core-profession-mismatch") errors.push("纯计算机岗位必须进入 core-profession-mismatch");
+if (!Array.isArray(relevanceGate.explicitBiomedicalBridges) || relevanceGate.explicitBiomedicalBridges.length < 4) errors.push("岗位匹配缺少明确的生物医学工程交叉依据");
+
 const model = policy.modelPolicy || {};
 if (model.routineModel !== "GPT-5.6 Terra") errors.push("常规任务模型必须是 GPT-5.6 Terra");
 if (!Number.isInteger(model.batchSizeTarget) || model.batchSizeTarget < 20 || model.batchSizeTarget > 60) errors.push("模型批量复核目标必须在 20 至 60 个岗位之间");
@@ -59,6 +65,10 @@ for (const recipe of (recipes.recipes || [])) {
 }
 for (const source of registry.sources.filter((item) => item.recipeRequired)) {
   if (!recipeIds.has(source.id)) errors.push(`需要筛选配方但尚未登记：${source.id}`);
+}
+for (const id of ["national-civil", "central-enterprise-roster", "china-public-recruitment", "central-sasac-recruitment", "picc-campus", "sinopec-careers"]) {
+  const recipe = recipes.recipes.find((item) => item.sourceId === id);
+  if (!recipe?.availabilityRule) errors.push(`${id} 缺少入口可用性判定规则`);
 }
 
 if (errors.length) {

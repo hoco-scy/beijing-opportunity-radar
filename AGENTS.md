@@ -9,6 +9,7 @@
 - 搜索引擎、招聘平台、高校就业网、公众号、社群和公开社交媒体都可以发现线索，但不能作为发布证据。
 - 每条公开记录必须回溯到政府官方公告、官方职位表、企业官网或企业确认的官方招聘系统。第三方链接不得写入公开数据。
 - 检索范围不得限定为医学。应覆盖生物医学工程名称与代码、工学、理工类、电子信息、仪器、自动化、计算机、数据、人工智能、图像、信号、医疗器械、生物工程、相关专业、不限专业等口径。
+- 上述是**发现词**，不是候选人的专业能力声明，更不是正文发布的匹配依据。计算机、人工智能、网络安全、软件开发等纯计算机岗位，只有官方要求或职责明确连接到医疗器械、医疗 AI、医学影像、生物信号、临床数据或其他生物医学工程场景时，才可进入正文的“需要确认”；没有这种明确交集时，必须在匿名审核日志标记 `core-profession-mismatch`，不得发布，更不得标为“重点关注”。
 - 公考必须下载官方完整职位表，再用全部资格字段组合筛选，不能只用专业关键词。央国企必须先用官网结构化筛选覆盖可能相符的组合，再遍历每个筛选结果的全部分页或动态加载结果，不能直接翻未筛选的全集，也不能只看结果第一页。
 - 低关注度或低排名只影响排序，绝不自动排除；优先保留更多可复核数据。
 
@@ -36,6 +37,7 @@
 - 重试后仍失败时，不得把“未能访问”写成“没有公告”。该轮标记 `completed-partial`，记录尝试次数、最后检查时间和失败说明；其他可完成来源继续处理。
 - 不能只根据 HTTP 状态码判断入口成功。最终地址落到 `/404`、`error`，或页面标题/正文明确显示不存在、下线、错误页时，记录 `semantic-404`。入口能打开但筛选结果、分页、附件或职位详情没有处理完时，记录 `accessible-incomplete`，不得写成 `temporarily-unavailable`。
 - 必须按 `source-registry.json` 登记顺序尝试官方备用入口；仅 HTTP 入口只能用于已明确登记并标注核验日期的官方域名。动态招聘站必须执行 `filter-recipes.json` 中的访问方式、筛选组合和完成条件。
+- 从 `policyVersion: 6` 起，每条 `sourceChecks` 还必须写入 `accessEvidence`：实际请求的官方 URL、最终 URL 或错误类别、页面是否可用，以及所用筛选配方。任一登记入口或备用入口已返回非错误官方页面时，来源最多只能记为 `accessible-incomplete`，不得写成 `temporarily-unavailable`。只有所有登记入口与备用路径均无有效页面时才可写后者。
 - `officialSystemsChecked` 必须等于 `sourceChecks` 数量，成功与失败统计必须闭合；不得只记录部分来源却声称全面运行。
 - 现有正文岗位每 24 小时内至少复查一次，写入逐岗 `lastSeenAt`、`lastSeenStatus` 与 `statusEvidence`。全轮时间更新不等于逐岗复查。
 
@@ -62,6 +64,7 @@
 
 - 核对具体岗位名称/代码、单位、地点、届别、学历、专业、职责、发布时间、截止口径和官方投递路径。
 - 相关专业边界不明时可以进入正文并标记“需要确认”，但不能声称“确认符合”；官方未给出的字段写“官方未注明”，不得推断。
+- 发布前先做核心专业与能力门禁：岗位的核心专业、职责和必要能力须与生物医学工程或已公开的交叉方向有明确关系；“优先计算机背景”“需要编程能力”本身不构成相关性。宽口径的理工类或不限专业岗位可以保留为“需要确认”，但纯计算机/AI/网安岗位不能借“工学”或“相关专业优先”绕过这一步。
 - 北京岗位优先排序，但北京以外岗位可以作为低优先级补充，不能仅因排名低而删除。
 
 ## 岗位质量与安全筛选
@@ -82,7 +85,7 @@
 1. 复查现有岗位；再发现、去重、核验新岗位；处理预公告和上轮 deferred 项。
 2. 更新 `data/opportunities.json`、`data/review-log.json`，必要时更新来源登记与计划。
 3. 无论正文是否变化，都追加运行日志并更新 `meta.lastVerifiedAt`、`meta.lastRunAt` 与监测项 `checkedAt`；统一使用带 `+08:00` 的分钟级时间戳。
-4. 全量同步规则启用后，新版运行使用 `policyVersion: 5` 与 `screeningStrategyVersion: 2`。每个 `sourceChecks` 项必须有 `sourceId`、`status`、`note`、`attempts` 和分钟级 `checkedAt`，并且完整覆盖 `everyRunOfficial`；每轮都必须写入 `screeningMetrics`，说明入口报告总量、站内查询次数、站内筛选结果、去重候选、批量复核、官方逐岗核验和高推理升级数量，没有相应数据时填 0。`officialSystemsFailed` 必须等于 `accessible-incomplete`、`temporarily-unavailable`、`semantic-404` 与 `failed` 的合计数量。
+4. 全量同步规则启用后，新版运行使用 `policyVersion: 6` 与 `screeningStrategyVersion: 2`。每个 `sourceChecks` 项必须有 `sourceId`、`status`、`note`、`attempts`、分钟级 `checkedAt` 和 `accessEvidence`，并且完整覆盖 `everyRunOfficial`；每轮都必须写入 `screeningMetrics`，说明入口报告总量、站内查询次数、站内筛选结果、去重候选、批量复核、官方逐岗核验和高推理升级数量，没有相应数据时填 0。`officialSystemsFailed` 必须等于 `accessible-incomplete`、`temporarily-unavailable`、`semantic-404` 与 `failed` 的合计数量。
 5. 日志记录所有已回溯官方来源的通过、未通过与继续核验对象；原因只使用公开安全分类。若公告级条件已足以排除，可不拆全表，但须明确公告级结论。
 6. 运行：
    - `node scripts/validate-source-plan.mjs`

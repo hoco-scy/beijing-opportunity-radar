@@ -151,6 +151,53 @@ test("failed sources have explicit recovery routes and processing recipes", asyn
   assert.equal(source("chinapost-recruitment").entryUrl, "https://www.chinapost.com.cn/");
   assert.deepEqual(source("casic-careers").semanticFailureSignals, ["/404?errorpath=", "Not Found"]);
   assert.equal(plan.sourceOutcomeDefinitions["accessible-incomplete"].includes("入口可用"), true);
+  assert.equal(source("central-enterprise-roster").alternateEntryUrls[0], "http://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html");
+  for (const id of ["national-civil", "central-enterprise-roster", "china-public-recruitment", "central-sasac-recruitment", "picc-campus", "sinopec-careers"]) {
+    assert.match(recipes.recipes.find((item) => item.sourceId === id)?.availabilityRule || "", /官方页面|官方栏目|官方路径|官方来源|官方入口/);
+  }
+});
+
+test("computer discovery terms cannot turn into a biomedical-profile match without an explicit bridge", async () => {
+  const [agents, planRaw, policyRaw, opportunitiesRaw] = await Promise.all([
+    read("AGENTS.md"), read("data/source-plan.json"), read("data/screening-policy.json"), read("data/opportunities.json"),
+  ]);
+  const plan = JSON.parse(planRaw);
+  const policy = JSON.parse(policyRaw);
+  const opportunities = JSON.parse(opportunitiesRaw);
+  assert.match(agents, /发现词/);
+  assert.match(agents, /core-profession-mismatch/);
+  assert.deepEqual(plan.profileRelevanceGate.pureComputingOutcome, "core-profession-mismatch");
+  assert.equal(policy.profileRelevanceGate.discoveryTermsAreNotPublicationEvidence, true);
+  assert.equal(opportunities.jobs.some((job) => /人工智能工程师（安全方向）|科技类1-IT岗/.test(job.exactTitle)), false);
+});
+
+test("future runs record endpoint evidence before declaring an official source unavailable", async () => {
+  const [agents, automation, prompts, validator] = await Promise.all([
+    read("AGENTS.md"), read("AUTOMATION.md"), read("automation/task-prompts.md"), read("scripts/validate-review-log.mjs"),
+  ]);
+  for (const content of [agents, automation, prompts]) {
+    assert.match(content, /accessEvidence/);
+    assert.match(content, /accessible-incomplete/);
+  }
+  assert.match(prompts, /policyVersion 6/);
+  assert.match(validator, /已 有可用官方页面|已有可用官方页面/);
+  assert.match(validator, /不能写 temporarily-unavailable/);
+});
+
+test("BUAA job board is a high-priority discovery source, not public publication evidence", async () => {
+  const [registryRaw, planRaw, recipesRaw] = await Promise.all([
+    read("data/source-registry.json"), read("data/source-plan.json"), read("data/filter-recipes.json"),
+  ]);
+  const registry = JSON.parse(registryRaw);
+  const plan = JSON.parse(planRaw);
+  const recipes = JSON.parse(recipesRaw);
+  const source = registry.sources.find((item) => item.id === "buaa-career-discovery");
+  const recipe = recipes.recipes.find((item) => item.sourceId === "buaa-career-discovery");
+  assert.equal(source.role, "discovery");
+  assert.equal(source.tier, "priority");
+  assert.equal(source.officialSiteConfirmed, false);
+  assert.ok(plan.coverage.everyRunDiscovery.includes(source.id));
+  assert.match(recipe.queryPlan.completionRule, /不作为正文岗位或公告的发布证据/);
 });
 
 test("top bar shows only the update time while audit uses user-facing update language", async () => {

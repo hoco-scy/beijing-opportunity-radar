@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastVerifiedAt": "2026-08-22T17:07:00+08:00",
+    "lastVerifiedAt": "2026-08-22T17:26:00+08:00",
     "lastRunStatus": "completed-partial",
     "lastIncompleteSourceCount": 16,
     "lastDeferredCandidateCount": 1935,
@@ -9,81 +9,6 @@
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件"
   },
   "jobs": [
-    {
-      "id": "chinatelecom-32ae9cb8fa33c130",
-      "track": "央国企",
-      "subtrack": "通信央企",
-      "organization": "中国电信集团数据发展中心（支付公司）",
-      "department": "官方未注明",
-      "title": "人工智能工程师（安全方向）",
-      "exactTitle": "数据发展中心（支付公司）-人工智能工程师（安全方向）",
-      "jobCode": "32ae9cb8fa33c130",
-      "location": "北京市",
-      "cohort": "校园招聘（届别官方未注明）",
-      "recruitmentType": "校园招聘",
-      "headcount": "若干",
-      "education": "硕士研究生及以上",
-      "degree": "官方未单列",
-      "majors": "人工智能、网络空间安全、信息安全、计算机科学与技术等相关专业背景优先",
-      "politicalStatus": "官方未注明",
-      "experience": "官方未注明",
-      "responsibilities": [
-        "推进人工智能与大语言模型技术在安全领域的研究和演进。",
-        "与安全、产品和工程团队协作，推动研究成果在业务场景落地迭代。",
-        "跟踪 AI 与安全交叉领域前沿技术并形成技术成果。"
-      ],
-      "requirements": [
-        "硕士研究生及以上学历。",
-        "相关专业背景优先。",
-        "具备机器学习、深度学习、大语言模型与 AI 智能体相关基础。",
-        "具备良好编程能力，熟练掌握至少一门主流编程语言。"
-      ],
-      "publishedAt": "2026-08-22",
-      "deadline": "官方未注明统一截止时间；以系统实时状态为准",
-      "deadlineType": "官方未注明",
-      "status": "招聘中",
-      "priority": 94,
-      "matchLevel": "重点关注",
-      "matchReason": "北京的人工智能与网络安全研发岗位，公开学历门槛和职责清晰；专业及能力偏好以投递系统实时要求为准。",
-      "riskNotes": [
-        "官方未公开统一截止时间，以系统实时状态为准。",
-        "公开要求含专业与能力偏好，投递前应结合岗位页再次确认。"
-      ],
-      "tags": [
-        "北京",
-        "人工智能",
-        "网络安全",
-        "大语言模型",
-        "校园招聘"
-      ],
-      "sourceId": "chinatelecom-careers",
-      "officialAnnouncementUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=32ae9cb8fa33c130&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0",
-      "officialApplyUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=32ae9cb8fa33c130&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0",
-      "applyInstruction": "打开中国电信官方校园招聘职位详情页，确认信息后使用“立即申请”入口投递。",
-      "verifiedAt": "2026-08-22",
-      "lastSeenAt": "2026-08-22T17:07:00+08:00",
-      "lastSeenStatus": "live",
-      "statusEvidence": "本轮打开官方职位详情，页面显示“立即申请”，并标注发布时间为 2026-08-22。",
-      "verifiedFields": [
-        "职位名称与编码",
-        "单位",
-        "地点",
-        "学历",
-        "职责",
-        "任职要求",
-        "发布时间",
-        "投递路径",
-        "截止口径"
-      ],
-      "verification": {
-        "officialSource": true,
-        "specificPosition": true,
-        "location": true,
-        "eligibility": true,
-        "applicationPath": true,
-        "deadlineChecked": true
-      }
-    },
     {
       "id": "picc-j78589",
       "track": "央国企",
@@ -1826,76 +1751,6 @@
       "lastSeenAt": "2026-08-22T12:30:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "本轮遍历官方招聘系统综合类 189 页（1888 条），并按职位代码确认仍在招",
-      "verifiedFields": [
-        "职位代码",
-        "单位",
-        "地点",
-        "专业",
-        "职责",
-        "投递路径",
-        "截止口径"
-      ],
-      "verification": {
-        "officialSource": true,
-        "specificPosition": true,
-        "location": true,
-        "eligibility": true,
-        "applicationPath": true,
-        "deadlineChecked": true
-      }
-    },
-    {
-      "id": "picc-j79359",
-      "track": "央国企",
-      "subtrack": "金融央企",
-      "organization": "中国人民财产保险股份有限公司",
-      "department": "人保财险北京分公司",
-      "title": "IT岗",
-      "exactTitle": "人保财险公司-北京分公司-科技类1-IT岗-2027届校招（经营单位）(J79359)",
-      "jobCode": "J79359",
-      "location": "北京市",
-      "cohort": "2027届校招",
-      "recruitmentType": "校园招聘",
-      "headcount": "官方未注明",
-      "education": "官方岗位页未单列",
-      "degree": "官方未单列",
-      "majors": "计算机类相关专业优先",
-      "politicalStatus": "要求具备良好政治素质和道德品行",
-      "experience": "应届生岗位",
-      "responsibilities": [
-        "通过科技工具提升业务效能",
-        "开发机器人实时报告和自动更新报表",
-        "提取并分析业务数据"
-      ],
-      "requirements": [
-        "计算机类相关专业优先",
-        "具备符合岗位要求的工作能力",
-        "无不良从业记录或处罚记录"
-      ],
-      "publishedAt": "2026-07-31",
-      "deadline": "官方岗位页未单列独立截止日；岗位招满即停，以投递系统实时状态为准",
-      "deadlineType": "官方未单列",
-      "status": "招聘中",
-      "priority": 76,
-      "matchLevel": "需要确认",
-      "matchReason": "专业要求为优先而非硬性限制，职责与数据分析和自动化工具相关。",
-      "riskNotes": [
-        "交叉工科是否被视作计算机相关方向需确认"
-      ],
-      "tags": [
-        "北京",
-        "IT",
-        "自动化报表",
-        "数据分析"
-      ],
-      "sourceId": "picc-campus",
-      "officialAnnouncementUrl": "https://picc.zhiye.com/custom/zpgg?hideAll=true",
-      "officialApplyUrl": "https://picc.zhiye.com/custom/campus?c1=6&hideAll=true",
-      "applyInstruction": "进入中国人保官方校招的科技类岗位，选择北京市并搜索职位代码 J79359",
-      "verifiedAt": "2026-08-22",
-      "lastSeenAt": "2026-08-22T12:30:00+08:00",
-      "lastSeenStatus": "live",
-      "statusEvidence": "本轮遍历官方招聘系统科技类 8 页（73 条），并按职位代码确认仍在招",
       "verifiedFields": [
         "职位代码",
         "单位",
