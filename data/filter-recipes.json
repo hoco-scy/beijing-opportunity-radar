@@ -3,7 +3,7 @@
   "verifiedAt": "2026-08-22T18:11:00+08:00",
   "city": "北京",
   "collectionPolicy": {
-    "rule": "公告和职位表以浏览器核验；有公开结构化筛选和分页的招聘门户先用脚本筛选、分页、去重，之后才逐项官方核验。",
+    "rule": "已验证的公开公告/API/附件入口优先由脚本采集；浏览器只用于首次建模、官方改版或脚本无法完成的详情回退。招聘门户仍先用官方结构化筛选、分页、去重，之后才逐项官方核验。",
     "scriptMayOnlyUse": "官方公开列表、公开详情页和浏览器确认的公开请求；不得绕过登录、验证码、WAF 或访问控制。",
     "browserMayNotBeReplacedBy": "搜索摘要、转载或未核验第三方页面。"
   },
@@ -13,7 +13,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
-      "accessMode": "browser-official-page",
+      "accessMode": "script-official-public-api",
       "nativeFilters": [
         "当年考试项目",
         "公告",
@@ -22,9 +22,9 @@
       ],
       "queryPlan": {
         "everyRun": [
-          "先打开国考主入口，再打开补充录用入口",
-          "等待当前项目或空状态加载",
-          "公告或职位表发布后下载官方附件并按公考硬条件组合筛选"
+          "脚本请求国考主入口与补充录用入口的公开前端配置，读取当期专题 ID 与官方 API 域名。",
+          "脚本请求专题公告 JSON、每条公告详情和官方附件；主入口失败时继续处理补充录用入口。",
+          "职位表以官方附件或公开查询接口为准，在本地结构化解析后再按公考硬条件组合筛选。"
         ],
         "completionRule": "两个登记入口中任一页面能正常呈现而职位表尚未发布时，记录 checked-no-new-position-table；不得因另一入口网关波动写 temporarily-unavailable"
       },
@@ -32,16 +32,21 @@
       "observations": [],
       "notes": "两条入口均为国家公务员局登记的 HTTP 官方路径；必须记录每条路径的最终页面或错误证据。",
       "collection": {
-        "primary": "browser",
-        "mode": "browser-announcement-and-official-position-table",
+        "primary": "script",
+        "mode": "official-spa-config-and-json-announcement-collector",
         "steps": [
-          "在浏览器打开官方考试入口及登记的官方备用入口，确认当前考试项目、公告与职位表入口。",
-          "进入本年度或尚未截止的公告详情；不以搜索摘要、转载或首页标题代替公告正文。",
-          "下载官方职位表/附件，在本地结构化解析后按全部公考硬条件组合筛选；模型不逐行阅读完整职位表。",
-          "只将通过全部硬条件的具体职位写入正文；公告无职位表时保留公告级待核验记录。"
+          "运行 node scripts/collect-public-exams.mjs --source national-civil，脚本从官方首页配置发现当期专题，不硬编码年度地址。",
+          "脚本读取公告详情和官方附件；需要职位表时加 --parse-position-tables。",
+          "按全部公开资格字段进行本地硬门禁；只有通过后才可另行写入具体岗位。"
         ],
-        "completion": "公告页和职位表（或官方明确尚未发布的空状态）均已用浏览器确认，并对附件解析结果保留官方链接。",
-        "fallback": "附件无法解析或页面改版时保留待核验记录，下轮从同一官方入口重试。"
+        "completion": "主入口与补充录用入口均产生官方请求证据；公告详情和可公开下载附件已采集。",
+        "fallback": "官方前端配置或公开接口改版时，先记录可访问未完成并用浏览器重新校准公开请求；不得绕过登录或验证码。",
+        "implementation": {
+          "command": "node scripts/collect-public-exams.mjs --source national-civil --parse-position-tables",
+          "smokeTest": "node scripts/collect-public-exams.mjs --source national-civil --max-notices 5 --summary",
+          "runtime": "Node.js 18+；npm ci --ignore-scripts 后运行；只访问国家公务员局登记域名。",
+          "hardGuard": "从实时官方配置读取专题 ID；主、补入口分别记录结果，任何一条失败都不能伪称无公告。"
+        }
       },
       "availability": {
         "state": "available",
@@ -62,29 +67,33 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
-      "accessMode": "browser-official-page",
+      "accessMode": "script-official-static-list",
       "nativeFilters": [],
       "queryPlan": {
         "everyRun": [
-          "在浏览器打开官方考试入口及登记的官方备用入口，确认当前考试项目、公告与职位表入口。",
-          "进入本年度或尚未截止的公告详情；不以搜索摘要、转载或首页标题代替公告正文。",
-          "下载官方职位表/附件，在本地结构化解析后按全部公考硬条件组合筛选；模型不逐行阅读完整职位表。",
-          "只将通过全部硬条件的具体职位写入正文；公告无职位表时保留公告级待核验记录。"
+          "脚本读取官方公告列表与可用分页，按官方链接进入每条相关公告详情。",
+          "脚本发现并下载官方职位表附件，使用结构化解析器而非逐行网页浏览。",
+          "对结构化结果执行完整公考资格门禁，单独流程才可发布具体岗位。"
         ],
         "completionRule": "公告页和职位表（或官方明确尚未发布的空状态）均已用浏览器确认，并对附件解析结果保留官方链接。"
       },
       "availabilityRule": "入口必须呈现非错误官方页面；可打开但列表、分页或附件未完成时只能记录 accessible-incomplete。",
       "collection": {
-        "primary": "browser",
-        "mode": "browser-announcement-and-official-position-table",
+        "primary": "script",
+        "mode": "official-static-announcement-and-workbook-collector",
         "steps": [
-          "在浏览器打开官方考试入口及登记的官方备用入口，确认当前考试项目、公告与职位表入口。",
-          "进入本年度或尚未截止的公告详情；不以搜索摘要、转载或首页标题代替公告正文。",
-          "下载官方职位表/附件，在本地结构化解析后按全部公考硬条件组合筛选；模型不逐行阅读完整职位表。",
-          "只将通过全部硬条件的具体职位写入正文；公告无职位表时保留公告级待核验记录。"
+          "运行 node scripts/collect-public-exams.mjs --source beijing-civil --parse-position-tables。",
+          "脚本保存公告、附件 URL、文件摘要和解析出的结构化职位行；不直接改写公开岗位数据。",
+          "后续硬资格判断必须逐项使用职位表字段。"
         ],
-        "completion": "公告页和职位表（或官方明确尚未发布的空状态）均已用浏览器确认，并对附件解析结果保留官方链接。",
-        "fallback": "附件无法解析或页面改版时保留待核验记录，下轮从同一官方入口重试。"
+        "completion": "公告列表、每条公告详情和可识别职位表附件均有脚本访问证据。",
+        "fallback": "页面改版或附件无可识别表头时标为 accessible-incomplete，并用浏览器只校准一次公开结构。",
+        "implementation": {
+          "command": "node scripts/collect-public-exams.mjs --source beijing-civil --parse-position-tables",
+          "smokeTest": "node scripts/collect-public-exams.mjs --source beijing-civil --max-notices 8 --summary",
+          "runtime": "Node.js 18+；npm ci --ignore-scripts 后运行；只访问 beijing.gov.cn。",
+          "hardGuard": "附件必须是官方域名且每张表须识别职位表头；解析失败不得被写为无岗位。"
+        }
       },
       "availability": {
         "state": "available",

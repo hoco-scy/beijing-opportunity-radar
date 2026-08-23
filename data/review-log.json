@@ -1,15 +1,83 @@
-Warning: truncated output (original token count: 162796)
-Total output lines: 9077
-
 {
   "meta": {
     "schemaVersion": 1,
-    "lastRunAt": "2026-08-23T14:13:00+08:00",
+    "lastRunAt": "2026-08-23T15:03:00+08:00",
     "timezone": "Asia/Shanghai",
     "privacyRule": "只记录公开招聘事实、匿名审核结论和公开安全原因；不记录或反推任何私人资格字段",
     "initializationStatus": "synchronized"
   },
   "runs": [
+    {
+      "id": "run-20260823-1503-public-exam-sync",
+      "scope": "targeted-remediation",
+      "checkedAt": "2026-08-23T15:03:00+08:00",
+      "trigger": "public-exam-script-sync",
+      "policyVersion": 6,
+      "screeningStrategyVersion": 2,
+      "candidateProcessingVersion": 3,
+      "coverageStatus": "targeted-public-exam-sources",
+      "status": "completed",
+      "outcome": "official-public-exam-announcements-synchronized",
+      "summary": "已用脚本完成 2 个登记公考来源的官方公告、详情和可公开附件检查；发现 53 条公告，0 条仍需私有资格判断的公告级待核验对象。未将任何公考职位直接发布到岗位页。",
+      "metrics": {
+        "officialSystemsChecked": 2,
+        "officialSystemsSucceeded": 2,
+        "officialSystemsFailed": 0,
+        "newLeads": 53,
+        "reviewedItems": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "deferred": 0,
+        "published": 0,
+        "updated": 0,
+        "closed": 0
+      },
+      "screeningMetrics": {
+        "portalResultsReported": 53,
+        "nativeFilterQueries": 2,
+        "nativeFilteredResults": 53,
+        "deduplicatedCandidates": 0,
+        "positionsBatchReviewed": 0,
+        "positionsOfficiallyVerified": 0,
+        "positionsEscalated": 0,
+        "positionsDeferredByBudget": 0,
+        "discoverySourcesChecked": 0,
+        "discoveryOfficialCandidates": 0
+      },
+      "sourceChecks": [
+        {
+          "sourceId": "national-civil",
+          "status": "checked-no-active-campaign",
+          "attempts": 2,
+          "note": "官方公告、详情和可见附件已完成脚本检查；本轮未发现报名截止日未过且可进入资格判断的公务员/选调公告；另有 2 条缺少可解析报名期限的历史/归档公告，未作为在招处理。",
+          "accessEvidence": [
+            {
+              "requestedUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+              "finalUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+              "outcome": "official-page",
+              "recipe": "官方 SPA 配置 → 官方 JSON 专题 → 公告详情/附件"
+            }
+          ],
+          "checkedAt": "2026-08-23T15:03:00+08:00"
+        },
+        {
+          "sourceId": "beijing-civil",
+          "status": "checked-no-active-campaign",
+          "attempts": 1,
+          "note": "官方公告、详情和可见附件已完成脚本检查；本轮未发现报名截止日未过且可进入资格判断的公务员/选调公告；另有 6 条缺少可解析报名期限的历史/归档公告，未作为在招处理。",
+          "accessEvidence": [
+            {
+              "requestedUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
+              "finalUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
+              "outcome": "official-page",
+              "recipe": "官方静态公告列表 → 公告详情 → 附件"
+            }
+          ],
+          "checkedAt": "2026-08-23T15:03:00+08:00"
+        }
+      ],
+      "reviews": []
+    },
     {
       "id": "run-20260823-1413-chinatelecom-remediation",
       "scope": "full-sync",
@@ -1884,638 +1952,6 @@ Total output lines: 9077
         },
         {
           "id": "review-20260823-1413-f8e9b3d7ea444261",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "北京云网操作系统研发中心",
-          "title": "大模型算法工程师",
-          "officialPublishedAt": "2026-08-17",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=f8e9b3d7ea444261&recruitType=1&positionType=0%2F1227%2F109100%2F109203%2F109207&columnId=1&brandCode=1&importPost="
-        }
-      ]
-    },
-    {
-      "id": "run-20260823-1303-full-source-update",
-      "scope": "full-city-run",
-      "checkedAt": "2026-08-23T13:03:00+08:00",
-      "trigger": "manual-full-update",
-      "policyVersion": 6,
-      "screeningStrategyVersion": 2,
-      "candidateProcessingVersion": 2,
-      "coverageStatus": "all-official-sources-covered",
-      "status": "completed-partial",
-      "outcome": "all-official-sources-checked",
-      "summary": "已检查 24 个官方来源；中国电信按 北京 官网筛选 81 个候选并逐项读取职位详情。其余入口已记录本轮可访问性，未完成原生筛选或附件核验的来源均保留为后续处理，不据此发布岗位。",
-      "metrics": {
-        "officialSystemsChecked": 24,
-        "officialSystemsSucceeded": 1,
-        "officialSystemsFailed": 23,
-        "newLeads": 81,
-        "reviewedItems": 81,
-        "accepted": 2,
-        "rejected": 79,
-        "deferred": 0,
-        "published": 2,
-        "updated": 0,
-        "closed": 0
-      },
-      "screeningMetrics": {
-        "portalResultsReported": 2431,
-        "nativeFilterQueries": 1,
-        "nativeFilteredResults": 81,
-        "deduplicatedCandidates": 81,
-        "positionsBatchReviewed": 81,
-        "positionsOfficiallyVerified": 81,
-        "positionsEscalated": 0,
-        "positionsDeferredByBudget": 0,
-        "discoverySourcesChecked": 0,
-        "discoveryOfficialCandidates": 0
-      },
-      "sourceChecks": [
-        {
-          "sourceId": "national-civil",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
-              "finalUrl": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "beijing-civil",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
-              "finalUrl": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "beijing-personnel-exam",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/",
-              "finalUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "beijing-institutions",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/",
-              "finalUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "central-institutions",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/",
-              "finalUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "china-public-recruitment",
-          "status": "accessible-incomplete",
-          "attempts": 2,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://job.mohrss.gov.cn/cjobs/institution/listInstitution",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            },
-            {
-              "requestedUrl": "http://job.mohrss.gov.cn/cjobs/institution/listInstitution",
-              "finalUrl": "http://job.mohrss.gov.cn/cjobs/institution/listInstitution",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "central-sasac-recruitment",
-          "status": "accessible-incomplete",
-          "attempts": 2,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.sasac.gov.cn/n2588035/n2588325/n2588350/index.html",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            },
-            {
-              "requestedUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/n2588350/index.html",
-              "finalUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/n2588350/index.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "central-enterprise-roster",
-          "status": "accessible-incomplete",
-          "attempts": 2,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            },
-            {
-              "requestedUrl": "http://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
-              "finalUrl": "http://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "beijing-state-assets",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://gzw.beijing.gov.cn/yggq/gqzp/index.html",
-              "finalUrl": "https://gzw.beijing.gov.cn/yggq/gqzp/index.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "picc-campus",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true",
-              "finalUrl": "https://picc.zhiye.com/custom/xiaoyuan?hideAll=true",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "boe-campus",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://campus.boe.com/jobs?hideMenu=1",
-              "finalUrl": "https://campus.boe.com/jobs?hideMenu=1",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "sinopharm-careers",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.sinopharm.com/recruitment.html",
-              "finalUrl": "https://www.sinopharm.com/recruitment.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "genertec-official",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.gt.cn/",
-              "finalUrl": "https://www.gt.cn/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "crc-careers",
-          "status": "temporarily-unavailable",
-          "attempts": 2,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "已按登记入口与备用入口重试，公开页面本轮仍不可用；本轮不据此判断无岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://runjob.crc.com.cn/#/complex/homepage?id=1769554545615040514",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            },
-            {
-              "requestedUrl": "https://careers.crc.com.cn/index.html",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            }
-          ]
-        },
-        {
-          "sourceId": "cec-campus",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://campus.cec.com.cn/",
-              "finalUrl": "https://campus.cec.com.cn/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "cetc-recruitment",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.cetc.com.cn/zgdk/1593037/zpjgg/index.html",
-              "finalUrl": "https://www.cetc.com.cn/zgdk/1593037/zpjgg/index.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "sgcc-careers",
-          "status": "temporarily-unavailable",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "已按登记入口与备用入口重试，公开页面本轮仍不可用；本轮不据此判断无岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://zhaopin.sgcc.com.cn/",
-              "outcome": "network-error",
-              "recipe": "公开入口返回 HTTP 412，未取得可用于采集的页面。"
-            }
-          ]
-        },
-        {
-          "sourceId": "cnpc-careers",
-          "status": "temporarily-unavailable",
-          "attempts": 3,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "已按登记入口与备用入口重试，公开页面本轮仍不可用；本轮不据此判断无岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.cnpc.com.cn/cnpc/index.shtml",
-              "outcome": "network-error",
-              "recipe": "公开入口返回 HTTP 412，未取得可用于采集的页面。"
-            },
-            {
-              "requestedUrl": "https://news.cnpc.com.cn/system/2026/04/22/030190563.shtml",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            },
-            {
-              "requestedUrl": "https://zhaopin.cnpc.com.cn/",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            }
-          ]
-        },
-        {
-          "sourceId": "sinopec-careers",
-          "status": "accessible-incomplete",
-          "attempts": 2,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://job.sinopec.com/",
-              "outcome": "network-error",
-              "recipe": "公开入口本轮无法连接：TypeError。"
-            },
-            {
-              "requestedUrl": "https://job.sinopec.com/#/school/index",
-              "finalUrl": "https://job.sinopec.com/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "cmcc-careers",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://job.10086.cn/personal/job/",
-              "finalUrl": "https://job.10086.cn/personal/job/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "chinatelecom-careers",
-          "status": "checked-full-pagination",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "已按官网“校园招聘 + 北京”筛选完成 9 页、81 个去重候选，并逐项读取官网详情完成匿名审核。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/campus",
-              "finalUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/campus",
-              "outcome": "official-page",
-              "recipe": "官网城市筛选 2431 → 81"
-            }
-          ]
-        },
-        {
-          "sourceId": "casic-careers",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/c35503679/content.html",
-              "finalUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/c35503679/content.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "spacechina-careers",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://m.spacechina.com/index.html",
-              "finalUrl": "https://m.spacechina.com/index.html",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        },
-        {
-          "sourceId": "chinapost-recruitment",
-          "status": "accessible-incomplete",
-          "attempts": 1,
-          "checkedAt": "2026-08-23T13:03:00+08:00",
-          "note": "官方入口已可访问；本轮未能在该来源完成原生筛选、分页/附件和逐岗核验，因此不据此发布岗位。",
-          "accessEvidence": [
-            {
-              "requestedUrl": "https://www.chinapost.com.cn/",
-              "finalUrl": "https://www.chinapost.com.cn/",
-              "outcome": "page-incomplete",
-              "recipe": "公开入口健康检查已返回非错误页面；本轮未完成该来源的公告/附件筛选与逐岗核验。"
-            }
-          ]
-        }
-      ],
-      "reviews": [
-        {
-          "id": "review-20260823-1303-0f248c3fd99efd3b",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "北京电信",
-          "title": "区域解决方案经理（市区）",
-          "officialPublishedAt": "2026-08-23",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招…82796 tokens truncated…以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=42bb0d9578b26930&recruitType=1&positionType=0%2F1227%2F132817%2F132893%2F133213&columnId=1&brandCode=1&importPost=0"
-        },
-        {
-          "id": "review-20260822-2146-6b98249c495fef30",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "中通服咨询设计研究院有限公司",
-          "title": "云计算与算力工程师（北京）",
-          "officialPublishedAt": "2026-08-17",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=6b98249c495fef30&recruitType=1&positionType=0%2F1227%2F132806&columnId=1&brandCode=1&importPost=0"
-        },
-        {
-          "id": "review-20260822-2146-fa21e8df40c7e17f",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "中通服咨询设计研究院有限公司",
-          "title": "信息化咨询师(北京)",
-          "officialPublishedAt": "2026-08-17",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "accepted",
-          "reasonCode": "broad-engineering-eligibility-needs-confirmation",
-          "reason": "官网将学历和专业范围写为理工科硕士及以上，职责是信息化咨询、调研和技术架构规划；可作为交叉工科背景的具体岗位保留，但投递前仍需向单位确认专业认定。",
-          "semanticBasis": "判断来自官网列出的“理工科类相关专业、硕士研究生及以上”以及以咨询、需求调研和技术规划为主的职责；没有把它表述为已确认符合。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=fa21e8df40c7e17f&recruitType=1&positionType=0%2F1227%2F132803&columnId=1&brandCode=1&importPost=0"
-        },
-        {
-          "id": "review-20260822-2146-2f7a8e20df547e47",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "天翼安全科技有限公司",
-          "title": "数据安全运营工程师",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "1",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=2f7a8e20df547e47&recruitType=1&positionType=0%2F1227%2F132807%2F132856%2F133115&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-88ca3e935fb636d1",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "天翼安全科技有限公司",
-          "title": "研发工程师",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "1",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=88ca3e935fb636d1&recruitType=1&positionType=0%2F1227%2F109100%2F109219%2F109230&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-49a6eee1af37c58b",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "天翼安全科技有限公司",
-          "title": "AI算法工程师",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "1",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=49a6eee1af37c58b&recruitType=1&positionType=0%2F1227%2F109100%2F109203%2F109207&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-9f6d6afd972948ef",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "天翼安全科技有限公司",
-          "title": "安全运营工程师",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=9f6d6afd972948ef&recruitType=1&positionType=0%2F1227%2F132807%2F132856%2F133115&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-cb44aca3634c816b",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "天翼安全科技有限公司",
-          "title": "安全算法工程师",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "1",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=cb44aca3634c816b&recruitType=1&positionType=0%2F1227%2F109100%2F109203%2F109207&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-c7aec9b5ef297618",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "中国电信股份有限公司人工智能研究院（上海）",
-          "title": "世界模型算法研究员/工程师",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "rejected",
-          "reasonCode": "role-domain-not-aligned",
-          "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
-          "semanticBasis": "逐项结合官网说明中的职责、任职专业、所服务业务及风险要求复核；此结论不以“计算机”或“AI”等词本身作自动排除依据。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=c7aec9b5ef297618&recruitType=1&positionType=0%2F1227%2F109100%2F109200%2F109224&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-e316d7964c952a01",
-          "scope": "position",
-          "track": "央国企",
-          "organization": "中电信翼康科技有限公司",
-          "title": "AI算法及研发方向",
-          "officialPublishedAt": "2026-08-21",
-          "headcount": "若干",
-          "deadline": "官网未单列；以招聘系统实时状态为准",
-          "decision": "accepted",
-          "reasonCode": "health-digital-cross-domain-needs-confirmation",
-          "reason": "岗位来自中电信翼康科技，官方集团资料确认该单位服务医疗卫生健康数字化平台；该岗位开展垂直领域大模型研发。职位专业要求偏人工智能和计算机，故保留为需要确认而非确认符合。",
-          "semanticBasis": "综合岗位官网详情中的垂直领域模型研发职责与中国电信集团官网对中电信翼康医疗卫生健康数字化业务的说明判断；没有因“AI算法”标题本身直接收录。",
-          "verificationNote": "已从官网职位详情核对单位、地点、学历、职责、任职要求和投递入口。",
-          "fallback": "打开中国电信官网职位详情，查看完整要求并从官网投递。",
-          "sourceId": "chinatelecom-careers",
-          "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=e316d7964c952a01&recruitType=1&positionType=0%2F1227%2F109100%2F109203%2F109207&columnId=1&brandCode=1&importPost="
-        },
-        {
-          "id": "review-20260822-2146-f8e9b3d7ea444261",
           "scope": "position",
           "track": "央国企",
           "organization": "北京云网操作系统研发中心",
