@@ -61,6 +61,16 @@ test("source cards retain meaningful overlap but reserve selection tags for its 
   assert.deepEqual(selectionSources, ["beijing-selection-program", "buaa-career-discovery"]);
 });
 
+test("source directory separates user shortcuts from collection status", async () => {
+  const [sourcesPage, sourcesScript] = await Promise.all([read("sources.html"), read("sources.js")]);
+  assert.match(sourcesPage, /官方快捷入口/);
+  assert.match(sourcesPage, /采集与核验路线/);
+  assert.match(sourcesScript, /view: "shortcut"/);
+  assert.match(sourcesScript, /不显示采集状态/);
+  assert.match(sourcesScript, /collectionEntryUrl/);
+  assert.match(sourcesScript, /未在最近更新中/);
+});
+
 test("each scheduled run covers every registered source instead of rotating source batches", async () => {
   const [registryRaw, planRaw] = await Promise.all([
     read("data/source-registry.json"),
