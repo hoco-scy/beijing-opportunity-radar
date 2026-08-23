@@ -33,7 +33,9 @@ function officialDomain(urlValue, source) {
   try {
     const url = new URL(urlValue);
     const permittedProtocol = url.protocol === "https:" || (["official-http-only", "official-http-fallback"].includes(source.transportSecurity) && url.protocol === "http:");
-    return permittedProtocol && source.domains.some((domain) =>
+    const domains = [...source.domains];
+    if (source.collectionEntryUrl) domains.push(new URL(source.collectionEntryUrl).hostname);
+    return permittedProtocol && domains.some((domain) =>
       url.hostname === domain || url.hostname.endsWith(`.${domain}`));
   } catch { return false; }
 }
@@ -85,7 +87,7 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
     }
     if (Number(run.policyVersion || 0) >= 6) {
       const evidence = check.accessEvidence;
-      const entries = [source?.entryUrl, ...(source?.alternateEntryUrls || [])].filter(Boolean);
+      const entries = [source?.collectionEntryUrl || source?.entryUrl, ...(source?.alternateEntryUrls || [])].filter(Boolean);
       if (!Array.isArray(evidence) || !evidence.length) errors.push(`${checkLabel}.accessEvidence 必须记录入口访问证据`);
       else {
         const attempted = new Set();

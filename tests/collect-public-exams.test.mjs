@@ -111,45 +111,48 @@ test("collects Beijing static notices and discovers its attached position table"
   assert.equal(result.notices[0].attachments[0].officialUrl, "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202610/position.xlsx");
 });
 
-test("collects a standalone official selection-program announcement and retains its lifecycle", async () => {
-  const entry = "https://rsj.beijing.gov.cn/xxgk/tzgg/";
-  const notice = "https://rsj.beijing.gov.cn/xxgk/tzgg/209910/t20991015_1.html";
+test("collects Beijing graduate selection and Youpei announcements from the selected-university public category", async () => {
+  const config = "https://career.buaa.edu.cn/frontpage/buaa/js/init.js";
+  const feed = "https://career.buaa.edu.cn/f/newsCenter/ajax_list";
+  const detail = "https://career.buaa.edu.cn/f/newsCenter/ajax_view?id=selection-2099";
+  const title = "北京市2099年度定向选调和“优培计划”招聘应届优秀大学毕业生公告";
   const fetchImpl = mockFetch({
-    [entry]: { body: '<a href="./209910/t20991015_1.html" title="北京市2099年度定向选调和优培毕业生公告">公告</a>' },
-    [notice]: { body: "网上报名：2099年10月20日至11月5日。<a href=\"./positions.xlsx\">附件1：职位表</a>" }
+    [config]: { body: "window._config = { token: 'public-token' };" },
+    [feed]: { body: json({ state: 1, object: { newsPage: { totalPage: 1, list: [
+      { id: "selection-2099", title, releaseDate: "2099-09-08", url: "/frontpage/buaa/html/newsDetail.html?id=selection-2099" },
+      { id: "listed-2099", title: "北京市2099年度定向选调应届优秀大学毕业生拟录用人员名单", releaseDate: "2099-09-10" }
+    ] } } }) },
+    [detail]: { body: json({ state: 1, object: { article: {
+      title,
+      releaseDate: "2099-09-08",
+      articleData: { content: "<p>北京市人力资源和社会保障局</p><p>面向应届优秀大学毕业生。</p><p>网上报名：2099年10月20日至11月5日。</p>" }
+    }, fileMap: [{ fileName: "附件2：职位简章.xlsx", fileUrl: "/files/positions.xlsx" }] } }) }
   });
   const result = await collectStaticSelectionProgram({ sourceId: "beijing-selection-program", fetchImpl });
+  assert.equal(result.collectionRoute, "北航就业网选调生公开栏目 API → 城市应届选调公告详情/附件");
   assert.equal(result.noticeCount, 1);
   assert.equal(result.notices[0].category, "selection-program");
   assert.equal(result.notices[0].lifecycle.status, "open-or-upcoming");
-  assert.equal(result.notices[0].attachments[0].officialUrl, "https://rsj.beijing.gov.cn/xxgk/tzgg/209910/positions.xlsx");
+  assert.equal(result.notices[0].attachments[0].officialUrl, "https://career.buaa.edu.cn/files/positions.xlsx");
 });
 
-test("discovers a selection notice when the official list exposes only a script URL", async () => {
-  const entry = "https://rsj.beijing.gov.cn/xxgk/tzgg/";
-  const notice = "https://rsj.beijing.gov.cn/xxgk/tzgg/209910/t20991016_2.html";
+test("does not accept a Beijing selection relay without official issuer evidence", async () => {
+  const config = "https://career.buaa.edu.cn/frontpage/buaa/js/init.js";
+  const feed = "https://career.buaa.edu.cn/f/newsCenter/ajax_list";
+  const detail = "https://career.buaa.edu.cn/f/newsCenter/ajax_view?id=selection-2099";
+  const title = "北京市2099年度定向选调应届优秀大学毕业生公告";
   const fetchImpl = mockFetch({
-    [entry]: { body: '<script>const record = {"title":"","url":"./209910/t20991016_2.html"};</script>' },
-    [notice]: { body: "<h1>北京市2099年度定向选调应届优秀大学毕业生公告</h1>网上报名：2099年10月20日至11月5日。" }
+    [config]: { body: "window._config = { token: 'public-token' };" },
+    [feed]: { body: json({ state: 1, object: { newsPage: { totalPage: 1, list: [{ id: "selection-2099", title, releaseDate: "2099-09-08", url: "/frontpage/buaa/html/newsDetail.html?id=selection-2099" }] } } }) },
+    [detail]: { body: json({ state: 1, object: { article: {
+      title,
+      articleData: { content: "<p>面向应届优秀大学毕业生。网上报名：2099年10月20日至11月5日。</p>" }
+    }, fileMap: [] } }) }
   });
   const result = await collectStaticSelectionProgram({ sourceId: "beijing-selection-program", fetchImpl });
-  assert.equal(result.noticeCount, 1);
-  assert.equal(result.notices[0].title, "北京市2099年度定向选调应届优秀大学毕业生公告");
-});
-
-test("uses the official mobile detail fallback when a Beijing CMS list URL is stale", async () => {
-  const entry = "https://rsj.beijing.gov.cn/xxgk/tzgg/";
-  const notice = "https://rsj.beijing.gov.cn/xxgk/tzgg/209910/t20991017_3.html";
-  const fallback = "https://rsj.beijing.gov.cn/xxgk/tzgg/209910/t20991017_3_ext.html";
-  const fetchImpl = mockFetch({
-    [entry]: { body: '<script>const record = {"title":"","url":"./209910/t20991017_3.html"};</script>' },
-    [notice]: { status: 404, body: "not found" },
-    [fallback]: { body: "<title>北京市2099年度优培计划招聘公告</title>网上报名：2099年10月20日至11月5日。" }
-  });
-  const result = await collectStaticSelectionProgram({ sourceId: "beijing-selection-program", fetchImpl });
-  assert.equal(result.status, "completed");
-  assert.equal(result.noticeCount, 1);
-  assert.equal(result.notices[0].officialUrl, fallback);
+  assert.equal(result.noticeCount, 0);
+  assert.equal(result.status, "completed-partial");
+  assert.match(result.errors[0].error, /发布机关/);
 });
 
 test("collects Shanghai notices through the official API hierarchy", async () => {

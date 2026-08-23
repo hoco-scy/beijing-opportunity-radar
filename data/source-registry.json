@@ -75,11 +75,14 @@
         "rsj.beijing.gov.cn"
       ],
       "entryUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/",
-      "accessMode": "script-official-static-list",
+      "accessMode": "script-official-university-announcement-api",
       "recipeRequired": true,
       "registeredAt": "2026-08-23T15:39:00+08:00",
       "lastAccessAuditAt": "2026-08-23",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionEntryUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/newsList.html?id=5453aeeb99e74d78aea0b45fd456ae68",
+      "collectionAccessMode": "script-official-university-announcement-api",
+      "collectionNote": "页面继续展示并链接北京市人社局原生入口；后台从选调高校公开栏目筛选北京应届选调／优培公告，再以正文确认发布机关。"
     },
     {
       "id": "beijing-institutions",
