@@ -110,6 +110,53 @@
       }
     },
     {
+      "sourceId": "beijing-selection-program",
+      "status": "route-verified",
+      "observedAt": "2026-08-23",
+      "officialEntryUrl": "https://rsj.beijing.gov.cn/xxgk/tzgg/",
+      "accessMode": "script-official-static-list",
+      "nativeFilters": [],
+      "queryPlan": {
+        "everyRun": [
+          "脚本读取北京市人力资源和社会保障局官方通知公告列表与可见分页，只保留选调、优培、定向选调和选调生相关公告。",
+          "对每条候选公告进入官方详情，提取报名期限、职位表和同域官方附件；不以转载或搜索摘要作证据。",
+          "报名期有效时再结构化解析职位表；预公告保留为公告级待核验，不能发布为具体可报岗位。"
+        ],
+        "completionRule": "官方列表、相关详情和可公开附件均有本轮访问证据；尚未发布职位表时记录待跟踪，而非无岗位。"
+      },
+      "availabilityRule": "官方公告列表可访问且详情同属 rsj.beijing.gov.cn 即可进入脚本采集；列表或附件未完整返回时只能记 accessible-incomplete。",
+      "collection": {
+        "primary": "script",
+        "mode": "official-static-selection-announcement-collector",
+        "steps": [
+          "运行 node scripts/collect-public-exams.mjs --source beijing-selection-program --parse-position-tables。",
+          "采集器从官方公告列表进入详情并保留附件 URL、报名期限和解析错误。",
+          "只将报名窗口未过或明确预公告写入匿名审核记录，具体岗位仍须走私有资格门禁。"
+        ],
+        "completion": "官方公告列表、详情和公开附件路径均被采集；没有当期公告时记录 checked-no-active-campaign。",
+        "fallback": "CMS 改版、分页或附件不完整时记录 accessible-incomplete，再用浏览器校准公开结构；不得绕过访问控制。",
+        "implementation": {
+          "command": "node scripts/collect-public-exams.mjs --source beijing-selection-program --parse-position-tables",
+          "smokeTest": "node scripts/collect-public-exams.mjs --source beijing-selection-program --max-notices 8 --summary",
+          "runtime": "Node.js 18+；npm ci --ignore-scripts 后运行；只访问 rsj.beijing.gov.cn 的公开页面与附件。",
+          "hardGuard": "未出现报名期限或职位表的官方预公告只能待核验；附件必须同属登记官方域名。"
+        }
+      },
+      "availability": {
+        "state": "available",
+        "summary": "官方通知公告列表可打开，已确认存在选调优培历史公告与官方附件路径。",
+        "evidence": [
+          {
+            "method": "official-public-page-check",
+            "target": "https://rsj.beijing.gov.cn/xxgk/tzgg/",
+            "outcome": "non-error official page",
+            "checkedAt": "2026-08-23T10:20:00+08:00"
+          }
+        ],
+        "nextAction": "每轮先检查最新公告和期限；当年职位表发布后再触发结构化逐岗处理。"
+      }
+    },
+    {
       "sourceId": "beijing-personnel-exam",
       "status": "route-verified",
       "observedAt": "2026-08-22",

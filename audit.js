@@ -28,6 +28,7 @@ const scopeLabels = { announcement: "整份公告", position: "具体岗位", "o
 const sourceLabels = {
   "national-civil": "国家公务员局",
   "beijing-civil": "北京市公务员招考",
+  "beijing-selection-program": "北京选调／优培公告",
   "beijing-personnel-exam": "北京市人事考试平台",
   "beijing-institutions": "北京市事业单位招聘",
   "central-institutions": "中央和国家机关事业单位招聘",
