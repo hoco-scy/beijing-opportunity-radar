@@ -45,7 +45,7 @@ test("favorites stay in the job list and the former page redirects", async () =>
   for (const page of pages) assert.doesNotMatch(await read(page), /href="favorites\.html"/);
 });
 
-test("source cards expose overlapping coverage instead of claiming orthogonal categories", async () => {
+test("source cards retain meaningful overlap but reserve selection tags for its active collection chain", async () => {
   const [sourcesPage, sourcesScript, registryRaw] = await Promise.all([
     read("sources.html"), read("sources.js"), read("data/source-registry.json"),
   ]);
@@ -56,7 +56,9 @@ test("source cards expose overlapping coverage instead of claiming orthogonal ca
   assert.match(sourcesScript, /source\.coverage/);
   assert.ok(registry.sources.every((source) => Array.isArray(source.coverage) && source.coverage.length > 0));
   const shared = registry.sources.find((source) => source.id === "beijing-personnel-exam");
-  assert.deepEqual(shared.coverage, ["公务员招录", "选调优培", "事业单位", "国有企业"]);
+  assert.deepEqual(shared.coverage, ["公务员招录", "事业单位", "国有企业"]);
+  const selectionSources = registry.sources.filter((source) => source.coverage.includes("选调优培")).map((source) => source.id).sort();
+  assert.deepEqual(selectionSources, ["beijing-selection-program", "buaa-career-discovery"]);
 });
 
 test("each scheduled run covers every registered source instead of rotating source batches", async () => {
