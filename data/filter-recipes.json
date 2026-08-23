@@ -1298,7 +1298,7 @@
       "status": "route-verified",
       "observedAt": "2026-08-22",
       "officialEntryUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoList.html?type=1",
-      "accessMode": "browser-official-page",
+      "accessMode": "public-filterable-list",
       "nativeFilters": [
         "地区：北京",
         "类型：招聘信息/校招/选调/优培",
@@ -1315,15 +1315,15 @@
       },
       "availabilityRule": "公开列表或任一结构化筛选结果可加载时，记录本轮已检查；页面不可用仅影响发现覆盖，不能替代官方来源状态。",
       "observations": [],
-      "notes": "无需登录即可访问招聘信息列表，覆盖校招、选调等多类线索；作为每轮高优先级发现渠道。",
+      "notes": "无需登录即可访问招聘信息列表；云端脚本使用其公开城市、单位性质和关键词筛选接口。它只产生待回溯的线索，不能替代单位或政府官方发布证据。",
       "collection": {
-        "primary": "browser",
-        "mode": "official-browser-native-filter",
+        "primary": "script",
+        "mode": "script-buaa-public-filtered-discovery",
         "steps": [
-          "在浏览器中打开官方入口，确认列表、公告或搜索区已真实加载；不把搜索摘要或跳转错误页当作来源可用。",
-          "使用页面已呈现的地点、招聘类型、学历、岗位类别、发布时间或关键词控件；保留本轮实际筛选组合和筛选后数量。",
-          "只在已应用筛选的结果集中翻页或加载更多；记录页数/空状态并按官方详情链接或职位代码去重，不遍历未筛选的大型全集。",
-          "仅对筛选候选打开官方详情、公告正文和附件核验；控件、分页或附件不稳定时记录 accessible-incomplete，不猜测或绕过访问控制。"
+          "请求北航公开前端配置，取得页面明确暴露的公共令牌；令牌缺失时停止，不猜测或绕过访问控制。",
+          "对本城市按单位性质和生物医学相关关键词执行公开原生筛选，读取每个筛选结果的服务端分页，不请求未筛选全集。",
+          "按招聘信息 ID 去重并读取公开详情；只保留仍未截止且同时具有生物医学场景和工程专业依据的线索。",
+          "将线索回溯到单位或政府官方页面；未回溯前不得作为岗位页或考试公告页的发布证据。"
         ],
         "nativeFilters": [
           "地区：北京",
@@ -1338,8 +1338,14 @@
           "单位 + 职位名称 + 工作地点"
         ],
         "modelBoundary": "模型只复核结构化预筛后的候选；纯计算机/AI/网络安全/软件岗位没有明确生物医学工程交集时写 core-profession-mismatch。",
-        "completion": "已在官方浏览器页面完成本轮筛选、结果计数、已筛选分页和候选详情/附件核验；未完成部分按 accessible-incomplete 记录。",
-        "fallback": "官方页面需要登录、验证码、WAF 或动态控件不可稳定使用时停止采集，按登记备用官方入口重试并记录 accessible-incomplete 或 temporarily-unavailable；不得绕过访问控制或退回未筛选全集。"
+        "completion": "已完成公开筛选、筛选后分页、去重和公开详情读取；产出仅为待回溯线索，不能直接发布岗位。",
+        "fallback": "公开接口失效或需要登录、验证码、WAF 时停止采集，记录 accessible-incomplete；不得绕过访问控制或退回未筛选全集。",
+        "implementation": {
+          "command": "node scripts/collect-buaa-discovery.mjs --city 北京",
+          "smokeTest": "node scripts/collect-buaa-discovery.mjs --city 北京",
+          "runtime": "Node.js 18+，仅使用内置 fetch、URL 和 AbortSignal；无需浏览器驱动、凭据或本地状态。",
+          "hardGuard": "每个请求都必须包含城市、单位性质和关键词；脚本只读取原生筛选结果及其分页，拒绝未筛选全集。"
+        }
       },
       "availability": {
         "state": "available",
