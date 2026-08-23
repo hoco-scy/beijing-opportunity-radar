@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "city": "北京",
   "sourceId": "chinatelecom-careers",
-  "candidateSetHash": "b6e36ba42e76568ebb5b5cca386500746e561280119b6045f23f998863736301",
+  "candidateSetHash": "f63ef9a5ac5f715273c3068a2218dcbb1152b4a1b34afdcee89f1182d4062747",
   "reviewMethod": "本轮按官网详情分为两个语义批次，由任务代理阅读职责、专业条件与单位业务后形成；不是关键词分类结果。",
   "batchDecisions": [
     {
       "batch": 1,
-      "candidateCount": 37,
+      "candidateCount": 41,
       "decision": "rejected",
       "reasonCode": "role-domain-not-aligned",
       "reason": "岗位核心工作集中在云网、软件、算法、安全、通信或工程交付，未形成与当前关注方向相符的医疗健康或生物医学交叉职责，因此不放入岗位页。",
@@ -15,7 +15,7 @@
     },
     {
       "batch": 2,
-      "candidateCount": 36,
+      "candidateCount": 40,
       "decision": "rejected",
       "reasonCode": "role-domain-not-aligned",
       "reason": "岗位的核心业务为云网、通信、安全、技术开发、运营或非医疗职能；官网详情没有提供可支持生物医学工程相关性的职责或专业条件，因此不收录。",
