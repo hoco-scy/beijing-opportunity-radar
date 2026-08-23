@@ -54,6 +54,13 @@ function collectionMethod(source) {
   return "公告与职位信息核验";
 }
 
+function collectionCounts(check) {
+  const metrics = check?.collectionMetrics;
+  if (!metrics) return "本轮未记录采集数量";
+  if (metrics.state === "completed") return `本轮采集 ${metrics.collected} 条 → 筛选后 ${metrics.afterFilter} 条`;
+  return "本轮未完成原生采集，不能按 0 条理解";
+}
+
 function filteredSources() {
   const keyword = sourceState.query.trim().toLowerCase();
   return sourceState.registry.sources.filter((source) => {
@@ -87,7 +94,7 @@ function collectionCard(source, check) {
     <h3>${escapeHTML(source.organization)}</h3>
     <p class="source-type">${escapeHTML(collectionMethod(source))} · ${escapeHTML(roleLabels[source.role] || source.type)}</p>
     <div class="source-coverage"><strong>覆盖</strong>${tagsFor(source)}</div>
-    <div class="source-card-footer"><span>${escapeHTML(checkedAt)}</span><a href="${safeUrl(collectionEntry(source, check))}" target="_blank" rel="noreferrer">查看采集入口 ↗</a></div>
+    <div class="source-card-footer"><span>${escapeHTML(checkedAt)}<br />${escapeHTML(collectionCounts(check))}</span><a href="${safeUrl(collectionEntry(source, check))}" target="_blank" rel="noreferrer">查看采集入口 ↗</a></div>
   </article>`;
 }
 

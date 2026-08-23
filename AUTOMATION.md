@@ -74,7 +74,7 @@ Codex 云端的代理阶段默认没有互联网访问。云端定时任务必�
 6. 对每个入口写入可复查的 `accessEvidence`：请求 URL、最终 URL 或错误类别、是否取得非错误官方页面、已执行的配方步骤。已取得任一非错误官方页面而未完成筛选、分页或附件时，只能记为 `accessible-incomplete`，不能记为 `temporarily-unavailable`。不得用“浏览器报错”覆盖已登记且可访问的 HTTP/WAP 官方备用入口。
 7. 本轮某一来源失败后继续处理其他来源。最终运行状态为 `completed-partial` 时，必须说明缺口来自哪里，但不能把缺口描述成“没有更新”。
 
-每条 `sourceChecks` 至少写入 `sourceId`、状态、尝试次数、分钟级检查时间和面向记录的简短说明。`officialSystemsChecked` 必须与 `sourceChecks` 数量相等；失败数必须和各失败状态合计一致。
+每条 `sourceChecks` 至少写入 `sourceId`、状态、尝试次数、分钟级检查时间和面向记录的简短说明，以及 `collectionMetrics`。`collectionMetrics` 必须明确展示“本轮采集 N 条 → 筛选后 M 条”；只有完整跑通本站筛选、分页/附件与必要详情处理时才能填写数字。未完成或不可用必须写 `null` 并说明原因，绝不能以 `0 条` 代替。`officialSystemsChecked` 必须与 `sourceChecks` 数量相等；失败数必须和各失败状态合计一致。
 
 ### 步骤 B.5：按来源配方选择采集工具
 

@@ -1,9 +1,9 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastVerifiedAt": "2026-08-24T00:58:00+08:00",
+    "lastVerifiedAt": "2026-08-24T01:13:00+08:00",
     "lastRunStatus": "completed-partial",
-    "lastIncompleteSourceCount": 15,
+    "lastIncompleteSourceCount": 17,
     "lastDeferredCandidateCount": 0,
     "timezone": "Asia/Shanghai",
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件",
@@ -1701,7 +1701,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212224778113649409",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212224778113649409",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T00:58:00+08:00",
+      "verifiedAt": "2026-08-24T01:13:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -1738,7 +1738,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205993421104481178",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205993421104481178",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T00:58:00+08:00",
+      "verifiedAt": "2026-08-24T01:13:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -1775,7 +1775,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209207622157468571",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209207622157468571",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T00:58:00+08:00",
+      "verifiedAt": "2026-08-24T01:13:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -1812,7 +1812,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208497433158615824",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208497433158615824",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T00:58:00+08:00",
+      "verifiedAt": "2026-08-24T01:13:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
