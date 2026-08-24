@@ -8,6 +8,7 @@ const SUPPORTED_COLLECTORS = new Set([
   "picc-campus",
   "boe-campus",
   "crc-careers",
+  "jqzp-beijing-soe",
   "buaa-discovery",
   "iguopin-discovery",
   "ncss-discovery"

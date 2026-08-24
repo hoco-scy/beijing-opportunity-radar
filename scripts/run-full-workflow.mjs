@@ -13,6 +13,7 @@ import { collectNCSSDiscovery } from "./collect-ncss-discovery.mjs";
 import { collectPiccCampus } from "./collect-picc-campus.mjs";
 import { collectBoeCampus } from "./collect-boe-campus.mjs";
 import { collectCrcCareers } from "./collect-crc-careers.mjs";
+import { collectJqzpBeijingSoe } from "./collect-jqzp-beijing-soe.mjs";
 import { collectOfficialNoticeFeed } from "./collect-official-notice-feed.mjs";
 import { createCollectionFetch } from "./resilient-fetch.mjs";
 import { mergeDiscoveryCandidates, mergeOfficialMonitors } from "./collection-merge.mjs";
@@ -273,16 +274,17 @@ async function main() {
     maxRetryAfterMs: sourcePlan.requestPolicy?.maxRetryAfterMs || 300_000,
     circuitCooldownMs: sourcePlan.requestPolicy?.circuitCooldownMs || 300_000
   });
-  const [publicExamRun, buaa, iguopin, ncss, picc, boe, crc] = await Promise.all([
+  const [publicExamRun, buaa, iguopin, ncss, jqzp, picc, boe, crc] = await Promise.all([
     buildPublicExamRun({ registry, recipes, checkedAt, fetchImpl: collectionFetch }),
     collectBuaaDiscovery({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableDiscoveryResult("buaa-career-discovery", error)),
     collectIGuopinDiscovery({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableDiscoveryResult("iguopin-discovery", error)),
     collectNCSSDiscovery({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableDiscoveryResult("national-college-employment", error)),
+    collectJqzpBeijingSoe({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableStructuredResult("jqzp-beijing-soe", error)),
     collectPiccCampus({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableStructuredResult("picc-campus", error)),
     collectBoeCampus({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableStructuredResult("boe-campus", error)),
     collectCrcCareers({ city: recipes.city, fetchImpl: collectionFetch }).catch((error) => unavailableStructuredResult("crc-careers", error))
   ]);
-  const structuredResults = new Map([picc, boe, crc].map((result) => [result.sourceId, result]));
+  const structuredResults = new Map([jqzp, picc, boe, crc].map((result) => [result.sourceId, result]));
   const publicExamChecks = new Map(publicExamRun.sourceChecks.map((check) => [check.sourceId, check]));
   const officialNoticeResults = new Map();
   const scheduledIds = [...new Set([...(sourcePlan.coverage.everyRunOfficial || []), ...(sourcePlan.coverage.everyRunDiscovery || [])])];
@@ -299,6 +301,7 @@ async function main() {
     if (route.collector === "buaa-discovery") return discoverySourceCheck(source, buaa, checkedAt);
     if (route.collector === "iguopin-discovery") return discoverySourceCheck(source, iguopin, checkedAt);
     if (route.collector === "ncss-discovery") return discoverySourceCheck(source, ncss, checkedAt);
+    if (route.collector === "jqzp-beijing-soe") return verifiedJobsSourceCheck(source, jqzp, checkedAt);
     if (route.collector === "picc-campus") return verifiedJobsSourceCheck(source, picc, checkedAt);
     if (route.collector === "boe-campus") return verifiedJobsSourceCheck(source, boe, checkedAt);
     if (route.collector === "crc-careers") return verifiedJobsSourceCheck(source, crc, checkedAt);
@@ -319,6 +322,8 @@ async function main() {
   const officialNoticeMonitors = [...officialNoticeResults.entries()]
     .flatMap(([sourceId, result]) => (result.noticeItems || []).map((item) => monitorFromOfficialNotice(item, sources.get(sourceId), checkedAt)))
     .filter(Boolean);
+  const structuredValues = [...structuredResults.values()];
+  const structuredMetric = (field) => structuredValues.reduce((sum, result) => sum + (Number(result[field]) || 0), 0);
   const run = {
     id: `run-${checkedAt.slice(0, 10).replaceAll("-", "")}-${checkedAt.slice(11, 16).replace(":", "")}-aggregate-first-full-sync`,
     scope: "full-city-run", checkedAt, trigger: "scheduled-or-manual-full-update", scheduledSourceIds: scheduledIds, policyVersion: 7,
@@ -326,20 +331,20 @@ async function main() {
     coverageStatus: "aggregate-first-collection-and-source-health",
     status: incomplete ? "completed-partial" : "completed",
     outcome: "aggregate-platform-discovery-plus-official-verification",
-    summary: `本轮已执行公考、选调优培、三类聚合平台和重点单位的公开采集。北航就业信息网${buaa.collectionError ? "本轮未完成" : `初筛 ${buaa.leads.length} 条`}，国聘${iguopin.collectionError ? "本轮未完成" : `初筛 ${iguopin.leads.length} 条`}，国家大学生就业服务平台${ncss.collectionError ? "本轮未完成" : `初筛 ${ncss.leads.length} 条`}；重点官网具体岗位：中国人保 ${picc.collectionError ? "未完成" : picc.afterFilter + " 条"}、京东方 ${boe.collectionError ? "未完成" : boe.afterFilter + " 条"}、华润 ${crc.collectionError ? "未完成" : crc.afterFilter + " 条"}；官方公告页保留 ${officialNoticeMonitors.length} 条待拆分公告。`,
+    summary: `本轮已执行公考、选调优培、聚合平台和重点单位的公开采集。京企直聘${jqzp.collectionError ? "本轮未完成" : `核验后保留 ${jqzp.afterFilter} 条`}，北航就业信息网${buaa.collectionError ? "本轮未完成" : `初筛 ${buaa.leads.length} 条`}，国聘${iguopin.collectionError ? "本轮未完成" : `初筛 ${iguopin.leads.length} 条`}，国家大学生就业服务平台${ncss.collectionError ? "本轮未完成" : `初筛 ${ncss.leads.length} 条`}；重点官网具体岗位：中国人保 ${picc.collectionError ? "未完成" : picc.afterFilter + " 条"}、京东方 ${boe.collectionError ? "未完成" : boe.afterFilter + " 条"}、华润 ${crc.collectionError ? "未完成" : crc.afterFilter + " 条"}；官方公告页保留 ${officialNoticeMonitors.length} 条待拆分公告。`,
     metrics: {
       officialSystemsChecked: sourceChecks.length, officialSystemsSucceeded: sourceChecks.length - incomplete, officialSystemsFailed: incomplete,
       newLeads: (publicExamRun.metrics?.newLeads || 0) + buaa.leads.length + iguopin.leads.length + ncss.leads.length + officialNoticeMonitors.length + [...structuredResults.values()].reduce((sum, result) => sum + (result.jobs?.length || 0), 0),
       reviewedItems: publicExamRun.reviews.length, accepted: 0, rejected: 0, deferred: publicExamRun.reviews.length,
-      published: [...structuredResults.values()].reduce((sum, result) => sum + (result.jobs?.length || 0), 0), updated: 0, closed: 0
+      published: structuredValues.reduce((sum, result) => sum + (result.jobs?.length || 0), 0), updated: 0, closed: 0
     },
     screeningMetrics: {
-      portalResultsReported: (publicMetrics.portalResultsReported || 0) + buaa.portalResultsReported + iguopin.portalResultsReported + ncss.portalResultsReported,
-      nativeFilterQueries: (publicMetrics.nativeFilterQueries || 0) + buaa.nativeFilterQueries + iguopin.nativeFilterQueries + ncss.nativeFilterQueries,
-      nativeFilteredResults: (publicMetrics.nativeFilteredResults || 0) + buaa.nativeFilteredResults + iguopin.nativeFilteredResults + ncss.nativeFilteredResults,
-      deduplicatedCandidates: (publicMetrics.deduplicatedCandidates || 0) + buaa.deduplicatedCandidates + iguopin.deduplicatedCandidates + ncss.deduplicatedCandidates,
-      positionsBatchReviewed: (publicMetrics.positionsBatchReviewed || 0) + buaa.detailsChecked + iguopin.detailsChecked + ncss.detailsChecked,
-      positionsOfficiallyVerified: (publicMetrics.positionsOfficiallyVerified || 0) + [...structuredResults.values()].reduce((sum, result) => sum + (result.positionsOfficiallyVerified || 0), 0),
+      portalResultsReported: (publicMetrics.portalResultsReported || 0) + buaa.portalResultsReported + iguopin.portalResultsReported + ncss.portalResultsReported + structuredMetric("portalResultsReported"),
+      nativeFilterQueries: (publicMetrics.nativeFilterQueries || 0) + buaa.nativeFilterQueries + iguopin.nativeFilterQueries + ncss.nativeFilterQueries + structuredMetric("nativeFilterQueries"),
+      nativeFilteredResults: (publicMetrics.nativeFilteredResults || 0) + buaa.nativeFilteredResults + iguopin.nativeFilteredResults + ncss.nativeFilteredResults + structuredMetric("nativeFilteredResults"),
+      deduplicatedCandidates: (publicMetrics.deduplicatedCandidates || 0) + buaa.deduplicatedCandidates + iguopin.deduplicatedCandidates + ncss.deduplicatedCandidates + structuredMetric("deduplicatedCandidates"),
+      positionsBatchReviewed: (publicMetrics.positionsBatchReviewed || 0) + buaa.detailsChecked + iguopin.detailsChecked + ncss.detailsChecked + structuredMetric("detailsChecked"),
+      positionsOfficiallyVerified: (publicMetrics.positionsOfficiallyVerified || 0) + structuredMetric("positionsOfficiallyVerified"),
       positionsEscalated: 0, positionsDeferredByBudget: publicMetrics.positionsDeferredByBudget || 0,
       discoverySourcesChecked: 3, discoveryOfficialCandidates: buaa.leads.length + iguopin.leads.length + ncss.leads.length
     },

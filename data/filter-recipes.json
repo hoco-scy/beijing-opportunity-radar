@@ -1588,6 +1588,76 @@
         ],
         "nextAction": "下轮仍需先做入口与语义健康检查，不能把本轮结果当作永久可用。"
       }
+    },
+    {
+      "sourceId": "jqzp-beijing-soe",
+      "status": "route-verified",
+      "observedAt": "2026-08-24",
+      "officialEntryUrl": "https://jqzp.fesco.com.cn/page?id=27",
+      "accessMode": "public-filterable-list",
+      "nativeFilters": [
+        "工作地点：北京市（站内城市 ID 33）",
+        "工作经验：应届生（站内 ID 1）",
+        "招聘类型：校园招聘（站内 ID 2）",
+        "公司性质：国有企业（站内 ID 5）",
+        "专业与学历：列表官方字段预筛，公开详情二次核验",
+        "有效状态：未下线且截止日期未过"
+      ],
+      "queryPlan": {
+        "everyRun": [
+          "调用京企直聘职位页实际使用的无需登录公开接口，同时传入北京、应届生、校园招聘、国有企业四项站内筛选；禁止请求未筛选职位全集。",
+          "按接口返回总量读取筛选结果全部分页并以岗位 ID 去重；先用列表直接返回的专业、学历和截止日期排除明确不可报记录。",
+          "仅对列表预筛可能可报的记录请求公开详情，核验专业、学历、工作经验、职责、客观风险、投递路径和截止日期。",
+          "不限专业、工学门类或理工类可报的岗位不能因标题没有医学词而删除；纯计算机岗位必须在职责中存在明确生物医学应用场景。"
+        ],
+        "completionRule": "已完成四项站内筛选、筛选后全部分页、岗位 ID 去重、列表资格预筛和候选详情核验，并同时输出原生筛选数、详情核验数和最终保留数。"
+      },
+      "availabilityRule": "公开接口或详情不能完整返回时记录 accessible-incomplete 或 temporarily-unavailable，并保留上次已核验岗位；不得把失败解释为 0 条。",
+      "collection": {
+        "primary": "script",
+        "mode": "script-jqzp-public-filtered-structured-list",
+        "steps": [
+          "请求京企直聘公开职位接口，固定携带北京、应届生、校园招聘、国有企业四项原生筛选。",
+          "只遍历该筛选结果的服务端分页，按公开岗位 ID 去重，不搜索全站 613 条职位，也不只靠医学标题关键词。",
+          "用列表的官方专业、学历和截止日期先缩小详情请求；专业字段缺失时保留并进入详情，不能直接删除。",
+          "读取少量公开岗位详情并完成应届硕士、专业可报、无明确工作年限、非纯计算机、非高危和未截止门禁。",
+          "通过门禁的岗位以北京市国资委主办平台的当前公开记录进入岗位页；记录本轮采集数、详情数、保留数及每类排除原因。"
+        ],
+        "nativeFilters": [
+          "北京市",
+          "应届生",
+          "校园招聘",
+          "国有企业"
+        ],
+        "pagination": "读取接口 count 并按每页 100 条遍历四项原生筛选后的全部分页；结果异常扩大超过 100 页时安全停止，防止筛选参数失效。",
+        "deduplicateBy": [
+          "京企直聘岗位 ID",
+          "公开详情链接",
+          "单位 + 具体岗位 + 地点"
+        ],
+        "modelBoundary": "确定性脚本负责站内筛选、分页、硬资格和明显不匹配排除；模型可复核边界专业或岗位质量，但不能把专业字段本身当作纯计算机岗位具有生物医学场景的证据。",
+        "completion": "已完成公开筛选、全部筛选分页、去重、列表预筛、详情核验和具体岗位输出。",
+        "fallback": "接口限流、断链或服务端错误时使用统一退避重试；触发访问控制时停止请求并保留上次岗位，不绕过验证码或访问控制，不回退到浏览器逐岗扫描。",
+        "implementation": {
+          "command": "node scripts/collect-jqzp-beijing-soe.mjs --city 北京",
+          "smokeTest": "node scripts/collect-jqzp-beijing-soe.mjs --city 北京",
+          "runtime": "Node.js 18+；只使用内置 fetch、URL、Buffer 和 AbortSignal；无需登录、Cookie、浏览器状态或本地缓存，适合云端 Codex。",
+          "hardGuard": "列表请求必须同时包含北京、应届生、校园招聘和国有企业四项筛选；只打开列表资格预筛后可能可报的公开详情，拒绝未筛选全集。"
+        }
+      },
+      "availability": {
+        "state": "available",
+        "summary": "已确认公开职位页、筛选接口、分页字段和岗位详情接口均无需登录即可访问。",
+        "evidence": [
+          {
+            "method": "public-filter-and-detail-api-check",
+            "target": "https://jqzp.fesco.com.cn/position",
+            "outcome": "北京＋应届生＋校园招聘＋国有企业筛选返回结构化职位和总量；公开详情返回任职条件",
+            "checkedAt": "2026-08-24T00:00:00+08:00"
+          }
+        ],
+        "nextAction": "每轮通过统一韧性请求层执行，若接口结构变化则明确记为未完成并保留上次结果。"
+      }
     }
   ]
 }

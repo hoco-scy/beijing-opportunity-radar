@@ -232,6 +232,38 @@
       "collectionNote": "本地国资招聘公告页适配器"
     },
     {
+      "id": "jqzp-beijing-soe",
+      "organization": "京企直聘",
+      "type": "北京市属国企招聘平台",
+      "role": "authoritative",
+      "tier": "critical",
+      "cadence": "every-run",
+      "monitoringEnabled": true,
+      "coverage": [
+        "国有企业"
+      ],
+      "domains": [
+        "jqzp.fesco.com.cn"
+      ],
+      "entryUrl": "https://jqzp.fesco.com.cn/page?id=27",
+      "collectionEntryUrl": "https://jqzp.fesco.com.cn/position",
+      "accessMode": "public-filterable-list",
+      "collectionAccessMode": "script-jqzp-public-filtered-structured-list",
+      "collectionNote": "北京市国资委主办的市管企业招聘平台。脚本先使用北京、应届生、校园招聘和国有企业原生筛选，再以列表专业/学历字段预筛并读取少量公开详情完成资格核验；不扫描未筛选全站职位。",
+      "officialSiteConfirmed": true,
+      "officialOperator": "北京市人民政府国有资产监督管理委员会主办、北京外企人力资源服务有限公司承办",
+      "lastCollectionAudit": {
+        "checkedAt": "2026-08-24T16:22:00+08:00",
+        "collectionMetrics": {
+          "state": "completed",
+          "collected": 291,
+          "afterFilter": 14,
+          "filterDescription": "已使用北京、应届生、校园招聘、国有企业四项站内筛选读取全部 291 条结果；列表资格预筛后核验 15 条公开详情，14 条通过，1 条因岗位质量明显较低排除。"
+        }
+      },
+      "lastAccessAuditAt": "2026-08-24"
+    },
+    {
       "id": "picc-campus",
       "organization": "中国人民保险集团",
       "type": "企业官方招聘系统",
@@ -343,6 +375,7 @@
       "tier": "priority",
       "cadence": "every-run",
       "monitoringEnabled": true,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -362,6 +395,7 @@
       "tier": "priority",
       "cadence": "every-run",
       "monitoringEnabled": true,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -381,6 +415,7 @@
       "tier": "priority",
       "cadence": "every-run",
       "monitoringEnabled": true,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -399,7 +434,8 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": true,
+      "monitoringEnabled": false,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -426,7 +462,8 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": true,
+      "monitoringEnabled": false,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -451,7 +488,8 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": true,
+      "monitoringEnabled": false,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -476,7 +514,8 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": true,
+      "monitoringEnabled": false,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],
@@ -559,6 +598,7 @@
       "tier": "priority",
       "cadence": "every-run",
       "monitoringEnabled": true,
+      "shortcutEnabled": false,
       "coverage": [
         "国有企业"
       ],

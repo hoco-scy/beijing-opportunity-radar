@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
  * Stateless preflight for collectors that a fresh Codex cloud container can run.
- * With --live it performs the no-login, filtered 北航就业信息网、国聘和国家大学生就业服务平台 discovery checks.
+ * With --live it performs the no-login, filtered 京企直聘、北航就业信息网、国聘和国家大学生就业服务平台 checks.
  */
 import { access, readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { collectNCSSDiscovery } from "./collect-ncss-discovery.mjs";
+import { collectJqzpBeijingSoe } from "./collect-jqzp-beijing-soe.mjs";
 
 const root = new URL("../", import.meta.url);
 const MINIMUM_NODE_MAJOR = 18;
@@ -80,19 +81,20 @@ function run(command, args) {
 }
 
 export async function runLiveSmoke() {
-  const [buaaOut, iguopinOut, ncss] = await Promise.all([
+  const [buaaOut, iguopinOut, ncss, jqzp] = await Promise.all([
     run(process.execPath, ["scripts/collect-buaa-discovery.mjs", "--city", "北京"]),
     run(process.execPath, ["scripts/collect-iguopin-discovery.mjs", "--city", "北京"]),
-    collectNCSSDiscovery({ city: "北京" })
+    collectNCSSDiscovery({ city: "北京" }),
+    collectJqzpBeijingSoe({ city: "北京" })
   ]);
   const buaa = JSON.parse(buaaOut);
   const iguopin = JSON.parse(iguopinOut);
-  for (const result of [buaa, iguopin, ncss]) {
+  for (const result of [buaa, iguopin, ncss, jqzp]) {
     if (result.collectionMethod !== "script" || result.nativeFilterQueries < 1 || !Array.isArray(result.pagesVisited) || !result.pagesVisited.length) {
       throw new Error(`${result.sourceId || "公开"}筛选冒烟检查未能证明脚本实际使用原生筛选请求。`);
     }
   }
-  return { buaa, iguopin, ncss };
+  return { buaa, iguopin, ncss, jqzp };
 }
 
 async function main() {

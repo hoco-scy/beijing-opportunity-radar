@@ -20,6 +20,7 @@ const accessModeByCollector = {
   "picc-campus": "script-official-structured-list",
   "boe-campus": "script-official-structured-list",
   "crc-careers": "script-official-public-gateway",
+  "jqzp-beijing-soe": "script-jqzp-public-filtered-structured-list",
   "buaa-discovery": "script-buaa-public-filtered-discovery",
   "iguopin-discovery": "script-iguopin-public-filtered-discovery",
   "ncss-discovery": "script-ncss-public-filtered-discovery"
