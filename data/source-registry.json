@@ -54,7 +54,8 @@
       "cadence": "every-run",
       "coverage": [
         "公务员招录",
-        "事业单位"
+        "事业单位",
+        "国有企业"
       ],
       "domains": [
         "rsj.beijing.gov.cn"
@@ -341,7 +342,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -349,7 +350,9 @@
         "campus.cec.com.cn"
       ],
       "entryUrl": "https://campus.cec.com.cn/",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "cetc-recruitment",
@@ -358,7 +361,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -366,7 +369,9 @@
         "cetc.com.cn"
       ],
       "entryUrl": "https://www.cetc.com.cn/zgdk/1593037/zpjgg/index.html",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "sgcc-careers",
@@ -375,7 +380,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -383,7 +388,9 @@
         "zhaopin.sgcc.com.cn"
       ],
       "entryUrl": "https://zhaopin.sgcc.com.cn/",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "cnpc-careers",
@@ -392,7 +399,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -408,7 +415,9 @@
         "https://zhaopin.cnpc.com.cn/"
       ],
       "accessMode": "browser-official-page",
-      "lastAccessAuditAt": "2026-08-22"
+      "lastAccessAuditAt": "2026-08-22",
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "sinopec-careers",
@@ -417,7 +426,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -431,7 +440,9 @@
       "accessMode": "browser-spa",
       "recipeRequired": true,
       "lastAccessAuditAt": "2026-08-22",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "cmcc-careers",
@@ -440,7 +451,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -454,7 +465,9 @@
       "accessMode": "filterable-dynamic-list",
       "recipeRequired": true,
       "lastAccessAuditAt": "2026-08-22",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "chinatelecom-careers",
@@ -463,7 +476,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -545,7 +558,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -560,7 +573,9 @@
       ],
       "recipeRequired": true,
       "lastAccessAuditAt": "2026-08-22",
-      "officialSiteConfirmed": true
+      "officialSiteConfirmed": true,
+      "collectionAccessMode": "script-official-notice-adapter",
+      "collectionNote": "官方招聘入口与公告适配器"
     },
     {
       "id": "buaa-career-discovery",

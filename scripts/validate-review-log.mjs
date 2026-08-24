@@ -155,11 +155,16 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
     if ((run.screeningMetrics?.positionsEscalated || 0) > 20) errors.push(`${label} 高推理升级数超过每轮 20 项上限`);
   }
   if (Number(run.candidateProcessingVersion || 0) >= 1) {
-    const telecomChecked = (run.sourceChecks || []).some((check) => check.sourceId === "chinatelecom-careers" && check.status === "checked-full-pagination");
-    const candidates = run.screeningMetrics?.deduplicatedCandidates || 0;
+    const telecomCheck = (run.sourceChecks || []).find((check) => check.sourceId === "chinatelecom-careers" && check.status === "checked-full-pagination");
+    const sourceSpecificClosure = Number(run.policyVersion || 0) >= 7;
+    const candidates = sourceSpecificClosure
+      ? (telecomCheck?.collectionMetrics?.afterFilter || 0)
+      : (run.screeningMetrics?.deduplicatedCandidates || 0);
     const telecomReviews = (run.reviews || []).filter((review) => review.sourceId === "chinatelecom-careers").length;
-    if (telecomChecked && telecomReviews !== candidates) errors.push(`${label} 中国电信已采集候选必须逐项写入审核记录`);
-    if (telecomChecked && (run.screeningMetrics?.positionsBatchReviewed || 0) !== candidates) errors.push(`${label} 中国电信候选必须全部完成批量审核`);
+    if (telecomCheck && telecomReviews !== candidates) errors.push(`${label} 中国电信已采集候选必须逐项写入审核记录`);
+    if (telecomCheck && (sourceSpecificClosure
+      ? (run.screeningMetrics?.positionsBatchReviewed || 0) < candidates
+      : (run.screeningMetrics?.positionsBatchReviewed || 0) !== candidates)) errors.push(`${label} 中国电信候选必须全部完成批量审核`);
   }
   if (Number(run.candidateProcessingVersion || 0) >= 2) {
     const telecomReviews = (run.reviews || []).filter((review) => review.sourceId === "chinatelecom-careers");

@@ -30,7 +30,7 @@
     "criticalEveryRun": ["national-civil","beijing-civil","beijing-personnel-exam","beijing-selection-program","beijing-institutions","central-institutions","china-public-recruitment","central-sasac-recruitment","central-enterprise-roster","beijing-state-assets"],
     "activeUntilDeadline": true,
     "activeDefinition": ["正文已有在招岗位","截止未过的正式公告或预公告","上轮 deferred 的待补字段对象"],
-    "everyRunOfficial": ["national-civil","beijing-civil","beijing-personnel-exam","beijing-selection-program","beijing-institutions","central-institutions","china-public-recruitment","central-sasac-recruitment","central-enterprise-roster","beijing-state-assets","picc-campus","boe-campus","sinopharm-careers","genertec-official","crc-careers","casic-careers","spacechina-careers"],
+    "everyRunOfficial": ["national-civil","beijing-civil","beijing-personnel-exam","beijing-selection-program","beijing-institutions","central-institutions","china-public-recruitment","central-sasac-recruitment","central-enterprise-roster","beijing-state-assets","picc-campus","boe-campus","sinopharm-careers","genertec-official","crc-careers","cec-campus","cetc-recruitment","sgcc-careers","cnpc-careers","sinopec-careers","cmcc-careers","chinatelecom-careers","casic-careers","spacechina-careers","chinapost-recruitment"],
     "everyRunDiscovery": ["buaa-career-discovery","national-college-employment","iguopin-discovery"],
     "maxUnseenHours": 24,
     "dynamicExpansion": "以北航就业信息网和国聘的已筛选结果作为主发现池；重点补充医疗健康、生物医药、医疗器械、保险健康以及航空航天院所中明确生物医学工程交叉的官网岗位，不恢复对通信、能源等低相关大型央企的逐家轮询"

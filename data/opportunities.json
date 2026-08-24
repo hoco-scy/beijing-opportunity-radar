@@ -1,9 +1,9 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastVerifiedAt": "2026-08-24T12:20:00+08:00",
+    "lastVerifiedAt": "2026-08-24T14:40:00+08:00",
     "lastRunStatus": "completed-partial",
-    "lastIncompleteSourceCount": 1,
+    "lastIncompleteSourceCount": 9,
     "lastDeferredCandidateCount": 0,
     "timezone": "Asia/Shanghai",
     "publicationRule": "仅发布能在官方公告、职位表或官方招聘系统中定位到的具体岗位；公考岗位还必须通过全部个人资格硬条件",
@@ -62,8 +62,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351589318",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J78429",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -135,8 +135,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600621",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80472",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -209,8 +209,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351590156",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J79924",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -293,8 +293,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600612",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80466",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -372,8 +372,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600620",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80474",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -445,8 +445,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351589790",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J79355",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -525,8 +525,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600609",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80465",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -600,8 +600,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600623",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80470",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -673,8 +673,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600622",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80471",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -751,8 +751,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351588920",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J79005",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -826,8 +826,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351590155",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J79923",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -901,8 +901,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600624",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80469",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -976,8 +976,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600625",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80468",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -1050,8 +1050,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351587979",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J78915",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -1132,8 +1132,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351600611",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J80467",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -1218,8 +1218,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351589786",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J79360",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -1296,8 +1296,8 @@
       "officialAnnouncementUrl": "https://picc.zhiye.com/custom/campus?hideAll=true",
       "officialApplyUrl": "https://picc.zhiye.com/campus/detail?jobAdId=351587824",
       "applyInstruction": "打开中国人保官方岗位页并核对职位代码 J79016",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "中国人保官方校园招聘接口按招聘类型和工作地点筛选后返回的在招岗位。",
       "professionalEligibility": {
@@ -1372,8 +1372,8 @@
       "officialAnnouncementUrl": "https://runjob.crc.com.cn/#/complex/homepage?id=1769554545615040514",
       "officialApplyUrl": "https://runjob.crc.com.cn/#/complex/RecruitDetail?id=1850844730576011265&comId=1769554545615040514&typeId=A02",
       "applyInstruction": "打开华润集团官方职位页核对并投递",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "华润集团公开职位网关当前返回的校园招聘岗位。",
       "professionalEligibility": {
@@ -1448,8 +1448,8 @@
       "officialAnnouncementUrl": "https://runjob.crc.com.cn/#/complex/homepage?id=1769554545615040514",
       "officialApplyUrl": "https://runjob.crc.com.cn/#/complex/RecruitDetail?id=1850844730546651137&comId=1769554545615040514&typeId=A02",
       "applyInstruction": "打开华润集团官方职位页核对并投递",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "华润集团公开职位网关当前返回的校园招聘岗位。",
       "professionalEligibility": {
@@ -1528,8 +1528,8 @@
       "officialAnnouncementUrl": "https://runjob.crc.com.cn/#/complex/homepage?id=1769554545615040514",
       "officialApplyUrl": "https://runjob.crc.com.cn/#/complex/RecruitDetail?id=1951105402428678146&comId=1769554545615040514&typeId=A02",
       "applyInstruction": "打开华润集团官方职位页核对并投递",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "lastSeenAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
       "lastSeenStatus": "live",
       "statusEvidence": "华润集团公开职位网关当前返回的校园招聘岗位。",
       "professionalEligibility": {
@@ -1556,6 +1556,152 @@
         "applicationPath": true,
         "deadlineChecked": true
       }
+    },
+    {
+      "id": "chinatelecom-6ee10b46e14f5a54",
+      "track": "央国企",
+      "subtrack": "通信央企",
+      "organization": "中电信人工智能科技（北京）有限公司",
+      "department": "官方未注明",
+      "title": "科创项目管理经理",
+      "exactTitle": "科创项目管理经理",
+      "jobCode": "6ee10b46e14f5a54",
+      "location": "西城区",
+      "cohort": "校园招聘",
+      "recruitmentType": "校园招聘",
+      "headcount": "若干",
+      "education": "硕士研究生",
+      "degree": "官方未单列",
+      "majors": "1. 硕士及以上学历（技术战略方向博士优先），计算机、电子信息、人工智能、软件工程、信息管理与信息系统等相关理工科专业。 2. 深入了解人工智能、大数据、云计算等技术领域（如模型训练与推理、智能体、数据平台/中台等），具备真实的研发项目或深度课题参与经历，能够从技术实现层面理解研发流程与关键节点。 3. 具备优秀的技术沟通与表达能力，准确理解并提炼技术细节、核心突破与成果亮点，推动技术信息在战略层面的有效传达。 4. 具备出色的跨部门、跨层级沟通协调能力；有学生干部、社团负责人、项目组织或大型活动统筹经验者优先。 5. 具备较强的技术文档撰写能力与数据分析能力，能独立完成研究报告、技术文档及汇报材料的编制；PPT制作能力突出，能将复杂技术内容转化为清晰、有说服力的汇报材料。 6. 逻辑思维清晰，善于独立思考与研究，对前沿科技有浓厚兴趣，具备强烈的学习意愿和快速适应能力。 7. 工作细致认真，责任心强，具备高度的主动性与抗压能力，能适应多任务并行的工作节奏。 8. 有论文、专利、软著等科创产出，或国家级/省部级科研项目参与经验、重大科技奖项申报辅助经历者优先。",
+      "politicalStatus": "官方未单列",
+      "experience": "校园招聘岗位",
+      "responsibilities": [
+        "1. 负责跟踪AI领域前沿技术动态、行业发展趋势及国家相关政策，收集分析科技创新相关资料数据，形成技术趋势分析报告与专题汇报材料，为技术布局与战略决策提供输入； 2. 参与国家重大科技攻关任务/国家级创新平台的申请、过程管理及验收，完成申报材料编制、汇报PPT制作及评审会议组织等工作； 3. 参与研发项目全流程管理（规划、立项、实施、验收、转化），推进研发项目上云管理及合规管控工作； 4. 参与研发成果管理工作，包括自研产品测试、成果转化推广及项目后评估等； 5. 负责统筹组织国家级、省部级重大科技奖项申报，对接集团科技委及研发管理部门，落实相关支撑工作与管理要求"
+      ],
+      "requirements": [
+        "1. 硕士及以上学历（技术战略方向博士优先），计算机、电子信息、人工智能、软件工程、信息管理与信息系统等相关理工科专业。 2. 深入了解人工智能、大数据、云计算等技术领域（如模型训练与推理、智能体、数据平台/中台等），具备真实的研发项目或深度课题参与经历，能够从技术实现层面理解研发流程与关键节点。 3. 具备优秀的技术沟通与表达能力，准确理解并提炼技术细节、核心突破与成果亮点，推动技术信息在战略层面的有效传达。 4. 具备出色的跨部门、跨层级沟通协调能力；有学生干部、社团负责人、项目组织或大型活动统筹经验者优先。 5. 具备较强的技术文档撰写能力与数据分析能力，能独立完成研究报告、技术文档及汇报材料的编制；PPT制作能力突出，能将复杂技术内容转化为清晰、有说服力的汇报材料。 6. 逻辑思维清晰，善于独立思考与研究，对前沿科技有浓厚兴趣，具备强烈的学习意愿和快速适应能力。 7. 工作细致认真，责任心强，具备高度的主动性与抗压能力，能适应多任务并行的工作节奏。 8. 有论文、专利、软著等科创产出，或国家级/省部级科研项目参与经验、重大科技奖项申报辅助经历者优先。"
+      ],
+      "publishedAt": "2026-08-21",
+      "deadline": "官网未单列；以招聘系统实时状态为准",
+      "deadlineType": "官方未单列",
+      "status": "招聘中",
+      "priority": 64,
+      "matchLevel": "需要确认",
+      "matchReason": "官网专业条件采用理工科相关专业口径，投递前需向招聘单位确认专业目录认定。",
+      "riskNotes": [
+        "官网职位页未单列报名截止日，投递前请以系统实时状态为准。"
+      ],
+      "tags": [
+        "北京",
+        "中国电信",
+        "校园招聘",
+        "理工科相关专业",
+        "需要确认"
+      ],
+      "sourceId": "chinatelecom-careers",
+      "officialAnnouncementUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/campus",
+      "officialApplyUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=6ee10b46e14f5a54&recruitType=1&positionType=N%2F%E7%A7%91%E5%88%9B%E7%AE%A1%E7%90%86&columnId=1&brandCode=1&importPost=0",
+      "applyInstruction": "打开中国电信官网职位详情后点击“立即申请”。",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "本轮已在中国电信官网职位详情核验岗位字段和“立即申请”入口。",
+      "verifiedFields": [
+        "单位",
+        "岗位名称",
+        "地点",
+        "学历",
+        "职责",
+        "任职要求",
+        "投递路径"
+      ],
+      "verification": {
+        "officialSource": true,
+        "specificPosition": true,
+        "location": true,
+        "eligibility": true,
+        "applicationPath": true,
+        "deadlineChecked": true
+      },
+      "professionalEligibility": {
+        "eligible": true,
+        "basis": "broad-engineering",
+        "evidence": "理工科相关专业",
+        "reason": "官网专业条件明确使用理工科相关专业口径，按高召回规则保留并标记需要确认"
+      }
+    },
+    {
+      "id": "chinatelecom-fa21e8df40c7e17f",
+      "track": "央国企",
+      "subtrack": "通信央企",
+      "organization": "中通服咨询设计研究院有限公司",
+      "department": "官方未注明",
+      "title": "信息化咨询师(北京)",
+      "exactTitle": "信息化咨询师(北京)",
+      "jobCode": "fa21e8df40c7e17f",
+      "location": "北京市",
+      "cohort": "校园招聘",
+      "recruitmentType": "校园招聘",
+      "headcount": "若干",
+      "education": "硕士研究生",
+      "degree": "官方未单列",
+      "majors": "1、理工科类相关专业，硕士研究生及以上学历。 2、熟练使用各种Office工具；良好的表达能力与方案呈现能力；英语CET-4。",
+      "politicalStatus": "官方未单列",
+      "experience": "校园招聘岗位",
+      "responsibilities": [
+        "1、从事信息化咨询项目，协助进行客户业务调研与需求访谈，参与撰写信息化咨询报告，协助完成企业信息化/数字化转型的顶层设计、技术架构规划及实施方案的制定； 2、与客户进行有效沟通，协助制作并汇报PPT，参与方案讲解和演示；包括调研、咨询、规划、客户沟通、文案制作、业务维护与拓展等工作。 3、收集和整理行业动态和技术趋势，参与公司知识库的建设；协助进行现有客户的关系维护，参与挖掘新的业务机会。"
+      ],
+      "requirements": [
+        "1、理工科类相关专业，硕士研究生及以上学历。 2、熟练使用各种Office工具；良好的表达能力与方案呈现能力；英语CET-4。"
+      ],
+      "publishedAt": "2026-08-17",
+      "deadline": "官网未单列；以招聘系统实时状态为准",
+      "deadlineType": "官方未单列",
+      "status": "招聘中",
+      "priority": 64,
+      "matchLevel": "需要确认",
+      "matchReason": "官网专业条件采用理工科相关专业口径，投递前需向招聘单位确认专业目录认定。",
+      "riskNotes": [
+        "官网职位页未单列报名截止日，投递前请以系统实时状态为准。"
+      ],
+      "tags": [
+        "北京",
+        "中国电信",
+        "校园招聘",
+        "理工科相关专业",
+        "需要确认"
+      ],
+      "sourceId": "chinatelecom-careers",
+      "officialAnnouncementUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/campus",
+      "officialApplyUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=fa21e8df40c7e17f&recruitType=1&positionType=0%2F1227%2F132803&columnId=1&brandCode=1&importPost=0",
+      "applyInstruction": "打开中国电信官网职位详情后点击“立即申请”。",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenAt": "2026-08-24T14:40:00+08:00",
+      "lastSeenStatus": "live",
+      "statusEvidence": "本轮已在中国电信官网职位详情核验岗位字段和“立即申请”入口。",
+      "verifiedFields": [
+        "单位",
+        "岗位名称",
+        "地点",
+        "学历",
+        "职责",
+        "任职要求",
+        "投递路径"
+      ],
+      "verification": {
+        "officialSource": true,
+        "specificPosition": true,
+        "location": true,
+        "eligibility": true,
+        "applicationPath": true,
+        "deadlineChecked": true
+      },
+      "professionalEligibility": {
+        "eligible": true,
+        "basis": "broad-engineering",
+        "evidence": "理工科相关专业",
+        "reason": "官网专业条件明确使用理工科相关专业口径，按高召回规则保留并标记需要确认"
+      }
     }
   ],
   "monitors": [
@@ -1566,7 +1712,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/2WUr0u5yK3HN5ImAV4ldNw",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
     },
     {
@@ -1576,7 +1722,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/HyQjq9SYDveud2L8IP2Rrg",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
     },
     {
@@ -1586,7 +1732,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/bjsad9lx64jnzqYGf3r_Rg",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
     },
     {
@@ -1596,7 +1742,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/OpZCk1xQILuLf8jJp3S4Sg",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
     },
     {
@@ -1606,7 +1752,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/eWIXQCKvA_6HvqgIVixtqg",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
     },
     {
@@ -1616,7 +1762,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/5fZcDA2QVn1KSWS3qiJLtQ",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
     },
     {
@@ -1626,168 +1772,8 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://mp.weixin.qq.com/s/aAV6eNYoBo4ng02w4HuJZw",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-state-assets"
-    },
-    {
-      "id": "notice-central-institutions-132f2aad30361b667a",
-      "track": "事业单位",
-      "title": "中国新闻社2026年度面向社会公开招聘工作人员...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260818_582358.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-05c00820b84a41e380",
-      "track": "事业单位",
-      "title": "中国文物交流中心面向社会公开招聘博士后研究...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260810_581811.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-3125de16fb92be6fb3",
-      "track": "事业单位",
-      "title": "中国地质调查局局属单位2026年度公开招聘工作...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260805_581569.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-3727c859d6b3b44b78",
-      "track": "事业单位",
-      "title": "中国地质调查局局属单位2026年度公开招聘工作...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/gxbyszpzl/202608/t20260805_581569.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-d9145990111cb70621",
-      "track": "事业单位",
-      "title": "自然资源部所属单位2026年度公开招聘工作人员...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/gxbyszpzl/202607/t20260722_580688.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-fa9841829440878f77",
-      "track": "事业单位",
-      "title": "中国地质调查局局属单位2026年度公开招聘工作...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/gxbyszpzl/202607/t20260717_580418.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-8d977d3894177af4af",
-      "track": "事业单位",
-      "title": "水利部信息中心公开招聘高层次专业技术人员的...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zytz/202607/t20260707_579721.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-76d08cb79e8258ba0a",
-      "track": "事业单位",
-      "title": "中国农业科学院2026年度第二批统一公开招聘补...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zytz/202606/t20260610_578080.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-678503db0e48c16074",
-      "track": "事业单位",
-      "title": "中国社会科学院2026年度公开招聘第二批专业技...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zytz/202606/t20260608_577861.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-53dce1cac915da8152",
-      "track": "事业单位",
-      "title": "人力资源社会保障部关于职业院校毕业生参加事...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/xgzc/202112/t20211207_429685.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-4ad7b4008a66a07e5b",
-      "track": "事业单位",
-      "title": "中国民用航空飞行学院2026年公开招聘事业编制...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/nprygs/202608/t20260821_582564.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-central-institutions-4686c0afc4b299f009",
-      "track": "事业单位",
-      "title": "2025年度国家自然科学基金委员会公开招聘工作...",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/nprygs/202608/t20260821_582561.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "central-institutions"
-    },
-    {
-      "id": "notice-beijing-personnel-exam-c2db4c734717c4a027",
-      "track": "事业单位",
-      "title": "北京市2026年度定向选调应届优秀大学毕业生补录公告",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202602/t20260226_4541765.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "beijing-personnel-exam"
-    },
-    {
-      "id": "notice-beijing-personnel-exam-72b86b70ea478712bb",
-      "track": "事业单位",
-      "title": "北京市2026年度定向选调和“优培计划”招聘应届优秀大学毕业生公告",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202509/t20250912_4200440.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "beijing-personnel-exam"
-    },
-    {
-      "id": "notice-beijing-personnel-exam-94871e87daaaf781ec",
-      "track": "事业单位",
-      "title": "北京市2025年度定向选调应届优秀大学毕业生补录公告",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202502/t20250227_4020461.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "beijing-personnel-exam"
-    },
-    {
-      "id": "notice-beijing-personnel-exam-d76e5a1a3d34b55cee",
-      "track": "事业单位",
-      "title": "北京市2025年度定向选调和“优培计划”招聘应届优秀大学毕业生公告",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202409/t20240919_3894681.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "beijing-personnel-exam"
     },
     {
       "id": "notice-beijing-institutions-03ed0444b2ee991aae",
@@ -1796,7 +1782,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1806,7 +1792,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260821_4831284.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1816,7 +1802,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260821_4831251.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1826,7 +1812,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260818_4827546.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1836,7 +1822,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260818_4827515.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1846,7 +1832,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260817_4825939.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1856,7 +1842,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260817_4825920.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1866,7 +1852,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260817_4825274.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1876,7 +1862,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260812_4819268.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1886,7 +1872,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260811_4818561.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1896,7 +1882,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260811_4817545.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
@@ -1906,148 +1892,168 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://rsj.beijing.gov.cn/xxgk/gkzp/202608/t20260811_4817540.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "beijing-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-51b545acad181b03b4",
+      "id": "notice-beijing-personnel-exam-c2db4c734717c4a027",
       "track": "事业单位",
-      "title": "事业单位公开招聘",
+      "title": "北京市2026年度定向选调应届优秀大学毕业生补录公告",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "http://job.mohrss.gov.cn/cjobs/institution/listInstitution",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202602/t20260226_4541765.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "beijing-personnel-exam"
     },
     {
-      "id": "notice-china-public-recruitment-752679d85691ef26a2",
+      "id": "notice-beijing-personnel-exam-72b86b70ea478712bb",
       "track": "事业单位",
-      "title": "中国藏学研究中心所属事业单位2026年度面向社会公开招聘工作人员公告？",
+      "title": "北京市2026年度定向选调和“优培计划”招聘应届优秀大学毕业生公告",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260818_582359.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202509/t20250912_4200440.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "beijing-personnel-exam"
     },
     {
-      "id": "notice-china-public-recruitment-132f2aad30361b667a",
+      "id": "notice-beijing-personnel-exam-94871e87daaaf781ec",
       "track": "事业单位",
-      "title": "中国新闻社2026年度面向社会公开招聘工作人员公告",
+      "title": "北京市2025年度定向选调应届优秀大学毕业生补录公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202502/t20250227_4020461.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "beijing-personnel-exam"
+    },
+    {
+      "id": "notice-beijing-personnel-exam-d76e5a1a3d34b55cee",
+      "track": "事业单位",
+      "title": "北京市2025年度定向选调和“优培计划”招聘应届优秀大学毕业生公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://rsj.beijing.gov.cn/ywsite/bjpta/xwzx/zytz/202409/t20240919_3894681.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "beijing-personnel-exam"
+    },
+    {
+      "id": "notice-central-institutions-132f2aad30361b667a",
+      "track": "事业单位",
+      "title": "中国新闻社2026年度面向社会公开招聘工作人员...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260818_582358.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-05c00820b84a41e380",
+      "id": "notice-central-institutions-05c00820b84a41e380",
       "track": "事业单位",
-      "title": "中国文物交流中心面向社会公开招聘博士后研究人员公告",
+      "title": "中国文物交流中心面向社会公开招聘博士后研究...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260810_581811.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-307ebed3c26f6b3a08",
+      "id": "notice-central-institutions-3125de16fb92be6fb3",
       "track": "事业单位",
-      "title": "国家广播电视总局直属事业单位2026年度公开招聘公告（第二批）",
-      "status": "待查看职位表",
-      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260810_581810.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
-    },
-    {
-      "id": "notice-china-public-recruitment-3125de16fb92be6fb3",
-      "track": "事业单位",
-      "title": "中国地质调查局局属单位2026年度公开招聘工作人员公告（第四批）",
+      "title": "中国地质调查局局属单位2026年度公开招聘工作...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260805_581569.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-13f59611071df1c872",
+      "id": "notice-central-institutions-3727c859d6b3b44b78",
       "track": "事业单位",
-      "title": "科技日报社公开招聘事业单位工作人员公告",
+      "title": "中国地质调查局局属单位2026年度公开招聘工作...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260731_581269.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/gxbyszpzl/202608/t20260805_581569.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-820c8ab679495b0f89",
+      "id": "notice-central-institutions-d9145990111cb70621",
       "track": "事业单位",
-      "title": "国务院国资委委属单位2026年面向社会公开招聘公告",
+      "title": "自然资源部所属单位2026年度公开招聘工作人员...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260731_581268.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/gxbyszpzl/202607/t20260722_580688.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-f4409bbda06a175170",
+      "id": "notice-central-institutions-fa9841829440878f77",
       "track": "事业单位",
-      "title": "中国水利水电科学研究院2026年度公开招聘工作人员（第三批）公告",
+      "title": "中国地质调查局局属单位2026年度公开招聘工作...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260729_581143.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/gxbyszpzl/202607/t20260717_580418.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-d871764250873227a6",
+      "id": "notice-central-institutions-8d977d3894177af4af",
       "track": "事业单位",
-      "title": "民政部所属单位2026年度社会公开招聘公告",
+      "title": "水利部信息中心公开招聘高层次专业技术人员的...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260728_581063.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zytz/202607/t20260707_579721.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-b1dec6b9526c8802dc",
+      "id": "notice-central-institutions-76d08cb79e8258ba0a",
       "track": "事业单位",
-      "title": "国家中医药管理局直属事业单位2026年度第二批公开招聘公告",
+      "title": "中国农业科学院2026年度第二批统一公开招聘补...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260728_581062.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zytz/202606/t20260610_578080.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-bc723221437bac183a",
+      "id": "notice-central-institutions-678503db0e48c16074",
       "track": "事业单位",
-      "title": "自然资源部所属单位2026年度公开招聘工作人员公告（第四批）",
+      "title": "中国社会科学院2026年度公开招聘第二批专业技...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260722_580688.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zytz/202606/t20260608_577861.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-b532a245fee37787ba",
+      "id": "notice-central-institutions-53dce1cac915da8152",
       "track": "事业单位",
-      "title": "中国地质调查局局属单位2026年度公开招聘工作人员公告（第三批）",
+      "title": "人力资源社会保障部关于职业院校毕业生参加事...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260717_580418.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/xgzc/202112/t20211207_429685.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
-      "id": "notice-china-public-recruitment-e57ac1e7b3bb15a973",
+      "id": "notice-central-institutions-4ad7b4008a66a07e5b",
       "track": "事业单位",
-      "title": "国家邮政局所属在京单位2026年度公开招聘公告",
+      "title": "中国民用航空飞行学院2026年公开招聘事业编制...",
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
-      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260715_580262.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
-      "sourceId": "china-public-recruitment"
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/nprygs/202608/t20260821_582564.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
+    },
+    {
+      "id": "notice-central-institutions-4686c0afc4b299f009",
+      "track": "事业单位",
+      "title": "2025年度国家自然科学基金委员会公开招聘工作...",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/nprygs/202608/t20260821_582561.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "central-institutions"
     },
     {
       "id": "notice-central-sasac-recruitment-89e2d4259455389d19",
@@ -2056,7 +2062,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/n2588350/c35428690/content.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "central-sasac-recruitment"
     },
     {
@@ -2066,7 +2072,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/n2588350/c35795890/content.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "central-sasac-recruitment"
     },
     {
@@ -2076,7 +2082,7 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/n2588350/c35747841/content.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "central-sasac-recruitment"
     },
     {
@@ -2086,8 +2092,148 @@
       "status": "待查看职位表",
       "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
       "officialUrl": "http://wap.sasac.gov.cn/n2588035/n2588325/n2588350/c35693219/content.html",
-      "checkedAt": "2026-08-24T12:20:00+08:00",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
       "sourceId": "central-sasac-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-51b545acad181b03b4",
+      "track": "事业单位",
+      "title": "事业单位公开招聘",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "http://job.mohrss.gov.cn/cjobs/institution/listInstitution",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-752679d85691ef26a2",
+      "track": "事业单位",
+      "title": "中国藏学研究中心所属事业单位2026年度面向社会公开招聘工作人员公告？",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260818_582359.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-132f2aad30361b667a",
+      "track": "事业单位",
+      "title": "中国新闻社2026年度面向社会公开招聘工作人员公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260818_582358.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-05c00820b84a41e380",
+      "track": "事业单位",
+      "title": "中国文物交流中心面向社会公开招聘博士后研究人员公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260810_581811.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-307ebed3c26f6b3a08",
+      "track": "事业单位",
+      "title": "国家广播电视总局直属事业单位2026年度公开招聘公告（第二批）",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260810_581810.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-3125de16fb92be6fb3",
+      "track": "事业单位",
+      "title": "中国地质调查局局属单位2026年度公开招聘工作人员公告（第四批）",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202608/t20260805_581569.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-13f59611071df1c872",
+      "track": "事业单位",
+      "title": "科技日报社公开招聘事业单位工作人员公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260731_581269.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-820c8ab679495b0f89",
+      "track": "事业单位",
+      "title": "国务院国资委委属单位2026年面向社会公开招聘公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260731_581268.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-f4409bbda06a175170",
+      "track": "事业单位",
+      "title": "中国水利水电科学研究院2026年度公开招聘工作人员（第三批）公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260729_581143.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-d871764250873227a6",
+      "track": "事业单位",
+      "title": "民政部所属单位2026年度社会公开招聘公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260728_581063.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-b1dec6b9526c8802dc",
+      "track": "事业单位",
+      "title": "国家中医药管理局直属事业单位2026年度第二批公开招聘公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260728_581062.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-bc723221437bac183a",
+      "track": "事业单位",
+      "title": "自然资源部所属单位2026年度公开招聘工作人员公告（第四批）",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260722_580688.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-b532a245fee37787ba",
+      "track": "事业单位",
+      "title": "中国地质调查局局属单位2026年度公开招聘工作人员公告（第三批）",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260717_580418.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
+    },
+    {
+      "id": "notice-china-public-recruitment-e57ac1e7b3bb15a973",
+      "track": "事业单位",
+      "title": "国家邮政局所属在京单位2026年度公开招聘公告",
+      "status": "待查看职位表",
+      "note": "这是一则官方招聘公告；在职位表和报名条件拆分为具体岗位前，暂不列入岗位页。",
+      "officialUrl": "https://www.mohrss.gov.cn/SYrlzyhshbzb/fwyd/SYkaoshizhaopin/zyhgjjgsydwgkzp/zpgg/202607/t20260715_580262.html",
+      "checkedAt": "2026-08-24T14:40:00+08:00",
+      "sourceId": "china-public-recruitment"
     },
     {
       "id": "national-civil-2027",
@@ -2159,7 +2305,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=fa48cba8202d467cbeabd23dd0150dc6",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=fa48cba8202d467cbeabd23dd0150dc6",
       "officialApplyUrl": "https://zts.hotjob.cn/",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台公开提供了直达投递链接；请打开后核对单位、岗位条件和投递页面，再决定是否收藏或投递。",
       "backtracking": {
@@ -2196,7 +2342,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=352f7f9900d04030a4590ba5250c745e",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=352f7f9900d04030a4590ba5250c745e",
       "officialApplyUrl": "https://bfhc3.zhiye.com/campus/jobs?queryId=514b69bc-acc4-4cf4-b90f-66860154a66c",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台公开提供了直达投递链接；请打开后核对单位、岗位条件和投递页面，再决定是否收藏或投递。",
       "backtracking": {
@@ -2233,7 +2379,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=c4f823bc7c5e44cd90333bbb46096f76",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=c4f823bc7c5e44cd90333bbb46096f76",
       "officialApplyUrl": "https://career.naura.com",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台公开提供了直达投递链接；请打开后核对单位、岗位条件和投递页面，再决定是否收藏或投递。",
       "backtracking": {
@@ -2270,7 +2416,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=e3be2441fe8745fa9032680e41e9b295",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=e3be2441fe8745fa9032680e41e9b295",
       "officialApplyUrl": "https://talent.lenovo.com.cn/position?projectType=3",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台公开提供了直达投递链接；请打开后核对单位、岗位条件和投递页面，再决定是否收藏或投递。",
       "backtracking": {
@@ -2307,7 +2453,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=b42c208caaa847aeadab7277ee4fa728",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=b42c208caaa847aeadab7277ee4fa728",
       "officialApplyUrl": "https://app.mokahr.com/campus-recruitment/cpicproperty/150956#/",
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台公开提供了直达投递链接；请打开后核对单位、岗位条件和投递页面，再决定是否收藏或投递。",
       "backtracking": {
@@ -2344,7 +2490,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=207160134206489364",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=207160134206489364",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2381,7 +2527,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214442073250595919",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214442073250595919",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2418,7 +2564,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214447981749863509",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214447981749863509",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2455,7 +2601,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213118027141480834",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213118027141480834",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2492,7 +2638,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213119872987562365",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213119872987562365",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2529,7 +2675,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=0d1769f8d69141699bfca60a427f47df",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=0d1769f8d69141699bfca60a427f47df",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2566,7 +2712,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=1cea7cd7a7674fe2861b7489fa46e8c1",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=1cea7cd7a7674fe2861b7489fa46e8c1",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2603,7 +2749,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=5948a3a69361490bb9ba63542c6430d0",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=5948a3a69361490bb9ba63542c6430d0",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2640,7 +2786,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=210199074186463473",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=210199074186463473",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2677,7 +2823,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=204390261999010714",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=204390261999010714",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2714,7 +2860,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214408983849469011",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214408983849469011",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2751,7 +2897,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214721401280529780",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214721401280529780",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2788,7 +2934,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213097619352715641",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213097619352715641",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2825,7 +2971,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=207331426880783117",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=207331426880783117",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2862,7 +3008,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=207331426914272013",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=207331426914272013",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2899,7 +3045,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=206335588314383259",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=206335588314383259",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2936,7 +3082,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214407626270704725",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214407626270704725",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -2973,7 +3119,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208320621384303518",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208320621384303518",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3010,7 +3156,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=206335309191840671",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=206335309191840671",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3047,7 +3193,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214551848336491606",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214551848336491606",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3084,7 +3230,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214168808858846206",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214168808858846206",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3121,7 +3267,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214162007794910200",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214162007794910200",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3158,7 +3304,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205002168908907423",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205002168908907423",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3195,7 +3341,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214136222488986595",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214136222488986595",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3232,44 +3378,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205115524269474719",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205115524269474719",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "国企",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-212365724562230757",
-      "track": "待确认线索",
-      "organization": "航天新长征大道科技有限公司",
-      "employerNature": "国企",
-      "title": "采购商务",
-      "exactTitle": "采购商务",
-      "location": "北京-丰台区",
-      "education": "本科",
-      "majors": "工学全类；管理学全类；装备制造全类；电子与信息全类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-08-05",
-      "deadline": "2026-08-31",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=212365724562230757",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212365724562230757",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3306,7 +3415,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213454585124094690",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213454585124094690",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3343,7 +3452,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214578636114625618",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214578636114625618",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3380,44 +3489,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211090360816896247",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211090360816896247",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "国企",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-211231955017009905",
-      "track": "待确认线索",
-      "organization": "中国航发北京航科发动机控制系统科技有限公司",
-      "employerNature": "国企",
-      "title": "产品研发设计（泵与调节器方向）",
-      "exactTitle": "产品研发设计（泵与调节器方向）",
-      "location": "北京-顺义区",
-      "education": "硕士",
-      "majors": "航空航天类；机械工程类；动力工程及工程热物理类；能源动力类；机械类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-07-28",
-      "deadline": "2027-06-30",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=211231955017009905",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211231955017009905",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3454,7 +3526,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211234197426146033",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211234197426146033",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3491,7 +3563,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211233597623896804",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211233597623896804",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3528,7 +3600,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211235324049754758",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211235324049754758",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3565,7 +3637,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211236595829836422",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211236595829836422",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3602,7 +3674,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211244186647661297",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211244186647661297",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3639,7 +3711,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213250953074180131",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213250953074180131",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3676,7 +3748,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211241802605267692",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211241802605267692",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3713,7 +3785,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211525500311440129",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211525500311440129",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3750,7 +3822,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213453030211715810",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213453030211715810",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3787,7 +3859,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=206021145269371808",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=206021145269371808",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3824,7 +3896,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=202953775927788209",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=202953775927788209",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3861,7 +3933,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213455480306008751",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213455480306008751",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3898,7 +3970,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205010042020168602",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205010042020168602",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3935,7 +4007,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=203986176829293328",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=203986176829293328",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -3972,7 +4044,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=165871109227413664",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=165871109227413664",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4009,7 +4081,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214264691923354617",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214264691923354617",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4046,7 +4118,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163690650817006857",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163690650817006857",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4083,7 +4155,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214264485546820604",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214264485546820604",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4120,7 +4192,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163690328879009026",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163690328879009026",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4157,7 +4229,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=204248714791879576",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=204248714791879576",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4194,7 +4266,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163572304989785349",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163572304989785349",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4231,7 +4303,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170487849567650556",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170487849567650556",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4268,7 +4340,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170063564881527549",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170063564881527549",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4305,7 +4377,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212265999783693055",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212265999783693055",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4342,7 +4414,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212265915511737099",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212265915511737099",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4379,7 +4451,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=204982508075352984",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=204982508075352984",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4416,7 +4488,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163572305023274245",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163572305023274245",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215149324860917077",
+      "track": "待确认线索",
+      "organization": "航天新长征大道科技有限公司",
+      "employerNature": "国企",
+      "title": "工控系统工程师",
+      "exactTitle": "工控系统工程师",
+      "location": "北京-丰台区",
+      "education": "硕士",
+      "majors": "机械类；能源动力类；计算机类；通信类；电子信息类；控制科学与工程类；自动化类；电气类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-21",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215149324860917077",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215149324860917077",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4453,7 +4562,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163380521848540223",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163380521848540223",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4490,7 +4599,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214577069273646161",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214577069273646161",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4527,7 +4636,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170485786540507901",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170485786540507901",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4564,7 +4673,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211245828919003877",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211245828919003877",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4601,7 +4710,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211246852513729157",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211246852513729157",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4638,7 +4747,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=204103917301138192",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=204103917301138192",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4675,7 +4784,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=169962482373232222",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=169962482373232222",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4712,7 +4821,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=169962834493441428",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=169962834493441428",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4749,7 +4858,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211647352358832801",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211647352358832801",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4786,7 +4895,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208314337729708958",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208314337729708958",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4823,7 +4932,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209174441270182816",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209174441270182816",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4860,7 +4969,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205115087306883856",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205115087306883856",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4897,7 +5006,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=210626078425745657",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=210626078425745657",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4934,7 +5043,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=0722101e993744eba41d4c09bdf59a42",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=0722101e993744eba41d4c09bdf59a42",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -4971,7 +5080,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214719324361852264",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214719324361852264",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-213132057205801346",
+      "track": "待确认线索",
+      "organization": "北京神舟航天软件技术股份有限公司",
+      "employerNature": "国企",
+      "title": "后端开发工程师-2027校园招聘(J10254)",
+      "exactTitle": "后端开发工程师-2027校园招聘(J10254)",
+      "location": "北京；石家庄",
+      "education": "硕士",
+      "majors": "计算机科学与技术类；软件工程类；电子信息类；机械工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-10",
+      "deadline": "2026-11-07",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=213132057205801346",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213132057205801346",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5008,7 +5154,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163572305006431493",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163572305006431493",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5045,7 +5191,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213453625568002718",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213453625568002718",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5082,7 +5228,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214264602970555384",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214264602970555384",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5119,7 +5265,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212251334131321496",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212251334131321496",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5156,7 +5302,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214199604344783869",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214199604344783869",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5193,7 +5339,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213453890983559834",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213453890983559834",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5230,7 +5376,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=203407280870261664",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=203407280870261664",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5267,44 +5413,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211216502781643398",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211216502781643398",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "国企",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-211355899569113855",
-      "track": "待确认线索",
-      "organization": "中国建筑技术集团有限公司",
-      "employerNature": "国企",
-      "title": "技术工程师",
-      "exactTitle": "技术工程师",
-      "location": "北京-朝阳区",
-      "education": "硕士",
-      "majors": "土木水利类；土木工程类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-07-29",
-      "deadline": "2026-10-26",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=211355899569113855",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211355899569113855",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5341,7 +5450,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170510078288336512",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170510078288336512",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5358,64 +5467,27 @@
       ]
     },
     {
-      "id": "candidate-iguopin-discovery-213672070674907982",
+      "id": "candidate-iguopin-discovery-211355899569113855",
       "track": "待确认线索",
-      "organization": "北京天地华泰矿业管理股份有限公司",
+      "organization": "中国建筑技术集团有限公司",
       "employerNature": "国企",
-      "title": "技术管理或研发",
-      "exactTitle": "技术管理或研发",
-      "location": "北京；山西；宁夏",
+      "title": "技术工程师",
+      "exactTitle": "技术工程师",
+      "location": "北京-朝阳区",
       "education": "硕士",
-      "majors": "电气工程类",
+      "majors": "土木水利类；土木工程类",
       "recruitmentType": "校招",
-      "publishedAt": "2026-09-01",
-      "deadline": "2026-09-30",
+      "publishedAt": "2026-07-29",
+      "deadline": "2026-10-26",
       "status": "待用户确认",
       "priority": 64,
       "matchLevel": "待确认",
       "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
       "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=213672070674907982",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213672070674907982",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=211355899569113855",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211355899569113855",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "国企",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-213672247607427918",
-      "track": "待确认线索",
-      "organization": "北京天地华泰矿业管理股份有限公司",
-      "employerNature": "国企",
-      "title": "技术管理或研发",
-      "exactTitle": "技术管理或研发",
-      "location": "北京；山西；宁夏",
-      "education": "硕士",
-      "majors": "矿业工程类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-09-01",
-      "deadline": "2026-09-30",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=213672247607427918",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213672247607427918",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5452,7 +5524,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213672169777922898",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213672169777922898",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5489,7 +5561,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213671995731084118",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213671995731084118",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5526,44 +5598,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212227268674587297",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212227268674587297",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "国企",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-213567878257967816",
-      "track": "待确认线索",
-      "organization": "北京天地融创科技股份有限公司",
-      "employerNature": "国企",
-      "title": "技术开发岗（气化技术方向）",
-      "exactTitle": "技术开发岗（气化技术方向）",
-      "location": "北京",
-      "education": "硕士",
-      "majors": "动力工程及工程热物理类；化学工程与技术类；能源动力类；新能源发电工程类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-08-13",
-      "deadline": "2027-08-31",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=213567878257967816",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213567878257967816",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5600,7 +5635,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213568051549831809",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213568051549831809",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5637,7 +5672,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211205617891674406",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211205617891674406",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5674,7 +5709,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170529077227164323",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170529077227164323",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5711,7 +5746,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170529506086355708",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170529506086355708",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5748,7 +5783,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170047619479896824",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170047619479896824",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5785,7 +5820,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214149648204432353",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214149648204432353",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5822,7 +5857,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214260597611561976",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214260597611561976",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5859,7 +5894,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214134245914837901",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214134245914837901",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5896,7 +5931,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214150211449127907",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214150211449127907",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5933,7 +5968,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214290191915942904",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214290191915942904",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -5970,7 +6005,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163572304973073669",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163572304973073669",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6007,7 +6042,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=206289814717203213",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=206289814717203213",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6044,7 +6079,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170486107840972382",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170486107840972382",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6081,7 +6116,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170047618221605624",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170047618221605624",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6118,7 +6153,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170047616812319480",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170047616812319480",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6155,7 +6190,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=170047616174785272",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=170047616174785272",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6192,7 +6227,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=207321462606923158",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=207321462606923158",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6229,7 +6264,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212402476328947217",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212402476328947217",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6266,7 +6301,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212224778113649409",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212224778113649409",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6303,7 +6338,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=144cf8fc8a6f4435a8ba44c680bd4e7e",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=144cf8fc8a6f4435a8ba44c680bd4e7e",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6314,6 +6349,43 @@
       "tags": [
         "国聘/北航筛选",
         "平台未注明单位性质",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-204539347209290658",
+      "track": "待确认线索",
+      "organization": "中国教育图书进出口有限公司",
+      "employerNature": "国企",
+      "title": "客服代表",
+      "exactTitle": "客服代表",
+      "location": "北京-丰台区",
+      "education": "本科",
+      "majors": "专业不限",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-06-12",
+      "deadline": "2026-08-31",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=204539347209290658",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=204539347209290658",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
         "应届生",
         "专业条件可报",
         "需手动确认"
@@ -6340,7 +6412,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=165871194103349415",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=165871194103349415",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6377,7 +6449,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213453425298375394",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213453425298375394",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6414,7 +6486,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214165577063728112",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214165577063728112",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6451,7 +6523,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163690484638682377",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163690484638682377",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6488,7 +6560,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163378252545526851",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163378252545526851",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-165871017221165182",
+      "track": "待确认线索",
+      "organization": "安标国家矿用产品安全标志中心有限公司",
+      "employerNature": "国企",
+      "title": "矿山新能源研发技术助理",
+      "exactTitle": "矿山新能源研发技术助理",
+      "location": "北京-朝阳区",
+      "education": "硕士",
+      "majors": "材料科学与工程类；机械工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2025-11-19",
+      "deadline": "2026-08-30",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=165871017221165182",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=165871017221165182",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6525,7 +6634,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214198741559673856",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214198741559673856",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6562,7 +6671,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213455909316199091",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213455909316199091",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6599,7 +6708,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214551004241200209",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214551004241200209",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6636,7 +6745,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212370531519827528",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212370531519827528",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6673,7 +6782,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208609529607226274",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208609529607226274",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215148810823796067",
+      "track": "待确认线索",
+      "organization": "北京神舟航天软件技术股份有限公司",
+      "employerNature": "国企",
+      "title": "前端开发工程师-2027校园招聘(J10264)",
+      "exactTitle": "前端开发工程师-2027校园招聘(J10264)",
+      "location": "北京；石家庄",
+      "education": "硕士",
+      "majors": "计算机科学与技术类；软件工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-10-31",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215148810823796067",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215148810823796067",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6710,7 +6856,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211382443054205699",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211382443054205699",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6747,7 +6893,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211382657181813409",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211382657181813409",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6784,7 +6930,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213122532914495945",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213122532914495945",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6821,7 +6967,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213454132055376586",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213454132055376586",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6858,7 +7004,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=206454214891668384",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=206454214891668384",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6895,7 +7041,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214264959956157432",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214264959956157432",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6932,7 +7078,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209363371294721430",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209363371294721430",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -6943,6 +7089,117 @@
       "tags": [
         "国聘/北航筛选",
         "事业单位",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215148125977838964",
+      "track": "待确认线索",
+      "organization": "航天新长征大道科技有限公司",
+      "employerNature": "国企",
+      "title": "软件工程师（前端开发）",
+      "exactTitle": "软件工程师（前端开发）",
+      "location": "北京-丰台区",
+      "education": "硕士",
+      "majors": "自动化类；计算机类；软件工程类；电子信息类；电气类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-21",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215148125977838964",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215148125977838964",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215147654118638964",
+      "track": "待确认线索",
+      "organization": "航天新长征大道科技有限公司",
+      "employerNature": "国企",
+      "title": "软件工程师（C++上位机）",
+      "exactTitle": "软件工程师（C++上位机）",
+      "location": "北京-丰台区",
+      "education": "硕士",
+      "majors": "电子信息类；自动化类；控制科学与工程类；计算机类；软件工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-21",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215147654118638964",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215147654118638964",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215147852156896628",
+      "track": "待确认线索",
+      "organization": "航天新长征大道科技有限公司",
+      "employerNature": "国企",
+      "title": "软件工程师（JAVA后端）",
+      "exactTitle": "软件工程师（JAVA后端）",
+      "location": "北京-丰台区",
+      "education": "硕士",
+      "majors": "计算机类；电子信息类；电气类；自动化类；软件工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-21",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215147852156896628",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215147852156896628",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
         "应届生",
         "专业条件可报",
         "需手动确认"
@@ -6969,7 +7226,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209504289154926886",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209504289154926886",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7006,7 +7263,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214264867664692216",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214264867664692216",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7043,7 +7300,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213454837453423330",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213454837453423330",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7080,7 +7337,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=f01e63c24d4042f3a94293b5d386c1e2",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=f01e63c24d4042f3a94293b5d386c1e2",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7117,7 +7374,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214551571864749141",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214551571864749141",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7154,7 +7411,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212410442805415542",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212410442805415542",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7191,7 +7448,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=210086361812699431",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=210086361812699431",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7228,7 +7485,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205006672819651482",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205006672819651482",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7265,7 +7522,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214164463929000953",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214164463929000953",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7302,7 +7559,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211089993798519030",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211089993798519030",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7339,7 +7596,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209061591507796749",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209061591507796749",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7376,7 +7633,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=202952665930400583",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=202952665930400583",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7413,7 +7670,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214130766957773691",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214130766957773691",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7450,7 +7707,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211089845001390326",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211089845001390326",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7487,7 +7744,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=203406945527268116",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=203406945527268116",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7524,7 +7781,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214201864923644915",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214201864923644915",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7561,7 +7818,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=162940750802193475",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=162940750802193475",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7598,7 +7855,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=162938976343166023",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=162938976343166023",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215150438012421475",
+      "track": "待确认线索",
+      "organization": "航天新长征大道科技有限公司",
+      "employerNature": "国企",
+      "title": "系统集成工程师",
+      "exactTitle": "系统集成工程师",
+      "location": "北京-丰台区",
+      "education": "硕士",
+      "majors": "电子信息类；电气类；自动化类；控制科学与工程类；计算机类；仪器科学与技术类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-21",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215150438012421475",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215150438012421475",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7635,7 +7929,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214257910522315771",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214257910522315771",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7672,7 +7966,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205993421104481178",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205993421104481178",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7709,7 +8003,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=154722291085738757",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=154722291085738757",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7746,7 +8040,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=154722356600767246",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=154722356600767246",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7783,7 +8077,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214112379112260499",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214112379112260499",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7800,27 +8094,27 @@
       ]
     },
     {
-      "id": "candidate-iguopin-discovery-214252139143234552",
+      "id": "candidate-iguopin-discovery-214112347201995668",
       "track": "待确认线索",
-      "organization": "中冶建筑研究总院有限公司",
+      "organization": "天地科技股份有限公司国际分公司",
       "employerNature": "国企",
-      "title": "销售岗-2027校招",
-      "exactTitle": "销售岗-2027校招",
-      "location": "北京；天津-蓟州区",
-      "education": "本科",
-      "majors": "材料类；建筑学类；土木工程类；工程管理类",
+      "title": "项目助理",
+      "exactTitle": "项目助理",
+      "location": "北京-朝阳区",
+      "education": "硕士",
+      "majors": "矿业工程类；材料科学与工程类；计算机科学与技术类",
       "recruitmentType": "校招",
       "publishedAt": "2026-08-18",
-      "deadline": "2026-11-14",
+      "deadline": "2027-08-31",
       "status": "待用户确认",
       "priority": 64,
       "matchLevel": "待确认",
       "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
       "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=214252139143234552",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214252139143234552",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=214112347201995668",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214112347201995668",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7857,7 +8151,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=210077931379099794",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=210077931379099794",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7894,7 +8188,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=205998649824510736",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=205998649824510736",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7931,7 +8225,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=213414893250936869",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213414893250936869",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -7968,7 +8262,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209379704149377947",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209379704149377947",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8005,7 +8299,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209375908102931352",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209375908102931352",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8042,7 +8336,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212406841341120022",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212406841341120022",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8079,7 +8373,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208454373141906336",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208454373141906336",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8116,7 +8410,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212372830669508087",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212372830669508087",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8153,7 +8447,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212373202502946295",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212373202502946295",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8190,7 +8484,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214582836978517070",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214582836978517070",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-213565952820773600",
+      "track": "待确认线索",
+      "organization": "鞍钢集团北京研究院有限公司",
+      "employerNature": "国企",
+      "title": "研究员（科技研发）",
+      "exactTitle": "研究员（科技研发）",
+      "location": "北京-昌平区",
+      "education": "硕士",
+      "majors": "控制科学与工程类；计算机科学与技术类；冶金工程类；材料类；机械类；材料科学与工程类；机械工程类；电气工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-13",
+      "deadline": "2026-11-10",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=213565952820773600",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213565952820773600",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8227,7 +8558,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214582890967598162",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214582890967598162",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8264,7 +8595,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=209207622157468571",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209207622157468571",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8301,7 +8632,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208169296348578580",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208169296348578580",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8338,7 +8669,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208169405534700304",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208169405534700304",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8375,7 +8706,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=169962533594071800",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=169962533594071800",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8412,7 +8743,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=215130563068036448",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215130563068036448",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215150907908687183",
+      "track": "待确认线索",
+      "organization": "北京神舟航天软件技术股份有限公司",
+      "employerNature": "国企",
+      "title": "云平台网络运维工程师-2027校园招聘(J10267)",
+      "exactTitle": "云平台网络运维工程师-2027校园招聘(J10267)",
+      "location": "北京",
+      "education": "硕士",
+      "majors": "网络空间安全类；计算机类；软件工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-08",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215150907908687183",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215150907908687183",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8449,44 +8817,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=162687022421511046",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=162687022421511046",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "国企",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-211108419275327636",
-      "track": "待确认线索",
-      "organization": "北方科技信息研究所",
-      "employerNature": "国企",
-      "title": "知识产权咨询研究（北方科技信息研究所）(J13602)",
-      "exactTitle": "知识产权咨询研究（北方科技信息研究所）(J13602)",
-      "location": "北京-海淀区",
-      "education": "硕士",
-      "majors": "理学全类；工学全类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-07-28",
-      "deadline": "2026-10-24",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=211108419275327636",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211108419275327636",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8523,7 +8854,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212252864985172632",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212252864985172632",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8560,7 +8891,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212252091085753096",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212252091085753096",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8597,7 +8928,81 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=202952617024815943",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=202952617024815943",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "事业单位",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215149921005733208",
+      "track": "待确认线索",
+      "organization": "北京神舟航天软件技术股份有限公司",
+      "employerNature": "国企",
+      "title": "智能运维工程师-2027校园招聘(J10266)",
+      "exactTitle": "智能运维工程师-2027校园招聘(J10266)",
+      "location": "北京",
+      "education": "硕士",
+      "majors": "计算机科学与技术类；软件工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-08",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215149921005733208",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215149921005733208",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-209075696348169118",
+      "track": "待确认线索",
+      "organization": "建筑材料工业信息中心",
+      "employerNature": "事业单位",
+      "title": "智能制造解决方案研发工程师",
+      "exactTitle": "智能制造解决方案研发工程师",
+      "location": "北京",
+      "education": "硕士",
+      "majors": "计算机类；管理科学与工程类；工业工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-07-13",
+      "deadline": "2026-10-10",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=209075696348169118",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209075696348169118",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8634,44 +9039,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=206454276011066271",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=206454276011066271",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
-      "manualConfirmationRequired": true,
-      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
-      "backtracking": {
-        "status": "manual-confirmation-required",
-        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
-      },
-      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
-      "tags": [
-        "国聘/北航筛选",
-        "事业单位",
-        "应届生",
-        "专业条件可报",
-        "需手动确认"
-      ]
-    },
-    {
-      "id": "candidate-iguopin-discovery-209075696348169118",
-      "track": "待确认线索",
-      "organization": "建筑材料工业信息中心",
-      "employerNature": "事业单位",
-      "title": "智能制造解决方案研发工程师",
-      "exactTitle": "智能制造解决方案研发工程师",
-      "location": "北京",
-      "education": "硕士",
-      "majors": "计算机类；管理科学与工程类；工业工程类",
-      "recruitmentType": "校招",
-      "publishedAt": "2026-07-13",
-      "deadline": "2026-10-10",
-      "status": "待用户确认",
-      "priority": 64,
-      "matchLevel": "待确认",
-      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
-      "sourceId": "iguopin-discovery",
-      "sourceUrl": "https://www.iguopin.com/job/detail?id=209075696348169118",
-      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=209075696348169118",
-      "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8708,7 +9076,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=eb85b7dc7c9a47e89d8d0275c8d37b3b",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=eb85b7dc7c9a47e89d8d0275c8d37b3b",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8745,7 +9113,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=e9b2e9583a754669b31086938fa148bf",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=e9b2e9583a754669b31086938fa148bf",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8782,7 +9150,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=d251c9fd32614fac94b832a1998208f8",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=d251c9fd32614fac94b832a1998208f8",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8819,7 +9187,7 @@
       "sourceUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=cedf3cbd21994add856ce1579ddaf53e",
       "officialAnnouncementUrl": "https://career.buaa.edu.cn/frontpage/buaa/html/recruitmentinfoForm.html?positionDetailId=cedf3cbd21994add856ce1579ddaf53e",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8856,7 +9224,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214282697030239230",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214282697030239230",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8893,7 +9261,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214282470588154878",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214282470588154878",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8930,7 +9298,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214282851145745406",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214282851145745406",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -8967,7 +9335,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208168100988715796",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208168100988715796",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9004,7 +9372,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163415665300999236",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163415665300999236",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9041,7 +9409,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163414996242402376",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163414996242402376",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9078,7 +9446,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=163415276505795656",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=163415276505795656",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9115,7 +9483,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214551734100427861",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214551734100427861",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9152,7 +9520,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211107461749278868",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211107461749278868",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-215149543333823843",
+      "track": "待确认线索",
+      "organization": "北京神舟航天软件技术股份有限公司",
+      "employerNature": "国企",
+      "title": "自动化攻防工程师-2027校园招聘(J10265)",
+      "exactTitle": "自动化攻防工程师-2027校园招聘(J10265)",
+      "location": "北京",
+      "education": "硕士",
+      "majors": "计算机科学与技术类；网络空间安全类；软件工程类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-24",
+      "deadline": "2026-11-08",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=215149543333823843",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215149543333823843",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9189,7 +9594,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211647383413459720",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211647383413459720",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9226,7 +9631,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211106784302074102",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211106784302074102",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9263,7 +9668,44 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=214200033522746360",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=214200033522746360",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
+      "manualConfirmationRequired": true,
+      "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
+      "backtracking": {
+        "status": "manual-confirmation-required",
+        "automaticResult": "平台未返回可验证的单位直达链接，脚本不会猜测或搜索拼接官网。"
+      },
+      "collectionEvidence": "国聘公开岗位页的城市和专业可报关键词筛选结果；岗位名称只参与排序，平台没有提供单位官方原文时保留为待确认线索。",
+      "tags": [
+        "国聘/北航筛选",
+        "国企",
+        "应届生",
+        "专业条件可报",
+        "需手动确认"
+      ]
+    },
+    {
+      "id": "candidate-iguopin-discovery-213136866310881661",
+      "track": "待确认线索",
+      "organization": "北京神舟航天软件技术股份有限公司",
+      "employerNature": "国企",
+      "title": "AI应用产品测试开发工程师-2027校园招聘(J10259)",
+      "exactTitle": "AI应用产品测试开发工程师-2027校园招聘(J10259)",
+      "location": "北京",
+      "education": "硕士",
+      "majors": "计算机科学与技术类；软件工程类；电子信息类",
+      "recruitmentType": "校招",
+      "publishedAt": "2026-08-14",
+      "deadline": "2026-11-08",
+      "status": "待用户确认",
+      "priority": 64,
+      "matchLevel": "待确认",
+      "matchReason": "已通过城市、应届硕士、单位性质和公开专业条件的脚本初筛；尚未取得可作为正式发布依据的单位或政府原文。",
+      "sourceId": "iguopin-discovery",
+      "sourceUrl": "https://www.iguopin.com/job/detail?id=213136866310881661",
+      "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=213136866310881661",
+      "officialApplyUrl": null,
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9300,7 +9742,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=208497433158615824",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=208497433158615824",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9337,7 +9779,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=212983550775918978",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=212983550775918978",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9374,7 +9816,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=215131143794591091",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=215131143794591091",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {
@@ -9411,7 +9853,7 @@
       "sourceUrl": "https://www.iguopin.com/job/detail?id=211089712478161193",
       "officialAnnouncementUrl": "https://www.iguopin.com/job/detail?id=211089712478161193",
       "officialApplyUrl": null,
-      "verifiedAt": "2026-08-24T12:20:00+08:00",
+      "verifiedAt": "2026-08-24T14:40:00+08:00",
       "manualConfirmationRequired": true,
       "manualConfirmationReason": "平台未公开提供单位官网或独立投递地址；请先查看平台原页，再自行核对单位官网或投递渠道。",
       "backtracking": {

@@ -92,6 +92,48 @@
       "eligibilityGate": "official-major-and-education-only",
       "description": "华润集团官方公开职位网关采集器"
     },
+    "cec-campus": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "中国电子官方招聘入口与公告适配器"
+    },
+    "cetc-recruitment": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "中国电科官方招聘公告适配器"
+    },
+    "sgcc-careers": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "国家电网官方招聘入口与公告适配器"
+    },
+    "cnpc-careers": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "中国石油官方招聘入口与公告适配器"
+    },
+    "sinopec-careers": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "中国石化官方招聘入口与公告适配器"
+    },
+    "cmcc-careers": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "中国移动官方招聘入口与公告适配器"
+    },
+    "chinatelecom-careers": {
+      "collector": "official-notice-feed",
+      "recipeSource": "scripts/collect-chinatelecom.mjs",
+      "eligibilityGate": "official-major-and-education-only",
+      "description": "中国电信官方结构化校园招聘采集器；全量结果由独立脚本闭合"
+    },
     "casic-careers": {
       "collector": "official-notice-feed",
       "recipeSource": "data/source-registry.json",
@@ -103,6 +145,12 @@
       "recipeSource": "data/source-registry.json",
       "eligibilityGate": "source-specific",
       "description": "航天科技官方招聘公告页适配器"
+    },
+    "chinapost-recruitment": {
+      "collector": "official-notice-feed",
+      "recipeSource": "data/source-registry.json",
+      "eligibilityGate": "source-specific",
+      "description": "中国邮政官方招聘公告适配器"
     },
     "buaa-career-discovery": {
       "collector": "buaa-discovery",
