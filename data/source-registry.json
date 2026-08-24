@@ -54,8 +54,7 @@
       "cadence": "every-run",
       "coverage": [
         "公务员招录",
-        "事业单位",
-        "国有企业"
+        "事业单位"
       ],
       "domains": [
         "rsj.beijing.gov.cn"
@@ -572,6 +571,7 @@
       "cadence": "every-run",
       "coverage": [
         "公务员招录",
+        "选调优培",
         "事业单位",
         "国有企业",
         "发现线索"
