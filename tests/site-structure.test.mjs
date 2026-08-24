@@ -176,9 +176,10 @@ test("official major eligibility is the hard gate and job wording only affects r
   const plan = JSON.parse(planRaw);
   const policy = JSON.parse(policyRaw);
   assert.match(agents, /是否可报只依据官方/);
-  assert.match(plan.profileRelevanceGate.publicDisplayRule, /岗位内容只影响排序/);
+  assert.match(plan.profileRelevanceGate.publicDisplayRule, /纯计算机岗位还必须具有明确生物医学交叉场景/);
   assert.equal(policy.profileRelevanceGate.discoveryTermsAreNotPublicationEvidence, true);
-  assert.equal(policy.profileRelevanceGate.roleTextNeverRejectsEligibleMajor, true);
+  assert.equal(policy.profileRelevanceGate.roleTextNeverRejectsEligibleMajor, false);
+  assert.equal(policy.profileRelevanceGate.pureComputingRequiresBiomedicalBridge, true);
 });
 
 test("future runs record endpoint evidence before declaring an official source unavailable", async () => {
