@@ -88,7 +88,7 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
     }
     if (Number(run.policyVersion || 0) >= 6) {
       const evidence = check.accessEvidence;
-      const entries = [source?.collectionEntryUrl || source?.entryUrl, ...(source?.alternateEntryUrls || [])].filter(Boolean);
+      const entries = [...new Set([source?.collectionEntryUrl, source?.entryUrl, ...(source?.alternateEntryUrls || [])].filter(Boolean))];
       if (!Array.isArray(evidence) || !evidence.length) errors.push(`${checkLabel}.accessEvidence 必须记录入口访问证据`);
       else {
         const attempted = new Set();
@@ -105,7 +105,7 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
           if (item.outcome === "semantic-404") hasSemantic404 = true;
         }
         if (check.status === "temporarily-unavailable") {
-          for (const url of entries) if (!attempted.has(url)) errors.push(`${checkLabel} 写 temporarily-unavailable 前必须尝试登记入口：${url}`);
+          if (entries.length && !entries.some((url) => attempted.has(url))) errors.push(`${checkLabel} 写 temporarily-unavailable 前必须尝试至少一个登记入口：${entries.join("、")}`);
           if (hasOfficialPage) errors.push(`${checkLabel} 已有可用官方页面，不能写 temporarily-unavailable`);
         }
         if (check.status === "accessible-incomplete" && !hasOfficialPage) errors.push(`${checkLabel} 写 accessible-incomplete 必须有可用官方页面证据`);

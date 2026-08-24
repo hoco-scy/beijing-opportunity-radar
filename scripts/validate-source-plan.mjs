@@ -80,9 +80,9 @@ if (plan.qualityFilter?.lowRankNeverMeansExclude !== true) errors.push("低排�
 if (!plan.positionScan?.largeDatasetStrategy?.includes("screening-policy.json") || !plan.positionScan.largeDatasetStrategy.includes("filter-recipes.json")) errors.push("大规模职位入口必须引用 screening-policy.json 与 filter-recipes.json");
 const relevanceGate = plan.profileRelevanceGate || {};
 if (!Array.isArray(relevanceGate.discoveryOnlyTerms) || !relevanceGate.discoveryOnlyTerms.includes("人工智能")) errors.push("必须把人工智能等词限定为发现词");
-if (!Array.isArray(relevanceGate.explicitBiomedicalBridges) || relevanceGate.explicitBiomedicalBridges.length < 4) errors.push("岗位匹配必须登记明确的生物医学工程交叉依据");
-if (relevanceGate.pureComputingOutcome !== "core-profession-mismatch") errors.push("纯计算机岗位必须有 core-profession-mismatch 处理结果");
-if (!relevanceGate.rule?.includes("不得进入公开 jobs")) errors.push("纯计算机岗位不得绕过正文发布门禁");
+if (!/是否可报只依据官方专业、学历和招录对象要求/.test(relevanceGate.rule || "")) errors.push("来源计划必须把专业资格作为收录硬门禁");
+if (!/岗位内容只影响排序/.test(relevanceGate.publicDisplayRule || "")) errors.push("岗位内容只能用于排序和风险提示");
+if (!relevanceGate.rule?.includes("不得因此拒绝")) errors.push("岗位名称或职责不含医疗词时不得否决官方专业条件已确认可报的岗位");
 
 if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));

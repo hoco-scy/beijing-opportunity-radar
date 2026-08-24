@@ -169,18 +169,16 @@ test("failed sources have explicit recovery routes and processing recipes", asyn
   }
 });
 
-test("computer discovery terms cannot turn into a biomedical-profile match without an explicit bridge", async () => {
-  const [agents, planRaw, policyRaw, opportunitiesRaw] = await Promise.all([
-    read("AGENTS.md"), read("data/source-plan.json"), read("data/screening-policy.json"), read("data/opportunities.json"),
+test("official major eligibility is the hard gate and job wording only affects ranking", async () => {
+  const [agents, planRaw, policyRaw] = await Promise.all([
+    read("AGENTS.md"), read("data/source-plan.json"), read("data/screening-policy.json"),
   ]);
   const plan = JSON.parse(planRaw);
   const policy = JSON.parse(policyRaw);
-  const opportunities = JSON.parse(opportunitiesRaw);
-  assert.match(agents, /发现词/);
-  assert.match(agents, /core-profession-mismatch/);
-  assert.deepEqual(plan.profileRelevanceGate.pureComputingOutcome, "core-profession-mismatch");
+  assert.match(agents, /是否可报只依据官方/);
+  assert.match(plan.profileRelevanceGate.publicDisplayRule, /岗位内容只影响排序/);
   assert.equal(policy.profileRelevanceGate.discoveryTermsAreNotPublicationEvidence, true);
-  assert.equal(opportunities.jobs.some((job) => /人工智能工程师（安全方向）|科技类1-IT岗/.test(job.exactTitle)), false);
+  assert.equal(policy.profileRelevanceGate.roleTextNeverRejectsEligibleMajor, true);
 });
 
 test("future runs record endpoint evidence before declaring an official source unavailable", async () => {
