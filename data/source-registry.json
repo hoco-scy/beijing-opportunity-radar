@@ -321,7 +321,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -338,7 +338,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -355,7 +355,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -372,7 +372,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -397,7 +397,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -420,7 +420,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -443,7 +443,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -525,7 +525,7 @@
       "role": "authoritative",
       "tier": "priority",
       "cadence": "every-run",
-      "monitoringEnabled": false,
+      "monitoringEnabled": true,
       "coverage": [
         "国有企业"
       ],
@@ -551,6 +551,7 @@
       "cadence": "every-run",
       "coverage": [
         "公务员招录",
+        "选调优培",
         "事业单位",
         "国有企业",
         "发现线索"
