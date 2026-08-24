@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "city": "北京",
   "sourceId": "chinatelecom-careers",
-  "candidateSetHash": "d3355f2b2ed8fd5385334134a898b9a630fc81575ca01ee41c36f268b09226a9",
+  "candidateSetHash": "8f198483274dac6caf1cf3fd04f6e60923c2b3e67ed439f545bc86e38026c907",
   "reviewMethod": "本轮逐项读取官网专业、学历、届别、职责与任职要求；硬条件决定结论，岗位内容仅用于排序和风险提示。",
   "batchDecisions": [],
   "overrides": [
@@ -628,6 +628,13 @@
         "理工科相关专业",
         "需要确认"
       ]
+    },
+    {
+      "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=97b801da8709ae4e&recruitType=1&positionType=0%2F1227%2F132809%2F132862%2F133133&columnId=1&brandCode=1&importPost=",
+      "decision": "rejected",
+      "reasonCode": "pure-computing-without-biomedical-bridge",
+      "reason": "官网职位要求和职责为通用软件研发、云网与计算机通信方向，未出现明确生物医学交叉场景，按当前规则不发布。",
+      "semanticBasis": "已核对官网详情的专业、学历、届别、职责和任职要求；纯软件与计算岗位只有明确生物医学应用桥接时才保留。"
     },
     {
       "officialUrl": "https://job.chinatelecom.com.cn/wt/TELE/web/index/webPosition210!getOnePosition?postIdEnc=2f7a8e20df547e47&recruitType=1&positionType=0%2F1227%2F132807%2F132856%2F133115&columnId=1&brandCode=1&importPost=",
