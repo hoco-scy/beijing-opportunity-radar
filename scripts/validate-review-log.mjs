@@ -102,6 +102,10 @@ for (const [runIndex, run] of (log.runs || []).entries()) {
             hasOfficialPage = true;
             if (!item.finalUrl || !officialDomain(item.finalUrl, source)) errors.push(`${evidenceLabel}.finalUrl 必须是同一官方来源域名`);
           }
+          // 验证码/WAF 页面证明登记的官方路由可达，但受保护的列表或
+          // 详情未完成；这属于 accessible-incomplete，采集器仍须立即
+          // 停止且不得绕过访问控制。
+          if (item.outcome === "access-control") hasOfficialPage = true;
           if (item.outcome === "semantic-404") hasSemantic404 = true;
         }
         if (check.status === "temporarily-unavailable") {
